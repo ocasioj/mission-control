@@ -31,20 +31,6 @@
       "createdAt": "2026-01-25T18:00:00Z"
     },
     {
-      "id": "task_004",
-      "title": "Research email automation tools",
-      "description": "Compare options for newsletter and drip campaigns",
-      "status": "backlog",
-      "project": "growth",
-      "tags": [
-        "growth",
-        "research"
-      ],
-      "subtasks": [],
-      "priority": "medium",
-      "createdAt": "2026-01-24T11:00:00Z"
-    },
-    {
       "id": "task_005",
       "title": "Implement dark mode",
       "description": "Add theme toggle with system preference detection and persistence",
@@ -373,5 +359,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:21.224Z"
+  "lastUpdated": "2026-03-23T04:45:24.404Z"
 }
