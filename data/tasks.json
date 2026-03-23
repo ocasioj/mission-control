@@ -1,41 +1,6 @@
 {
   "tasks": [
     {
-      "id": "task_001",
-      "title": "Redesign landing page",
-      "description": "Modern refresh with improved conversion focus and mobile-first approach",
-      "status": "backlog",
-      "project": "design",
-      "tags": [
-        "design",
-        "growth"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Competitor analysis",
-          "done": false
-        },
-        {
-          "id": "sub_002",
-          "title": "Wireframe concepts",
-          "done": false
-        },
-        {
-          "id": "sub_003",
-          "title": "Design mockups",
-          "done": false
-        },
-        {
-          "id": "sub_004",
-          "title": "Get stakeholder feedback",
-          "done": false
-        }
-      ],
-      "priority": "high",
-      "createdAt": "2026-01-20T10:00:00Z"
-    },
-    {
       "id": "task_002",
       "title": "Plan weekend hiking trip",
       "description": "Research trails, check weather, prepare gear for Saturday adventure",
@@ -443,5 +408,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:14.353Z"
+  "lastUpdated": "2026-03-23T04:45:18.179Z"
 }
