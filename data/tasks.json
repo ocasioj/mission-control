@@ -1,36 +1,5 @@
 {
-  "tasks": [
-    {
-      "id": "task_012",
-      "title": "Social media content calendar",
-      "description": "Plan posts for February across all platforms",
-      "status": "done",
-      "project": "growth",
-      "tags": [
-        "growth",
-        "content"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Identify key dates/events",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Draft post ideas",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Schedule in buffer",
-          "done": true
-        }
-      ],
-      "priority": "medium",
-      "createdAt": "2026-01-12T14:00:00Z"
-    }
-  ],
+  "tasks": [],
   "projects": [
     {
       "id": "devops",
@@ -99,5 +68,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:48.982Z"
+  "lastUpdated": "2026-03-23T04:45:52.379Z"
 }
