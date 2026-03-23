@@ -1,36 +1,6 @@
 {
   "tasks": [
     {
-      "id": "task_011",
-      "title": "Quarterly tax prep",
-      "description": "Gather documents and submit to accountant",
-      "status": "done",
-      "project": "personal",
-      "tags": [
-        "personal",
-        "finance"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Export bank statements",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Organize receipts",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Send to accountant",
-          "done": true
-        }
-      ],
-      "priority": "high",
-      "createdAt": "2026-01-10T09:00:00Z"
-    },
-    {
       "id": "task_012",
       "title": "Social media content calendar",
       "description": "Plan posts for February across all platforms",
@@ -129,5 +99,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:45.884Z"
+  "lastUpdated": "2026-03-23T04:45:48.982Z"
 }
