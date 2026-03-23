@@ -31,41 +31,6 @@
       "createdAt": "2026-01-25T18:00:00Z"
     },
     {
-      "id": "task_003",
-      "title": "Set up CI/CD pipeline",
-      "description": "Automate testing and deployment for the main project repository",
-      "status": "backlog",
-      "project": "devops",
-      "tags": [
-        "devops",
-        "automation"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Configure GitHub Actions",
-          "done": false
-        },
-        {
-          "id": "sub_002",
-          "title": "Add test coverage reports",
-          "done": false
-        },
-        {
-          "id": "sub_003",
-          "title": "Set up staging environment",
-          "done": false
-        },
-        {
-          "id": "sub_004",
-          "title": "Document deployment process",
-          "done": false
-        }
-      ],
-      "priority": "high",
-      "createdAt": "2026-01-22T14:00:00Z"
-    },
-    {
       "id": "task_004",
       "title": "Research email automation tools",
       "description": "Compare options for newsletter and drip campaigns",
@@ -408,5 +373,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:18.179Z"
+  "lastUpdated": "2026-03-23T04:45:21.224Z"
 }
