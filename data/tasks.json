@@ -1,41 +1,6 @@
 {
   "tasks": [
     {
-      "id": "task_008",
-      "title": "API documentation update",
-      "description": "Complete overhaul of REST API docs with examples and error codes",
-      "status": "review",
-      "project": "devops",
-      "tags": [
-        "devops",
-        "documentation"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Document all endpoints",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Add request/response examples",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Include authentication guide",
-          "done": true
-        },
-        {
-          "id": "sub_004",
-          "title": "Peer review",
-          "done": false
-        }
-      ],
-      "priority": "high",
-      "createdAt": "2026-01-18T09:00:00Z"
-    },
-    {
       "id": "task_009",
       "title": "New logo concepts",
       "description": "Three variations for brand refresh, awaiting team vote",
@@ -229,5 +194,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:36.779Z"
+  "lastUpdated": "2026-03-23T04:45:39.644Z"
 }
