@@ -1,41 +1,6 @@
 {
   "tasks": [
     {
-      "id": "task_010",
-      "title": "Fix login redirect bug",
-      "description": "Users were redirected to wrong page after OAuth login",
-      "status": "done",
-      "project": "devops",
-      "tags": [
-        "devops",
-        "bugfix"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Reproduce issue",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Identify root cause",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Implement fix",
-          "done": true
-        },
-        {
-          "id": "sub_004",
-          "title": "Write regression test",
-          "done": true
-        }
-      ],
-      "priority": "high",
-      "createdAt": "2026-01-17T08:00:00Z"
-    },
-    {
       "id": "task_011",
       "title": "Quarterly tax prep",
       "description": "Gather documents and submit to accountant",
@@ -164,5 +129,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:42.959Z"
+  "lastUpdated": "2026-03-23T04:45:45.884Z"
 }
