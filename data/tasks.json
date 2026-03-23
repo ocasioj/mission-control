@@ -1,36 +1,6 @@
 {
   "tasks": [
     {
-      "id": "task_009",
-      "title": "New logo concepts",
-      "description": "Three variations for brand refresh, awaiting team vote",
-      "status": "review",
-      "project": "design",
-      "tags": [
-        "design",
-        "branding"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Minimalist version",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Bold/modern version",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Classic refined version",
-          "done": true
-        }
-      ],
-      "priority": "medium",
-      "createdAt": "2026-01-19T11:00:00Z"
-    },
-    {
       "id": "task_010",
       "title": "Fix login redirect bug",
       "description": "Users were redirected to wrong page after OAuth login",
@@ -194,5 +164,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:39.644Z"
+  "lastUpdated": "2026-03-23T04:45:42.959Z"
 }
