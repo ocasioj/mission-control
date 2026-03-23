@@ -1,41 +1,6 @@
 {
   "tasks": [
     {
-      "id": "task_005",
-      "title": "Implement dark mode",
-      "description": "Add theme toggle with system preference detection and persistence",
-      "status": "in_progress",
-      "project": "devops",
-      "tags": [
-        "devops",
-        "design"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Define color variables",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Create theme toggle component",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Persist preference in localStorage",
-          "done": false
-        },
-        {
-          "id": "sub_004",
-          "title": "Test across browsers",
-          "done": false
-        }
-      ],
-      "priority": "medium",
-      "createdAt": "2026-01-23T09:00:00Z"
-    },
-    {
       "id": "task_006",
       "title": "Write Q1 blog post",
       "description": "Industry trends article for company blog, target 1500 words",
@@ -329,5 +294,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:27.644Z"
+  "lastUpdated": "2026-03-23T04:45:30.554Z"
 }
