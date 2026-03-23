@@ -1,36 +1,6 @@
 {
   "tasks": [
     {
-      "id": "task_007",
-      "title": "Organize home office",
-      "description": "Declutter desk, improve cable management, add plants",
-      "status": "in_progress",
-      "project": "personal",
-      "tags": [
-        "personal",
-        "wellness"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Sort through papers",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Order cable organizers",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Buy desk plant",
-          "done": false
-        }
-      ],
-      "priority": "low",
-      "createdAt": "2026-01-26T15:00:00Z"
-    },
-    {
       "id": "task_008",
       "title": "API documentation update",
       "description": "Complete overhaul of REST API docs with examples and error codes",
@@ -259,5 +229,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:33.464Z"
+  "lastUpdated": "2026-03-23T04:45:36.779Z"
 }
