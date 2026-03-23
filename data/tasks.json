@@ -1,36 +1,6 @@
 {
   "tasks": [
     {
-      "id": "task_002",
-      "title": "Plan weekend hiking trip",
-      "description": "Research trails, check weather, prepare gear for Saturday adventure",
-      "status": "backlog",
-      "project": "personal",
-      "tags": [
-        "personal",
-        "wellness"
-      ],
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Choose trail (moderate difficulty)",
-          "done": false
-        },
-        {
-          "id": "sub_002",
-          "title": "Check weather forecast",
-          "done": false
-        },
-        {
-          "id": "sub_003",
-          "title": "Pack essentials",
-          "done": false
-        }
-      ],
-      "priority": "low",
-      "createdAt": "2026-01-25T18:00:00Z"
-    },
-    {
       "id": "task_005",
       "title": "Implement dark mode",
       "description": "Add theme toggle with system preference detection and persistence",
@@ -359,5 +329,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-23T04:45:24.404Z"
+  "lastUpdated": "2026-03-23T04:45:27.644Z"
 }
