@@ -6090,7 +6090,7 @@
 
                 // Notify OpenClaw agent when task moves to in_progress
                 if (newStatus === 'in_progress') {
-                    fetch('http://100.112.51.117:3100/api/task-webhook', {
+                    fetch('https://srv1408451.porgy-brill.ts.net:8444/api/task-webhook', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
