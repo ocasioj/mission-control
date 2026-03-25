@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission Control - MoltBot</title>
+    <title>Mission Control</title>
     <style>
         :root {
             --bg-primary: #0d0d0d;
@@ -1783,6 +1783,117 @@
         .live-dot { display: inline-block; width: 8px; height: 8px; background: var(--accent-green); border-radius: 50%; margin-right: 0.5rem; animation: livePulse 2s infinite; }
         @keyframes livePulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
+        /* === NEW VIEWS === */
+        .section-container {
+            padding: 2rem;
+            max-width: 1200px;
+        }
+        .section-header {
+            margin-bottom: 2rem;
+        }
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            max-width: 600px;
+        }
+
+        /* Calendar */
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .calendar-cron-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            transition: border-color 0.2s;
+        }
+        .calendar-cron-card:hover { border-color: var(--accent-blue); }
+        .calendar-cron-card.enabled { border-left: 3px solid var(--accent-green); }
+        .calendar-cron-card.disabled { border-left: 3px solid var(--border); opacity: 0.6; }
+        .calendar-cron-card.error { border-left: 3px solid var(--accent-red); }
+        .cal-cron-name { font-weight: 600; font-size: 0.95rem; }
+        .cal-cron-schedule { color: var(--accent-blue); font-size: 0.8rem; font-family: monospace; }
+        .cal-cron-next { font-size: 0.8rem; color: var(--text-secondary); }
+        .cal-cron-status { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; }
+        .cal-status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .cal-status-dot.ok { background: var(--accent-green); }
+        .cal-status-dot.disabled { background: var(--text-secondary); }
+        .cal-status-dot.error { background: var(--accent-red); }
+        .cal-status-dot.running { background: var(--accent-blue); animation: pulse 1.5s infinite; }
+        .cal-cron-last { font-size: 0.75rem; color: var(--text-secondary); }
+        .empty-state-large {
+            color: var(--text-secondary); padding: 3rem; text-align: center;
+            grid-column: 1/-1; font-size: 0.95rem;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+        .project-view-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .project-view-card:hover { border-color: var(--accent-blue); transform: translateY(-2px); }
+        .project-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .project-card-icon { font-size: 1.5rem; }
+        .project-card-name { font-weight: 600; font-size: 1rem; }
+        .project-card-stats { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 1rem; }
+        .project-progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .project-progress-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+        .project-progress-label { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.4rem; }
+        .project-task-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
+        .project-task-item { font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem; }
+        .project-task-item::before { content: '•'; color: var(--accent-blue); }
+
+        /* Memory / Team gateway cards */
+        .gateway-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            max-width: 480px;
+            text-align: center;
+        }
+        .gateway-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .gateway-card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .gateway-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; }
+        .gateway-features { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; text-align: left; }
+        .gateway-feature { font-size: 0.85rem; color: var(--text-secondary); padding: 0.4rem 0.75rem; background: rgba(255,255,255,0.04); border-radius: 6px; }
+        .gateway-hint { font-size: 0.8rem; color: var(--text-secondary); opacity: 0.7; }
+        .memory-gateway-notice { display: flex; justify-content: center; padding: 2rem 0; }
+        .org-placeholder { display: flex; justify-content: center; }
+
+        /* Team / Mission */
+        .mission-card {
+            background: var(--bg-card);
+            border: 1px solid var(--accent-blue);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .mission-header { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-blue); margin-bottom: 0.75rem; font-weight: 600; }
+        .mission-text { font-size: 1rem; line-height: 1.6; color: var(--text-primary); }
+        .agents-org { margin-top: 1rem; }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .sidebar { width: 56px; }
@@ -2243,7 +2354,7 @@
     <div id="dashboard" class="dashboard" style="display: none;">
 
     <nav class="sidebar" id="sidebar">
-        <div class="sidebar-logo"><span>🔲</span> Mission Control</div>
+        <div class="sidebar-logo"><span>🎯</span> Mission Control</div>
         <div class="sidebar-section-label">Core</div>
         <div class="sidebar-item active" data-view="tasks" onclick="switchView('tasks')"><span class="sidebar-icon">📋</span><span class="sidebar-label">Tasks</span></div>
         <div class="sidebar-item" data-view="agents" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🤖</span><span class="sidebar-label">Agents</span></div>
@@ -2251,14 +2362,14 @@
         <div class="sidebar-item" data-view="approvals" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">✅</span><span class="sidebar-label">Approvals</span></div>
         <div class="sidebar-item" data-view="council" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">👥</span><span class="sidebar-label">Council</span></div>
         <div class="sidebar-section-label">Plan</div>
-        <div class="sidebar-item" data-view="calendar" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">📅</span><span class="sidebar-label">Calendar</span></div>
-        <div class="sidebar-item" data-view="projects" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">📁</span><span class="sidebar-label">Projects</span></div>
-        <div class="sidebar-item" data-view="memory" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🧠</span><span class="sidebar-label">Memory</span></div>
+        <div class="sidebar-item" data-view="calendar" onclick="switchView('calendar')"><span class="sidebar-icon">📅</span><span class="sidebar-label">Calendar</span></div>
+        <div class="sidebar-item" data-view="projects" onclick="switchView('projects')"><span class="sidebar-icon">📁</span><span class="sidebar-label">Projects</span></div>
+        <div class="sidebar-item" data-view="memory" onclick="switchView('memory')"><span class="sidebar-icon">🧠</span><span class="sidebar-label">Memory</span></div>
         <div class="sidebar-item" data-view="docs" onclick="switchView('docs')"><span class="sidebar-icon">📑</span><span class="sidebar-label">Docs</span></div>
         <div class="sidebar-section-label">Team</div>
         <div class="sidebar-item" data-view="people" onclick="switchView('people')"><span class="sidebar-icon">👤</span><span class="sidebar-label">People</span></div>
         <div class="sidebar-item" data-view="office" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🏢</span><span class="sidebar-label">Office</span></div>
-        <div class="sidebar-item" data-view="team" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🔗</span><span class="sidebar-label">Team</span></div>
+        <div class="sidebar-item" data-view="team" onclick="switchView('team')"><span class="sidebar-icon">🔗</span><span class="sidebar-label">Team</span></div>
         <div class="sidebar-section-label">System</div>
         <div class="sidebar-item" data-view="system" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">⚙️</span><span class="sidebar-label">System</span></div>
         <div class="sidebar-item" data-view="radar" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">📡</span><span class="sidebar-label">Radar</span></div>
@@ -2298,7 +2409,7 @@
             </div>
             <span class="live-indicator live" id="live-indicator">Live</span>
             <button class="btn btn-secondary" id="btn-pause" onclick="togglePause()">⏸ Pause</button>
-            <button class="btn btn-secondary" onclick="pingAgent()">Ping Henry</button>
+            <button class="btn btn-secondary" onclick="pingAgent()">Ping Joe</button>
             <button class="btn btn-secondary" onclick="pollForUpdates(); window.location.reload()">↻ Refresh</button>
 
             <!-- Not Logged In -->
@@ -2632,6 +2743,87 @@
             </div>
         </div>
     </div><!-- END view-people -->
+
+    <!-- CALENDAR VIEW -->
+    <div id="view-calendar" class="view" style="display:none;">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>📅 Calendar</h2>
+                <p class="section-subtitle">All scheduled cron jobs and proactive tasks your OpenClaw has set up. Use this to confirm your agent is being proactive.</p>
+            </div>
+            <div id="calendar-cron-list" class="calendar-grid">
+                <div class="empty-state-large">Loading scheduled jobs...</div>
+            </div>
+        </div>
+    </div><!-- END view-calendar -->
+
+    <!-- PROJECTS VIEW -->
+    <div id="view-projects" class="view" style="display:none;">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>📁 Projects</h2>
+                <p class="section-subtitle">Track every major project you're working on. Stay on top of what needs to move forward today.</p>
+            </div>
+            <div id="projects-grid" class="projects-grid">
+                <!-- Populated by renderProjectsView() -->
+            </div>
+        </div>
+    </div><!-- END view-projects -->
+
+    <!-- MEMORY VIEW -->
+    <div id="view-memory" class="view" style="display:none;">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>🧠 Memory</h2>
+                <p class="section-subtitle">Your OpenClaw's memories, organized by day — like a journal of your entire digital life together.</p>
+            </div>
+            <div class="memory-gateway-notice" id="memory-content">
+                <div class="gateway-card">
+                    <div class="gateway-icon">🧠</div>
+                    <h3>Memory Viewer</h3>
+                    <p>Connect to your OpenClaw gateway to browse memories organized by day. Once connected, you can read past conversations like journal entries.</p>
+                    <div class="gateway-features">
+                        <div class="gateway-feature">📅 Memories organized by date</div>
+                        <div class="gateway-feature">🔍 Search past conversations</div>
+                        <div class="gateway-feature">📖 Read like a journal</div>
+                        <div class="gateway-feature">💾 Long-term memory document</div>
+                    </div>
+                    <p class="gateway-hint">Your OpenClaw must be connected via the gateway to access memories.</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- END view-memory -->
+
+    <!-- TEAM VIEW -->
+    <div id="view-team" class="view" style="display:none;">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>🔗 Team</h2>
+                <p class="section-subtitle">Your agent org structure — every OpenClaw and sub-agent, their roles, and the mission everyone is working towards.</p>
+            </div>
+            <div id="team-content">
+                <div class="mission-card">
+                    <div class="mission-header">🎯 Mission Statement</div>
+                    <div class="mission-text" id="mission-text">No mission statement set. Go to your OpenClaw and say: "Let's define our mission statement — based on everything you know about me, what should we be working towards?"</div>
+                </div>
+                <div class="agents-org" id="agents-org">
+                    <div class="org-placeholder">
+                        <div class="gateway-card">
+                            <div class="gateway-icon">🤖</div>
+                            <h3>Agent Org Chart</h3>
+                            <p>Connect to your OpenClaw gateway to see all active agents, their roles, and which devices they run on.</p>
+                            <div class="gateway-features">
+                                <div class="gateway-feature">👤 Main agent + all sub-agents</div>
+                                <div class="gateway-feature">💻 Device assignments</div>
+                                <div class="gateway-feature">📋 Roles and responsibilities</div>
+                                <div class="gateway-feature">🔀 Who to delegate what to</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- END view-team -->
 
     <!-- Auth Modal -->
     <div class="modal-overlay" id="auth-modal" onclick="if(event.target===this)hideAuthModal()">
@@ -3717,8 +3909,19 @@
             showToast(isPaused ? 'warning' : 'success', isPaused ? 'Agents paused' : 'Agents resumed');
         }
 
-        function pingAgent() {
-            showToast('success', '📡 Pinged Henry');
+        async function pingAgent() {
+            showToast('success', '📡 Pinging Joe...');
+            try {
+                const res = await fetch('http://localhost:61949/api/ping-joe', { method: 'POST' });
+                const data = await res.json();
+                if (data.ok) {
+                    showToast('success', '📡 Joe has been pinged via Signal!');
+                } else {
+                    showToast('error', '✗ Ping failed: ' + (data.error || 'unknown error'));
+                }
+            } catch (e) {
+                showToast('error', '✗ Could not reach Mission Control server');
+            }
         }
 
         function showToast(type, message) {
@@ -5549,6 +5752,74 @@
         }
 
         // === VIEW SWITCHING ===
+        function renderCalendarView() {
+            const container = document.getElementById('calendar-cron-list');
+            if (!container) return;
+            const crons = STATE.crons || [];
+            if (crons.length === 0) {
+                container.innerHTML = '<div class="empty-state-large">No scheduled jobs found. Ask your OpenClaw to schedule proactive tasks and they\'ll appear here.</div>';
+                return;
+            }
+            container.innerHTML = crons.map(cron => {
+                const isEnabled = cron.enabled !== false;
+                const statusClass = !isEnabled ? 'disabled' : cron.lastStatus === 'error' ? 'error' : isRunning(cron) ? 'running' : 'ok';
+                const statusText = !isEnabled ? 'Disabled' : cron.lastStatus === 'error' ? 'Error' : isRunning(cron) ? 'Running...' : 'Active';
+                const nextRun = cron.nextRunAt ? formatRelativeTime(new Date(cron.nextRunAt)) : 'N/A';
+                const lastRun = cron.state?.lastRunAtMs ? formatRelativeTime(new Date(cron.state.lastRunAtMs)) : 'Never';
+                return `
+                    <div class="calendar-cron-card ${statusClass}" onclick="openCronDetail('${cron.id}')">
+                        <div class="cal-cron-name">${escapeHtml(cron.name || 'Unnamed job')}</div>
+                        <div class="cal-cron-schedule">${escapeHtml(cron.scheduleHuman || (cron.schedule?.expr || ''))}</div>
+                        <div class="cal-cron-status">
+                            <span class="cal-status-dot ${statusClass}"></span>
+                            <span>${statusText}</span>
+                        </div>
+                        <div class="cal-cron-next">⏭ Next: ${nextRun}</div>
+                        <div class="cal-cron-last">Last run: ${lastRun}</div>
+                    </div>`;
+            }).join('');
+        }
+
+        function renderProjectsView() {
+            const container = document.getElementById('projects-grid');
+            if (!container) return;
+            const projects = (STATE.data && STATE.data.projects) || [];
+            const tasks = (STATE.data && STATE.data.tasks) || [];
+            if (projects.length === 0) {
+                container.innerHTML = '<div class="empty-state-large">No projects yet. Add projects in Settings or ask your OpenClaw to set them up.</div>';
+                return;
+            }
+            container.innerHTML = projects.map(proj => {
+                const projTasks = tasks.filter(t => !t.archived && t.project === proj.id);
+                const total = projTasks.length;
+                const done = projTasks.filter(t => t.status === 'done' || t.status === 'review').length;
+                const inProgress = projTasks.filter(t => t.status === 'in_progress').length;
+                const backlog = projTasks.filter(t => t.status === 'backlog').length;
+                const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+                const activeTasks = projTasks.filter(t => t.status !== 'done').slice(0, 3);
+                return `
+                    <div class="project-view-card" onclick="filterByProject('${proj.id}'); switchView('tasks')" style="border-top: 3px solid ${proj.color}">
+                        <div class="project-card-header">
+                            <span class="project-card-icon">${proj.icon || '📁'}</span>
+                            <span class="project-card-name">${escapeHtml(proj.name)}</span>
+                        </div>
+                        <div class="project-card-stats">
+                            <span>${total} tasks</span>
+                            <span>${inProgress} in progress</span>
+                            <span>${backlog} in backlog</span>
+                        </div>
+                        <div class="project-progress-bar">
+                            <div class="project-progress-fill" style="width:${pct}%; background:${proj.color}"></div>
+                        </div>
+                        <div class="project-progress-label">${pct}% complete</div>
+                        ${activeTasks.length > 0 ? `
+                        <div class="project-task-list">
+                            ${activeTasks.map(t => `<div class="project-task-item">${escapeHtml(t.title)}</div>`).join('')}
+                        </div>` : ''}
+                    </div>`;
+            }).join('');
+        }
+
         function switchView(viewName) {
             // Hide all views
             document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
@@ -5565,6 +5836,10 @@
             document.querySelectorAll('.sidebar-item').forEach(item => {
                 item.classList.toggle('active', item.dataset.view === viewName);
             });
+
+            // Trigger view-specific render
+            if (viewName === 'calendar') renderCalendarView();
+            if (viewName === 'projects') renderProjectsView();
         }
 
         function generateChangesSummary() {
@@ -7434,8 +7709,8 @@
             function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
             function create() {
                 stars = [];
-                for (let i = 0; i < 150; i++) {
-                    stars.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, size: Math.random() * 1.5 + 0.3, speed: Math.random() * 0.12 + 0.02, opacity: Math.random() * 0.5 + 0.15 });
+                for (let i = 0; i < 250; i++) {
+                    stars.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, size: Math.random() * 1.5 + 0.3, speed: Math.random() * 0.12 + 0.02, opacity: Math.random() * 0.6 + 0.2 });
                 }
             }
             function draw() {
