@@ -1702,8 +1702,94 @@
             }
         }
 
+        .dashboard {
+            margin-left: 220px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 220px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            z-index: 101;
+            display: flex;
+            flex-direction: column;
+            padding: 0.75rem 0;
+        }
+        .sidebar-logo {
+            padding: 0.75rem 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-section-label {
+            padding: 0.75rem 1rem 0.25rem;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.45rem 1rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.15s;
+            border-radius: 6px;
+            margin: 1px 0.5rem;
+        }
+        .sidebar-item:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+        .sidebar-item.active {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent-blue);
+        }
+        .sidebar-icon { width: 20px; text-align: center; font-size: 1rem; flex-shrink: 0; }
+
+        /* Filter Bar */
+        .btn-green { background: var(--accent-green); color: white; font-weight: 600; }
+        .btn-green:hover { opacity: 0.9; }
+        .filter-select { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-primary); padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+        .assignee-filters { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+        .assignee-btn { display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.375rem 0.75rem; border-radius: 20px; cursor: pointer; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-secondary); font-size: 0.8rem; transition: all 0.2s; }
+        .assignee-btn:hover { border-color: var(--accent-blue); color: var(--text-primary); }
+        .assignee-btn.active { background: var(--accent-blue); border-color: var(--accent-blue); color: white; }
+
+        /* Task Card Footer */
+        .task-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 0.5rem; gap: 0.5rem; }
+        .project-badge { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 500; white-space: nowrap; }
+        .badge-initial { width: 16px; height: 16px; border-radius: 50%; color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: 700; }
+        .task-timestamp { font-size: 0.7rem; color: var(--text-secondary); white-space: nowrap; }
+
+        /* Live Activity Dot */
+        .live-dot { display: inline-block; width: 8px; height: 8px; background: var(--accent-green); border-radius: 50%; margin-right: 0.5rem; animation: livePulse 2s infinite; }
+        @keyframes livePulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .sidebar { width: 56px; }
+            .sidebar .sidebar-label { display: none; }
+            .sidebar .sidebar-logo span:last-child { display: none; }
+            .sidebar .sidebar-section-label { display: none; }
+            .dashboard { margin-left: 56px; }
             .header {
                 flex-direction: column;
                 gap: 1rem;
@@ -2095,6 +2181,7 @@
     </style>
 </head>
 <body>
+    <canvas id="starfield" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
     <!-- Login Required Screen (shown when not authenticated) -->
     <div id="login-screen" class="login-screen">
         <div class="login-container">
@@ -2155,25 +2242,46 @@
     <!-- Main Dashboard (hidden until authenticated) -->
     <div id="dashboard" class="dashboard" style="display: none;">
 
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-logo"><span>🔲</span> Mission Control</div>
+        <div class="sidebar-section-label">Core</div>
+        <div class="sidebar-item active" data-view="tasks" onclick="switchView('tasks')"><span class="sidebar-icon">📋</span><span class="sidebar-label">Tasks</span></div>
+        <div class="sidebar-item" data-view="agents" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🤖</span><span class="sidebar-label">Agents</span></div>
+        <div class="sidebar-item" data-view="content" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">📄</span><span class="sidebar-label">Content</span></div>
+        <div class="sidebar-item" data-view="approvals" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">✅</span><span class="sidebar-label">Approvals</span></div>
+        <div class="sidebar-item" data-view="council" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">👥</span><span class="sidebar-label">Council</span></div>
+        <div class="sidebar-section-label">Plan</div>
+        <div class="sidebar-item" data-view="calendar" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">📅</span><span class="sidebar-label">Calendar</span></div>
+        <div class="sidebar-item" data-view="projects" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">📁</span><span class="sidebar-label">Projects</span></div>
+        <div class="sidebar-item" data-view="memory" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🧠</span><span class="sidebar-label">Memory</span></div>
+        <div class="sidebar-item" data-view="docs" onclick="switchView('docs')"><span class="sidebar-icon">📑</span><span class="sidebar-label">Docs</span></div>
+        <div class="sidebar-section-label">Team</div>
+        <div class="sidebar-item" data-view="people" onclick="switchView('people')"><span class="sidebar-icon">👤</span><span class="sidebar-label">People</span></div>
+        <div class="sidebar-item" data-view="office" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🏢</span><span class="sidebar-label">Office</span></div>
+        <div class="sidebar-item" data-view="team" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🔗</span><span class="sidebar-label">Team</span></div>
+        <div class="sidebar-section-label">System</div>
+        <div class="sidebar-item" data-view="system" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">⚙️</span><span class="sidebar-label">System</span></div>
+        <div class="sidebar-item" data-view="radar" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">📡</span><span class="sidebar-label">Radar</span></div>
+        <div class="sidebar-item" data-view="factory" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🏭</span><span class="sidebar-label">Factory</span></div>
+        <div class="sidebar-item" data-view="pipeline" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🔀</span><span class="sidebar-label">Pipeline</span></div>
+        <div class="sidebar-item" data-view="feedback" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">💬</span><span class="sidebar-label">Feedback</span></div>
+    </nav>
+
     <header class="header">
         <div class="header-left">
             <div class="logo">
                 <span>🎯</span>
                 <span>Mission Control</span>
             </div>
-            <nav class="nav-tabs">
-                <div class="nav-tab active" data-view="tasks" onclick="switchView('tasks')">Tasks</div>
-                <div class="nav-tab" data-view="docs" onclick="switchView('docs')">Docs</div>
-                <div class="nav-tab" data-view="people" onclick="switchView('people')">People</div>
-            </nav>
-            
+        </div>
+        <div class="header-right">
             <!-- Search -->
             <div class="search-container">
                 <div class="search-input-wrapper">
-                    <input type="text" 
-                           id="search-input" 
-                           class="search-input" 
-                           placeholder="Search tasks..." 
+                    <input type="text"
+                           id="search-input"
+                           class="search-input"
+                           placeholder="Search... ⌘K"
                            oninput="handleSearch(this.value)"
                            onkeydown="if(event.key==='Escape'){clearSearch()}">
                     <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2188,9 +2296,9 @@
                     <span>📦 Archive</span>
                 </label>
             </div>
-        </div>
-        <div class="header-right">
             <span class="live-indicator live" id="live-indicator">Live</span>
+            <button class="btn btn-secondary" id="btn-pause" onclick="togglePause()">⏸ Pause</button>
+            <button class="btn btn-secondary" onclick="pingAgent()">Ping Henry</button>
             <button class="btn btn-secondary" onclick="pollForUpdates(); window.location.reload()">↻ Refresh</button>
 
             <!-- Not Logged In -->
@@ -2255,7 +2363,11 @@
     </div>
 
     <div class="filters" id="filters">
-        <button class="filter-btn active" data-filter="all">All projects</button>
+        <button class="btn btn-green" onclick="openNewTask('backlog')">+ New task</button>
+        <div class="assignee-filters" id="assignee-filters"></div>
+        <select class="filter-select" id="project-filter-select" onchange="filterByProject(this.value)">
+            <option value="all">All projects</option>
+        </select>
     </div>
 
     <main class="main">
@@ -2343,7 +2455,7 @@
 
         <aside class="activity" id="activity-sidebar">
             <div class="activity-header">
-                <span>ACTIVITY</span>
+                <span><span class="live-dot"></span>Live Activity</span>
                 <button class="activity-toggle" onclick="toggleActivity()" title="Hide Activity">
                     <span id="activity-toggle-icon">✕</span>
                 </button>
@@ -2727,6 +2839,10 @@
                     <select class="form-input" id="task-project">
                         <!-- Populated dynamically from STATE.data.projects -->
                     </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Assignee</label>
+                    <input type="text" class="form-input" id="task-assignee" placeholder="e.g. Alex, Henry">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Tags</label>
@@ -3593,6 +3709,18 @@
         });
 
         // === TOAST NOTIFICATIONS ===
+        let isPaused = false;
+        function togglePause() {
+            isPaused = !isPaused;
+            const btn = document.getElementById('btn-pause');
+            btn.textContent = isPaused ? '▶ Resume' : '⏸ Pause';
+            showToast(isPaused ? 'warning' : 'success', isPaused ? 'Agents paused' : 'Agents resumed');
+        }
+
+        function pingAgent() {
+            showToast('success', '📡 Pinged Henry');
+        }
+
         function showToast(type, message) {
             const container = document.getElementById('toast-container');
             const toast = document.createElement('div');
@@ -3714,6 +3842,11 @@
                 // Apply project filter
                 if (currentFilter !== 'all') {
                     tasks = tasks.filter(t => t.project === currentFilter || (t.tags && t.tags.includes(currentFilter)));
+                }
+
+                // Apply assignee filter
+                if (currentAssigneeFilter !== 'all') {
+                    tasks = tasks.filter(t => t.assignee === currentAssigneeFilter);
                 }
 
                 // Sort: Done column by completedAt (newest first), others by priority + sortOrder
@@ -3887,6 +4020,22 @@
                     ${reviewActions}
                     ${archiveActions}
                     ${unarchiveActions}
+                    ${(() => {
+                        const data = STATE.data || FALLBACK_DATA;
+                        const proj = (data.projects || []).find(p => p.id === task.project);
+                        const projColor = proj ? (proj.color || '#3b82f6') : '#3b82f6';
+                        const projName = proj ? proj.name : (task.project || '');
+                        const assigneeInitial = task.assignee ? task.assignee.charAt(0).toUpperCase() : '';
+                        const timeStr = task.createdAt ? formatTimeAgo(task.createdAt) : '';
+                        return projName || timeStr ? `
+                            <div class="task-card-footer">
+                                ${projName ? `<span class="project-badge" style="background:${projColor}22; color:${projColor}">
+                                    ${assigneeInitial ? `<span class="badge-initial" style="background:${projColor}">${assigneeInitial}</span>` : ''}
+                                    ${projName}
+                                </span>` : ''}
+                                ${timeStr ? `<span class="task-timestamp">${timeStr}</span>` : ''}
+                            </div>` : '';
+                    })()}
                 </div>
             `;
         }
@@ -4148,6 +4297,11 @@
                     tasks = tasks.filter(t => t.project === currentFilter || (t.tags && t.tags.includes(currentFilter)));
                 }
 
+                // Apply assignee filter
+                if (currentAssigneeFilter !== 'all') {
+                    tasks = tasks.filter(t => t.assignee === currentAssigneeFilter);
+                }
+
                 // Sort: Done column by completedAt (newest first), others by priority + sortOrder
                 if (status === 'done') {
                     tasks.sort((a, b) => {
@@ -4236,8 +4390,19 @@
             const container = document.getElementById('activity-list');
             const data = STATE.data || FALLBACK_DATA;
             const activities = data.activities || FALLBACK_DATA.activities;
-            container.innerHTML = activities.map(a => `
-                <div class="activity-item">
+            container.innerHTML = activities.map(a => {
+                if (a.type === 'agent_working') {
+                    return `<div class="activity-item">
+                        <div class="activity-dot completed"></div>
+                        <div class="activity-content">
+                            <span class="activity-actor">🟢 ${a.actor}</span>
+                            <span class="activity-action"> — </span>
+                            <span class="activity-task">${a.task}</span>
+                            <div class="activity-time">${a.time}</div>
+                        </div>
+                    </div>`;
+                }
+                return `<div class="activity-item">
                     <div class="activity-dot ${a.type}"></div>
                     <div class="activity-content">
                         <span class="activity-actor">${a.actor}</span>
@@ -4245,8 +4410,8 @@
                         <span class="activity-task">${a.task}</span>
                         <div class="activity-time">${a.time}</div>
                     </div>
-                </div>
-            `).join('');
+                </div>`;
+            }).join('');
         }
 
         function getActionText(activity) {
@@ -4280,19 +4445,33 @@
         }
 
         function renderFilters() {
-            const container = document.getElementById('filters');
             const data = STATE.data || FALLBACK_DATA;
             const projects = data.projects || FALLBACK_DATA.projects;
-            const projectButtons = projects.map(p =>
-                `<button class="filter-btn" data-filter="${p.id}" onclick="filterByProject('${p.id}')">${p.icon} ${p.name}</button>`
-            ).join('');
-            container.innerHTML = `
-                <button class="filter-btn active" data-filter="all" onclick="filterByProject('all')">All projects</button>
-                ${projectButtons}
-            `;
+
+            // Populate project dropdown
+            const sel = document.getElementById('project-filter-select');
+            if (sel) {
+                sel.innerHTML = '<option value="all">All projects</option>' +
+                    projects.map(p => `<option value="${p.id}" ${currentFilter === p.id ? 'selected' : ''}>${p.icon} ${p.name}</option>`).join('');
+            }
+
+            // Populate assignee filter buttons
+            const assigneeContainer = document.getElementById('assignee-filters');
+            if (assigneeContainer) {
+                const assignees = [...new Set(data.tasks.filter(t => t.assignee).map(t => t.assignee))];
+                const colors = ['#3b82f6','#10b981','#f59e0b','#ef4444','#8b5cf6','#ec4899'];
+                assigneeContainer.innerHTML =
+                    `<button class="assignee-btn ${currentAssigneeFilter === 'all' ? 'active' : ''}" onclick="filterByAssignee('all')">All</button>` +
+                    assignees.map((name, i) => {
+                        const color = colors[i % colors.length];
+                        const initial = name.charAt(0).toUpperCase();
+                        return `<button class="assignee-btn ${currentAssigneeFilter === name ? 'active' : ''}" onclick="filterByAssignee('${name.replace(/'/g, "\\'")}')"><span class="badge-initial" style="background:${color}">${initial}</span> ${name}</button>`;
+                    }).join('');
+            }
         }
 
         let currentFilter = 'all';
+        let currentAssigneeFilter = 'all';
         let searchQuery = '';
         let showArchivedInSearch = false;
 
@@ -4600,13 +4779,14 @@
 
         function filterByProject(projectId) {
             currentFilter = projectId;
-
-            // Update active state
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.filter === projectId);
-            });
-
             renderTasks();
+            renderFilters();
+        }
+
+        function filterByAssignee(name) {
+            currentAssigneeFilter = name;
+            renderTasks();
+            renderFilters();
         }
 
         function updateStats() {
@@ -4687,6 +4867,7 @@
             document.getElementById('task-status').value = task.isTemplate ? (task.baseStatus || 'backlog') : task.status;
             document.getElementById('task-priority').value = task.priority;
             document.getElementById('task-project').value = task.project;
+            document.getElementById('task-assignee').value = task.assignee || '';
             document.getElementById('btn-delete-task').style.display = 'block';
             
             // Show/hide "As Cron" button based on task type
@@ -4975,6 +5156,7 @@
             document.getElementById('task-status').value = status;
             document.getElementById('task-priority').value = 'medium';
             document.getElementById('task-project').value = 'system';
+            document.getElementById('task-assignee').value = '';
             document.getElementById('btn-delete-task').style.display = 'none';
 
             // Reset tags
@@ -5000,6 +5182,7 @@
             const status = document.getElementById('task-status').value;
             const priority = document.getElementById('task-priority').value;
             const project = document.getElementById('task-project').value;
+            const assignee = document.getElementById('task-assignee').value.trim();
             const tags = currentTaskTags.length > 0 ? [...currentTaskTags] : [project];
 
             if (!title) {
@@ -5015,6 +5198,7 @@
                     task.description = description;
                     task.priority = priority;
                     task.project = project;
+                    task.assignee = assignee;
                     task.tags = tags.length > 0 ? tags : [project];
                     
                     if (isEditingTemplate) {
@@ -5030,6 +5214,7 @@
                     title: title,
                     description: description,
                     project: project,
+                    assignee: assignee,
                     tags: tags.length > 0 ? tags : [project],
                     subtasks: [],
                     priority: priority,
@@ -5376,9 +5561,9 @@
                 view.style.display = 'block';
             }
 
-            // Update nav tabs
-            document.querySelectorAll('.nav-tab').forEach(tab => {
-                tab.classList.toggle('active', tab.dataset.view === viewName);
+            // Update sidebar active state
+            document.querySelectorAll('.sidebar-item').forEach(item => {
+                item.classList.toggle('active', item.dataset.view === viewName);
             });
         }
 
@@ -5538,11 +5723,12 @@
             document.getElementById('task-status').value = 'backlog';
             document.getElementById('task-priority').value = 'medium';
             document.getElementById('task-project').value = 'system';
+            document.getElementById('task-assignee').value = '';
             document.getElementById('btn-delete-task').style.display = 'none';
-            
+
             currentTaskTags = [];
             renderTagChips();
-            
+
             document.getElementById('subtasks-list').innerHTML = '<div style="color: var(--text-secondary); font-size: 0.875rem;">No subtasks yet</div>';
             document.getElementById('comments-list').innerHTML = '<div style="color: var(--text-secondary); font-size: 0.875rem;">No comments yet</div>';
             
@@ -6994,6 +7180,14 @@
                 if (reopen) reopen.style.display = 'flex';
             }
             // Auth is now handled by checkAuth() in the login script below
+
+            // Cmd+K / Ctrl+K to focus search
+            document.addEventListener('keydown', (e) => {
+                if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                    e.preventDefault();
+                    document.getElementById('search-input').focus();
+                }
+            });
         });
 
         // Pause polling when tab not visible
@@ -7230,6 +7424,35 @@
 
         // Check auth on page load
         checkAuth();
+
+        // Starfield background
+        (function initStarfield() {
+            const canvas = document.getElementById('starfield');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let stars = [];
+            function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+            function create() {
+                stars = [];
+                for (let i = 0; i < 150; i++) {
+                    stars.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, size: Math.random() * 1.5 + 0.3, speed: Math.random() * 0.12 + 0.02, opacity: Math.random() * 0.5 + 0.15 });
+                }
+            }
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (const s of stars) {
+                    s.y += s.speed;
+                    if (s.y > canvas.height) { s.y = 0; s.x = Math.random() * canvas.width; }
+                    ctx.fillStyle = `rgba(255,255,255,${s.opacity})`;
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                requestAnimationFrame(draw);
+            }
+            resize(); create(); draw();
+            window.addEventListener('resize', () => { resize(); create(); });
+        })();
     </script>
 </body>
 </html>
