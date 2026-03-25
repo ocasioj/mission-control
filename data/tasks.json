@@ -13,20 +13,6 @@
       "createdAt": "2026-03-25T00:13:20.865Z",
       "status": "in_progress",
       "sortOrder": 0
-    },
-    {
-      "id": "task_1774398367582",
-      "title": "code bug fix",
-      "description": "",
-      "project": "",
-      "tags": [
-        ""
-      ],
-      "subtasks": [],
-      "priority": "medium",
-      "createdAt": "2026-03-25T00:26:07.582Z",
-      "status": "in_progress",
-      "sortOrder": 1
     }
   ],
   "projects": [
@@ -177,5 +163,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-25T00:26:22.561Z"
+  "lastUpdated": "2026-03-25T00:26:48.158Z"
 }
