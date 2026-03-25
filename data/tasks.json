@@ -11,7 +11,7 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-03-25T00:13:20.865Z",
-      "status": "backlog",
+      "status": "in_progress",
       "sortOrder": 0
     }
   ],
@@ -48,6 +48,14 @@
     }
   ],
   "activities": [
+    {
+      "type": "moved",
+      "actor": "ocasioj",
+      "task": "Fix login bug",
+      "from": "backlog",
+      "to": "in_progress",
+      "time": "just now"
+    },
     {
       "type": "moved",
       "actor": "ocasioj",
@@ -251,5 +259,5 @@
       "time": "3 days ago"
     }
   ],
-  "lastUpdated": "2026-03-25T00:35:53.864Z"
+  "lastUpdated": "2026-03-25T00:37:40.953Z"
 }
