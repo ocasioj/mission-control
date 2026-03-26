@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "JoseClaw",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 70,
+      "lastActivity": 1774498656317,
+      "lastActivityAgo": "27s ago",
+      "isActive": true,
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774498628343\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
       "id": "main",
       "name": "Joe",
       "desc": "Web chat & voice call handler, general assistant",
       "sessionCount": 7,
       "lastActivity": 1774497880554,
-      "lastActivityAgo": "8m ago",
+      "lastActivityAgo": "13m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "JoseClaw",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 71,
-      "lastActivity": 1774497868821,
-      "lastActivityAgo": "8m ago",
-      "isActive": false,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774497841914\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
-      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "planner",
@@ -28,7 +28,7 @@
       "desc": "",
       "sessionCount": 1,
       "lastActivity": 1773548092913,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Sun 2026-03-15 00:13 EDT] Build a detailed 4-day family trip itinerary for Montreal, Canada. Group: 2 adults, 2 childre",
       "lastModel": "claude-sonnet-4-5"
@@ -39,7 +39,7 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 1,
       "lastActivity": 1773547999020,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Sun 2026-03-15 00:12 EDT] Compare hotel options in Montreal, Canada for a family of 4 (2 adults, 2 children), 4 nights.",
       "lastModel": "claude-sonnet-4-5"
@@ -133,5 +133,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774498383565
+  "updatedAt": 1774498683500
 }
