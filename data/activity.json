@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1774513178885,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1774509000159,
@@ -75,13 +82,6 @@
       "agentName": "Joe",
       "timestamp": 1774436400163,
       "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
-      "turns": 1
-    },
-    {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1774425848606,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
       "turns": 1
     },
     {
@@ -251,19 +251,19 @@
     },
     {
       "day": "2026-03-25",
-      "total": 9,
+      "total": 8,
       "byAgent": {
-        "signal-chat": 8,
-        "main": 1
+        "signal-chat": 8
       }
     },
     {
       "day": "2026-03-26",
-      "total": 6,
+      "total": 7,
       "byAgent": {
-        "signal-chat": 6
+        "signal-chat": 6,
+        "main": 1
       }
     }
   ],
-  "updatedAt": 1774513052391
+  "updatedAt": 1774513352403
 }
