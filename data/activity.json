@@ -87,13 +87,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774422000303,
-      "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774413108867,
       "message": "[cron:779a4a3d-4ce1-456c-b6bf-d877868f928f Mission Control UI Update Status] The dev agent is still ",
       "turns": 1
@@ -265,9 +258,9 @@
     },
     {
       "day": "2026-03-25",
-      "total": 11,
+      "total": 10,
       "byAgent": {
-        "signal-chat": 10,
+        "signal-chat": 9,
         "main": 1
       }
     },
@@ -279,5 +272,5 @@
       }
     }
   ],
-  "updatedAt": 1774508552036
+  "updatedAt": 1774508852382
 }
