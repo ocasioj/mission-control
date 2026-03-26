@@ -6,7 +6,7 @@
       "desc": "Web chat & voice call handler, general assistant",
       "sessionCount": 7,
       "lastActivity": 1774496080811,
-      "lastActivityAgo": "18m ago",
+      "lastActivityAgo": "23m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -15,7 +15,7 @@
       "id": "signal-chat",
       "name": "JoseClaw",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 74,
+      "sessionCount": 73,
       "lastActivity": 1774490409923,
       "lastActivityAgo": "1h ago",
       "isActive": false,
@@ -133,5 +133,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774497183579
+  "updatedAt": 1774497484047
 }
