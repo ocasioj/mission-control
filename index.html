@@ -2277,6 +2277,96 @@
         .agent-modal-stat-label { color: var(--text-secondary); }
         .agent-modal-stat-value { font-weight: 600; text-align: right; max-width: 55%; }
 
+        /* ── Activity View ────────────────────────────────────────────────── */
+        .activity-layout { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; }
+        .activity-feed { flex: 1; min-width: 280px; }
+        .activity-digest { flex: 0 0 280px; }
+        .activity-event {
+            display: flex; gap: 0.75rem; padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .activity-event:last-child { border-bottom: none; }
+        .activity-dot {
+            flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%;
+            margin-top: 4px;
+        }
+        .activity-body { flex: 1; min-width: 0; }
+        .activity-agent { font-weight: 700; font-size: 0.85rem; }
+        .activity-msg { font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .activity-time { font-size: 0.7rem; color: #555; margin-top: 2px; font-family: monospace; }
+        .digest-chart { display: flex; flex-direction: column; gap: 6px; margin-top: 0.75rem; }
+        .digest-day { display: flex; align-items: center; gap: 8px; font-size: 0.72rem; }
+        .digest-day-label { width: 42px; color: var(--text-secondary); font-family: monospace; flex-shrink: 0; }
+        .digest-bar-wrap { flex: 1; height: 14px; background: var(--bg-card); border-radius: 4px; overflow: hidden; }
+        .digest-bar { height: 100%; border-radius: 4px; background: var(--accent-blue); transition: width 0.4s; }
+        .digest-count { width: 20px; text-align: right; color: var(--text-secondary); flex-shrink: 0; }
+
+        /* ── Health View ──────────────────────────────────────────────────── */
+        .health-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+        .health-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 1rem;
+        }
+        .health-card-title { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: 0.5rem; }
+        .health-stat { font-size: 1.6rem; font-weight: 800; }
+        .health-sub { font-size: 0.72rem; color: var(--text-secondary); margin-top: 3px; }
+        .container-row { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--border); font-size: 0.8rem; }
+        .container-row:last-child { border-bottom: none; }
+        .container-name { font-weight: 600; flex: 1; }
+        .container-state { font-size: 0.7rem; padding: 2px 7px; border-radius: 4px; font-weight: 600; }
+        .disk-bar-wrap { background: var(--bg-secondary); border-radius: 6px; height: 10px; overflow: hidden; margin-top: 6px; }
+        .disk-bar { height: 100%; border-radius: 6px; transition: width 0.4s; }
+
+        /* ── Goals View ───────────────────────────────────────────────────── */
+        .goals-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .goal-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 1rem; position: relative;
+        }
+        .goal-area { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.4rem; }
+        .goal-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; }
+        .goal-owner { font-size: 0.72rem; color: var(--text-secondary); margin-bottom: 0.7rem; }
+        .goal-progress-wrap { background: var(--bg-secondary); border-radius: 6px; height: 8px; overflow: hidden; }
+        .goal-progress-bar { height: 100%; border-radius: 6px; transition: width 0.4s; }
+        .goal-pct { font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px; text-align: right; }
+        .goal-notes { font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.5rem; }
+        .pipeline-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .pipeline-stage {
+            flex: 1; min-width: 120px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 10px; padding: 0.85rem; text-align: center;
+        }
+        .pipeline-stage-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); }
+        .pipeline-stage-count { font-size: 1.8rem; font-weight: 800; margin: 4px 0; }
+        .pipeline-stage-value { font-size: 0.75rem; color: var(--text-secondary); }
+
+        /* ── Quick Actions floating button + panel ────────────────────────── */
+        #qa-btn {
+            position: fixed; bottom: 1.5rem; right: 1.5rem;
+            width: 48px; height: 48px; border-radius: 50%;
+            background: var(--accent-blue);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; cursor: pointer; z-index: 500;
+            box-shadow: 0 4px 20px rgba(59,130,246,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        #qa-btn:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(59,130,246,0.55); }
+        #qa-panel {
+            position: fixed; bottom: 5rem; right: 1.5rem;
+            width: 300px; max-height: 70vh; overflow-y: auto;
+            background: var(--bg-primary); border: 1px solid var(--border);
+            border-radius: 14px; padding: 1rem;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+            z-index: 499; animation: scaleIn 0.15s ease;
+        }
+        .qa-preset {
+            padding: 0.6rem 0.75rem; border-radius: 8px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            font-size: 0.8rem; cursor: pointer; margin-bottom: 6px;
+            transition: background 0.15s;
+        }
+        .qa-preset:hover { background: var(--bg-secondary); border-color: var(--accent-blue); }
+
         /* Docs two-panel layout (reuses mem-layout pattern) */
         /* Docs two-panel layout (reuses mem-layout pattern) */
         .docs-layout { display: flex; gap: 0; height: calc(100vh - 160px); min-height: 500px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
@@ -2854,10 +2944,9 @@
         <div class="sidebar-logo"><span>🎯</span> Mission Control</div>
         <div class="sidebar-section-label">Core</div>
         <div class="sidebar-item active" data-view="tasks" onclick="switchView('tasks')"><span class="sidebar-icon">📋</span><span class="sidebar-label">Tasks</span></div>
-        <div class="sidebar-item" data-view="agents" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🤖</span><span class="sidebar-label">Agents</span></div>
-        <div class="sidebar-item" data-view="content" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">📄</span><span class="sidebar-label">Content</span></div>
-        <div class="sidebar-item" data-view="approvals" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">✅</span><span class="sidebar-label">Approvals</span></div>
-        <div class="sidebar-item" data-view="council" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">👥</span><span class="sidebar-label">Council</span></div>
+        <div class="sidebar-item" data-view="activity" onclick="switchView('activity')"><span class="sidebar-icon">⚡</span><span class="sidebar-label">Activity</span></div>
+        <div class="sidebar-item" data-view="health" onclick="switchView('health')"><span class="sidebar-icon">💚</span><span class="sidebar-label">Health</span></div>
+        <div class="sidebar-item" data-view="goals" onclick="switchView('goals')"><span class="sidebar-icon">🎯</span><span class="sidebar-label">Goals</span></div>
         <div class="sidebar-section-label">Plan</div>
         <div class="sidebar-item" data-view="calendar" onclick="switchView('calendar')"><span class="sidebar-icon">📅</span><span class="sidebar-label">Calendar</span></div>
         <div class="sidebar-item" data-view="projects" onclick="switchView('projects')"><span class="sidebar-icon">📁</span><span class="sidebar-label">Projects</span></div>
@@ -3203,6 +3292,55 @@
             </div>
         </div>
     </div><!-- END view-office -->
+
+    <!-- Activity View -->
+    <div id="view-activity" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>⚡ Activity</h2><p class="section-subtitle" id="activity-subtitle">Recent agent sessions across Jose & Co.</p></div>
+                <button onclick="renderActivityView()" style="background:var(--bg-card);border:1px solid var(--border);color:var(--text-secondary);padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px;">↻ Refresh</button>
+            </div>
+            <div id="activity-content"><div class="empty-state-large">Loading activity...</div></div>
+        </div>
+    </div><!-- END view-activity -->
+
+    <!-- Health View -->
+    <div id="view-health" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>💚 Health</h2><p class="section-subtitle" id="health-subtitle">System status — containers, disk, cron jobs</p></div>
+                <button onclick="renderHealthView()" style="background:var(--bg-card);border:1px solid var(--border);color:var(--text-secondary);padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px;">↻ Refresh</button>
+            </div>
+            <div id="health-content"><div class="empty-state-large">Loading health data...</div></div>
+        </div>
+    </div><!-- END view-health -->
+
+    <!-- Goals View -->
+    <div id="view-goals" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>🎯 Goals</h2><p class="section-subtitle">OKRs and revenue pipeline for Jose & Co.</p></div>
+            </div>
+            <div id="goals-content"><div class="empty-state-large">Loading goals...</div></div>
+        </div>
+    </div><!-- END view-goals -->
+
+    <!-- Quick Actions floating panel -->
+    <div id="qa-btn" onclick="toggleQuickActions()" title="Quick Actions">⚡</div>
+    <div id="qa-panel" style="display:none;">
+        <div style="font-size:0.75rem;font-weight:700;color:var(--text-secondary);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.85rem;">Quick Actions</div>
+        <div class="qa-preset" onclick="sendQuickAction('Good morning Joe — what\'s on the agenda today?')">🌅 Morning briefing</div>
+        <div class="qa-preset" onclick="sendQuickAction('Ask Scout to do a quick research summary on AI agent trends this week.')">🔍 Scout research</div>
+        <div class="qa-preset" onclick="sendQuickAction('Ask Nova to pull the latest IBM stock data and give me a quick summary.')">📊 Nova: IBM update</div>
+        <div class="qa-preset" onclick="sendQuickAction('Ask Director to outline a YouTube video idea for this week.')">🎬 Director: video idea</div>
+        <div class="qa-preset" onclick="sendQuickAction('Ask Amp to draft 3 LinkedIn post ideas for today.')">📣 Amp: post ideas</div>
+        <div class="qa-preset" onclick="sendQuickAction('Ask Ledger to give me a quick financial summary.')">💰 Ledger: summary</div>
+        <div class="qa-preset" onclick="sendQuickAction('Ask Closer to check the sales pipeline and recommend next steps.')">🤝 Closer: pipeline</div>
+        <div style="margin-top:0.75rem;border-top:1px solid var(--border);padding-top:0.75rem;">
+            <textarea id="qa-custom" placeholder="Type any message to send via Signal..." rows="2" style="width:100%;background:var(--bg-secondary);border:1px solid var(--border);border-radius:6px;color:var(--text-primary);padding:8px;font-size:0.8rem;resize:vertical;font-family:inherit;"></textarea>
+            <button onclick="sendQuickAction(document.getElementById('qa-custom').value)" style="margin-top:6px;width:100%;background:var(--accent-blue);border:none;color:white;padding:8px;border-radius:6px;cursor:pointer;font-size:0.82rem;font-weight:600;">Send via Signal</button>
+        </div>
+    </div>
 
     <!-- Auth Modal -->
     <div class="modal-overlay" id="auth-modal" onclick="if(event.target===this)hideAuthModal()">
@@ -6868,6 +7006,219 @@
             }, 60000);
         }
 
+        // ── Activity View ─────────────────────────────────────────────────────────
+
+        async function renderActivityView() {
+            const el  = document.getElementById('activity-content');
+            const sub = document.getElementById('activity-subtitle');
+            if (!el) return;
+            el.innerHTML = '<div class="empty-state-large">Loading...</div>';
+            let data;
+            try { data = await fetchGitHubDataFile('activity.json'); } catch(e) {
+                el.innerHTML = '<div class="empty-state-large">Could not load activity data.</div>'; return;
+            }
+            const events = data.events || [];
+            const digest = data.digest || [];
+            if (sub) sub.textContent = `${events.length} sessions in the last 7 days`;
+
+            const maxTotal = Math.max(...digest.map(d => d.total), 1);
+            const digestHtml = `
+                <div class="gateway-card" style="margin-bottom:1rem">
+                    <h3 style="font-size:0.85rem;margin-bottom:0.75rem">7-Day Activity</h3>
+                    <div class="digest-chart">
+                        ${digest.map(d => {
+                            const label = d.day.slice(5); // MM-DD
+                            const pct = Math.round(d.total / maxTotal * 100);
+                            return `<div class="digest-day">
+                                <span class="digest-day-label">${escapeHtml(label)}</span>
+                                <div class="digest-bar-wrap"><div class="digest-bar" style="width:${pct}%"></div></div>
+                                <span class="digest-count">${d.total}</span>
+                            </div>`;
+                        }).join('')}
+                    </div>
+                </div>`;
+
+            const feedHtml = events.length === 0
+                ? '<div class="empty-state-large">No sessions found in the last 7 days.</div>'
+                : events.map(ev => {
+                    const color = TEAM_COLOR[ev.agentId] || '#6b7280';
+                    const ago = ev.timestamp ? timeAgoClient(ev.timestamp) : '';
+                    return `<div class="activity-event">
+                        <div class="activity-dot" style="background:${color}"></div>
+                        <div class="activity-body">
+                            <div class="activity-agent" style="color:${color}">${escapeHtml(ev.agentName)}</div>
+                            ${ev.message ? `<div class="activity-msg">${escapeHtml(ev.message)}</div>` : ''}
+                            <div class="activity-time">${ago}${ev.turns > 1 ? ` · ${ev.turns} turns` : ''}</div>
+                        </div>
+                    </div>`;
+                }).join('');
+
+            el.innerHTML = `<div class="activity-layout">
+                <div class="activity-feed">${feedHtml}</div>
+                <div class="activity-digest">${digestHtml}</div>
+            </div>`;
+        }
+
+        function timeAgoClient(ms) {
+            const s = Math.floor((Date.now() - ms) / 1000);
+            if (s < 60) return `${s}s ago`;
+            if (s < 3600) return `${Math.floor(s/60)}m ago`;
+            if (s < 86400) return `${Math.floor(s/3600)}h ago`;
+            return `${Math.floor(s/86400)}d ago`;
+        }
+
+        // ── Health View ────────────────────────────────────────────────────────────
+
+        function fmtBytes(b) {
+            if (!b) return '0B';
+            if (b < 1024) return b + 'B';
+            if (b < 1024*1024) return (b/1024).toFixed(0) + 'KB';
+            if (b < 1024*1024*1024) return (b/1024/1024).toFixed(1) + 'MB';
+            return (b/1024/1024/1024).toFixed(2) + 'GB';
+        }
+
+        async function renderHealthView() {
+            const el  = document.getElementById('health-content');
+            const sub = document.getElementById('health-subtitle');
+            if (!el) return;
+            el.innerHTML = '<div class="empty-state-large">Loading...</div>';
+            let data;
+            try { data = await fetchGitHubDataFile('health.json'); } catch(e) {
+                el.innerHTML = '<div class="empty-state-large">Could not load health data. Server push pending.</div>'; return;
+            }
+
+            const disk = data.disk || {};
+            const diskPct = disk.percent || 0;
+            const diskColor = diskPct > 85 ? '#ef4444' : diskPct > 65 ? '#f59e0b' : '#10b981';
+            const containers = data.containers || [];
+            const cronErrors = data.cronErrors || [];
+            if (sub) sub.textContent = `${containers.length} containers · ${data.cronTotal||0} cron jobs · updated ${timeAgoClient(data.updatedAt)}`;
+
+            const stateColor = s => s === 'running' ? '#10b981' : s === 'exited' ? '#ef4444' : '#f59e0b';
+            const stateBg    = s => s === 'running' ? 'rgba(16,185,129,0.1)' : s === 'exited' ? 'rgba(239,68,68,0.1)' : 'rgba(245,158,11,0.1)';
+
+            el.innerHTML = `
+                <div class="health-grid">
+                    <div class="health-card" style="border-color:${data.gatewayUp?'rgba(16,185,129,0.3)':'rgba(239,68,68,0.3)'}">
+                        <div class="health-card-title">Gateway</div>
+                        <div class="health-stat" style="color:${data.gatewayUp?'#10b981':'#ef4444'}">${data.gatewayUp?'Online':'Offline'}</div>
+                        <div class="health-sub">reservadoai.tech · port 18789</div>
+                    </div>
+                    <div class="health-card">
+                        <div class="health-card-title">Disk Usage</div>
+                        <div class="health-stat" style="color:${diskColor}">${diskPct}%</div>
+                        <div class="disk-bar-wrap"><div class="disk-bar" style="width:${diskPct}%;background:${diskColor}"></div></div>
+                        <div class="health-sub">${fmtBytes(disk.usedBytes)} / ${fmtBytes(disk.totalBytes)}</div>
+                    </div>
+                    <div class="health-card" style="border-color:${cronErrors.length>0?'rgba(239,68,68,0.3)':''}">
+                        <div class="health-card-title">Cron Jobs</div>
+                        <div class="health-stat" style="color:${cronErrors.length>0?'#ef4444':'#10b981'}">${cronErrors.length===0?'All OK':cronErrors.length+' errors'}</div>
+                        <div class="health-sub">${data.cronTotal||0} total jobs</div>
+                        ${cronErrors.map(e=>`<div style="font-size:0.72rem;color:#ef4444;margin-top:2px">${escapeHtml(e.name)}: ${e.errors} errors</div>`).join('')}
+                    </div>
+                    <div class="health-card">
+                        <div class="health-card-title">Containers</div>
+                        <div class="health-stat">${containers.filter(c=>c.state==='running').length}</div>
+                        <div class="health-sub">running of ${containers.length} total</div>
+                    </div>
+                </div>
+                <div class="gateway-card">
+                    <h3 style="font-size:0.85rem;margin-bottom:0.75rem">Containers</h3>
+                    ${containers.map(c=>`<div class="container-row">
+                        <div class="container-name">${escapeHtml(c.name||c.image)}</div>
+                        <div style="font-size:0.7rem;color:var(--text-secondary);margin-right:8px">${escapeHtml(c.image.split(':')[0].split('/').pop()||'')}</div>
+                        <span class="container-state" style="color:${stateColor(c.state)};background:${stateBg(c.state)}">${escapeHtml(c.state)}</span>
+                    </div>`).join('')}
+                </div>`;
+        }
+
+        // ── Goals View ─────────────────────────────────────────────────────────────
+
+        async function renderGoalsView() {
+            const el = document.getElementById('goals-content');
+            if (!el) return;
+            el.innerHTML = '<div class="empty-state-large">Loading...</div>';
+            let data;
+            try { data = await fetchGitHubDataFile('goals.json'); } catch(e) {
+                el.innerHTML = '<div class="empty-state-large">Could not load goals. Server push pending.</div>'; return;
+            }
+
+            const goals = data.goals || [];
+            const pipeline = data.pipeline || [];
+
+            const areaColor = { Product:'#3b82f6', Content:'#8b5cf6', Revenue:'#10b981', Operations:'#f97316' };
+            const statusColor = { 'on-track':'#10b981', 'in-progress':'#f59e0b', 'not-started':'#6b7280', 'blocked':'#ef4444' };
+            const statusLabel = { 'on-track':'On Track', 'in-progress':'In Progress', 'not-started':'Not Started', 'blocked':'Blocked' };
+
+            const goalsHtml = `<div class="goals-grid">
+                ${goals.map(g => {
+                    const ac = areaColor[g.area] || '#6b7280';
+                    const sc = statusColor[g.status] || '#6b7280';
+                    return `<div class="goal-card" style="border-top:3px solid ${ac}">
+                        <div class="goal-area" style="color:${ac}">${escapeHtml(g.area)}</div>
+                        <div class="goal-title">${escapeHtml(g.title)}</div>
+                        <div class="goal-owner">👤 ${escapeHtml(g.owner)}</div>
+                        <div class="goal-progress-wrap">
+                            <div class="goal-progress-bar" style="width:${g.progress}%;background:${ac}"></div>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;margin-top:4px">
+                            <span style="font-size:0.65rem;font-weight:700;color:${sc}">${escapeHtml(statusLabel[g.status]||g.status)}</span>
+                            <span class="goal-pct">${g.progress}%</span>
+                        </div>
+                        ${g.notes ? `<div class="goal-notes">${escapeHtml(g.notes)}</div>` : ''}
+                    </div>`;
+                }).join('')}
+            </div>`;
+
+            const pipelineHtml = pipeline.length ? `
+                <h3 style="font-size:0.9rem;font-weight:700;margin-bottom:0.75rem">Sales Pipeline</h3>
+                <div class="pipeline-row">
+                    ${pipeline.map((s,i) => {
+                        const colors = ['#6b7280','#3b82f6','#f59e0b','#10b981'];
+                        return `<div class="pipeline-stage" style="border-top:3px solid ${colors[i]||'#6b7280'}">
+                            <div class="pipeline-stage-label">${escapeHtml(s.stage)}</div>
+                            <div class="pipeline-stage-count" style="color:${colors[i]||'#6b7280'}">${s.count||0}</div>
+                            <div class="pipeline-stage-value">$${(s.value||0).toLocaleString()}</div>
+                        </div>`;
+                    }).join('')}
+                </div>` : '';
+
+            el.innerHTML = goalsHtml + pipelineHtml
+                + `<p style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.5rem">Ask Joe to update goals.json in workspace-signal-chat to customize these.</p>`;
+        }
+
+        // ── Quick Actions ──────────────────────────────────────────────────────────
+
+        let QA_OPEN = false;
+        function toggleQuickActions() {
+            QA_OPEN = !QA_OPEN;
+            document.getElementById('qa-panel').style.display = QA_OPEN ? 'block' : 'none';
+            document.getElementById('qa-btn').textContent = QA_OPEN ? '✕' : '⚡';
+        }
+
+        async function sendQuickAction(msg) {
+            if (!msg?.trim()) return;
+            const MC_URL = 'http://localhost:3100';
+            try {
+                const r = await fetch(`${MC_URL}/api/quick-action`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: msg.trim() }),
+                });
+                const j = await r.json();
+                if (j.ok) {
+                    showToast('success', 'Sent to Signal ✓');
+                    const ta = document.getElementById('qa-custom');
+                    if (ta) ta.value = '';
+                    toggleQuickActions();
+                } else {
+                    showToast('error', j.error || 'Send failed');
+                }
+            } catch(e) {
+                showToast('error', 'Could not reach Mission Control server');
+            }
+        }
+
         // ── Docs View ────────────────────────────────────────────────────────────
         // ── Docs View ────────────────────────────────────────────────────────────
 
@@ -7019,6 +7370,9 @@
             if (viewName === 'team') renderTeamView();
             if (viewName === 'docs') renderDocsView();
             if (viewName === 'office') renderOfficeView();
+            if (viewName === 'activity') renderActivityView();
+            if (viewName === 'health') renderHealthView();
+            if (viewName === 'goals') renderGoalsView();
             if (viewName !== 'office' && OFFICE_REFRESH_TIMER) { clearTimeout(OFFICE_REFRESH_TIMER); OFFICE_REFRESH_TIMER = null; }
             if (viewName !== 'office' && OFFICE_CLOCK_TIMER) { clearInterval(OFFICE_CLOCK_TIMER); OFFICE_CLOCK_TIMER = null; }
         }
