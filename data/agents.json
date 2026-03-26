@@ -2,22 +2,22 @@
   "agents": [
     {
       "id": "signal-chat",
-      "name": "JoseClaw",
+      "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 67,
       "lastActivity": 1774499122250,
-      "lastActivityAgo": "2m ago",
+      "lastActivityAgo": "3m ago",
       "isActive": true,
       "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774499101886\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "main",
-      "name": "Joe",
-      "desc": "Web chat & voice call handler, general assistant",
+      "name": "OpenClaw Web",
+      "desc": "Web chat & voice call handler",
       "sessionCount": 7,
       "lastActivity": 1774497880554,
-      "lastActivityAgo": "23m ago",
+      "lastActivityAgo": "24m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -133,5 +133,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774499283789
+  "updatedAt": 1774499345599
 }
