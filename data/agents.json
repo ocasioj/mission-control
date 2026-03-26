@@ -4,10 +4,10 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 68,
+      "sessionCount": 67,
       "lastActivity": 1774508400017,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
+      "lastActivityAgo": "7m ago",
+      "isActive": false,
       "lastMessage": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/heygen_dlq_report.py",
       "lastModel": "gemini-2.5-flash"
     },
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774507780846,
-      "lastActivityAgo": "12m ago",
+      "lastActivityAgo": "17m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774508550510
+  "updatedAt": 1774508850591
 }
