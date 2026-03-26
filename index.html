@@ -5835,13 +5835,10 @@
         const MC_BASE = 'http://localhost:61949';
 
         async function fetchGitHubDataFile(filename) {
-            const url = `https://api.github.com/repos/ocasioj/mission-control/contents/data/${filename}`;
-            const headers = { 'Cache-Control': 'no-cache' };
-            if (STATE.token) headers['Authorization'] = `token ${STATE.token}`;
-            const res = await fetch(url, { headers });
-            if (!res.ok) throw new Error(`GitHub fetch ${filename} failed: HTTP ${res.status}`);
-            const ghData = await res.json();
-            return JSON.parse(atob(ghData.content.replace(/\n/g, '')));
+            const url = `https://raw.githubusercontent.com/ocasioj/mission-control/main/data/${filename}?_=${Date.now()}`;
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`Fetch ${filename} failed: HTTP ${res.status}`);
+            return await res.json();
         }
 
         async function renderMemoryView() {
