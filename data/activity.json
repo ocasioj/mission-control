@@ -87,13 +87,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774421400156,
-      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774413108867,
       "message": "[cron:779a4a3d-4ce1-456c-b6bf-d877868f928f Mission Control UI Update Status] The dev agent is still ",
       "turns": 1
@@ -265,9 +258,9 @@
     },
     {
       "day": "2026-03-25",
-      "total": 12,
+      "total": 11,
       "byAgent": {
-        "signal-chat": 11,
+        "signal-chat": 10,
         "main": 1
       }
     },
@@ -279,5 +272,5 @@
       }
     }
   ],
-  "updatedAt": 1774507952282
+  "updatedAt": 1774508252363
 }
