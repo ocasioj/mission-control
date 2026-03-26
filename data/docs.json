@@ -139,10 +139,10 @@
       "name": "BILLING.md",
       "path": "/openclaw-data/workspace-signal-chat/BILLING.md",
       "category": "Notes",
-      "sizeBytes": 904,
-      "wordCount": 183,
-      "modifiedAt": 1774411202663.3665,
-      "content": "# Billing Ledger: AI Usage\n\n## Monthly Overview: March 2026\n| Provider | Model | Tokens (In/Out) | Estimated Cost |\n| :--- | :--- | :--- | :--- |\n| **Anthropic** | Claude Sonnet 4 5 | 182 / 17,982 | $1.03 |\n| **Anthropic** | Claude Sonnet 4 6 | 21 / 8,637 | $0.69 |\n| **Anthropic** | Claude Haiku 4 5 | 36 / 462 | $0.16 |\n| **Google** | Gemini 3 Pro Preview | 3,407,567 / 9,850 | $7.50 |\n| **Google** | Gemini 2.5 Flash | 19,897,561 / 89,827 | $7.20 |\n| **Google** | Gemini 3 Flash Preview | 1,430,851 / 13,600 | $0.78 |\n| **Google** | Gemini 2.5 Flash Lite | 177,401 / 5,052 | $0.02 |\n| **OpenAI** | Gpt 5 Mini | 1,251,038 / 19,507 | $0.38 |\n| **OpenAI** | Gpt 4O Mini | 485,397 / 1,771 | $0.10 |\n\n## Totals\n- **Total Tokens:** 26,816,742\n- **Total Est. Cost:** $17.86\n\n---\n*Note: Costs are estimated from per-response usage telemetry recorded in session JSONL logs. Updated: Wednesday, March 25, 2026.\n"
+      "sizeBytes": 838,
+      "wordCount": 169,
+      "modifiedAt": 1774497602348.4907,
+      "content": "# Billing Ledger: AI Usage\n\n## Monthly Overview: March 2026\n| Provider | Model | Tokens (In/Out) | Estimated Cost |\n| :--- | :--- | :--- | :--- |\n| **Anthropic** | Claude Sonnet 4 5 | 182 / 17,982 | $1.03 |\n| **Anthropic** | Claude Haiku 4 5 | 36 / 462 | $0.16 |\n| **Google** | Gemini 2.5 Flash | 4,305,061 / 39,723 | $1.46 |\n| **Google** | Gemini 3 Flash Preview | 1,430,851 / 13,600 | $0.78 |\n| **Google** | Gemini 3 Pro Preview | 47,110 / 1,822 | $0.12 |\n| **Google** | Gemini 2.5 Flash Lite | 179,836 / 5,169 | $0.02 |\n| **OpenAI** | Gpt 5 Mini | 1,215,797 / 17,260 | $0.36 |\n| **OpenAI** | Gpt 4O Mini | 485,397 / 1,771 | $0.10 |\n\n## Totals\n- **Total Tokens:** 7,762,059\n- **Total Est. Cost:** $4.02\n\n---\n*Note: Costs are estimated from per-response usage telemetry recorded in session JSONL logs. Updated: Thursday, March 26, 2026.\n"
     },
     {
       "name": "BUGS.md",
@@ -334,5 +334,5 @@
       "content": "# Todo List: Rene\n"
     }
   ],
-  "updatedAt": 1774497485408
+  "updatedAt": 1774497784699
 }
