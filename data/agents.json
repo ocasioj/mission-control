@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774558182016,
-      "lastActivityAgo": "7m ago",
+      "lastActivityAgo": "12m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 70,
       "lastActivity": 1774556804016,
-      "lastActivityAgo": "30m ago",
+      "lastActivityAgo": "35m ago",
       "isActive": false,
       "lastMessage": "[media attached: 2 files]\n[media attached 1/2: /data/.openclaw/media/inbound/92b100a8-b244-4d68-9e08-a5f9ac58925f.jpg (i",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774558651059
+  "updatedAt": 1774558950757
 }
