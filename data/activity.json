@@ -1,0 +1,398 @@
+{
+  "events": [
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774503972575,
+      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily Billing Update (Joe)] Run this exact command and re",
+      "turns": 1
+    },
+    {
+      "agentId": "writer",
+      "agentName": "Quill",
+      "timestamp": 1774502436652,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "video",
+      "agentName": "Director",
+      "timestamp": 1774502435398,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "support",
+      "agentName": "Anchor",
+      "timestamp": 1774502434202,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "social",
+      "agentName": "Amp",
+      "timestamp": 1774502432341,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "sales",
+      "agentName": "Closer",
+      "timestamp": 1774502430989,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "research",
+      "agentName": "Scout",
+      "timestamp": 1774502429423,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "planner",
+      "agentName": "Atlas",
+      "timestamp": 1774502427599,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "image-gen",
+      "agentName": "Pixel",
+      "timestamp": 1774502427388,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "finance",
+      "agentName": "Ledger",
+      "timestamp": 1774502426946,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "analyst",
+      "agentName": "Nova",
+      "timestamp": 1774502425896,
+      "message": "[Thu 2026-03-26 01:20 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "writer",
+      "agentName": "Quill",
+      "timestamp": 1774502177940,
+      "message": "[Thu 2026-03-26 01:16 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "research",
+      "agentName": "Scout",
+      "timestamp": 1774502105356,
+      "message": "[Thu 2026-03-26 01:15 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "planner",
+      "agentName": "Atlas",
+      "timestamp": 1774502105021,
+      "message": "[Thu 2026-03-26 01:15 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "image-gen",
+      "agentName": "Pixel",
+      "timestamp": 1774502104422,
+      "message": "[Thu 2026-03-26 01:15 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "analyst",
+      "agentName": "Nova",
+      "timestamp": 1774502103747,
+      "message": "[Thu 2026-03-26 01:15 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774497638616,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774497637358\",\n  \"sender_id\": \"+",
+      "turns": 45
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774497604148,
+      "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774497600335,
+      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily Billing Update (Joe)] Run this exact command and re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774450800177,
+      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774441500103,
+      "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774440900106,
+      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774440000155,
+      "message": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774436400163,
+      "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
+      "turns": 1
+    },
+    {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1774425848606,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774422600105,
+      "message": "[cron:804004cf-3ce2-4427-a060-d336b08398b0 Daily Backup Configs] Run a safe backup: copy /data/.open",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774422000303,
+      "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774421400156,
+      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774413108867,
+      "message": "[cron:779a4a3d-4ce1-456c-b6bf-d877868f928f Mission Control UI Update Status] The dev agent is still ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774411211830,
+      "message": "[cron:417a4559-d800-4764-8db6-17adc3960e89 pre-reset-summary-1774411201] Your session is about to re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774411006020,
+      "message": "[cron:9ce79520-cab2-4c0b-9a67-3e6bc8d468da Mission Control UI Update Status] The dev agent is still ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774396474373,
+      "message": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"gateway-client\",\n  \"id\": \"gateway-client\"\n}\n```\n\n",
+      "turns": 15
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774389608281,
+      "message": "[cron:edd56a0f-3fa6-43fe-aa84-28999da07f6f pre-reset-summary-1774389602] Your session is about to re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774353300105,
+      "message": "[cron:973d6718-4497-49a2-84e7-e01b79d20958 Giovanni Daily Todo Video Briefing] Read todo_giovanni.md",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774353000125,
+      "message": "[cron:bc3495eb-13fd-4ed7-bcb1-e5e3720ec092 Luis Daily Todo Video Briefing] Read todo_luis.md. Summar",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774332008947,
+      "message": "[cron:1ad3d5d9-df53-4018-8e86-1f2be4ce6875 pre-reset-summary-1774332001] Your session is about to re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774317612172,
+      "message": "[cron:be4bdecf-fee9-43d8-89b3-a69dc81cbc75 pre-reset-summary-1774317601] Your session is about to re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774316704262,
+      "message": "[Mon 2026-03-23 21:45 EDT] Iam testing out image remixing",
+      "turns": 8
+    },
+    {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1774253011777,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774238412051,
+      "message": "[cron:eb719f71-6630-4bff-8c43-bebe782883f9 pre-reset-summary-1774238402] Your session is about to re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774231208851,
+      "message": "[cron:11eab809-c6a3-4891-85f8-7bf7ce214c66 pre-reset-summary-1774231201] Your session is about to re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774180500095,
+      "message": "[cron:ea15cc17-34c8-4216-ba61-b8552019b0aa Giovanni Daily Todo Reminder] Read todo_giovanni.md. Prov",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774180200112,
+      "message": "[cron:a87d4a99-9f49-40ab-ba1f-9a7f1338ba5b Luis Daily Todo Reminder] Read todo_luis.md. Provide a co",
+      "turns": 1
+    },
+    {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1774166820208,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1774080937548,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1773994542579,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1773908145580,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    }
+  ],
+  "digest": [
+    {
+      "day": "2026-03-20",
+      "total": 1,
+      "byAgent": {
+        "main": 1
+      }
+    },
+    {
+      "day": "2026-03-21",
+      "total": 1,
+      "byAgent": {
+        "main": 1
+      }
+    },
+    {
+      "day": "2026-03-22",
+      "total": 3,
+      "byAgent": {
+        "signal-chat": 2,
+        "main": 1
+      }
+    },
+    {
+      "day": "2026-03-23",
+      "total": 3,
+      "byAgent": {
+        "signal-chat": 2,
+        "main": 1
+      }
+    },
+    {
+      "day": "2026-03-24",
+      "total": 7,
+      "byAgent": {
+        "signal-chat": 7
+      }
+    },
+    {
+      "day": "2026-03-25",
+      "total": 12,
+      "byAgent": {
+        "signal-chat": 11,
+        "main": 1
+      }
+    },
+    {
+      "day": "2026-03-26",
+      "total": 19,
+      "byAgent": {
+        "sales": 1,
+        "planner": 2,
+        "research": 2,
+        "signal-chat": 4,
+        "social": 1,
+        "image-gen": 2,
+        "finance": 1,
+        "analyst": 2,
+        "writer": 2,
+        "support": 1,
+        "video": 1
+      }
+    }
+  ],
+  "updatedAt": 1774504131969
+}
