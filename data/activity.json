@@ -17,13 +17,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774527997240,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774527996264\",\n  \"sender_id\": \"+",
-      "turns": 21
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774527900089,
       "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
       "turns": 1
@@ -272,12 +265,12 @@
     },
     {
       "day": "2026-03-26",
-      "total": 14,
+      "total": 13,
       "byAgent": {
-        "signal-chat": 13,
+        "signal-chat": 12,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774555352824
+  "updatedAt": 1774555652696
 }
