@@ -1963,140 +1963,176 @@
         .mem-md code { font-family: monospace; font-size: 0.8rem; background: var(--bg-card); padding: 1px 5px; border-radius: 4px; }
 
         /* ── Office View ──────────────────────────────────────────────────── */
-        .office-floor {
-            background: #07080f;
+        .office-room {
+            background: #1e1b2e;
             background-image:
-                linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
-            background-size: 36px 36px;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 1.75rem 2rem;
+                linear-gradient(45deg, rgba(255,255,255,0.018) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255,255,255,0.018) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.018) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.018) 75%);
+            background-size: 28px 28px;
+            background-position: 0 0, 0 14px, 14px -14px, -14px 0px;
+            border-radius: 16px;
+            border: 2px solid #2d2a45;
+            padding: 1.5rem;
             position: relative;
             overflow: hidden;
         }
-        .office-floor::before {
-            content: 'JOSE & CO. HQ';
-            position: absolute;
-            top: 12px; right: 16px;
-            font-size: 0.55rem;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            color: rgba(255,255,255,0.07);
-            font-family: monospace;
+        .office-room::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, #f59e0b, #3b82f6, #8b5cf6, #10b981, #f97316);
         }
-        .office-section-label {
+        .office-zone {
+            background: rgba(255,255,255,0.025);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 1rem 1rem 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .office-zone-label {
             font-size: 0.58rem;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.18);
-            margin-bottom: 0.6rem;
-            font-family: monospace;
-        }
-        .office-row { display: flex; gap: 0.85rem; margin-bottom: 1.4rem; align-items: flex-start; flex-wrap: wrap; }
-        .office-desk {
-            background: #0f1117;
-            border: 1px solid #1e2130;
-            border-radius: 8px;
-            padding: 0.6rem 0.7rem;
-            min-width: 100px;
-            position: relative;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            font-family: 'Courier New', monospace;
-            cursor: default;
-        }
-        .office-desk.active {
-            border-color: rgba(59,130,246,0.5);
-            box-shadow: 0 0 14px rgba(59,130,246,0.12);
-        }
-        .office-desk.corner-office {
-            min-width: 160px;
-            background: rgba(59,130,246,0.06);
-            border-color: rgba(59,130,246,0.25);
-        }
-        .office-desk.corner-office.active { box-shadow: 0 0 20px rgba(59,130,246,0.2); }
-        .office-desk.idle { opacity: 0.55; }
-        .desk-screen {
-            width: 100%; height: 44px;
-            background: #050509;
-            border: 1px solid #1a1d26;
-            border-radius: 4px;
-            margin-bottom: 0.45rem;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 18px;
-            position: relative; overflow: hidden;
-        }
-        .office-desk.corner-office .desk-screen { height: 60px; }
-        .desk-screen.on {
-            background: #080c14;
-            border-color: rgba(59,130,246,0.35);
-            box-shadow: 0 0 10px rgba(59,130,246,0.15) inset;
-        }
-        .desk-screen.on::after {
-            content: '';
-            position: absolute;
-            top: -100%; left: 0; right: 0;
-            height: 30%;
-            background: linear-gradient(transparent, rgba(59,130,246,0.08), transparent);
-            animation: screen-scan 3s linear infinite;
-        }
-        @keyframes screen-scan { 0% { top: -30%; } 100% { top: 100%; } }
-        .typing-dots { display: flex; gap: 3px; align-items: center; }
-        .typing-dots span {
-            width: 4px; height: 4px; border-radius: 50%;
-            background: var(--accent-blue);
-            animation: tdot 1.2s ease-in-out infinite;
-        }
-        .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-        .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-        @keyframes tdot { 0%,60%,100%{transform:translateY(0);opacity:0.3} 30%{transform:translateY(-5px);opacity:1} }
-        .desk-name { font-size: 0.62rem; font-weight: 700; color: rgba(255,255,255,0.6); text-align: center; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1px; }
-        .desk-role-lbl { font-size: 0.54rem; color: rgba(255,255,255,0.2); text-align: center; }
-        .desk-status { position: absolute; top: 6px; right: 6px; width: 5px; height: 5px; border-radius: 50%; }
-        .desk-status.active { background: #10b981; box-shadow: 0 0 5px #10b981; animation: blink 2s ease-in-out infinite; }
-        .desk-status.idle { background: rgba(255,255,255,0.12); }
-        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-        .desk-bubble {
-            position: absolute;
-            bottom: calc(100% + 6px); left: 50%;
-            transform: translateX(-50%);
-            background: rgba(30,40,70,0.97);
-            border: 1px solid rgba(59,130,246,0.4);
-            color: rgba(255,255,255,0.85);
-            font-size: 0.58rem;
-            padding: 4px 8px;
-            border-radius: 6px;
-            white-space: nowrap;
-            max-width: 180px;
-            overflow: hidden; text-overflow: ellipsis;
-            z-index: 20;
-            pointer-events: none;
-            font-family: -apple-system, sans-serif;
-        }
-        .desk-bubble::after {
-            content: '';
-            position: absolute;
-            top: 100%; left: 50%;
-            transform: translateX(-50%);
-            border: 4px solid transparent;
-            border-top-color: rgba(59,130,246,0.4);
-        }
-        .office-amenity { display: flex; flex-direction: column; align-items: center; gap: 3px; opacity: 0.45; }
-        .office-amenity span { font-size: 0.5rem; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.1em; font-family: monospace; }
-        .office-ticker {
-            margin-top: 0.5rem;
-            padding: 0.6rem 1rem;
-            background: rgba(0,0,0,0.4);
-            border-radius: 8px;
-            border: 1px solid #1a1d26;
-            font-size: 0.7rem;
             color: rgba(255,255,255,0.3);
+            margin-bottom: 0.85rem;
             font-family: monospace;
-            display: flex; gap: 0.5rem; align-items: center;
+            display: flex; align-items: center; gap: 6px;
         }
-        .ticker-dot { width: 5px; height: 5px; border-radius: 50%; background: #10b981; flex-shrink: 0; animation: blink 2s ease-in-out infinite; }
+        .office-desks-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-end; }
 
+        /* Workstation */
+        .workstation {
+            display: flex; flex-direction: column; align-items: center; gap: 0;
+            position: relative; cursor: default;
+        }
+        .ws-bubble {
+            position: absolute; bottom: calc(100% + 6px); left: 50%;
+            transform: translateX(-50%);
+            background: rgba(20,30,60,0.97);
+            border: 1px solid rgba(59,130,246,0.5);
+            color: rgba(255,255,255,0.9);
+            font-size: 0.58rem; padding: 4px 9px; border-radius: 8px;
+            white-space: nowrap; max-width: 170px; overflow: hidden; text-overflow: ellipsis;
+            z-index: 30; pointer-events: none; font-family: -apple-system, sans-serif;
+        }
+        .ws-bubble::after {
+            content: ''; position: absolute; top: 100%; left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid transparent; border-top-color: rgba(59,130,246,0.5);
+        }
+        /* Desk furniture */
+        .ws-desk {
+            width: 88px; height: 54px;
+            border-radius: 6px 6px 3px 3px;
+            border: 2px solid rgba(0,0,0,0.35);
+            position: relative;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.4);
+            z-index: 2;
+        }
+        .ws-desk.corner { width: 110px; height: 66px; }
+        .ws-monitor {
+            width: 40px; height: 28px;
+            background: #0a0a12;
+            border: 2px solid #1a1a2e;
+            border-radius: 3px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px;
+            position: relative; overflow: hidden;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+        }
+        .ws-desk.corner .ws-monitor { width: 52px; height: 36px; font-size: 14px; }
+        .ws-monitor.on {
+            background: #060d1f;
+            border-color: rgba(59,130,246,0.6);
+            box-shadow: 0 0 10px rgba(59,130,246,0.35);
+        }
+        .ws-monitor.on::after {
+            content: ''; position: absolute; top: -100%; left: 0; right: 0;
+            height: 40%; background: linear-gradient(transparent, rgba(59,130,246,0.15), transparent);
+            animation: mon-scan 2.5s linear infinite;
+        }
+        @keyframes mon-scan { 0%{top:-40%} 100%{top:110%} }
+        .ws-keyboard {
+            position: absolute; bottom: 4px; left: 50%;
+            transform: translateX(-50%);
+            width: 34px; height: 7px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 2px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        /* Chair */
+        .ws-chair {
+            width: 36px; height: 14px;
+            border-radius: 3px 3px 0 0;
+            border: 2px solid rgba(0,0,0,0.3);
+            margin-top: -2px;
+            z-index: 1;
+            box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+        }
+
+        /* Sims-style character */
+        .sim {
+            display: flex; flex-direction: column; align-items: center;
+            gap: 0; margin-top: 2px; z-index: 3;
+            transition: transform 0.3s;
+        }
+        .sim.active { animation: sim-bounce 1.8s ease-in-out infinite; }
+        .sim.idle { opacity: 0.45; }
+        @keyframes sim-bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)} }
+        .sim-head {
+            width: 22px; height: 22px; border-radius: 50%;
+            background: #f5c5a3;
+            border: 2px solid #e8a882;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; line-height: 1;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+        }
+        .sim-body {
+            width: 18px; height: 16px;
+            border-radius: 3px 3px 0 0;
+            border: 1.5px solid rgba(0,0,0,0.25);
+            margin-top: 1px;
+        }
+        .sim-legs { display: flex; gap: 2px; margin-top: 1px; }
+        .sim-leg {
+            width: 7px; height: 10px;
+            background: #2d3748;
+            border-radius: 0 0 3px 3px;
+            border: 1px solid rgba(0,0,0,0.3);
+        }
+        /* Nameplate */
+        .ws-nameplate {
+            font-size: 0.58rem; font-weight: 700;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase; letter-spacing: 0.06em;
+            margin-top: 4px; text-align: center;
+            font-family: monospace;
+        }
+        .ws-nameplate .ws-dot {
+            display: inline-block; width: 5px; height: 5px;
+            border-radius: 50%; margin-right: 3px; vertical-align: middle;
+        }
+
+        /* Amenities */
+        .office-amenities { display: flex; gap: 1.2rem; align-items: flex-end; padding: 0 0.5rem; }
+        .amenity { display: flex; flex-direction: column; align-items: center; gap: 3px; opacity: 0.6; }
+        .amenity-icon { font-size: 1.8rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); }
+        .amenity-label { font-size: 0.48rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.1em; font-family: monospace; }
+
+        /* Ticker */
+        .office-status-bar {
+            margin-top: 0.75rem; padding: 0.55rem 1rem;
+            background: rgba(0,0,0,0.35); border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.68rem; color: rgba(255,255,255,0.3);
+            font-family: monospace; display: flex; gap: 0.5rem; align-items: center;
+        }
+        .status-dot { width: 5px; height: 5px; border-radius: 50%; background: #10b981; flex-shrink: 0; animation: blink 2s ease-in-out infinite; }
+
+        /* Docs two-panel layout (reuses mem-layout pattern) */
         /* Docs two-panel layout (reuses mem-layout pattern) */
         .docs-layout { display: flex; gap: 0; height: calc(100vh - 160px); min-height: 500px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
         .docs-sidebar { width: 300px; flex-shrink: 0; border-right: 1px solid var(--border); display: flex; flex-direction: column; background: var(--bg-secondary); }
@@ -6449,28 +6485,65 @@
 
         let OFFICE_REFRESH_TIMER = null;
 
-        const OFFICE_EMOJI = {
-            'signal-chat':'🤵','main':'🖥️','analyst':'🔬','coder':'💻',
+        const TEAM_COLOR = {
+            'signal-chat': '#f59e0b',
+            'main':        '#6b7280',
+            'analyst':     '#3b82f6',
+            'research':    '#3b82f6',
+            'coder':       '#10b981',
+            'writer':      '#8b5cf6',
+            'video':       '#8b5cf6',
+            'image-gen':   '#8b5cf6',
+            'social':      '#8b5cf6',
+            'finance':     '#f97316',
+            'sales':       '#f97316',
+            'support':     '#f97316',
+            'planner':     '#f97316',
+        };
+
+        const FACE_EMOJI = {
+            'signal-chat':'🤵','main':'💼','analyst':'🔬','coder':'💻',
             'research':'🔍','image-gen':'🎨','planner':'🗺️','writer':'✍️',
             'video':'🎬','social':'📣','finance':'💰','sales':'🤝','support':'🛟',
         };
 
-        function buildDesk(a, isCorner) {
+        const DESK_COLOR = {
+            'signal-chat': '#7c4d1a',
+            default: '#6b4c2a',
+        };
+
+        function buildWorkstation(a, isCorner) {
             if (!a) return '';
-            const emoji = OFFICE_EMOJI[a.id] || '🤖';
             const on = a.isActive;
-            const screen = on
-                ? `<div class="desk-screen on"><div class="typing-dots"><span></span><span></span><span></span></div></div>`
-                : `<div class="desk-screen"><span style="font-size:14px;opacity:0.25">${emoji}</span></div>`;
+            const color = TEAM_COLOR[a.id] || '#6b7280';
+            const face = FACE_EMOJI[a.id] || '🤖';
+            const deskBg = isCorner ? '#7c4d1a' : '#6b4c2a';
+            const deskBorder = isCorner ? '#5a3810' : '#4a3018';
+            const chairBg = '#374151';
+
             const bubble = on && a.lastMessage
-                ? `<div class="desk-bubble">${escapeHtml(a.lastMessage.slice(0,50))}${a.lastMessage.length>50?'…':''}</div>`
+                ? `<div class="ws-bubble">${escapeHtml(a.lastMessage.slice(0,45))}${a.lastMessage.length>45?'…':''}</div>`
                 : '';
-            return `<div class="office-desk ${isCorner?'corner-office':''} ${on?'active':'idle'}">
+
+            const screenContent = on
+                ? `<div class="typing-dots"><span></span><span></span><span></span></div>`
+                : `<span style="opacity:0.2;font-size:${isCorner?'14':'10'}px">${face}</span>`;
+
+            return `<div class="workstation">
                 ${bubble}
-                <div class="desk-status ${on?'active':'idle'}"></div>
-                ${screen}
-                <div class="desk-name">${escapeHtml(a.name)}</div>
-                <div class="desk-role-lbl">${escapeHtml(a.id)}</div>
+                <div class="ws-desk ${isCorner?'corner':''}" style="background:${deskBg};border-color:${deskBorder}">
+                    <div class="ws-monitor ${on?'on':''}">${screenContent}</div>
+                    <div class="ws-keyboard"></div>
+                </div>
+                <div class="ws-chair" style="background:${chairBg};border-color:#1f2937"></div>
+                <div class="sim ${on?'active':'idle'}">
+                    <div class="sim-head">${on?'😊':'😴'}</div>
+                    <div class="sim-body" style="background:${color}"></div>
+                    <div class="sim-legs"><div class="sim-leg"></div><div class="sim-leg"></div></div>
+                </div>
+                <div class="ws-nameplate">
+                    <span class="ws-dot" style="background:${on?'#10b981':'rgba(255,255,255,0.15)'}"></span>${escapeHtml(a.name)}
+                </div>
             </div>`;
         }
 
@@ -6484,77 +6557,68 @@
                 const data = await fetchGitHubDataFile('agents.json');
                 agents = data.agents || [];
             } catch(e) {
-                el.innerHTML = '<div class="empty-state-large">Could not load office data. Try again in a moment.</div>';
+                el.innerHTML = '<div class="empty-state-large">Could not load office data.</div>';
                 return;
             }
 
             const am = {};
             agents.forEach(a => am[a.id] = a);
-            const activeCount = agents.filter(a => a.isActive).length;
+            const active = agents.filter(a => a.isActive);
             const time = new Date().toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
+            if (sub) sub.textContent = `${active.length > 0 ? active.length + ' agent' + (active.length>1?'s':'') + ' working' : 'All agents idle'} · ${time}`;
 
-            if (sub) sub.textContent = `${activeCount > 0 ? activeCount + ' agent' + (activeCount>1?'s':'') + ' working' : 'All agents idle'} · ${time}`;
+            const zone = (label, emoji, color, ids) => {
+                const desks = ids.map(id => buildWorkstation(am[id], false)).join('');
+                return `<div class="office-zone">
+                    <div class="office-zone-label"><span style="color:${color}">${emoji}</span> ${label}</div>
+                    <div class="office-desks-row">${desks}</div>
+                </div>`;
+            };
 
-            el.innerHTML = `<div class="office-floor">
-
-                <!-- Top row: Joe (corner) + Intel + Plants -->
-                <div class="office-row" style="margin-bottom:1.6rem;flex-wrap:nowrap;align-items:flex-start">
-                    <div>
-                        <div class="office-section-label">Chief of Staff</div>
-                        ${buildDesk(am['signal-chat'], true)}
+            el.innerHTML = `<div class="office-room">
+                <!-- Corner office row: Joe + Intel + Plants -->
+                <div style="display:flex;gap:1rem;margin-bottom:1rem;align-items:flex-start">
+                    <div class="office-zone" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.04)">
+                        <div class="office-zone-label"><span style="color:#f59e0b">⭐</span> Corner Office</div>
+                        <div class="office-desks-row">${buildWorkstation(am['signal-chat'], true)}</div>
                     </div>
-                    <div style="width:1px;background:rgba(255,255,255,0.04);align-self:stretch;margin:0 0.5rem;"></div>
-                    <div>
-                        <div class="office-section-label">Intelligence</div>
-                        <div style="display:flex;gap:0.85rem;">
-                            ${buildDesk(am['analyst'], false)}
-                            ${buildDesk(am['research'], false)}
+                    <div class="office-zone" style="flex:1">
+                        <div class="office-zone-label"><span style="color:#3b82f6">🧠</span> Intelligence</div>
+                        <div class="office-desks-row">
+                            ${buildWorkstation(am['analyst'], false)}
+                            ${buildWorkstation(am['research'], false)}
                         </div>
                     </div>
-                    <div style="margin-left:auto;padding-top:8px;">
-                        <div class="office-amenity"><span style="font-size:1.6rem">🌿</span><span>Plants</span></div>
+                    <div class="office-amenities" style="padding-bottom:0.5rem">
+                        <div class="amenity"><div class="amenity-icon">🌿</div><div class="amenity-label">Plants</div></div>
+                        <div class="amenity"><div class="amenity-icon">🪟</div><div class="amenity-label">Window</div></div>
                     </div>
                 </div>
 
-                <!-- Engineering & Creative row -->
-                <div class="office-section-label">Engineering & Creative</div>
-                <div class="office-row">
-                    ${['coder','writer','video','image-gen','social'].map(id => buildDesk(am[id], false)).join('')}
-                </div>
-
-                <!-- Business row + Water cooler -->
-                <div class="office-section-label">Business</div>
-                <div class="office-row" style="align-items:center">
-                    ${['finance','sales','support','planner'].map(id => buildDesk(am[id], false)).join('')}
-                    <div style="margin-left:auto;display:flex;flex-direction:column;gap:1rem;align-items:center">
-                        <div class="office-amenity"><span style="font-size:2rem">💧</span><span>Water Cooler</span></div>
-                        <div class="office-amenity"><span style="font-size:1.4rem">☕</span><span>Coffee</span></div>
+                ${zone('Engineering & Creative', '🎨', '#8b5cf6', ['coder','writer','video','image-gen','social'])}
+                
+                <div style="display:flex;gap:1rem;align-items:flex-start">
+                    <div style="flex:1">${zone('Business', '💼', '#f97316', ['finance','sales','support','planner'])}</div>
+                    <div style="display:flex;flex-direction:column;gap:0.75rem;align-items:center;padding:1.25rem 0.5rem">
+                        <div class="amenity"><div class="amenity-icon">💧</div><div class="amenity-label">Water Cooler</div></div>
+                        <div class="amenity"><div class="amenity-icon">☕</div><div class="amenity-label">Coffee</div></div>
+                        <div class="amenity"><div class="amenity-icon">📋</div><div class="amenity-label">Whiteboard</div></div>
                     </div>
                 </div>
 
-                <!-- System row -->
-                <div class="office-section-label">System</div>
-                <div class="office-row">
-                    ${buildDesk(am['main'], false)}
-                    <div style="display:flex;align-items:center;gap:6px;padding:0 8px;opacity:0.25;font-size:0.6rem;font-family:monospace;color:rgba(255,255,255,0.4)">
-                        🖥️ Server room →
-                    </div>
-                </div>
-
-                <!-- Ticker -->
-                <div class="office-ticker">
-                    <div class="ticker-dot"></div>
-                    <span>${activeCount > 0 ? activeCount + ' agent' + (activeCount>1?'s':'') + ' currently active' : 'All agents idle'} · Jose & Co. HQ · ${time}</span>
+                <div class="office-status-bar">
+                    <div class="status-dot"></div>
+                    <span>${active.length > 0 ? active.map(a=>escapeHtml(a.name)).join(', ') + ' working' : 'All agents idle'} · Jose & Co. HQ · ${time}</span>
                 </div>
             </div>`;
 
-            // Auto-refresh every 60s while office view is active
             if (OFFICE_REFRESH_TIMER) clearTimeout(OFFICE_REFRESH_TIMER);
             OFFICE_REFRESH_TIMER = setTimeout(() => {
                 if (document.getElementById('view-office')?.style.display !== 'none') renderOfficeView();
             }, 60000);
         }
 
+        // ── Docs View ────────────────────────────────────────────────────────────
         // ── Docs View ────────────────────────────────────────────────────────────
 
         let DOCS_DATA = [];
