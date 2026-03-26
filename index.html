@@ -5837,7 +5837,7 @@
         async function fetchGitHubDataFile(filename) {
             const url = `https://api.github.com/repos/ocasioj/mission-control/contents/data/${filename}`;
             const headers = { 'Cache-Control': 'no-cache' };
-            if (STATE.config && STATE.config.token) headers['Authorization'] = `token ${STATE.config.token}`;
+            if (STATE.token) headers['Authorization'] = `token ${STATE.token}`;
             const res = await fetch(url, { headers });
             if (!res.ok) throw new Error(`GitHub fetch ${filename} failed: HTTP ${res.status}`);
             const ghData = await res.json();
