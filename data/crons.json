@@ -156,10 +156,10 @@
         "kind": "agentTurn",
         "message": "Run the daily Gmail canary: exec gmail-health-report. Do not send any additional Signal message on success. If it fails, the script sends an alert directly."
       },
-      "lastRunAt": "2026-03-25T12:15:00.012Z",
-      "nextRunAt": "2026-03-26T12:15:00.000Z",
+      "lastRunAt": "2026-03-26T12:15:00.003Z",
+      "nextRunAt": "2026-03-27T12:15:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 13905,
+      "lastDurationMs": 15453,
       "consecutiveErrors": 0
     },
     {
@@ -181,5 +181,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774527151327
+  "updatedAt": 1774527451422
 }
