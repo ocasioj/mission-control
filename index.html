@@ -1963,90 +1963,189 @@
         .mem-md code { font-family: monospace; font-size: 0.8rem; background: var(--bg-card); padding: 1px 5px; border-radius: 4px; }
 
         /* ── Office View ──────────────────────────────────────────────────── */
-        .office-room {
-            background: #1e1b2e;
-            background-image:
-                linear-gradient(45deg, rgba(255,255,255,0.018) 25%, transparent 25%),
-                linear-gradient(-45deg, rgba(255,255,255,0.018) 25%, transparent 25%),
-                linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.018) 75%),
-                linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.018) 75%);
-            background-size: 28px 28px;
-            background-position: 0 0, 0 14px, 14px -14px, -14px 0px;
-            border-radius: 16px;
-            border: 2px solid #2d2a45;
-            padding: 1.5rem;
+        /* Back wall */
+        .office-wall {
+            background: linear-gradient(180deg, #d9c0a0 0%, #c8a878 100%);
+            border: 2px solid #8b6840;
+            border-bottom: 5px solid #6b4c2a;
+            border-radius: 12px 12px 0 0;
+            padding: 0.65rem 1rem 0.8rem;
+            display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;
             position: relative;
-            overflow: hidden;
         }
-        .office-room::before {
+        .office-wall::after {
             content: '';
-            position: absolute; top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, #f59e0b, #3b82f6, #8b5cf6, #10b981, #f97316);
+            position: absolute; bottom: 0; left: 0; right: 0; height: 5px;
+            background: repeating-linear-gradient(90deg, #5a3810 0px, #5a3810 9px, #6b4c2a 9px, #6b4c2a 18px);
         }
+        /* Day/night window */
+        .office-window {
+            flex: 0 0 auto; width: 80px; height: 56px;
+            border: 3px solid #5a3810; border-radius: 5px 5px 2px 2px;
+            overflow: hidden; position: relative;
+            box-shadow: inset 0 0 0 2px rgba(0,0,0,0.15);
+        }
+        .office-window .sky { position: absolute; inset: 0; bottom: 14px; }
+        .office-window .ground { position: absolute; bottom: 0; left: 0; right: 0; height: 14px; }
+        .office-window .win-bar-v {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 3px; background: #5a3810; transform: translateX(-50%); z-index: 2;
+        }
+        .office-window .win-bar-h {
+            position: absolute; left: 0; right: 0; top: 44%;
+            height: 3px; background: #5a3810; z-index: 2;
+        }
+        /* TV / mission screen */
+        .office-tv {
+            flex: 1; min-width: 140px; height: 56px;
+            background: #080810; border: 3px solid #2a2a3e;
+            border-radius: 6px; padding: 5px 8px;
+            overflow: hidden; position: relative;
+            box-shadow: 0 0 10px rgba(59,130,246,0.25), inset 0 0 0 1px #1a1a2e;
+            display: flex; align-items: center;
+        }
+        .office-tv .tv-scanlines {
+            position: absolute; inset: 0; pointer-events: none;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.12) 2px, rgba(0,0,0,0.12) 4px);
+        }
+        .office-tv .tv-text {
+            font-size: 0.5rem; color: rgba(100,200,255,0.9);
+            font-family: monospace; line-height: 1.5;
+            animation: tv-scroll 24s linear infinite;
+            position: relative; z-index: 1;
+        }
+        @keyframes tv-scroll { 0%{transform:translateY(0)} 100%{transform:translateY(-55px)} }
+        /* Bulletin board */
+        .office-bulletin {
+            flex: 0 0 auto; width: 88px; height: 56px;
+            background: #c8860a; border: 3px solid #7c4d00;
+            border-radius: 4px; padding: 6px 5px 4px;
+            position: relative;
+        }
+        .office-bulletin .bul-pin {
+            position: absolute; top: -5px; left: 50%;
+            transform: translateX(-50%);
+            width: 9px; height: 9px; border-radius: 50%;
+            background: #cc2200; border: 1.5px solid #880000;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        .office-bulletin .bul-note {
+            background: #ffffcc; border-radius: 2px;
+            font-size: 0.44rem; color: #333;
+            padding: 2px 3px; margin-bottom: 3px;
+            font-family: monospace;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.12);
+        }
+        /* Clock */
+        .office-clock {
+            flex: 0 0 auto; text-align: center; padding: 2px 6px;
+        }
+        .office-clock .clk-time {
+            font-size: 1.05rem; font-weight: 800;
+            color: #3d1a00; font-family: monospace; letter-spacing: 0.04em;
+        }
+        .office-clock .clk-label {
+            font-size: 0.43rem; color: #6b4c2a;
+            text-transform: uppercase; letter-spacing: 0.12em; font-family: monospace;
+        }
+        /* Floor */
+        .office-room {
+            background: #b8935c;
+            background-image:
+                repeating-linear-gradient(90deg, transparent 0px, transparent 44px, rgba(0,0,0,0.09) 44px, rgba(0,0,0,0.09) 47px),
+                repeating-linear-gradient(180deg, transparent 0px, transparent 22px, rgba(255,255,255,0.06) 22px, rgba(255,255,255,0.06) 24px);
+            border: 2px solid #8b6840; border-top: none;
+            border-radius: 0 0 14px 14px;
+            padding: 1rem 1.25rem 1.25rem;
+            position: relative; overflow: hidden;
+        }
+        /* Joe's private office */
+        .private-office {
+            display: inline-flex; flex-direction: column;
+            border: 2.5px solid #f59e0b;
+            border-radius: 10px; padding: 0.5rem 0.75rem 0.75rem;
+            background: rgba(245,158,11,0.05);
+            position: relative; vertical-align: top;
+        }
+        .private-office-sign {
+            font-size: 0.52rem; font-weight: 800;
+            color: #f59e0b; letter-spacing: 0.12em;
+            text-transform: uppercase; font-family: monospace;
+            margin-bottom: 0.4rem; text-align: center;
+        }
+        .private-office-door {
+            position: absolute; bottom: -2px; right: 12px;
+            width: 17px; height: 23px;
+            background: #c8860a; border: 2px solid #7c4d00;
+            border-radius: 3px 3px 0 0;
+        }
+        .private-office-door::after {
+            content: ''; position: absolute;
+            width: 3px; height: 3px; border-radius: 50%;
+            background: #ffd700; right: 2px; top: 50%; transform: translateY(-50%);
+        }
+        /* Zone boxes */
         .office-zone {
-            background: rgba(255,255,255,0.025);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 12px;
-            padding: 1rem 1rem 0.75rem;
-            margin-bottom: 1rem;
+            background: rgba(0,0,0,0.04);
+            border: 2px solid rgba(0,0,0,0.09);
+            border-radius: 8px;
+            padding: 0.7rem 0.7rem 0.6rem;
+            margin-bottom: 0.75rem;
         }
         .office-zone-label {
-            font-size: 0.58rem;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.3);
-            margin-bottom: 0.85rem;
-            font-family: monospace;
-            display: flex; align-items: center; gap: 6px;
+            font-size: 0.54rem; font-weight: 800;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: rgba(0,0,0,0.32); margin-bottom: 0.65rem;
+            font-family: monospace; display: flex; align-items: center; gap: 5px;
         }
-        .office-desks-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-end; }
-
+        /* Cubicle-style dividers between workstations */
+        .office-desks-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0; }
+        .office-desks-row .workstation {
+            border-right: 2px solid rgba(0,0,0,0.07);
+            padding: 0 0.6rem;
+        }
+        .office-desks-row .workstation:last-child { border-right: none; }
         /* Workstation */
         .workstation {
-            display: flex; flex-direction: column; align-items: center; gap: 0;
-            position: relative; cursor: default;
+            display: flex; flex-direction: column; align-items: center;
+            gap: 0; position: relative; cursor: pointer;
         }
+        .workstation:hover .sim { transform: scale(1.1); }
         .ws-bubble {
             position: absolute; bottom: calc(100% + 6px); left: 50%;
             transform: translateX(-50%);
-            background: rgba(20,30,60,0.97);
-            border: 1px solid rgba(59,130,246,0.5);
+            background: rgba(20,30,60,0.95);
+            border: 1px solid rgba(59,130,246,0.45);
             color: rgba(255,255,255,0.9);
-            font-size: 0.58rem; padding: 4px 9px; border-radius: 8px;
+            font-size: 0.57rem; padding: 4px 9px; border-radius: 8px;
             white-space: nowrap; max-width: 170px; overflow: hidden; text-overflow: ellipsis;
             z-index: 30; pointer-events: none; font-family: -apple-system, sans-serif;
         }
         .ws-bubble::after {
             content: ''; position: absolute; top: 100%; left: 50%;
             transform: translateX(-50%);
-            border: 4px solid transparent; border-top-color: rgba(59,130,246,0.5);
+            border: 4px solid transparent; border-top-color: rgba(59,130,246,0.45);
         }
-        /* Desk furniture */
+        /* Wood desk */
         .ws-desk {
             width: 88px; height: 54px;
+            background: #7c5a28;
             border-radius: 6px 6px 3px 3px;
-            border: 2px solid rgba(0,0,0,0.35);
-            position: relative;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 0 rgba(0,0,0,0.4);
+            border: 2px solid rgba(0,0,0,0.3);
+            position: relative; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.12);
             z-index: 2;
         }
-        .ws-desk.corner { width: 110px; height: 66px; }
+        .ws-desk.corner { width: 108px; height: 64px; background: #8b6830; }
         .ws-monitor {
             width: 40px; height: 28px;
-            background: #0a0a12;
-            border: 2px solid #1a1a2e;
-            border-radius: 3px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 11px;
-            position: relative; overflow: hidden;
-            box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+            background: #0a0a12; border: 2px solid #1a1a2e;
+            border-radius: 3px; display: flex; align-items: center; justify-content: center;
+            font-size: 11px; position: relative; overflow: hidden;
         }
         .ws-desk.corner .ws-monitor { width: 52px; height: 36px; font-size: 14px; }
         .ws-monitor.on {
-            background: #060d1f;
-            border-color: rgba(59,130,246,0.6);
+            background: #060d1f; border-color: rgba(59,130,246,0.6);
             box-shadow: 0 0 10px rgba(59,130,246,0.35);
         }
         .ws-monitor.on::after {
@@ -2056,81 +2155,127 @@
         }
         @keyframes mon-scan { 0%{top:-40%} 100%{top:110%} }
         .ws-keyboard {
-            position: absolute; bottom: 4px; left: 50%;
-            transform: translateX(-50%);
+            position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
             width: 34px; height: 7px;
-            background: rgba(255,255,255,0.08);
-            border-radius: 2px;
-            border: 1px solid rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.07); border-radius: 2px;
+            border: 1px solid rgba(255,255,255,0.04);
         }
-        /* Chair */
         .ws-chair {
-            width: 36px; height: 14px;
-            border-radius: 3px 3px 0 0;
-            border: 2px solid rgba(0,0,0,0.3);
-            margin-top: -2px;
-            z-index: 1;
-            box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+            width: 36px; height: 14px; background: #374151;
+            border-radius: 3px 3px 0 0; border: 2px solid rgba(0,0,0,0.2);
+            margin-top: -2px; z-index: 1;
+            box-shadow: 0 2px 0 rgba(0,0,0,0.22);
         }
-
-        /* Sims-style character */
+        /* Sims character */
         .sim {
             display: flex; flex-direction: column; align-items: center;
-            gap: 0; margin-top: 2px; z-index: 3;
-            transition: transform 0.3s;
+            gap: 0; margin-top: 2px; z-index: 3; transition: transform 0.3s;
         }
         .sim.active { animation: sim-bounce 1.8s ease-in-out infinite; }
-        .sim.idle { opacity: 0.45; }
+        .sim.idle { opacity: 0.5; }
         @keyframes sim-bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)} }
+        @keyframes sim-walk {
+            0%,100%{transform:translateX(0) rotate(0deg)}
+            25%{transform:translateX(-2px) rotate(-2deg)}
+            75%{transform:translateX(2px) rotate(2deg)}
+        }
+        .sim-hair {
+            width: 24px; height: 9px;
+            border-radius: 50% 50% 0 0;
+            margin-bottom: -3px; z-index: 4;
+            border: 1.5px solid rgba(0,0,0,0.18);
+        }
         .sim-head {
             width: 22px; height: 22px; border-radius: 50%;
-            background: #f5c5a3;
-            border: 2px solid #e8a882;
+            border: 2px solid rgba(0,0,0,0.12);
             display: flex; align-items: center; justify-content: center;
             font-size: 12px; line-height: 1;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+            position: relative;
+        }
+        .sim-tie {
+            position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%);
+            width: 5px; height: 8px; background: #cc0000;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 55%, 50% 100%, 0% 55%);
+            z-index: 5;
         }
         .sim-body {
             width: 18px; height: 16px;
-            border-radius: 3px 3px 0 0;
-            border: 1.5px solid rgba(0,0,0,0.25);
+            border-radius: 3px 3px 0 0; border: 1.5px solid rgba(0,0,0,0.18);
             margin-top: 1px;
         }
         .sim-legs { display: flex; gap: 2px; margin-top: 1px; }
         .sim-leg {
-            width: 7px; height: 10px;
-            background: #2d3748;
-            border-radius: 0 0 3px 3px;
-            border: 1px solid rgba(0,0,0,0.3);
+            width: 7px; height: 10px; background: #2d3748;
+            border-radius: 0 0 3px 3px; border: 1px solid rgba(0,0,0,0.22);
         }
         /* Nameplate */
         .ws-nameplate {
-            font-size: 0.58rem; font-weight: 700;
-            color: rgba(255,255,255,0.5);
+            font-size: 0.54rem; font-weight: 700;
+            color: rgba(0,0,0,0.38);
             text-transform: uppercase; letter-spacing: 0.06em;
-            margin-top: 4px; text-align: center;
-            font-family: monospace;
+            margin-top: 4px; text-align: center; font-family: monospace;
         }
         .ws-nameplate .ws-dot {
             display: inline-block; width: 5px; height: 5px;
             border-radius: 50%; margin-right: 3px; vertical-align: middle;
         }
-
-        /* Amenities */
-        .office-amenities { display: flex; gap: 1.2rem; align-items: flex-end; padding: 0 0.5rem; }
-        .amenity { display: flex; flex-direction: column; align-items: center; gap: 3px; opacity: 0.6; }
-        .amenity-icon { font-size: 1.8rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); }
-        .amenity-label { font-size: 0.48rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.1em; font-family: monospace; }
-
-        /* Ticker */
+        /* Break zone (water cooler area) */
+        .break-zone {
+            display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 0.6rem;
+            border: 2px dashed rgba(0,0,0,0.1);
+            border-radius: 10px; background: rgba(255,255,255,0.18);
+            min-width: 72px;
+        }
+        .amenity { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+        .amenity-icon { font-size: 1.55rem; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15)); }
+        .amenity-label { font-size: 0.43rem; color: rgba(0,0,0,0.28); text-transform: uppercase; letter-spacing: 0.1em; font-family: monospace; }
+        /* Status bar */
         .office-status-bar {
-            margin-top: 0.75rem; padding: 0.55rem 1rem;
-            background: rgba(0,0,0,0.35); border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.68rem; color: rgba(255,255,255,0.3);
+            margin-top: 0.75rem; padding: 0.5rem 1rem;
+            background: rgba(0,0,0,0.07); border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.07);
+            font-size: 0.65rem; color: rgba(0,0,0,0.38);
             font-family: monospace; display: flex; gap: 0.5rem; align-items: center;
         }
         .status-dot { width: 5px; height: 5px; border-radius: 50%; background: #10b981; flex-shrink: 0; animation: blink 2s ease-in-out infinite; }
+        /* Agent profile modal */
+        .agent-modal-overlay {
+            position: fixed; inset: 0; z-index: 1000;
+            background: rgba(0,0,0,0.55);
+            display: flex; align-items: center; justify-content: center;
+            animation: fadeIn 0.15s ease;
+        }
+        .agent-modal {
+            background: var(--bg-primary); border: 1px solid var(--border);
+            border-radius: 16px; padding: 1.5rem;
+            width: 320px; max-width: 90vw;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            animation: scaleIn 0.15s ease; position: relative;
+        }
+        @keyframes scaleIn { from{transform:scale(0.9);opacity:0} to{transform:scale(1);opacity:1} }
+        .agent-modal-close {
+            position: absolute; top: 1rem; right: 1rem;
+            background: none; border: none; cursor: pointer;
+            color: var(--text-secondary); font-size: 1.1rem;
+        }
+        .agent-modal-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .agent-modal-avatar {
+            font-size: 2rem; width: 52px; height: 52px;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--bg-secondary); border-radius: 12px;
+            border: 2px solid var(--border);
+        }
+        .agent-modal-name { font-size: 1.1rem; font-weight: 700; }
+        .agent-modal-role { font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px; }
+        .agent-modal-stat {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.8rem;
+        }
+        .agent-modal-stat:last-child { border-bottom: none; }
+        .agent-modal-stat-label { color: var(--text-secondary); }
+        .agent-modal-stat-value { font-weight: 600; text-align: right; max-width: 55%; }
 
         /* Docs two-panel layout (reuses mem-layout pattern) */
         /* Docs two-panel layout (reuses mem-layout pattern) */
@@ -6484,71 +6629,148 @@
         // ── Office View ───────────────────────────────────────────────────────────
 
         let OFFICE_REFRESH_TIMER = null;
+        let OFFICE_CLOCK_TIMER = null;
 
         const TEAM_COLOR = {
             'signal-chat': '#f59e0b',
             'main':        '#6b7280',
             'analyst':     '#3b82f6',
-            'research':    '#3b82f6',
+            'research':    '#60a5fa',
             'coder':       '#10b981',
             'writer':      '#8b5cf6',
-            'video':       '#8b5cf6',
-            'image-gen':   '#8b5cf6',
-            'social':      '#8b5cf6',
+            'video':       '#a78bfa',
+            'image-gen':   '#c084fc',
+            'social':      '#ec4899',
             'finance':     '#f97316',
-            'sales':       '#f97316',
-            'support':     '#f97316',
-            'planner':     '#f97316',
+            'sales':       '#fb923c',
+            'support':     '#14b8a6',
+            'planner':     '#fbbf24',
         };
 
-        const FACE_EMOJI = {
-            'signal-chat':'🤵','main':'💼','analyst':'🔬','coder':'💻',
-            'research':'🔍','image-gen':'🎨','planner':'🗺️','writer':'✍️',
-            'video':'🎬','social':'📣','finance':'💰','sales':'🤝','support':'🛟',
+        const AGENT_SKIN = {
+            'signal-chat': '#f5c5a3',
+            'main':        '#f0c8a8',
+            'analyst':     '#d4956a',
+            'research':    '#c8784a',
+            'coder':       '#8b5e3c',
+            'writer':      '#f0b990',
+            'video':       '#a0603a',
+            'image-gen':   '#fad5b0',
+            'social':      '#7a4f30',
+            'finance':     '#e8a878',
+            'sales':       '#bc7850',
+            'support':     '#d09060',
+            'planner':     '#6b3f22',
         };
 
-        const DESK_COLOR = {
-            'signal-chat': '#7c4d1a',
-            default: '#6b4c2a',
+        const AGENT_HAIR = {
+            'signal-chat': '#1a0a00',
+            'main':        '#505050',
+            'analyst':     '#2c1a0a',
+            'research':    '#c8860a',
+            'coder':       '#1a1a1a',
+            'writer':      '#8b5e3c',
+            'video':       '#3d2600',
+            'image-gen':   '#e8c468',
+            'social':      '#1a0a00',
+            'finance':     '#6b4c2a',
+            'sales':       '#3d1a00',
+            'support':     '#a0784a',
+            'planner':     '#1a0a00',
         };
+
+        function getWindowStyle(hour) {
+            if (hour >= 6 && hour < 8)
+                return { sky: 'linear-gradient(180deg,#ff7e5f 0%,#feb47b 55%,#ffe08a 100%)', ground: '#3a6b3a' };
+            if (hour >= 8 && hour < 17)
+                return { sky: 'linear-gradient(180deg,#87ceeb 0%,#b8dff5 70%,#ddf0fa 100%)', ground: '#4a8c3a' };
+            if (hour >= 17 && hour < 20)
+                return { sky: 'linear-gradient(180deg,#1a237e 0%,#7b1fa2 30%,#f57c00 65%,#ffb74d 100%)', ground: '#2a5a2a' };
+            return { sky: 'linear-gradient(180deg,#0d1b2a 0%,#1a2a4a 55%,#2a3d6a 100%)', ground: '#1a3a1a' };
+        }
 
         function buildWorkstation(a, isCorner) {
             if (!a) return '';
             const on = a.isActive;
             const color = TEAM_COLOR[a.id] || '#6b7280';
-            const face = FACE_EMOJI[a.id] || '🤖';
-            const deskBg = isCorner ? '#7c4d1a' : '#6b4c2a';
-            const deskBorder = isCorner ? '#5a3810' : '#4a3018';
-            const chairBg = '#374151';
+            const skin  = AGENT_SKIN[a.id]  || '#f5c5a3';
+            const hair  = AGENT_HAIR[a.id]  || '#2c1a0a';
+            const isJoe = a.id === 'signal-chat';
 
             const bubble = on && a.lastMessage
                 ? `<div class="ws-bubble">${escapeHtml(a.lastMessage.slice(0,45))}${a.lastMessage.length>45?'…':''}</div>`
                 : '';
-
             const screenContent = on
                 ? `<div class="typing-dots"><span></span><span></span><span></span></div>`
-                : `<span style="opacity:0.2;font-size:${isCorner?'14':'10'}px">${face}</span>`;
+                : `<span style="opacity:0.15;font-size:${isCorner?'13':'9'}px">💤</span>`;
+            const tieEl = isJoe ? `<div class="sim-tie"></div>` : '';
+            const face  = isJoe && on ? '😎' : on ? '😊' : '😴';
 
-            return `<div class="workstation">
+            return `<div class="workstation" onclick="showAgentModal('${a.id}')">
                 ${bubble}
-                <div class="ws-desk ${isCorner?'corner':''}" style="background:${deskBg};border-color:${deskBorder}">
-                    <div class="ws-monitor ${on?'on':''}">${screenContent}</div>
+                <div class="ws-desk${isCorner?' corner':''}">
+                    <div class="ws-monitor${on?' on':''}">${screenContent}</div>
                     <div class="ws-keyboard"></div>
                 </div>
-                <div class="ws-chair" style="background:${chairBg};border-color:#1f2937"></div>
-                <div class="sim ${on?'active':'idle'}">
-                    <div class="sim-head">${on?'😊':'😴'}</div>
+                <div class="ws-chair"></div>
+                <div class="sim${on?' active':' idle'}">
+                    <div class="sim-hair" style="background:${hair}"></div>
+                    <div class="sim-head" style="background:${skin}">${face}${tieEl}</div>
                     <div class="sim-body" style="background:${color}"></div>
                     <div class="sim-legs"><div class="sim-leg"></div><div class="sim-leg"></div></div>
                 </div>
                 <div class="ws-nameplate">
-                    <span class="ws-dot" style="background:${on?'#10b981':'rgba(255,255,255,0.15)'}"></span>${escapeHtml(a.name)}
+                    <span class="ws-dot" style="background:${on?color:'rgba(0,0,0,0.15)'}"></span>${escapeHtml(a.name)}
                 </div>
             </div>`;
         }
 
+        function showAgentModal(agentId) {
+            const agents = window._OFFICE_AGENTS || [];
+            const a = agents.find(x => x.id === agentId);
+            if (!a) return;
+            const color = TEAM_COLOR[a.id] || '#6b7280';
+            const existing = document.getElementById('agent-modal-overlay');
+            if (existing) existing.remove();
+            const overlay = document.createElement('div');
+            overlay.id = 'agent-modal-overlay';
+            overlay.className = 'agent-modal-overlay';
+            overlay.innerHTML = `<div class="agent-modal">
+                <button class="agent-modal-close" onclick="document.getElementById('agent-modal-overlay').remove()">✕</button>
+                <div class="agent-modal-header">
+                    <div class="agent-modal-avatar" style="border-color:${color}">${AGENT_EMOJI[a.id]||'🤖'}</div>
+                    <div>
+                        <div class="agent-modal-name">${escapeHtml(a.name)}</div>
+                        <div class="agent-modal-role" style="color:${color}">${escapeHtml(AGENT_ROLE_TITLE[a.id]||a.id)}</div>
+                    </div>
+                </div>
+                <div class="agent-modal-stat">
+                    <span class="agent-modal-stat-label">Status</span>
+                    <span class="agent-modal-stat-value" style="color:${a.isActive?'#10b981':'#6b7280'}">${a.isActive?'Working':'Idle'}</span>
+                </div>
+                <div class="agent-modal-stat">
+                    <span class="agent-modal-stat-label">Sessions</span>
+                    <span class="agent-modal-stat-value">${a.sessionCount||0}</span>
+                </div>
+                <div class="agent-modal-stat">
+                    <span class="agent-modal-stat-label">Last Active</span>
+                    <span class="agent-modal-stat-value">${escapeHtml(a.lastActivityAgo||'never')}</span>
+                </div>
+                <div class="agent-modal-stat">
+                    <span class="agent-modal-stat-label">Model</span>
+                    <span class="agent-modal-stat-value">${escapeHtml(a.model||'—')}</span>
+                </div>
+                ${a.lastMessage?`<div class="agent-modal-stat" style="flex-direction:column;gap:4px">
+                    <span class="agent-modal-stat-label">Last Message</span>
+                    <span class="agent-modal-stat-value" style="font-size:0.75rem;color:var(--text-secondary);max-width:100%">${escapeHtml(a.lastMessage.slice(0,120))}${a.lastMessage.length>120?'…':''}</span>
+                </div>`:''}
+            </div>`;
+            overlay.addEventListener('click', e => { if (e.target===overlay) overlay.remove(); });
+            document.body.appendChild(overlay);
+        }
+
         async function renderOfficeView() {
-            const el = document.getElementById('office-content');
+            const el  = document.getElementById('office-content');
             const sub = document.getElementById('office-subtitle');
             if (!el) return;
 
@@ -6560,57 +6782,85 @@
                 el.innerHTML = '<div class="empty-state-large">Could not load office data.</div>';
                 return;
             }
+            window._OFFICE_AGENTS = agents;
 
             const am = {};
             agents.forEach(a => am[a.id] = a);
             const active = agents.filter(a => a.isActive);
-            const time = new Date().toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
-            if (sub) sub.textContent = `${active.length > 0 ? active.length + ' agent' + (active.length>1?'s':'') + ' working' : 'All agents idle'} · ${time}`;
+            const now    = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
+            const hour    = now.getHours();
+
+            if (sub) sub.textContent = `${active.length>0 ? active.length+' agent'+(active.length>1?'s':'')+' working' : 'All agents idle'} · ${timeStr}`;
+
+            const win = getWindowStyle(hour);
+            const MISSION = 'We build with intelligence. An autonomous organization of AI agents doing real work 24/7. One person. A full team of specialists — each with a defined role, a distinct voice, and a shared mission: help Jose move faster, think sharper, and build better.';
 
             const zone = (label, emoji, color, ids) => {
-                const desks = ids.map(id => buildWorkstation(am[id], false)).join('');
+                const desks = ids.filter(id => am[id]).map(id => buildWorkstation(am[id], false)).join('');
+                if (!desks) return '';
                 return `<div class="office-zone">
                     <div class="office-zone-label"><span style="color:${color}">${emoji}</span> ${label}</div>
                     <div class="office-desks-row">${desks}</div>
                 </div>`;
             };
 
-            el.innerHTML = `<div class="office-room">
-                <!-- Corner office row: Joe + Intel + Plants -->
-                <div style="display:flex;gap:1rem;margin-bottom:1rem;align-items:flex-start">
-                    <div class="office-zone" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.04)">
-                        <div class="office-zone-label"><span style="color:#f59e0b">⭐</span> Corner Office</div>
-                        <div class="office-desks-row">${buildWorkstation(am['signal-chat'], true)}</div>
+            el.innerHTML = `
+                <div class="office-wall">
+                    <div class="office-window">
+                        <div class="sky" style="background:${win.sky}"></div>
+                        <div class="ground" style="background:${win.ground}"></div>
+                        <div class="win-bar-v"></div><div class="win-bar-h"></div>
                     </div>
-                    <div class="office-zone" style="flex:1">
-                        <div class="office-zone-label"><span style="color:#3b82f6">🧠</span> Intelligence</div>
-                        <div class="office-desks-row">
-                            ${buildWorkstation(am['analyst'], false)}
-                            ${buildWorkstation(am['research'], false)}
+                    <div class="office-window">
+                        <div class="sky" style="background:${win.sky}"></div>
+                        <div class="ground" style="background:${win.ground}"></div>
+                        <div class="win-bar-v"></div><div class="win-bar-h"></div>
+                    </div>
+                    <div class="office-tv">
+                        <div class="tv-scanlines"></div>
+                        <div class="tv-text">${escapeHtml(MISSION)}</div>
+                    </div>
+                    <div class="office-bulletin">
+                        <div class="bul-pin"></div>
+                        <div class="bul-note">📌 ${active.length} active</div>
+                        <div class="bul-note">👥 ${agents.length} agents</div>
+                        <div class="bul-note">Jose & Co.</div>
+                    </div>
+                    <div class="office-clock">
+                        <div class="clk-time" id="office-clock-display">${timeStr}</div>
+                        <div class="clk-label">HQ Time</div>
+                    </div>
+                </div>
+                <div class="office-room">
+                    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:flex-start">
+                        <div class="private-office">
+                            <div class="private-office-sign">⭐ Chief of Staff</div>
+                            <div class="office-desks-row">${buildWorkstation(am['signal-chat'], true)}</div>
+                            <div class="private-office-door"></div>
+                        </div>
+                        ${zone('Intelligence', '🧠', '#3b82f6', ['analyst','research'])}
+                        ${zone('Engineering & Creative', '⚡', '#10b981', ['coder','writer','video','image-gen','social'])}
+                        ${zone('Business Ops', '💼', '#f97316', ['finance','sales','support','planner'])}
+                        <div class="break-zone">
+                            <div class="amenity"><div class="amenity-icon">💧</div><div class="amenity-label">Water</div></div>
+                            <div class="amenity"><div class="amenity-icon">☕</div><div class="amenity-label">Coffee</div></div>
+                            <div class="amenity"><div class="amenity-icon">🌿</div><div class="amenity-label">Plants</div></div>
                         </div>
                     </div>
-                    <div class="office-amenities" style="padding-bottom:0.5rem">
-                        <div class="amenity"><div class="amenity-icon">🌿</div><div class="amenity-label">Plants</div></div>
-                        <div class="amenity"><div class="amenity-icon">🪟</div><div class="amenity-label">Window</div></div>
+                    <div class="office-status-bar">
+                        <div class="status-dot"></div>
+                        <span>${active.length>0 ? active.map(a=>escapeHtml(a.name)).join(', ')+' working' : 'All agents idle'} · Jose & Co. HQ · ${timeStr}</span>
                     </div>
                 </div>
+            `;
 
-                ${zone('Engineering & Creative', '🎨', '#8b5cf6', ['coder','writer','video','image-gen','social'])}
-                
-                <div style="display:flex;gap:1rem;align-items:flex-start">
-                    <div style="flex:1">${zone('Business', '💼', '#f97316', ['finance','sales','support','planner'])}</div>
-                    <div style="display:flex;flex-direction:column;gap:0.75rem;align-items:center;padding:1.25rem 0.5rem">
-                        <div class="amenity"><div class="amenity-icon">💧</div><div class="amenity-label">Water Cooler</div></div>
-                        <div class="amenity"><div class="amenity-icon">☕</div><div class="amenity-label">Coffee</div></div>
-                        <div class="amenity"><div class="amenity-icon">📋</div><div class="amenity-label">Whiteboard</div></div>
-                    </div>
-                </div>
-
-                <div class="office-status-bar">
-                    <div class="status-dot"></div>
-                    <span>${active.length > 0 ? active.map(a=>escapeHtml(a.name)).join(', ') + ' working' : 'All agents idle'} · Jose & Co. HQ · ${time}</span>
-                </div>
-            </div>`;
+            // Live clock tick
+            if (OFFICE_CLOCK_TIMER) clearInterval(OFFICE_CLOCK_TIMER);
+            OFFICE_CLOCK_TIMER = setInterval(() => {
+                const clk = document.getElementById('office-clock-display');
+                if (clk) clk.textContent = new Date().toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
+            }, 1000);
 
             if (OFFICE_REFRESH_TIMER) clearTimeout(OFFICE_REFRESH_TIMER);
             OFFICE_REFRESH_TIMER = setTimeout(() => {
@@ -6770,6 +7020,7 @@
             if (viewName === 'docs') renderDocsView();
             if (viewName === 'office') renderOfficeView();
             if (viewName !== 'office' && OFFICE_REFRESH_TIMER) { clearTimeout(OFFICE_REFRESH_TIMER); OFFICE_REFRESH_TIMER = null; }
+            if (viewName !== 'office' && OFFICE_CLOCK_TIMER) { clearInterval(OFFICE_CLOCK_TIMER); OFFICE_CLOCK_TIMER = null; }
         }
 
         function generateChangesSummary() {
