@@ -139,10 +139,10 @@
       "name": "BILLING.md",
       "path": "/openclaw-data/workspace-signal-chat/BILLING.md",
       "category": "Notes",
-      "sizeBytes": 896,
+      "sizeBytes": 895,
       "wordCount": 183,
-      "modifiedAt": 1774503975673.8625,
-      "content": "# Billing Ledger: AI Usage\n\n## Monthly Overview: March 2026\n| Provider | Model | Tokens (In/Out) | Estimated Cost |\n| :--- | :--- | :--- | :--- |\n| **Anthropic** | Claude Sonnet 4 5 | 182 / 17,982 | $1.03 |\n| **Anthropic** | Claude Sonnet 4 6 | 6 / 268 | $0.18 |\n| **Anthropic** | Claude Haiku 4 5 | 36 / 462 | $0.16 |\n| **Google** | Gemini 2.5 Flash | 8,333,828 / 58,477 | $2.93 |\n| **Google** | Gemini 3 Flash Preview | 1,473,715 / 14,186 | $0.80 |\n| **Google** | Gemini 3 Pro Preview | 135,096 / 4,281 | $0.33 |\n| **Google** | Gemini 2.5 Flash Lite | 380,665 / 7,077 | $0.04 |\n| **OpenAI** | Gpt 5 Mini | 1,215,797 / 17,260 | $0.36 |\n| **OpenAI** | Gpt 4O Mini | 485,397 / 1,771 | $0.10 |\n\n## Totals\n- **Total Tokens:** 12,146,486\n- **Total Est. Cost:** $5.92\n\n---\n*Note: Costs are estimated from per-response usage telemetry recorded in session JSONL logs. Updated: Thursday, March 26, 2026.\n"
+      "modifiedAt": 1774504371961.384,
+      "content": "# Billing Ledger: AI Usage\n\n## Monthly Overview: March 2026\n| Provider | Model | Tokens (In/Out) | Estimated Cost |\n| :--- | :--- | :--- | :--- |\n| **Anthropic** | Claude Sonnet 4 5 | 182 / 17,982 | $1.03 |\n| **Anthropic** | Claude Sonnet 4 6 | 6 / 268 | $0.18 |\n| **Anthropic** | Claude Haiku 4 5 | 36 / 462 | $0.16 |\n| **Google** | Gemini 2.5 Flash | 8,531,439 / 59,467 | $3.00 |\n| **Google** | Gemini 3 Flash Preview | 1,473,715 / 14,186 | $0.80 |\n| **Google** | Gemini 3 Pro Preview | 89,966 / 2,591 | $0.22 |\n| **Google** | Gemini 2.5 Flash Lite | 380,665 / 7,077 | $0.04 |\n| **OpenAI** | Gpt 5 Mini | 1,215,797 / 17,260 | $0.36 |\n| **OpenAI** | Gpt 4O Mini | 485,397 / 1,771 | $0.10 |\n\n## Totals\n- **Total Tokens:** 12,298,267\n- **Total Est. Cost:** $5.87\n\n---\n*Note: Costs are estimated from per-response usage telemetry recorded in session JSONL logs. Updated: Thursday, March 26, 2026.\n"
     },
     {
       "name": "BUGS.md",
@@ -334,5 +334,5 @@
       "content": "# Todo List: Rene\n"
     }
   ],
-  "updatedAt": 1774504131316
+  "updatedAt": 1774504430884
 }
