@@ -102,10 +102,10 @@
         "kind": "agentTurn",
         "message": "Run a self health check: exec `joe-repair --check`. If any issues are found, run `joe-repair --fix` to repair them, then send Jose a brief Signal DM summarizing what you found and fixed. If everything is healthy, do nothing — no message needed."
       },
-      "lastRunAt": "2026-03-25T15:00:00.008Z",
-      "nextRunAt": "2026-03-26T15:00:00.000Z",
+      "lastRunAt": "2026-03-26T15:00:00.009Z",
+      "nextRunAt": "2026-03-27T15:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 24439,
+      "lastDurationMs": 10724,
       "consecutiveErrors": 0
     },
     {
@@ -181,5 +181,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774537052241
+  "updatedAt": 1774537351416
 }
