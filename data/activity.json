@@ -209,13 +209,6 @@
       "timestamp": 1773994542579,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
       "turns": 1
-    },
-    {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1773908145580,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
     }
   ],
   "digest": [
@@ -272,5 +265,5 @@
       }
     }
   ],
-  "updatedAt": 1774512752195
+  "updatedAt": 1774513052391
 }
