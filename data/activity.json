@@ -87,13 +87,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774436400163,
-      "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774413108867,
       "message": "[cron:779a4a3d-4ce1-456c-b6bf-d877868f928f Mission Control UI Update Status] The dev agent is still ",
       "turns": 1
@@ -258,9 +251,9 @@
     },
     {
       "day": "2026-03-25",
-      "total": 8,
+      "total": 7,
       "byAgent": {
-        "signal-chat": 8
+        "signal-chat": 7
       }
     },
     {
@@ -272,5 +265,5 @@
       }
     }
   ],
-  "updatedAt": 1774522952785
+  "updatedAt": 1774523252811
 }
