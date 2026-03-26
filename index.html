@@ -1855,28 +1855,43 @@
         /* Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1.25rem;
         }
         .project-view-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 1.5rem;
             cursor: pointer;
             transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
         }
-        .project-view-card:hover { border-color: var(--accent-blue); transform: translateY(-2px); }
-        .project-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
-        .project-card-icon { font-size: 1.5rem; }
-        .project-card-name { font-weight: 600; font-size: 1rem; }
-        .project-card-stats { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 1rem; }
-        .project-progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .project-view-card:hover { border-color: var(--accent-blue); transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .proj-card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.6rem; }
+        .proj-card-name { font-weight: 700; font-size: 1.05rem; flex: 1; }
+        .proj-status-badge { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; white-space: nowrap; margin-left: 8px; }
+        .proj-status-active { background: rgba(34,197,94,0.15); color: #22c55e; }
+        .proj-status-planning { background: rgba(99,102,241,0.15); color: #818cf8; }
+        .proj-status-paused { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .proj-status-done { background: rgba(107,114,128,0.15); color: #9ca3af; }
+        .proj-desc { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .proj-progress-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 5px; }
+        .proj-pct { font-weight: 700; color: var(--text-primary); }
+        .project-progress-bar { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; margin-bottom: 1rem; }
         .project-progress-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
-        .project-progress-label { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.4rem; }
-        .project-task-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
-        .project-task-item { font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem; }
-        .project-task-item::before { content: '•'; color: var(--accent-blue); }
+        .proj-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+        .proj-assignee { display: flex; align-items: center; gap: 8px; }
+        .proj-avatar { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; }
+        .proj-assignee-name { font-size: 12px; color: var(--text-secondary); font-weight: 500; }
+        .proj-priority-badge { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+        .proj-priority-high { background: rgba(239,68,68,0.15); color: #ef4444; }
+        .proj-priority-medium { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .proj-priority-low { background: rgba(34,197,94,0.15); color: #22c55e; }
+        .proj-updated { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
 
         /* Memory / Team gateway cards */
         .gateway-card {
@@ -2823,8 +2838,10 @@
     <div id="view-projects" class="view" style="display:none;">
         <div class="section-container">
             <div class="section-header">
-                <h2>📁 Projects</h2>
-                <p class="section-subtitle">Track every major project you're working on. Stay on top of what needs to move forward today.</p>
+                <div>
+                    <h2>📁 Projects</h2>
+                    <p class="section-subtitle" id="projects-subtitle">Track every major project you're working on.</p>
+                </div>
             </div>
             <div id="projects-grid" class="projects-grid">
                 <!-- Populated by renderProjectsView() -->
@@ -5886,37 +5903,81 @@
             const projects = (STATE.data && STATE.data.projects) || [];
             const tasks = (STATE.data && STATE.data.tasks) || [];
             if (projects.length === 0) {
-                container.innerHTML = '<div class="empty-state-large">No projects yet. Add projects in Settings or ask your OpenClaw to set them up.</div>';
+                container.innerHTML = '<div class="empty-state-large">No projects yet. Ask your OpenClaw: "Set up my major projects in Mission Control."</div>';
                 return;
             }
+
+            // Update subtitle counts
+            const active = projects.filter(p => (p.status || 'active') === 'active').length;
+            const planning = projects.filter(p => p.status === 'planning').length;
+            const subtitle = document.getElementById('projects-subtitle');
+            if (subtitle) {
+                const parts = [`${projects.length} total`];
+                if (active) parts.push(`${active} active`);
+                if (planning) parts.push(`${planning} planning`);
+                subtitle.textContent = parts.join(' • ');
+            }
+
+            function avatarColor(name) {
+                const colors = ['#6366f1','#22c55e','#f59e0b','#ec4899','#14b8a6','#8b5cf6','#ef4444','#3b82f6'];
+                let h = 0; for (let i = 0; i < (name||'').length; i++) h = (h * 31 + name.charCodeAt(i)) & 0xffffffff;
+                return colors[Math.abs(h) % colors.length];
+            }
+
+            function timeAgoShort(ms) {
+                if (!ms) return null;
+                const s = Math.floor((Date.now() - ms) / 1000);
+                if (s < 3600) return `${Math.floor(s/60)}m ago`;
+                if (s < 86400) return `${Math.floor(s/3600)}h ago`;
+                if (s < 86400 * 30) return `${Math.floor(s/86400)}d ago`;
+                return `${Math.floor(s/2592000)}mo ago`;
+            }
+
             container.innerHTML = projects.map(proj => {
-                const projTasks = tasks.filter(t => !t.archived && t.project === proj.id);
+                const projTasks = tasks.filter(t => !t.archived && (t.project === proj.id || t.project === proj.name));
                 const total = projTasks.length;
                 const done = projTasks.filter(t => t.status === 'done' || t.status === 'review').length;
                 const inProgress = projTasks.filter(t => t.status === 'in_progress').length;
-                const backlog = projTasks.filter(t => t.status === 'backlog').length;
                 const pct = total > 0 ? Math.round((done / total) * 100) : 0;
-                const activeTasks = projTasks.filter(t => t.status !== 'done').slice(0, 3);
-                return `
-                    <div class="project-view-card" onclick="filterByProject('${proj.id}'); switchView('tasks')" style="border-top: 3px solid ${proj.color}">
-                        <div class="project-card-header">
-                            <span class="project-card-icon">${proj.icon || '📁'}</span>
-                            <span class="project-card-name">${escapeHtml(proj.name)}</span>
+
+                const status = proj.status || 'active';
+                const statusClass = { active: 'proj-status-active', planning: 'proj-status-planning', paused: 'proj-status-paused', done: 'proj-status-done' }[status] || 'proj-status-active';
+                const statusLabel = status.charAt(0).toUpperCase() + status.slice(1);
+
+                const assignee = proj.assignee || '';
+                const avatarInitial = assignee ? assignee.charAt(0).toUpperCase() : (proj.name || '?').charAt(0).toUpperCase();
+                const avatarBg = avatarColor(assignee || proj.name);
+
+                const priority = proj.priority || '';
+                const priorityClass = { high: 'proj-priority-high', medium: 'proj-priority-medium', low: 'proj-priority-low' }[priority] || '';
+
+                const updatedMs = proj.updatedAt || null;
+                const updatedAgo = timeAgoShort(updatedMs);
+                const updatedBy = proj.updatedBy || assignee || '';
+                const updatedStr = updatedAgo ? (updatedBy ? `${updatedAgo} by ${updatedBy}` : updatedAgo) : null;
+
+                return `<div class="project-view-card" onclick="filterByProject('${proj.id}'); switchView('tasks')" style="border-top: 3px solid ${proj.color || '#6366f1'}">
+                    <div class="proj-card-top">
+                        <div class="proj-card-name">${escapeHtml(proj.icon || '')} ${escapeHtml(proj.name)}</div>
+                        <span class="proj-status-badge ${statusClass}">${statusLabel}</span>
+                    </div>
+                    ${proj.description ? `<div class="proj-desc">${escapeHtml(proj.description)}</div>` : '<div style="height:0.75rem"></div>'}
+                    <div class="proj-progress-row">
+                        <span class="proj-pct">${pct}%</span>
+                        <span>${done}/${total} tasks${inProgress ? ` • ${inProgress} active` : ''}</span>
+                    </div>
+                    <div class="project-progress-bar">
+                        <div class="project-progress-fill" style="width:${pct}%; background:${proj.color || '#6366f1'}"></div>
+                    </div>
+                    <div class="proj-card-footer">
+                        <div class="proj-assignee">
+                            <div class="proj-avatar" style="background:${avatarBg}">${avatarInitial}</div>
+                            ${assignee ? `<span class="proj-assignee-name">${escapeHtml(assignee)}</span>` : '<span class="proj-assignee-name" style="color:var(--text-muted)">Unassigned</span>'}
                         </div>
-                        <div class="project-card-stats">
-                            <span>${total} tasks</span>
-                            <span>${inProgress} in progress</span>
-                            <span>${backlog} in backlog</span>
-                        </div>
-                        <div class="project-progress-bar">
-                            <div class="project-progress-fill" style="width:${pct}%; background:${proj.color}"></div>
-                        </div>
-                        <div class="project-progress-label">${pct}% complete</div>
-                        ${activeTasks.length > 0 ? `
-                        <div class="project-task-list">
-                            ${activeTasks.map(t => `<div class="project-task-item">${escapeHtml(t.title)}</div>`).join('')}
-                        </div>` : ''}
-                    </div>`;
+                        ${priority ? `<span class="proj-priority-badge ${priorityClass}">${priority}</span>` : ''}
+                    </div>
+                    ${updatedStr ? `<div class="proj-updated">${updatedStr}</div>` : ''}
+                </div>`;
             }).join('');
         }
 
