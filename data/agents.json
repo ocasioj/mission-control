@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774505982393,
-      "lastActivityAgo": "22m ago",
+      "lastActivityAgo": "27m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 67,
       "lastActivity": 1774504808095,
-      "lastActivityAgo": "42m ago",
+      "lastActivityAgo": "47m ago",
       "isActive": false,
       "lastMessage": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily Billing Update (Joe)] Run this exact command and return stdout exactly ",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774507350543
+  "updatedAt": 1774507650445
 }
