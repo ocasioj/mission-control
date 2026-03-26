@@ -1,0 +1,63 @@
+{
+  "goals": [
+    {
+      "id": "g1",
+      "title": "Launch Mission Control v1",
+      "area": "Product",
+      "progress": 85,
+      "owner": "Joe",
+      "status": "on-track",
+      "notes": "Dashboard live at GitHub Pages"
+    },
+    {
+      "id": "g2",
+      "title": "Build YouTube content pipeline",
+      "area": "Content",
+      "progress": 30,
+      "owner": "Director",
+      "status": "in-progress",
+      "notes": "Director + Pixel + Amp workflow in design"
+    },
+    {
+      "id": "g3",
+      "title": "5 paying customers",
+      "area": "Revenue",
+      "progress": 0,
+      "owner": "Closer",
+      "status": "not-started",
+      "notes": "Prospecting list not yet built"
+    },
+    {
+      "id": "g4",
+      "title": "Automate weekly digest",
+      "area": "Operations",
+      "progress": 60,
+      "owner": "Ledger",
+      "status": "in-progress",
+      "notes": "Daily briefing live; weekly digest in progress"
+    }
+  ],
+  "pipeline": [
+    {
+      "stage": "Lead",
+      "count": 0,
+      "value": 0
+    },
+    {
+      "stage": "Contacted",
+      "count": 0,
+      "value": 0
+    },
+    {
+      "stage": "Proposal",
+      "count": 0,
+      "value": 0
+    },
+    {
+      "stage": "Closed",
+      "count": 0,
+      "value": 0
+    }
+  ],
+  "updatedAt": 1774504133050
+}
