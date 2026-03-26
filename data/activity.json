@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774507800278,
+      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774503972575,
       "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily Billing Update (Joe)] Run this exact command and re",
       "turns": 1
@@ -266,11 +273,11 @@
     },
     {
       "day": "2026-03-26",
-      "total": 3,
+      "total": 4,
       "byAgent": {
-        "signal-chat": 3
+        "signal-chat": 4
       }
     }
   ],
-  "updatedAt": 1774507652330
+  "updatedAt": 1774507952282
 }
