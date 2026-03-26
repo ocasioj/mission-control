@@ -78,41 +78,6 @@
       "turns": 1
     },
     {
-      "agentId": "writer",
-      "agentName": "Quill",
-      "timestamp": 1774502177940,
-      "message": "[Thu 2026-03-26 01:16 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "research",
-      "agentName": "Scout",
-      "timestamp": 1774502105356,
-      "message": "[Thu 2026-03-26 01:15 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "planner",
-      "agentName": "Atlas",
-      "timestamp": 1774502105021,
-      "message": "[Thu 2026-03-26 01:15 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "image-gen",
-      "agentName": "Pixel",
-      "timestamp": 1774502104422,
-      "message": "[Thu 2026-03-26 01:15 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "analyst",
-      "agentName": "Nova",
-      "timestamp": 1774502103747,
-      "message": "[Thu 2026-03-26 01:15 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1774497604148,
@@ -371,21 +336,21 @@
     },
     {
       "day": "2026-03-26",
-      "total": 18,
+      "total": 13,
       "byAgent": {
         "sales": 1,
-        "planner": 2,
-        "research": 2,
+        "planner": 1,
+        "research": 1,
         "signal-chat": 3,
         "social": 1,
-        "image-gen": 2,
+        "image-gen": 1,
         "finance": 1,
-        "analyst": 2,
-        "writer": 2,
+        "analyst": 1,
+        "writer": 1,
         "support": 1,
         "video": 1
       }
     }
   ],
-  "updatedAt": 1774505552327
+  "updatedAt": 1774505852517
 }
