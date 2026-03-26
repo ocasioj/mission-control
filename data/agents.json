@@ -6,7 +6,7 @@
       "desc": "Web chat & voice call handler, general assistant",
       "sessionCount": 7,
       "lastActivity": 1774496080811,
-      "lastActivityAgo": "13m ago",
+      "lastActivityAgo": "18m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -50,7 +50,7 @@
       "desc": "Image generation tasks",
       "sessionCount": 1,
       "lastActivity": 1773546531824,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Sat 2026-03-14 23:48 EDT] Create a vibrant travel poster for a family trip to Montreal, Canada. Include iconic Montreal",
       "lastModel": "gemini-3-flash-preview"
@@ -61,7 +61,7 @@
       "desc": "",
       "sessionCount": 1,
       "lastActivity": 1773546498380,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Sat 2026-03-14 23:47 EDT] Write a Python budget calculator script for a 4-day family trip to Montreal, Canada for 2 adu",
       "lastModel": "claude-sonnet-4-5"
@@ -133,5 +133,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774496883629
+  "updatedAt": 1774497183579
 }
