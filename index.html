@@ -5834,14 +5834,22 @@
 
         const MC_BASE = 'http://localhost:61949';
 
+        async function fetchGitHubDataFile(filename) {
+            const url = `https://api.github.com/repos/ocasioj/mission-control/contents/data/${filename}`;
+            const headers = { 'Cache-Control': 'no-cache' };
+            if (STATE.config && STATE.config.token) headers['Authorization'] = `token ${STATE.config.token}`;
+            const res = await fetch(url, { headers });
+            if (!res.ok) throw new Error(`GitHub fetch ${filename} failed: HTTP ${res.status}`);
+            const ghData = await res.json();
+            return JSON.parse(atob(ghData.content.replace(/\n/g, '')));
+        }
+
         async function renderMemoryView() {
             const el = document.getElementById('memory-content');
             if (!el) return;
             el.innerHTML = '<div class="empty-state-large">Loading memories...</div>';
             try {
-                const res = await fetch(`${MC_BASE}/api/memory`);
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                const { current, entries } = await res.json();
+                const { current, entries } = await fetchGitHubDataFile('memory.json');
                 let html = '';
                 if (current && current.trim()) {
                     html += `<div class="memory-card memory-current">
@@ -5860,7 +5868,7 @@
                     </div>`).join('');
                 el.innerHTML = html;
             } catch(err) {
-                el.innerHTML = `<div class="gateway-card"><div class="gateway-icon">🧠</div><h3>Memory Viewer</h3><p>Could not reach Mission Control server at ${MC_BASE}.</p><p class="gateway-hint">Make sure the Mission Control container is running.</p></div>`;
+                el.innerHTML = `<div class="gateway-card"><div class="gateway-icon">🧠</div><h3>Memory Viewer</h3><p>Memory data not yet available.</p><p class="gateway-hint">The Mission Control server pushes updates every 5 minutes. Try again shortly.</p></div>`;
             }
         }
 
@@ -5869,13 +5877,12 @@
             if (!el) return;
             el.innerHTML = '<div class="empty-state-large">Loading agents...</div>';
             try {
-                const res = await fetch(`${MC_BASE}/api/agents`);
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                const agents = await res.json();
+                const { agents, updatedAt } = await fetchGitHubDataFile('agents.json');
                 if (!agents.length) {
                     el.innerHTML = '<div class="empty-state-large">No agents found.</div>';
                     return;
                 }
+                const ago = updatedAt ? `Updated ${formatTimeAgo(updatedAt)}` : '';
                 el.innerHTML = `<div class="agents-grid">${agents.map(a => `
                     <div class="agent-card ${a.isActive ? 'agent-active' : ''}">
                         <div class="agent-card-header">
@@ -5891,9 +5898,9 @@
                             ${a.lastModel ? `<span class="agent-model">${escapeHtml(a.lastModel.split('/').pop())}</span>` : ''}
                         </div>
                     </div>`).join('')}
-                </div>`;
+                </div>${ago ? `<div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:8px;">${ago}</div>` : ''}`;
             } catch(err) {
-                el.innerHTML = `<div class="gateway-card"><div class="gateway-icon">🤖</div><h3>Agent Team</h3><p>Could not reach Mission Control server at ${MC_BASE}.</p></div>`;
+                el.innerHTML = `<div class="gateway-card"><div class="gateway-icon">🤖</div><h3>Agent Team</h3><p>Agent data not yet available.</p><p class="gateway-hint">The Mission Control server pushes updates every 5 minutes. Try again shortly.</p></div>`;
             }
         }
 
