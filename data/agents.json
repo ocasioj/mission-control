@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 68,
+      "lastActivity": 1774528008537,
+      "lastActivityAgo": "42s ago",
+      "isActive": true,
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774527996264\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774527581714,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
-      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
-      "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 67,
-      "lastActivity": 1774527300004,
       "lastActivityAgo": "7m ago",
       "isActive": false,
-      "lastMessage": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmail-health-report. Do ",
-      "lastModel": "gemini-2.5-flash"
+      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
+      "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "planner",
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774527750583
+  "updatedAt": 1774528050688
 }
