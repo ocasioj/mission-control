@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "main",
+      "name": "Joe (Web)",
+      "desc": "Web chat & group @mention handler",
+      "sessionCount": 7,
+      "lastActivity": 1774523981602,
+      "lastActivityAgo": "2m ago",
+      "isActive": true,
+      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
+      "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 67,
       "lastActivity": 1774522800016,
-      "lastActivityAgo": "17m ago",
+      "lastActivityAgo": "22m ago",
       "isActive": false,
       "lastMessage": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/workspace-signal-chat/d",
       "lastModel": "gemini-2.5-flash"
-    },
-    {
-      "id": "main",
-      "name": "Joe (Web)",
-      "desc": "Web chat & group @mention handler",
-      "sessionCount": 7,
-      "lastActivity": 1774522181629,
-      "lastActivityAgo": "27m ago",
-      "isActive": false,
-      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
-      "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "planner",
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774523850554
+  "updatedAt": 1774524150663
 }
