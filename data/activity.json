@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774537200168,
+      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774527997240,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774527996264\",\n  \"sender_id\": \"+",
       "turns": 10
@@ -82,13 +89,6 @@
       "agentName": "Joe",
       "timestamp": 1774497600335,
       "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily Billing Update (Joe)] Run this exact command and re",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774450800177,
-      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
       "turns": 1
     },
     {
@@ -258,19 +258,19 @@
     },
     {
       "day": "2026-03-25",
-      "total": 4,
+      "total": 3,
       "byAgent": {
-        "signal-chat": 4
+        "signal-chat": 3
       }
     },
     {
       "day": "2026-03-26",
-      "total": 12,
+      "total": 13,
       "byAgent": {
-        "signal-chat": 11,
+        "signal-chat": 12,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774537054087
+  "updatedAt": 1774537352977
 }
