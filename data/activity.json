@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774522800164,
+      "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
+      "turns": 1
+    },
+    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1774513178885,
@@ -258,12 +265,12 @@
     },
     {
       "day": "2026-03-26",
-      "total": 7,
+      "total": 8,
       "byAgent": {
-        "signal-chat": 6,
+        "signal-chat": 7,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774522652425
+  "updatedAt": 1774522952785
 }
