@@ -1924,17 +1924,43 @@
         .agents-org { margin-top: 1rem; }
 
         /* Memory View */
-        .memory-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .memory-card.memory-current { border-color: var(--accent-blue); }
-        .memory-card-date { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-blue); margin-bottom: 0.75rem; font-weight: 600; }
-        .memory-current .memory-card-date { color: var(--accent-blue); }
-        .memory-card-body { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.7; white-space: pre-wrap; }
+        /* Memory two-panel layout */
+        .mem-layout { display: flex; gap: 0; height: calc(100vh - 160px); min-height: 500px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .mem-sidebar { width: 280px; flex-shrink: 0; border-right: 1px solid var(--border); display: flex; flex-direction: column; background: var(--bg-secondary); }
+        .mem-search { padding: 12px; border-bottom: 1px solid var(--border); }
+        .mem-search input { width: 100%; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; color: var(--text-primary); font-size: 13px; outline: none; box-sizing: border-box; }
+        .mem-search input:focus { border-color: var(--accent-blue); }
+        .mem-ltm { margin: 10px; padding: 12px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: border-color 0.15s; }
+        .mem-ltm:hover, .mem-ltm.active { border-color: var(--accent-blue); }
+        .mem-ltm-header { display: flex; align-items: center; gap: 10px; }
+        .mem-ltm-icon { width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg,#6366f1,#8b5cf6); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+        .mem-ltm-title { font-weight: 700; font-size: 13px; }
+        .mem-ltm-meta { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+        .mem-section-label { padding: 8px 14px 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); display: flex; align-items: center; gap: 6px; cursor: pointer; user-select: none; }
+        .mem-section-badge { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1px 7px; font-size: 10px; color: var(--text-secondary); }
+        .mem-entry-list { flex: 1; overflow-y: auto; padding-bottom: 8px; }
+        .mem-entry { padding: 10px 14px; cursor: pointer; border-left: 3px solid transparent; transition: all 0.15s; }
+        .mem-entry:hover { background: var(--bg-card); }
+        .mem-entry.active { background: var(--bg-card); border-left-color: var(--accent-blue); }
+        .mem-entry-day { font-weight: 600; font-size: 13px; }
+        .mem-entry-meta { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+        /* Reading pane */
+        .mem-pane { flex: 1; overflow-y: auto; background: var(--bg-primary); }
+        .mem-pane-empty { display: flex; align-items: center; justify-content: center; height: 100%; color: var(--text-muted); font-size: 14px; }
+        .mem-pane-header { padding: 20px 28px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: space-between; }
+        .mem-pane-title { font-size: 20px; font-weight: 700; }
+        .mem-pane-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+        .mem-pane-modified { font-size: 11px; color: var(--text-muted); white-space: nowrap; padding-top: 4px; }
+        .mem-pane-body { padding: 24px 28px; }
+        /* Markdown rendering */
+        .mem-md h1,.mem-md h2 { font-size: 1.1rem; font-weight: 700; margin: 1.2rem 0 0.5rem; color: var(--text-primary); }
+        .mem-md h3 { font-size: 1rem; font-weight: 600; margin: 1rem 0 0.4rem; color: var(--accent-blue); }
+        .mem-md p { font-size: 0.875rem; line-height: 1.75; color: var(--text-secondary); margin: 0.4rem 0; }
+        .mem-md ul,.mem-md ol { padding-left: 1.4rem; margin: 0.4rem 0; }
+        .mem-md li { font-size: 0.875rem; line-height: 1.7; color: var(--text-secondary); }
+        .mem-md strong { color: var(--text-primary); font-weight: 600; }
+        .mem-md hr { border: none; border-top: 1px solid var(--border); margin: 1.2rem 0; }
+        .mem-md code { font-family: monospace; font-size: 0.8rem; background: var(--bg-card); padding: 1px 5px; border-radius: 4px; }
 
         /* Team / Agents View */
         .agents-grid {
@@ -2851,10 +2877,10 @@
 
     <!-- MEMORY VIEW -->
     <div id="view-memory" class="view" style="display:none;">
-        <div class="section-container">
-            <div class="section-header">
+        <div class="section-container" style="padding-bottom:0;">
+            <div class="section-header" style="margin-bottom:12px;">
                 <h2>🧠 Memory</h2>
-                <p class="section-subtitle">Your OpenClaw's memories, organized by day — like a journal of your entire digital life together.</p>
+                <p class="section-subtitle">Your OpenClaw's memories, organized by day — a journal of your entire digital life.</p>
             </div>
             <div id="memory-content">
                 <div class="empty-state-large">Loading memories...</div>
@@ -5994,28 +6020,169 @@
             const el = document.getElementById('memory-content');
             if (!el) return;
             el.innerHTML = '<div class="empty-state-large">Loading memories...</div>';
+
+            let memData;
             try {
-                const { current, entries } = await fetchGitHubDataFile('memory.json');
-                let html = '';
-                if (current && current.trim()) {
-                    html += `<div class="memory-card memory-current">
-                        <div class="memory-card-date">📌 Current Session Memory</div>
-                        <div class="memory-card-body">${escapeHtml(current)}</div>
-                    </div>`;
-                }
-                if (entries.length === 0 && !current.trim()) {
-                    el.innerHTML = '<div class="empty-state-large">No memories found.</div>';
-                    return;
-                }
-                html += entries.map(e => `
-                    <div class="memory-card">
-                        <div class="memory-card-date">📅 ${escapeHtml(e.date)}</div>
-                        <div class="memory-card-body">${escapeHtml(e.content)}</div>
-                    </div>`).join('');
-                el.innerHTML = html;
+                memData = await fetchGitHubDataFile('memory.json');
             } catch(err) {
-                el.innerHTML = `<div class="gateway-card"><div class="gateway-icon">🧠</div><h3>Memory Viewer</h3><p>Memory data not yet available.</p><p class="gateway-hint">The Mission Control server pushes updates every 5 minutes. Try again shortly.</p></div>`;
+                el.innerHTML = `<div class="gateway-card"><div class="gateway-icon">🧠</div><h3>Memory Viewer</h3><p>Memory data not yet available.</p><p class="gateway-hint">The Mission Control server pushes updates every 5 minutes.</p></div>`;
+                return;
             }
+
+            const { current, entries } = memData;
+
+            // Simple markdown → HTML renderer
+            function renderMarkdown(md) {
+                if (!md) return '';
+                let html = escapeHtml(md)
+                    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+                    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+                    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+                    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/^---$/gm, '<hr>')
+                    .replace(/^- (.+)$/gm, '<li>$1</li>')
+                    .replace(/(<li>.*<\/li>\n?)+/g, m => `<ul>${m}</ul>`)
+                    .replace(/\n\n+/g, '</p><p>')
+                    .replace(/\n/g, '<br>');
+                return `<div class="mem-md"><p>${html}</p></div>`;
+            }
+
+            // Separate date entries from long-term memory files
+            const dateRe = /^\d{4}-\d{2}-\d{2}$/;
+            const dailyEntries = entries.filter(e => dateRe.test(e.date)).sort((a,b) => b.date.localeCompare(a.date));
+            const ltmEntries = entries.filter(e => !dateRe.test(e.date));
+
+            // Word count helper
+            function wc(text) { return (text||'').trim().split(/\s+/).filter(Boolean).length; }
+            function fmtSize(bytes) { return bytes > 1024 ? `${(bytes/1024).toFixed(1)} KB` : `${bytes} B`; }
+
+            // Group daily entries by recency
+            const now = new Date();
+            function groupLabel(dateStr) {
+                const d = new Date(dateStr + 'T12:00:00');
+                const diffDays = Math.floor((now - d) / 86400000);
+                if (diffDays === 0) return 'Today';
+                if (diffDays === 1) return 'Yesterday';
+                if (diffDays <= 7) return 'This Week';
+                const mon = d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                return mon;
+            }
+
+            function formatEntryDay(dateStr) {
+                const d = new Date(dateStr + 'T12:00:00');
+                return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            }
+
+            // Build grouped structure
+            const groups = {};
+            const groupOrder = [];
+            dailyEntries.forEach(e => {
+                const g = groupLabel(e.date);
+                if (!groups[g]) { groups[g] = []; groupOrder.push(g); }
+                groups[g].push(e);
+            });
+
+            // Build sidebar HTML
+            let ltmWc = wc(current) + ltmEntries.reduce((s,e) => s + wc(e.content), 0);
+            let ltmSize = (current||'').length + ltmEntries.reduce((s,e) => s + e.content.length, 0);
+
+            // Combine current + ltm entries for the long-term memory view
+            const ltmContent = (current ? `## Current Session\n${current}\n\n` : '') +
+                ltmEntries.map(e => `## ${e.date}\n${e.content}`).join('\n\n');
+
+            let sidebarHtml = `
+                <div class="mem-search"><input type="text" id="mem-search-input" placeholder="Search memory..." oninput="filterMemoryEntries(this.value)"></div>
+                <div class="mem-entry-list" id="mem-entry-list">
+                    <div class="mem-ltm active" id="mem-ltm-card" onclick="selectMemoryEntry('__ltm__')">
+                        <div class="mem-ltm-header">
+                            <div class="mem-ltm-icon">🧠</div>
+                            <div>
+                                <div class="mem-ltm-title">Long-Term Memory ✨</div>
+                                <div class="mem-ltm-meta">${ltmWc.toLocaleString()} words • Updated ${formatTimeAgo(Date.now() - 3600000)}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mem-section-label">📓 DAILY JOURNAL <span class="mem-section-badge">${dailyEntries.length} entries</span></div>`;
+
+            groupOrder.forEach(g => {
+                sidebarHtml += `<div class="mem-section-label" style="padding-top:12px;">${g} <span class="mem-section-badge">${groups[g].length}</span></div>`;
+                groups[g].forEach(e => {
+                    sidebarHtml += `<div class="mem-entry" id="mem-entry-${e.date}" onclick="selectMemoryEntry('${e.date}')">
+                        <div class="mem-entry-day">${formatEntryDay(e.date)}</div>
+                        <div class="mem-entry-meta">${fmtSize(e.content.length)} • ${wc(e.content).toLocaleString()} words</div>
+                    </div>`;
+                });
+            });
+            sidebarHtml += `</div>`;
+
+            // All entries stored for JS access
+            const allEntries = { '__ltm__': { title: 'Long-Term Memory', date: 'Long-Term Memory', content: ltmContent, size: ltmSize, wc: ltmWc } };
+            dailyEntries.forEach(e => {
+                allEntries[e.date] = { title: formatEntryDay(e.date), date: e.date, content: e.content, size: e.content.length, wc: wc(e.content) };
+            });
+
+            el.innerHTML = `<div class="mem-layout">
+                <div class="mem-sidebar">${sidebarHtml}</div>
+                <div class="mem-pane" id="mem-pane">
+                    <div class="mem-pane-empty">← Select a memory entry to read</div>
+                </div>
+            </div>`;
+
+            // Store entries on window for JS access
+            window._memEntries = allEntries;
+
+            // Auto-select LTM
+            selectMemoryEntry('__ltm__');
+        }
+
+        function selectMemoryEntry(id) {
+            if (!window._memEntries) return;
+            const entry = window._memEntries[id];
+            if (!entry) return;
+
+            // Update active state in sidebar
+            document.querySelectorAll('.mem-entry, .mem-ltm').forEach(el => el.classList.remove('active'));
+            const activeEl = id === '__ltm__' ? document.getElementById('mem-ltm-card') : document.getElementById('mem-entry-' + id);
+            if (activeEl) activeEl.classList.add('active');
+
+            function renderMarkdown(md) {
+                if (!md) return '';
+                let html = escapeHtml(md)
+                    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+                    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+                    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+                    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/^---$/gm, '<hr>')
+                    .replace(/^- (.+)$/gm, '<li>$1</li>')
+                    .replace(/(<li>.*<\/li>\n?)+/g, m => `<ul>${m}</ul>`)
+                    .replace(/\n\n+/g, '</p><p>')
+                    .replace(/\n/g, '<br>');
+                return `<div class="mem-md"><p>${html}</p></div>`;
+            }
+
+            function fmtSize(b) { return b > 1024 ? `${(b/1024).toFixed(1)} KB` : `${b} B`; }
+
+            const pane = document.getElementById('mem-pane');
+            if (!pane) return;
+            pane.innerHTML = `
+                <div class="mem-pane-header">
+                    <div>
+                        <div class="mem-pane-title">${escapeHtml(entry.title)}</div>
+                        <div class="mem-pane-subtitle">${escapeHtml(entry.date)} • ${fmtSize(entry.size)} • ${entry.wc.toLocaleString()} words</div>
+                    </div>
+                </div>
+                <div class="mem-pane-body">${renderMarkdown(entry.content)}</div>`;
+        }
+
+        function filterMemoryEntries(query) {
+            if (!window._memEntries) return;
+            const q = query.toLowerCase();
+            document.querySelectorAll('.mem-entry').forEach(el => {
+                const id = el.id.replace('mem-entry-', '');
+                const entry = window._memEntries[id];
+                const match = !q || (entry && entry.content.toLowerCase().includes(q));
+                el.style.display = match ? '' : 'none';
+            });
         }
 
         async function renderTeamView() {
