@@ -5764,10 +5764,17 @@
         }
 
         // === VIEW SWITCHING ===
-        function renderCalendarView() {
+        async function renderCalendarView() {
             const container = document.getElementById('calendar-cron-list');
             if (!container) return;
-            const crons = STATE.crons || [];
+            let crons = STATE.crons || [];
+            if (crons.length === 0) {
+                container.innerHTML = '<div class="empty-state-large">Loading scheduled jobs...</div>';
+                try {
+                    const data = await fetchGitHubDataFile('crons.json');
+                    crons = data.crons || [];
+                } catch(e) { crons = []; }
+            }
             if (crons.length === 0) {
                 container.innerHTML = '<div class="empty-state-large">No scheduled jobs found. Ask your OpenClaw to schedule proactive tasks and they\'ll appear here.</div>';
                 return;
