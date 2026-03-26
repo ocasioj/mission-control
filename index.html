@@ -1962,6 +1962,34 @@
         .mem-md hr { border: none; border-top: 1px solid var(--border); margin: 1.2rem 0; }
         .mem-md code { font-family: monospace; font-size: 0.8rem; background: var(--bg-card); padding: 1px 5px; border-radius: 4px; }
 
+        /* Docs two-panel layout (reuses mem-layout pattern) */
+        .docs-layout { display: flex; gap: 0; height: calc(100vh - 160px); min-height: 500px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .docs-sidebar { width: 300px; flex-shrink: 0; border-right: 1px solid var(--border); display: flex; flex-direction: column; background: var(--bg-secondary); }
+        .docs-search { padding: 12px; border-bottom: 1px solid var(--border); }
+        .docs-search input { width: 100%; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; color: var(--text-primary); font-size: 13px; outline: none; }
+        .docs-search input:focus { border-color: var(--accent-blue); }
+        .docs-pills { padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid var(--border); }
+        .docs-pill { font-size: 11px; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--border); cursor: pointer; color: var(--text-secondary); transition: all 0.15s; }
+        .docs-pill.active { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
+        .docs-file-list { flex: 1; overflow-y: auto; }
+        .docs-file-item { padding: 10px 14px; cursor: pointer; display: flex; align-items: flex-start; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }
+        .docs-file-item:hover { background: rgba(255,255,255,0.04); }
+        .docs-file-item.active { background: rgba(59,130,246,0.12); }
+        .docs-file-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+        .docs-file-name { font-size: 13px; font-weight: 500; line-height: 1.4; }
+        .docs-file-meta { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+        .docs-cat-badge { font-size: 10px; padding: 1px 7px; border-radius: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; display: inline-block; margin-top: 3px; }
+        .docs-cat-daily { background: rgba(16,185,129,0.15); color: #10b981; }
+        .docs-cat-projects { background: rgba(139,92,246,0.15); color: #8b5cf6; }
+        .docs-cat-notes { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .docs-cat-todos { background: rgba(59,130,246,0.15); color: #3b82f6; }
+        .docs-pane { flex: 1; overflow-y: auto; background: var(--bg-primary); }
+        .docs-pane-empty { display: flex; align-items: center; justify-content: center; height: 100%; color: var(--text-muted); font-size: 14px; flex-direction: column; gap: 8px; }
+        .docs-pane-header { padding: 18px 24px 14px; border-bottom: 1px solid var(--border); }
+        .docs-pane-title { font-size: 18px; font-weight: 700; }
+        .docs-pane-meta { font-size: 11px; color: var(--text-secondary); margin-top: 6px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+        .docs-pane-body { padding: 20px 24px; }
+
         /* Team / Agents View */
         .agents-grid {
             display: grid;
@@ -2675,148 +2703,35 @@
 
     <!-- DOCS VIEW -->
     <div id="view-docs" class="view" style="display: none;">
-        <div class="docs-container" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
-            <h1 style="margin-bottom: 1.5rem;">📚 Mission Control Documentation</h1>
-
-            <div class="docs-section" style="margin-bottom: 2rem; background: var(--bg-secondary); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--accent);">
-                <h2 style="color: var(--accent); margin-bottom: 0.5rem;">📌 Demo Mode</h2>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    You're currently viewing <strong>sample data</strong>. To manage your own tasks, click <strong>"Connect GitHub"</strong> in the top right corner to link your repository.
-                </p>
+        <div style="padding: 1.5rem 2rem 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1 style="font-size: 1.4rem; font-weight: 700;">📑 Documents</h1>
+                <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="docs-subtitle">Loading...</p>
             </div>
-
-            <div class="docs-section" style="margin-bottom: 2rem;">
-                <h2 style="color: var(--accent); margin-bottom: 1rem;">🚀 Getting Started</h2>
-
-                <h3 style="margin: 1rem 0 0.5rem;">Installation</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Add Mission Control to your existing MoltBot workspace:
-                </p>
-                <ol style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem;">
-                    <li><strong>Fork</strong> this repository to your GitHub account</li>
-                    <li><strong>Copy dashboard files</strong> to your workspace: <code>index.html</code>, <code>data/</code>, <code>canvas/</code>, <code>scripts/</code>, <code>.github/</code></li>
-                    <li>Enable <strong>GitHub Pages</strong> in your repo settings (Settings → Pages → Branch: main)</li>
-                    <li>Visit <code>https://[username].github.io/mission-control/</code></li>
-                </ol>
-
-                <h3 style="margin: 1.5rem 0 0.5rem;">Connect to GitHub</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Click <strong>"Connect GitHub"</strong> in the top right corner. You'll need a GitHub Personal Access Token with <code>repo</code> permissions.
-                </p>
-                <ol style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem;">
-                    <li>Go to <a href="https://github.com/settings/tokens" target="_blank" style="color: var(--accent);">GitHub Settings → Tokens</a></li>
-                    <li>Click "Generate new token (classic)"</li>
-                    <li>Select scope: <code>repo</code> (Full control of private repositories)</li>
-                    <li>Copy the token and paste it in Mission Control</li>
-                </ol>
-
-                <h3 style="margin: 1.5rem 0 0.5rem;">Understanding the Board</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Mission Control uses a Kanban-style board with 5 columns:
-                </p>
-                <ul style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem;">
-                    <li><strong>🔄 Permanent</strong> - Repeating tasks (daily, weekly checks)</li>
-                    <li><strong>📋 Backlog</strong> - Tasks waiting to be started</li>
-                    <li><strong>🚀 In Progress</strong> - Currently being worked on</li>
-                    <li><strong>👀 Review</strong> - Done, awaiting approval</li>
-                    <li><strong>✅ Done</strong> - Completed tasks</li>
-                </ul>
-            </div>
-
-            <div class="docs-section" style="margin-bottom: 2rem;">
-                <h2 style="color: var(--accent); margin-bottom: 1rem;">✨ Features</h2>
-
-                <h3 style="margin: 1rem 0 0.5rem;">Auto-Save</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    All changes are <strong>automatically saved</strong> to GitHub. No manual "Save" button needed!
-                </p>
-                <ul style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem;">
-                    <li>Drag & drop tasks between columns → instant save</li>
-                    <li>Edit task details → instant save</li>
-                    <li>Add/remove subtasks → instant save</li>
-                    <li>Add comments → instant save</li>
-                </ul>
-
-                <h3 style="margin: 1.5rem 0 0.5rem;">Drag & Drop</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Click and drag any task card to move it between columns. The status updates automatically.
-                </p>
-
-                <h3 style="margin: 1.5rem 0 0.5rem;">Subtasks</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Break down tasks into smaller steps. Click on a subtask to edit it inline.
-                </p>
-
-                <h3 style="margin: 1.5rem 0 0.5rem;">Comments</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Add comments to tasks for context or feedback. Comments on <strong>Review</strong> tasks trigger notifications to MoltBot.
-                </p>
-
-                <h3 style="margin: 1.5rem 0 0.5rem;">Projects & Tags</h3>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Organize tasks by project. Use the ⚙️ Settings to add new projects. Filter tasks using the project buttons.
-                </p>
-            </div>
-
-            <div class="docs-section" style="margin-bottom: 2rem;">
-                <h2 style="color: var(--accent); margin-bottom: 1rem;">🤖 MoltBot Integration</h2>
-                <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Mission Control is connected to MoltBot via webhooks. When you make changes:
-                </p>
-                <ul style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem;">
-                    <li><strong>Move task to "In Progress"</strong> → MoltBot receives a work order and starts processing</li>
-                    <li><strong>Add comment on Review task</strong> → MoltBot sees your feedback</li>
-                    <li><strong>MoltBot completes work</strong> → Task moves to "Review" automatically</li>
-                </ul>
-
-                <div style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                    <strong>💡 Pro Tip:</strong> Write clear task descriptions and subtasks. The more detail you provide, the better MoltBot can execute the task.
+            <button onclick="renderDocsView()" style="background: var(--bg-card); border: 1px solid var(--border); color: var(--text-secondary); padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 13px;">↻ Refresh</button>
+        </div>
+        <div style="padding: 0 2rem 1.5rem;">
+        <div class="docs-layout">
+            <div class="docs-sidebar">
+                <div class="docs-search">
+                    <input type="text" id="docs-search-input" placeholder="Search documents…" oninput="filterDocs()" />
+                </div>
+                <div class="docs-pills" id="docs-cat-pills">
+                    <!-- Category pills injected by JS -->
+                </div>
+                <div class="docs-file-list" id="docs-file-list">
+                    <div style="padding: 20px; text-align: center; color: var(--text-secondary); font-size: 13px;">Loading...</div>
                 </div>
             </div>
-
-            <div class="docs-section" style="margin-bottom: 2rem;">
-                <h2 style="color: var(--accent); margin-bottom: 1rem;">⌨️ Keyboard Shortcuts</h2>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr style="border-bottom: 1px solid var(--border-color);">
-                        <td style="padding: 0.5rem; color: var(--text-secondary);"><code>Cmd/Ctrl + Shift + R</code></td>
-                        <td style="padding: 0.5rem;">Hard refresh (clear cache)</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--border-color);">
-                        <td style="padding: 0.5rem; color: var(--text-secondary);"><code>Escape</code></td>
-                        <td style="padding: 0.5rem;">Close modals</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--border-color);">
-                        <td style="padding: 0.5rem; color: var(--text-secondary);"><code>Enter</code></td>
-                        <td style="padding: 0.5rem;">Save inline edits</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="docs-section">
-                <h2 style="color: var(--accent); margin-bottom: 1rem;">❓ FAQ</h2>
-
-                <details style="margin-bottom: 1rem;">
-                    <summary style="cursor: pointer; font-weight: 500;">Why don't I see my changes?</summary>
-                    <p style="color: var(--text-secondary); padding: 0.5rem 0 0 1rem;">
-                        GitHub Pages can cache content. Try a hard refresh (Cmd+Shift+R) or open in an incognito window.
-                    </p>
-                </details>
-
-                <details style="margin-bottom: 1rem;">
-                    <summary style="cursor: pointer; font-weight: 500;">How do I create a new project?</summary>
-                    <p style="color: var(--text-secondary); padding: 0.5rem 0 0 1rem;">
-                        Click the ⚙️ Settings button (when logged in) → Add a new project with ID, name, icon, and color.
-                    </p>
-                </details>
-
-                <details style="margin-bottom: 1rem;">
-                    <summary style="cursor: pointer; font-weight: 500;">Can multiple people use this?</summary>
-                    <p style="color: var(--text-secondary); padding: 0.5rem 0 0 1rem;">
-                        Yes! Anyone with repo access can connect their GitHub token. Changes from all users sync automatically.
-                    </p>
-                </details>
+            <div class="docs-pane" id="docs-pane">
+                <div class="docs-pane-empty">
+                    <span style="font-size: 32px;">📄</span>
+                    <span style="color: var(--text-secondary); font-size: 13px;">Select a document to read</span>
+                </div>
             </div>
         </div>
+        </div>
+        <!-- end docs layout -->
     </div><!-- END view-docs -->
 
     <!-- PEOPLE VIEW -->
@@ -6217,6 +6132,114 @@
             }
         }
 
+        // ── Docs View ────────────────────────────────────────────────────────────
+
+        let DOCS_DATA = [];
+        let DOCS_ACTIVE_CAT = 'All';
+        let DOCS_SELECTED = null;
+
+        const DOC_CAT_ICON = { Daily: '📅', Projects: '📁', Notes: '📝', Todos: '✅', All: '📑' };
+
+        function catClass(cat) {
+            const c = { Daily: 'daily', Projects: 'projects', Notes: 'notes', Todos: 'todos' };
+            return 'docs-cat-' + (c[cat] || 'notes');
+        }
+
+        async function renderDocsView() {
+            const fileList = document.getElementById('docs-file-list');
+            const catPills = document.getElementById('docs-cat-pills');
+            const subtitle = document.getElementById('docs-subtitle');
+            if (!fileList) return;
+            fileList.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:13px;">Loading...</div>';
+            try {
+                const { docs, updatedAt } = await fetchGitHubDataFile('docs.json');
+                DOCS_DATA = docs || [];
+                DOCS_ACTIVE_CAT = 'All';
+                DOCS_SELECTED = null;
+
+                // Build category counts
+                const catCounts = {};
+                DOCS_DATA.forEach(d => { catCounts[d.category] = (catCounts[d.category] || 0) + 1; });
+                const cats = ['All', ...Object.keys(catCounts).sort()];
+                catPills.innerHTML = cats.map(c =>
+                    `<span class="docs-pill ${c === 'All' ? 'active' : ''}" onclick="setDocsCat('${c}')">${DOC_CAT_ICON[c] || '📄'} ${c} ${c === 'All' ? DOCS_DATA.length : catCounts[c]}</span>`
+                ).join('');
+
+                const ago = updatedAt ? formatTimeAgo(updatedAt) : '';
+                if (subtitle) subtitle.textContent = `${DOCS_DATA.length} documents • ${Object.keys(catCounts).length} categories${ago ? ' • updated ' + ago : ''}`;
+
+                renderDocsList();
+                // Auto-select first doc
+                if (DOCS_DATA.length > 0) selectDoc(DOCS_DATA[0]);
+            } catch(e) {
+                fileList.innerHTML = '<div style="padding:20px;color:var(--text-secondary);font-size:13px;">Documents not yet available. The server pushes updates every 5 minutes.</div>';
+                if (subtitle) subtitle.textContent = 'Not available';
+            }
+        }
+
+        function renderDocsList() {
+            const fileList = document.getElementById('docs-file-list');
+            const query = (document.getElementById('docs-search-input')?.value || '').toLowerCase();
+            const filtered = DOCS_DATA.filter(d => {
+                const matchCat = DOCS_ACTIVE_CAT === 'All' || d.category === DOCS_ACTIVE_CAT;
+                const matchSearch = !query || d.name.toLowerCase().includes(query) || (d.content || '').toLowerCase().includes(query);
+                return matchCat && matchSearch;
+            });
+
+            if (!filtered.length) {
+                fileList.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:13px;">No documents found</div>';
+                return;
+            }
+
+            fileList.innerHTML = filtered.map((d, i) => {
+                const isActive = DOCS_SELECTED && DOCS_SELECTED.name === d.name;
+                const words = d.wordCount > 1000 ? (d.wordCount/1000).toFixed(1)+'k' : d.wordCount;
+                const date = d.modifiedAt ? new Date(d.modifiedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '';
+                return `<div class="docs-file-item ${isActive ? 'active' : ''}" onclick="selectDoc(DOCS_DATA.find(x=>x.name===\`${escapeHtml(d.name)}\`))">
+                    <div class="docs-file-icon">${DOC_CAT_ICON[d.category] || '📄'}</div>
+                    <div>
+                        <div class="docs-file-name">${escapeHtml(d.name.replace(/\.md$/, ''))}</div>
+                        <div class="docs-file-meta">${words} words${date ? ' · ' + date : ''}</div>
+                        <span class="docs-cat-badge ${catClass(d.category)}">${d.category}</span>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function setDocsCat(cat) {
+            DOCS_ACTIVE_CAT = cat;
+            document.querySelectorAll('.docs-pill').forEach(p => p.classList.toggle('active', p.textContent.trim().startsWith(DOC_CAT_ICON[cat] || cat)));
+            renderDocsList();
+        }
+
+        function filterDocs() {
+            renderDocsList();
+        }
+
+        function selectDoc(doc) {
+            if (!doc) return;
+            DOCS_SELECTED = doc;
+            renderDocsList(); // refresh active state in sidebar
+
+            const pane = document.getElementById('docs-pane');
+            if (!pane) return;
+            const sizeKb = doc.sizeBytes ? (doc.sizeBytes / 1024).toFixed(1) + ' KB' : '';
+            const words = doc.wordCount ? doc.wordCount.toLocaleString() + ' words' : '';
+            const date = doc.modifiedAt ? new Date(doc.modifiedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
+
+            pane.innerHTML = `
+                <div class="docs-pane-header">
+                    <div class="docs-pane-title">${escapeHtml(doc.name.replace(/\.md$/, ''))}</div>
+                    <div class="docs-pane-meta">
+                        <span class="docs-cat-badge ${catClass(doc.category)}">${doc.category}</span>
+                        ${sizeKb ? `<span>${sizeKb}</span>` : ''}
+                        ${words ? `<span>${words}</span>` : ''}
+                        ${date ? `<span>Modified ${date}</span>` : ''}
+                    </div>
+                </div>
+                <div class="docs-pane-body mem-md">${renderMarkdown(doc.content || '')}</div>`;
+        }
+
         async function runBriefing() {
             const btn = document.getElementById('briefing-btn');
             if (btn) { btn.textContent = '⏳ Starting...'; btn.disabled = true; }
@@ -6257,6 +6280,7 @@
             if (viewName === 'projects') renderProjectsView();
             if (viewName === 'memory') renderMemoryView();
             if (viewName === 'team') renderTeamView();
+            if (viewName === 'docs') renderDocsView();
         }
 
         function generateChangesSummary() {
