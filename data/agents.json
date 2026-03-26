@@ -1,0 +1,137 @@
+{
+  "agents": [
+    {
+      "id": "main",
+      "name": "Joe",
+      "desc": "Web chat & voice call handler, general assistant",
+      "sessionCount": 7,
+      "lastActivity": 1774494281246,
+      "lastActivityAgo": "3m ago",
+      "isActive": true,
+      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
+      "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
+      "id": "signal-chat",
+      "name": "JoseClaw",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 74,
+      "lastActivity": 1774490409923,
+      "lastActivityAgo": "1h ago",
+      "isActive": false,
+      "lastMessage": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exec `joe-repair --chec",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
+      "id": "planner",
+      "name": "planner",
+      "desc": "",
+      "sessionCount": 1,
+      "lastActivity": 1773548092913,
+      "lastActivityAgo": "10d ago",
+      "isActive": false,
+      "lastMessage": "[Sun 2026-03-15 00:13 EDT] Build a detailed 4-day family trip itinerary for Montreal, Canada. Group: 2 adults, 2 childre",
+      "lastModel": "claude-sonnet-4-5"
+    },
+    {
+      "id": "analyst",
+      "name": "Analyst",
+      "desc": "Data analysis and reporting",
+      "sessionCount": 1,
+      "lastActivity": 1773547999020,
+      "lastActivityAgo": "10d ago",
+      "isActive": false,
+      "lastMessage": "[Sun 2026-03-15 00:12 EDT] Compare hotel options in Montreal, Canada for a family of 4 (2 adults, 2 children), 4 nights.",
+      "lastModel": "claude-sonnet-4-5"
+    },
+    {
+      "id": "image-gen",
+      "name": "Image Gen",
+      "desc": "Image generation tasks",
+      "sessionCount": 1,
+      "lastActivity": 1773546531824,
+      "lastActivityAgo": "10d ago",
+      "isActive": false,
+      "lastMessage": "[Sat 2026-03-14 23:48 EDT] Create a vibrant travel poster for a family trip to Montreal, Canada. Include iconic Montreal",
+      "lastModel": "gemini-3-flash-preview"
+    },
+    {
+      "id": "dev",
+      "name": "dev",
+      "desc": "",
+      "sessionCount": 1,
+      "lastActivity": 1773546498380,
+      "lastActivityAgo": "10d ago",
+      "isActive": false,
+      "lastMessage": "[Sat 2026-03-14 23:47 EDT] Write a Python budget calculator script for a 4-day family trip to Montreal, Canada for 2 adu",
+      "lastModel": "claude-sonnet-4-5"
+    },
+    {
+      "id": "writer",
+      "name": "writer",
+      "desc": "",
+      "sessionCount": 1,
+      "lastActivity": 1773546447705,
+      "lastActivityAgo": "10d ago",
+      "isActive": false,
+      "lastMessage": "[Sat 2026-03-14 23:47 EDT] Write a hype message to send to a group chat about an upcoming 4-day family trip to Montreal,",
+      "lastModel": "claude-sonnet-4-5"
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "desc": "Deep research and information retrieval",
+      "sessionCount": 1,
+      "lastActivity": 1773545341117,
+      "lastActivityAgo": "10d ago",
+      "isActive": false,
+      "lastMessage": "[Sat 2026-03-14 23:28 EDT] Find the top things to do and best areas to stay for a weekend trip to Inwood, New York. Cove",
+      "lastModel": "gemini-3-pro-preview"
+    },
+    {
+      "id": "default",
+      "name": "Default",
+      "desc": "Fallback agent with heartbeat enabled",
+      "sessionCount": 3,
+      "lastActivity": 1773529766615,
+      "lastActivityAgo": "11d ago",
+      "isActive": false,
+      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
+      "id": "coder",
+      "name": "Coder",
+      "desc": "Software development and code tasks",
+      "sessionCount": 1,
+      "lastActivity": 1771917768200,
+      "lastActivityAgo": "29d ago",
+      "isActive": false,
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"604f90f6-947d-485f-8ff0-0d6992d47b8f\",\n  \"sender\": \"o",
+      "lastModel": "gpt-5.1-codex"
+    },
+    {
+      "id": "claude-code",
+      "name": "claude-code",
+      "desc": "",
+      "sessionCount": 0,
+      "lastActivity": 0,
+      "lastActivityAgo": "never",
+      "isActive": false,
+      "lastMessage": "",
+      "lastModel": ""
+    },
+    {
+      "id": "acp-defaultagent",
+      "name": "acp-defaultagent",
+      "desc": "",
+      "sessionCount": 0,
+      "lastActivity": 0,
+      "lastActivityAgo": "never",
+      "isActive": false,
+      "lastMessage": "",
+      "lastModel": ""
+    }
+  ],
+  "updatedAt": 1774494464022
+}
