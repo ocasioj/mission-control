@@ -6,7 +6,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 66,
       "lastActivity": 1774499122250,
-      "lastActivityAgo": "16m ago",
+      "lastActivityAgo": "19m ago",
       "isActive": false,
       "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774499101886\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gemini-2.5-flash"
@@ -17,14 +17,14 @@
       "desc": "Web chat & voice call handler",
       "sessionCount": 7,
       "lastActivity": 1774497880554,
-      "lastActivityAgo": "37m ago",
+      "lastActivityAgo": "40m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "planner",
-      "name": "Planner",
+      "name": "Atlas",
       "desc": "Trip planning and scheduling",
       "sessionCount": 1,
       "lastActivity": 1773548092913,
@@ -35,7 +35,7 @@
     },
     {
       "id": "analyst",
-      "name": "Analyst",
+      "name": "Nova",
       "desc": "Data analysis and reporting",
       "sessionCount": 1,
       "lastActivity": 1773547999020,
@@ -46,7 +46,7 @@
     },
     {
       "id": "image-gen",
-      "name": "Image Gen",
+      "name": "Pixel",
       "desc": "Image generation tasks",
       "sessionCount": 1,
       "lastActivity": 1773546531824,
@@ -57,7 +57,7 @@
     },
     {
       "id": "writer",
-      "name": "Writer",
+      "name": "Quill",
       "desc": "Content writing and copywriting",
       "sessionCount": 1,
       "lastActivity": 1773546447705,
@@ -68,7 +68,7 @@
     },
     {
       "id": "research",
-      "name": "Research",
+      "name": "Scout",
       "desc": "Deep research and information retrieval",
       "sessionCount": 1,
       "lastActivity": 1773545341117,
@@ -79,7 +79,7 @@
     },
     {
       "id": "coder",
-      "name": "Coder",
+      "name": "Dev",
       "desc": "Software development and code tasks",
       "sessionCount": 1,
       "lastActivity": 1771917768200,
@@ -89,5 +89,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774500141029
+  "updatedAt": 1774500295629
 }
