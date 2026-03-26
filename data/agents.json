@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774538381751,
-      "lastActivityAgo": "22m ago",
+      "lastActivityAgo": "27m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 68,
       "lastActivity": 1774537200016,
-      "lastActivityAgo": "42m ago",
+      "lastActivityAgo": "47m ago",
       "isActive": false,
       "lastMessage": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exec `joe-repair --chec",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774539750903
+  "updatedAt": 1774540050818
 }
