@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774555209993,
+      "message": "[cron:afe9314b-2aa4-4cb9-a138-c9ce8d5014ab pre-reset-summary-1774555201] Your session is about to re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774537200168,
       "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
       "turns": 1
@@ -265,12 +272,12 @@
     },
     {
       "day": "2026-03-26",
-      "total": 13,
+      "total": 14,
       "byAgent": {
-        "signal-chat": 12,
+        "signal-chat": 13,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774555052521
+  "updatedAt": 1774555352824
 }
