@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774527997240,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774527996264\",\n  \"sender_id\": \"+",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774527900089,
+      "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774527300085,
       "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
       "turns": 1
@@ -75,13 +89,6 @@
       "agentName": "Joe",
       "timestamp": 1774450800177,
       "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774441500103,
-      "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
       "turns": 1
     },
     {
@@ -251,19 +258,19 @@
     },
     {
       "day": "2026-03-25",
-      "total": 5,
+      "total": 4,
       "byAgent": {
-        "signal-chat": 5
+        "signal-chat": 4
       }
     },
     {
       "day": "2026-03-26",
-      "total": 10,
+      "total": 12,
       "byAgent": {
-        "signal-chat": 9,
+        "signal-chat": 11,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774527752701
+  "updatedAt": 1774528053100
 }
