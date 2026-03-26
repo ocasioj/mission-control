@@ -12,11 +12,11 @@
         "kind": "agentTurn",
         "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/daily_billing_update.py"
       },
-      "lastRunAt": "2026-03-25T04:00:00.007Z",
-      "nextRunAt": "2026-03-26T04:00:00.000Z",
-      "lastStatus": "ok",
-      "lastDurationMs": 5012,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-03-26T04:00:00.008Z",
+      "nextRunAt": "2026-03-27T04:00:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 3854,
+      "consecutiveErrors": 1
     },
     {
       "id": "b24ff533-ec0e-4129-855e-87e9affdd0ae",
@@ -66,10 +66,10 @@
         "kind": "agentTurn",
         "message": "Run log rotation script: python3 /data/.openclaw/hooks/rotate_logs.py. Respond with HEARTBEAT_OK if successful."
       },
-      "lastRunAt": "2026-03-25T04:00:05.019Z",
-      "nextRunAt": "2026-03-26T04:00:00.000Z",
+      "lastRunAt": "2026-03-26T04:00:03.862Z",
+      "nextRunAt": "2026-03-27T04:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 4653,
+      "lastDurationMs": 4234,
       "consecutiveErrors": 0
     },
     {
@@ -181,5 +181,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774497484806
+  "updatedAt": 1774497784076
 }
