@@ -1991,6 +1991,50 @@
         .docs-pane-body { padding: 20px 24px; }
 
         /* Team / Agents View */
+        .team-mission-banner {
+            background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.15));
+            border: 1px solid rgba(59,130,246,0.3);
+            border-radius: 12px;
+            padding: 1.2rem 1.8rem;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--text-primary);
+            text-align: center;
+            line-height: 1.5;
+        }
+        .team-hero { text-align: center; margin-bottom: 2rem; }
+        .team-hero h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.4rem; }
+        .team-hero p { color: var(--text-secondary); font-size: 0.9rem; }
+        .team-chief { max-width: 680px; margin: 0 auto 2.5rem; }
+        .team-chief-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(59,130,246,0.4);
+            border-radius: 14px;
+            padding: 1.5rem 1.8rem;
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+        }
+        .team-chief-card:hover { border-color: var(--accent-blue); }
+        .team-group-label {
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .team-group-label::before, .team-group-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
         .agents-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1999,19 +2043,35 @@
         .agent-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 1.25rem;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, transform 0.15s;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
         }
-        .agent-card.agent-active { border-color: var(--accent-green); }
-        .agent-card-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
-        .agent-status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-        .agent-status-dot.active { background: var(--accent-green); box-shadow: 0 0 6px var(--accent-green); }
-        .agent-status-dot.idle { background: var(--text-secondary); }
-        .agent-name { font-weight: 600; font-size: 0.95rem; }
-        .agent-workspace-id { font-size: 0.72rem; color: var(--text-secondary); margin-left: auto; }
-        .agent-desc { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.4; }
-        .agent-last-msg { font-size: 0.8rem; color: var(--text-primary); background: rgba(255,255,255,0.04); border-radius: 6px; padding: 0.5rem 0.75rem; margin-bottom: 0.75rem; font-style: italic; border-left: 2px solid var(--accent-blue); }
+        .agent-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-1px); }
+        .agent-card.agent-active { border-color: rgba(16,185,129,0.35); }
+        .agent-avatar {
+            width: 44px; height: 44px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; flex-shrink: 0;
+            background: rgba(255,255,255,0.06);
+        }
+        .agent-avatar-chief { width: 56px; height: 56px; border-radius: 12px; font-size: 26px; flex-shrink: 0; background: rgba(59,130,246,0.15); display: flex; align-items: center; justify-content: center; }
+        .agent-body { flex: 1; min-width: 0; }
+        .agent-card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem; }
+        .agent-status-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+        .agent-status-dot.active { background: var(--accent-green); box-shadow: 0 0 5px var(--accent-green); }
+        .agent-status-dot.idle { background: var(--text-secondary); opacity: 0.5; }
+        .agent-name { font-weight: 700; font-size: 1rem; }
+        .agent-role-title { font-size: 0.78rem; color: var(--accent-blue); font-weight: 500; margin-bottom: 0.4rem; }
+        .agent-workspace-id { font-size: 0.68rem; color: var(--text-secondary); margin-left: auto; }
+        .agent-desc { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5; }
+        .agent-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.6rem; }
+        .agent-tag { font-size: 0.68rem; padding: 2px 9px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12); color: var(--text-secondary); background: rgba(255,255,255,0.04); }
+        .agent-last-msg { font-size: 0.78rem; color: var(--text-primary); background: rgba(255,255,255,0.04); border-radius: 6px; padding: 0.45rem 0.7rem; margin-bottom: 0.6rem; font-style: italic; border-left: 2px solid var(--accent-blue); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .agent-card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem; }
         .agent-meta { display: flex; gap: 0.75rem; font-size: 0.75rem; color: var(--text-secondary); flex-wrap: wrap; align-items: center; }
         .agent-model { background: var(--bg-secondary); padding: 1px 6px; border-radius: 4px; font-size: 0.7rem; }
 
@@ -2806,10 +2866,6 @@
     <!-- TEAM VIEW -->
     <div id="view-team" class="view" style="display:none;">
         <div class="section-container">
-            <div class="section-header">
-                <h2>🔗 Team</h2>
-                <p class="section-subtitle">Every agent workspace, their last activity, and what they're working on.</p>
-            </div>
             <div id="team-content">
                 <div class="empty-state-large">Loading agents...</div>
             </div>
@@ -6100,6 +6156,91 @@
             });
         }
 
+        const AGENT_TAGS = {
+            'signal-chat': ['Orchestration', 'Delegation', 'Signal'],
+            'main':        ['Web', 'Voice', 'Interface'],
+            'analyst':     ['Analysis', 'Data', 'Decisions'],
+            'coder':       ['Code', 'Docker', 'Automation'],
+            'research':    ['Research', 'Web Search', 'Synthesis'],
+            'image-gen':   ['Images', 'Thumbnails', 'Graphics'],
+            'planner':     ['Planning', 'Trips', 'Roadmaps'],
+            'writer':      ['Scripts', 'Emails', 'Copywriting'],
+            'video':       ['YouTube', 'HeyGen', 'Pipeline'],
+            'social':      ['LinkedIn', 'X', 'Distribution'],
+            'finance':     ['Metrics', 'Revenue', 'Burn Rate'],
+            'sales':       ['Outreach', 'Prospecting', 'Pipeline'],
+            'support':     ['Support', 'Issues', 'Responses'],
+        };
+
+        const AGENT_EMOJI = {
+            'signal-chat': '🤵', 'main': '🖥️', 'analyst': '🔬',
+            'coder': '💻', 'research': '🔍', 'image-gen': '🎨',
+            'planner': '🗺️', 'writer': '✍️', 'video': '🎬',
+            'social': '📣', 'finance': '💰', 'sales': '🤝', 'support': '🛟',
+        };
+
+        const AGENT_ROLE_TITLE = {
+            'signal-chat': 'Chief of Staff',
+            'main':        'Web & Voice Interface',
+            'analyst':     'Data Analyst',
+            'coder':       'Software Engineer',
+            'research':    'Research Specialist',
+            'image-gen':   'Visual Designer',
+            'planner':     'Strategic Planner',
+            'writer':      'Content Writer',
+            'video':       'Video Producer',
+            'social':      'Social Media Manager',
+            'finance':     'Finance Manager',
+            'sales':       'Sales & Outreach',
+            'support':     'Customer Support',
+        };
+
+        const AGENT_GROUPS = [
+            { label: '⚡ Operations', ids: ['signal-chat'] },
+            { label: '🧠 Intelligence', ids: ['analyst', 'research'] },
+            { label: '🛠️ Engineering', ids: ['coder'] },
+            { label: '🎨 Creative', ids: ['writer', 'video', 'image-gen', 'social'] },
+            { label: '💼 Business', ids: ['finance', 'sales', 'support', 'planner'] },
+            { label: '🖥️ System', ids: ['main'] },
+        ];
+
+        function buildAgentCard(a, isChief) {
+            const tags = AGENT_TAGS[a.id] || [];
+            const emoji = AGENT_EMOJI[a.id] || '🤖';
+            const roleTitle = AGENT_ROLE_TITLE[a.id] || '';
+            if (isChief) {
+                return `<div class="team-chief-card">
+                    <div class="agent-avatar-chief">${emoji}</div>
+                    <div class="agent-body">
+                        <div class="agent-card-header">
+                            <span class="agent-status-dot ${a.isActive ? 'active' : 'idle'}"></span>
+                            <span class="agent-name" style="font-size:1.15rem">${escapeHtml(a.name)}</span>
+                            <span class="agent-workspace-id">${escapeHtml(a.id)}</span>
+                        </div>
+                        <div class="agent-role-title">${roleTitle}</div>
+                        <div class="agent-desc">${escapeHtml(a.desc)}</div>
+                        <div class="agent-tags">${tags.map(t => `<span class="agent-tag">${t}</span>`).join('')}</div>
+                        <div style="font-size:11px;color:var(--text-secondary);">🕐 ${escapeHtml(a.lastActivityAgo)} · ${a.sessionCount} sessions${a.lastModel ? ' · ' + escapeHtml(a.lastModel.split('/').pop()) : ''}</div>
+                    </div>
+                </div>`;
+            }
+            return `<div class="agent-card ${a.isActive ? 'agent-active' : ''}">
+                <div class="agent-avatar">${emoji}</div>
+                <div class="agent-body">
+                    <div class="agent-card-header">
+                        <span class="agent-status-dot ${a.isActive ? 'active' : 'idle'}"></span>
+                        <span class="agent-name">${escapeHtml(a.name)}</span>
+                        <span class="agent-workspace-id">${escapeHtml(a.id)}</span>
+                    </div>
+                    <div class="agent-role-title">${roleTitle}</div>
+                    <div class="agent-desc">${escapeHtml(a.desc)}</div>
+                    <div class="agent-tags">${tags.map(t => `<span class="agent-tag">${t}</span>`).join('')}</div>
+                    ${a.lastMessage ? `<div class="agent-last-msg">"${escapeHtml(a.lastMessage)}${a.lastMessage.length >= 120 ? '…' : ''}"</div>` : ''}
+                    <div style="font-size:11px;color:var(--text-secondary);">🕐 ${escapeHtml(a.lastActivityAgo)} · ${a.sessionCount} sessions</div>
+                </div>
+            </div>`;
+        }
+
         async function renderTeamView() {
             const el = document.getElementById('team-content');
             if (!el) return;
@@ -6110,25 +6251,46 @@
                     el.innerHTML = '<div class="empty-state-large">No agents found.</div>';
                     return;
                 }
-                const ago = updatedAt ? `Updated ${formatTimeAgo(updatedAt)}` : '';
-                el.innerHTML = `<div class="agents-grid">${agents.map(a => `
-                    <div class="agent-card ${a.isActive ? 'agent-active' : ''}">
-                        <div class="agent-card-header">
-                            <span class="agent-status-dot ${a.isActive ? 'active' : 'idle'}"></span>
-                            <span class="agent-name">${escapeHtml(a.name)}</span>
-                            <span class="agent-workspace-id">${escapeHtml(a.id)}</span>
-                        </div>
-                        <div class="agent-desc">${escapeHtml(a.desc)}</div>
-                        ${a.lastMessage ? `<div class="agent-last-msg">"${escapeHtml(a.lastMessage)}${a.lastMessage.length >= 120 ? '…' : ''}"</div>` : ''}
-                        <div class="agent-meta">
-                            <span>🕐 ${escapeHtml(a.lastActivityAgo)}</span>
-                            <span>${a.sessionCount} sessions</span>
-                            ${a.lastModel ? `<span class="agent-model">${escapeHtml(a.lastModel.split('/').pop())}</span>` : ''}
-                        </div>
-                    </div>`).join('')}
-                </div>${ago ? `<div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:8px;">${ago}</div>` : ''}`;
+                const agentMap = {};
+                agents.forEach(a => agentMap[a.id] = a);
+                const chief = agentMap['signal-chat'];
+                const ago = updatedAt ? formatTimeAgo(updatedAt) : '';
+
+                let html = `
+                    <div class="team-mission-banner">
+                        "Build an autonomous organization of AI agents that does work for me and produces value 24/7"
+                    </div>
+                    <div class="team-hero">
+                        <h2>Meet the Team</h2>
+                        <p>${agents.length} AI agents, each with a real role and a real personality.</p>
+                    </div>`;
+
+                // Chief of Staff featured
+                if (chief) {
+                    html += `<div class="team-chief">${buildAgentCard(chief, true)}</div>`;
+                }
+
+                // Groups
+                for (const group of AGENT_GROUPS) {
+                    if (group.ids.includes('signal-chat')) continue;
+                    const groupAgents = group.ids.map(id => agentMap[id]).filter(Boolean);
+                    if (!groupAgents.length) continue;
+                    html += `<div class="team-group-label">${group.label}</div>`;
+                    html += `<div class="agents-grid">${groupAgents.map(a => buildAgentCard(a, false)).join('')}</div>`;
+                }
+
+                // Any agents not in groups
+                const grouped = new Set(AGENT_GROUPS.flatMap(g => g.ids));
+                const ungrouped = agents.filter(a => !grouped.has(a.id) && a.id !== 'signal-chat');
+                if (ungrouped.length) {
+                    html += `<div class="team-group-label">Other</div>`;
+                    html += `<div class="agents-grid">${ungrouped.map(a => buildAgentCard(a, false)).join('')}</div>`;
+                }
+
+                if (ago) html += `<div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;">Updated ${ago}</div>`;
+                el.innerHTML = html;
             } catch(err) {
-                el.innerHTML = `<div class="gateway-card"><div class="gateway-icon">🤖</div><h3>Agent Team</h3><p>Agent data not yet available.</p><p class="gateway-hint">The Mission Control server pushes updates every 5 minutes. Try again shortly.</p></div>`;
+                el.innerHTML = `<div class="gateway-card"><div class="gateway-icon">🤖</div><h3>Agent Team</h3><p>Agent data not yet available.</p><p class="gateway-hint">The Mission Control server pushes updates every 5 minutes.</p></div>`;
             }
         }
 
