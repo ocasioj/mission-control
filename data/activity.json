@@ -115,13 +115,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774497638616,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774497637358\",\n  \"sender_id\": \"+",
-      "turns": 47
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774497604148,
       "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
       "turns": 1
@@ -378,12 +371,12 @@
     },
     {
       "day": "2026-03-26",
-      "total": 19,
+      "total": 18,
       "byAgent": {
         "sales": 1,
         "planner": 2,
         "research": 2,
-        "signal-chat": 4,
+        "signal-chat": 3,
         "social": 1,
         "image-gen": 2,
         "finance": 1,
@@ -394,5 +387,5 @@
       }
     }
   ],
-  "updatedAt": 1774504952294
+  "updatedAt": 1774505252283
 }
