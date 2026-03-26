@@ -6,7 +6,7 @@
       "desc": "Web chat & voice call handler, general assistant",
       "sessionCount": 7,
       "lastActivity": 1774496080811,
-      "lastActivityAgo": "9m ago",
+      "lastActivityAgo": "13m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -72,7 +72,7 @@
       "desc": "",
       "sessionCount": 1,
       "lastActivity": 1773546447705,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Sat 2026-03-14 23:47 EDT] Write a hype message to send to a group chat about an upcoming 4-day family trip to Montreal,",
       "lastModel": "claude-sonnet-4-5"
@@ -133,5 +133,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774496640110
+  "updatedAt": 1774496883629
 }
