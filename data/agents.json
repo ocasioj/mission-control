@@ -5,9 +5,9 @@
       "name": "Joe",
       "desc": "Web chat & voice call handler, general assistant",
       "sessionCount": 7,
-      "lastActivity": 1774494281246,
-      "lastActivityAgo": "29m ago",
-      "isActive": false,
+      "lastActivity": 1774496080811,
+      "lastActivityAgo": "4m ago",
+      "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -133,5 +133,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774496040075
+  "updatedAt": 1774496339986
 }
