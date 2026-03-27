@@ -10243,7 +10243,7 @@
             }
             if (!token) { showLoginScreen(); return; }
             STATE.token = token;
-            STATE.user = { login: 'ocasioj', name: 'Jose' };
+            STATE.user = { login: 'ocasioj', name: 'Jose', avatar_url: 'https://github.com/ocasioj.png' };
             showDashboard();
             await loadTasksFromGitHub();
             if (!(await loadCronsFromGateway())) await loadCronsFromGitHub();
