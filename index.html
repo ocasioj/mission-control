@@ -2416,6 +2416,31 @@
             font-size: 0.52rem;
             text-shadow: 0 0 10px rgba(245,158,11,0.45);
         }
+        /* Active agent glow — pulses when agent is working */
+        .cubicle.cub-active {
+            border-color: rgba(16,185,129,0.75) !important;
+            animation: cub-pulse 2.4s ease-in-out infinite;
+        }
+        .cubicle.cubicle-lg.cub-active {
+            border-color: rgba(245,158,11,0.95) !important;
+            animation: cub-pulse-gold 2s ease-in-out infinite;
+        }
+        @keyframes cub-pulse {
+            0%,100% { box-shadow: inset 0 10px 22px rgba(0,0,0,0.18), 0 0 14px rgba(16,185,129,0.3), 0 2px 8px rgba(0,0,0,0.25); }
+            50%      { box-shadow: inset 0 10px 22px rgba(0,0,0,0.18), 0 0 38px rgba(16,185,129,0.6), 0 2px 8px rgba(0,0,0,0.25); }
+        }
+        @keyframes cub-pulse-gold {
+            0%,100% { box-shadow: inset 0 14px 30px rgba(0,0,0,0.28), 0 0 28px rgba(245,158,11,0.35), 0 0 80px rgba(245,158,11,0.08); }
+            50%      { box-shadow: inset 0 14px 30px rgba(0,0,0,0.28), 0 0 55px rgba(245,158,11,0.65), 0 0 100px rgba(245,158,11,0.18); }
+        }
+        /* Activity indicator dot in cubicle top-right */
+        .cub-activity-dot {
+            position: absolute; top: 6px; right: 8px;
+            width: 7px; height: 7px; border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 8px rgba(16,185,129,0.8);
+            animation: blink 1.2s ease-in-out infinite;
+        }
         .cubicle .workstation {
             position: static !important;
             transform: none !important;
@@ -7224,6 +7249,7 @@
 
         let OFFICE_REFRESH_TIMER = null;
         let OFFICE_CLOCK_TIMER = null;
+        let OFFICE_POLL_TIMER = null;
 
         const TEAM_COLOR = {
             'signal-chat': '#f59e0b',
@@ -7592,7 +7618,7 @@
                 </div>
                 <div class="office-room">
                     <div class="office-hud">
-                        <div class="hud-stat">🟢 Active <span class="hud-stat-val green">${active.length}</span></div>
+                        <div class="hud-stat">🟢 Active <span class="hud-stat-val green" id="office-hud-active">${active.length}</span></div>
                         <div class="hud-divider"></div>
                         <div class="hud-stat">👥 Agents <span class="hud-stat-val blue">${agents.length}</span></div>
                         <div class="hud-divider"></div>
@@ -7618,10 +7644,86 @@
             // Start walking after a short delay so desks render first
             setTimeout(() => startOfficeWalking(agents), 2000);
 
-            if (OFFICE_REFRESH_TIMER) clearTimeout(OFFICE_REFRESH_TIMER);
-            OFFICE_REFRESH_TIMER = setTimeout(() => {
-                if (document.getElementById('view-office')?.style.display !== 'none') renderOfficeView();
-            }, 60000);
+            // Live poll every 30s — lightweight update, no full re-render
+            if (OFFICE_POLL_TIMER) clearInterval(OFFICE_POLL_TIMER);
+            OFFICE_POLL_TIMER = setInterval(() => {
+                if (document.getElementById('view-office')?.style.display !== 'none') updateOfficeLive();
+            }, 30000);
+        }
+
+        async function updateOfficeLive() {
+            try {
+                const r = await fetch(`${MC_BASE}/api/agents`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                if (!r.ok) return;
+                const data = await r.json();
+                const agents = Array.isArray(data) ? data : (data.agents || []);
+                if (!agents.length) return;
+                window._OFFICE_AGENTS = agents;
+
+                const active = agents.filter(a => a.isActive);
+
+                // Update subtitle + HUD
+                const t = new Date().toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
+                const sub = document.getElementById('office-subtitle');
+                if (sub) sub.textContent = `${active.length > 0 ? active.length + ' agent' + (active.length > 1 ? 's' : '') + ' working' : 'All agents idle'} · ${t}`;
+                const hudActive = document.getElementById('office-hud-active');
+                if (hudActive) hudActive.textContent = active.length;
+
+                agents.forEach(a => {
+                    const cub = document.getElementById('cub-' + a.id);
+                    if (!cub) return;
+
+                    // Glow + activity dot
+                    if (a.isActive) {
+                        cub.classList.add('cub-active');
+                        if (!cub.querySelector('.cub-activity-dot')) {
+                            const dot = document.createElement('div');
+                            dot.className = 'cub-activity-dot';
+                            cub.appendChild(dot);
+                        }
+                    } else {
+                        cub.classList.remove('cub-active');
+                        cub.querySelector('.cub-activity-dot')?.remove();
+                    }
+
+                    // Plumbob mood
+                    const plumbob = cub.querySelector('.sim-plumbob');
+                    if (plumbob) plumbob.className = `sim-plumbob ${a.isActive ? 'mood-green' : 'mood-yellow'}`;
+
+                    // Sim char bounce vs idle
+                    const char = cub.querySelector('.sim-char');
+                    if (char && cub.dataset.walking !== '1') {
+                        char.classList.toggle('active', a.isActive);
+                        char.classList.toggle('idle', !a.isActive);
+                    }
+
+                    // Speech bubble
+                    const ws = cub.querySelector('.workstation');
+                    let bubble = cub.querySelector('.ws-bubble');
+                    if (a.isActive && a.lastMessage && ws) {
+                        const txt = escapeHtml(a.lastMessage.slice(0, 45)) + (a.lastMessage.length > 45 ? '…' : '');
+                        if (!bubble) {
+                            bubble = document.createElement('div');
+                            bubble.className = 'ws-bubble';
+                            ws.insertBefore(bubble, ws.firstChild);
+                        }
+                        bubble.textContent = txt;
+                    } else if (bubble && !a.isActive) {
+                        bubble.remove();
+                    }
+
+                    // Mood bar
+                    const fill = cub.querySelector('.sim-moodbar-fill');
+                    if (fill) {
+                        fill.style.width = (a.isActive ? 75 + Math.floor(Math.random()*22) : 18 + Math.floor(Math.random()*20)) + '%';
+                        fill.style.background = a.isActive ? '#10b981' : '#f59e0b';
+                    }
+
+                    // Monitor on/off
+                    const mon = cub.querySelector('.ws-monitor');
+                    if (mon) mon.classList.toggle('on', !!a.isActive);
+                });
+            } catch(e) { console.warn('[office poll]', e); }
         }
 
         // ── Radar View ────────────────────────────────────────────────────────────
@@ -8766,8 +8868,9 @@
             if (viewName === 'inbox') renderInboxView();
             if (viewName === 'content') renderContentView();
             if (viewName !== 'office' && OFFICE_REFRESH_TIMER) { clearTimeout(OFFICE_REFRESH_TIMER); OFFICE_REFRESH_TIMER = null; }
-            if (viewName !== 'office' && OFFICE_CLOCK_TIMER) { clearInterval(OFFICE_CLOCK_TIMER); OFFICE_CLOCK_TIMER = null; }
-            if (viewName !== 'office' && OFFICE_WALK_TIMER) { clearInterval(OFFICE_WALK_TIMER); OFFICE_WALK_TIMER = null; }
+            if (viewName !== 'office' && OFFICE_POLL_TIMER)   { clearInterval(OFFICE_POLL_TIMER);   OFFICE_POLL_TIMER = null; }
+            if (viewName !== 'office' && OFFICE_CLOCK_TIMER)  { clearInterval(OFFICE_CLOCK_TIMER);  OFFICE_CLOCK_TIMER = null; }
+            if (viewName !== 'office' && OFFICE_WALK_TIMER)   { clearInterval(OFFICE_WALK_TIMER);   OFFICE_WALK_TIMER = null; }
             if (viewName !== 'radar' && RADAR_REFRESH_TIMER) { clearTimeout(RADAR_REFRESH_TIMER); RADAR_REFRESH_TIMER = null; }
         }
 
