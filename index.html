@@ -7221,7 +7221,7 @@
             }).join('');
 
             // Agent pills sorted by count
-            const sortedAgents = Object.entries(agentTotals).sort((a, b) => (b[1] as number) - (a[1] as number));
+            const sortedAgents = Object.entries(agentTotals).sort((a, b) => b[1] - a[1]);
             const pills = sortedAgents.map(([id, count]) => {
                 const color = TEAM_COLOR[id] || '#6b7280';
                 const emoji = AGENT_EMOJI[id] || '🤖';
