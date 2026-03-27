@@ -8,90 +8,6 @@
       "turns": 1
     },
     {
-      "agentId": "video",
-      "agentName": "Director",
-      "timestamp": 1774588092176,
-      "message": "[Fri 2026-03-27 01:08 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "support",
-      "agentName": "Anchor",
-      "timestamp": 1774588086118,
-      "message": "[Fri 2026-03-27 01:08 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "sales",
-      "agentName": "Closer",
-      "timestamp": 1774588085989,
-      "message": "[Fri 2026-03-27 01:08 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "support",
-      "agentName": "Anchor",
-      "timestamp": 1774588077722,
-      "message": "[Fri 2026-03-27 01:07 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "sales",
-      "agentName": "Closer",
-      "timestamp": 1774588077583,
-      "message": "[Fri 2026-03-27 01:07 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "social",
-      "agentName": "Amp",
-      "timestamp": 1774588070384,
-      "message": "[Fri 2026-03-27 01:07 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "finance",
-      "agentName": "Ledger",
-      "timestamp": 1774588065774,
-      "message": "[Fri 2026-03-27 01:07 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "planner",
-      "agentName": "Atlas",
-      "timestamp": 1774588064830,
-      "message": "[Fri 2026-03-27 01:07 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "image-gen",
-      "agentName": "Pixel",
-      "timestamp": 1774588054571,
-      "message": "[Fri 2026-03-27 01:07 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "writer",
-      "agentName": "Quill",
-      "timestamp": 1774588054354,
-      "message": "[Fri 2026-03-27 01:07 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "analyst",
-      "agentName": "Nova",
-      "timestamp": 1774588053475,
-      "message": "[Fri 2026-03-27 01:07 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "research",
-      "agentName": "Scout",
-      "timestamp": 1774588053209,
-      "message": "[Fri 2026-03-27 01:07 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1774584004072,
@@ -357,21 +273,12 @@
     },
     {
       "day": "2026-03-27",
-      "total": 16,
+      "total": 4,
       "byAgent": {
-        "sales": 2,
-        "planner": 1,
-        "research": 1,
         "signal-chat": 3,
-        "social": 1,
-        "image-gen": 1,
-        "finance": 1,
-        "analyst": 1,
-        "writer": 1,
-        "support": 2,
-        "video": 2
+        "video": 1
       }
     }
   ],
-  "updatedAt": 1774591579034
+  "updatedAt": 1774591879006
 }
