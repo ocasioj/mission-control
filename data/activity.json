@@ -94,13 +94,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774526400093,
-      "message": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774413108867,
       "message": "[cron:779a4a3d-4ce1-456c-b6bf-d877868f928f Mission Control UI Update Status] The dev agent is still ",
       "turns": 1
@@ -258,9 +251,9 @@
     },
     {
       "day": "2026-03-26",
-      "total": 5,
+      "total": 4,
       "byAgent": {
-        "signal-chat": 5
+        "signal-chat": 4
       }
     },
     {
@@ -272,5 +265,5 @@
       }
     }
   ],
-  "updatedAt": 1774612879270
+  "updatedAt": 1774613179152
 }
