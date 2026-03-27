@@ -192,12 +192,12 @@
         "kind": "agentTurn",
         "message": "You are Jose's proactive Revenue Agent. Run this every weekday at 5pm ET. Do the following and deliver a concise Signal report:\n\n1. PIPELINE CHECK: Review the sales pipeline at https://raw.githubusercontent.com/ocasioj/mission-control/main/data/pipeline.json — summarize deal count and total value by stage.\n\n2. LEAD RESEARCH: Use web search to find 2-3 potential leads for AI automation services. Target: small-to-medium businesses that would benefit from AI agents (e-commerce, real estate, healthcare admin, professional services). For each lead include: company name, why they're a fit, how to reach them.\n\n3. OUTREACH DRAFT: Write one cold outreach message Jose can send today. Keep it under 150 words, value-focused, specific to the lead.\n\n4. TOMORROW'S FOCUS: One concrete revenue action Jose should prioritize tomorrow.\n\nBe specific and actionable. No fluff."
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-03-27T21:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-03-27T21:00:00.007Z",
+      "nextRunAt": "2026-03-30T21:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 39961,
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774644977783
+  "updatedAt": 1774645277879
 }
