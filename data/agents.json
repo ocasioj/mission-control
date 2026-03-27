@@ -5,9 +5,9 @@
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
-      "lastActivity": 1774649434577,
-      "lastActivityAgo": "25m ago",
-      "isActive": false,
+      "lastActivity": 1774651235838,
+      "lastActivityAgo": "41s ago",
+      "isActive": true,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774650977549
+  "updatedAt": 1774651277432
 }
