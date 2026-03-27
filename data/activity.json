@@ -94,13 +94,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774527300085,
-      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774413108867,
       "message": "[cron:779a4a3d-4ce1-456c-b6bf-d877868f928f Mission Control UI Update Status] The dev agent is still ",
       "turns": 1
@@ -258,9 +251,9 @@
     },
     {
       "day": "2026-03-26",
-      "total": 4,
+      "total": 3,
       "byAgent": {
-        "signal-chat": 4
+        "signal-chat": 3
       }
     },
     {
@@ -272,5 +265,5 @@
       }
     }
   ],
-  "updatedAt": 1774613779031
+  "updatedAt": 1774614079222
 }
