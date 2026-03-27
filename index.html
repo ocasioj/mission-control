@@ -7201,13 +7201,13 @@
             }
 
             const { events = [], hourly = [], agentTotals = {}, updatedAt } = data;
-            const totalTurns = Object.values(agentTotals).reduce((a, b) => (a as number) + (b as number), 0) as number;
+            const totalTurns = Object.values(agentTotals).reduce((a, b) => a + b, 0);
             const now = Date.now();
 
             if (sub) sub.textContent = `${totalTurns} turns across ${Object.keys(agentTotals).length} agents in the last 24h`;
 
             // Hourly bar chart — hourly[0] = current hour, [23] = 23h ago
-            const hourlyTotals = hourly.map(h => Object.values(h).reduce((a: number, b) => a + (b as number), 0));
+            const hourlyTotals = hourly.map(h => Object.values(h).reduce((a, b) => a + b, 0));
             const maxBar = Math.max(...hourlyTotals, 1);
             const bars = hourly.map((h, i) => {
                 const total = hourlyTotals[i];
