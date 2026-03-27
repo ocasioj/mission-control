@@ -10243,7 +10243,24 @@
             }
             if (!token) { showLoginScreen(); return; }
             STATE.token = token;
-            STATE.user = { login: 'ocasioj', name: 'Jose', avatar_url: 'https://github.com/ocasioj.png' };
+            // Validate token + fetch real profile from GitHub API
+            try {
+                const userResp = await fetch('https://api.github.com/user', {
+                    headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
+                });
+                if (!userResp.ok) {
+                    // Token invalid — clear it and show login
+                    localStorage.removeItem('gh_token');
+                    showLoginScreen();
+                    return;
+                }
+                const user = await userResp.json();
+                STATE.user = { login: user.login, name: user.name || user.login, avatar_url: user.avatar_url };
+                document.getElementById('user-avatar').src = user.avatar_url;
+            } catch(e) {
+                // Network error — use fallback profile, don't block
+                STATE.user = { login: 'ocasioj', name: 'Jose', avatar_url: 'https://github.com/ocasioj.png' };
+            }
             showDashboard();
             await loadTasksFromGitHub();
             if (!(await loadCronsFromGateway())) await loadCronsFromGitHub();
