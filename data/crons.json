@@ -48,10 +48,10 @@
         "kind": "agentTurn",
         "message": "Run a safe backup: copy /data/.openclaw/workspace-signal-chat/memory/admin-changes.md, /data/.openclaw/workspace-signal-chat/config/video_pipeline.json, and /data/.openclaw/workspace-signal-chat/config/mcporter.json to /data/.openclaw/workspace-signal-chat/backups/$(date +%F)/. Ensure the backup dir exists and log result to /data/.openclaw/workspace-signal-chat/logs/cron_runs.log. Do not send any external messages; just perform local file operations and log a success/failure entry."
       },
-      "lastRunAt": "2026-03-26T07:10:00.021Z",
-      "nextRunAt": "2026-03-27T07:10:00.000Z",
+      "lastRunAt": "2026-03-27T07:10:00.003Z",
+      "nextRunAt": "2026-03-28T07:10:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 8676,
+      "lastDurationMs": 5021,
       "consecutiveErrors": 0
     },
     {
@@ -199,5 +199,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774595177682
+  "updatedAt": 1774595477782
 }
