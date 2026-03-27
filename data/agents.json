@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774572581278,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
+      "lastActivityAgo": "7m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 70,
       "lastActivity": 1774571247853,
-      "lastActivityAgo": "25m ago",
+      "lastActivityAgo": "30m ago",
       "isActive": false,
       "lastMessage": "System: [2026-03-26 20:22:41 EDT] Exec completed (glow-wil, code 0) :: Running Nano Banana Pro on /data/.openclaw/media/",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774572750772
+  "updatedAt": 1774573050672
 }
