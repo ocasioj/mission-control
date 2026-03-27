@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774623600486,
+      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
+      "turns": 1
+    },
+    {
       "agentId": "image-gen",
       "agentName": "Pixel",
       "timestamp": 1774622611267,
@@ -40,7 +47,7 @@
       "agentName": "Pixel",
       "timestamp": 1774622476872,
       "message": "[Fri 2026-03-27 10:41 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
+      "turns": 2
     },
     {
       "agentId": "video",
@@ -118,13 +125,6 @@
       "timestamp": 1774622438026,
       "message": "[Fri 2026-03-27 10:40 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774622432613,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774622431020\",\n  \"sender_id\": \"+",
-      "turns": 20
     },
     {
       "agentId": "signal-chat",
@@ -208,13 +208,6 @@
       "agentName": "Joe",
       "timestamp": 1774555209993,
       "message": "[cron:afe9314b-2aa4-4cb9-a138-c9ce8d5014ab pre-reset-summary-1774555201] Your session is about to re",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774537200168,
-      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
       "turns": 1
     },
     {
@@ -377,9 +370,9 @@
     },
     {
       "day": "2026-03-26",
-      "total": 2,
+      "total": 1,
       "byAgent": {
-        "signal-chat": 2
+        "signal-chat": 1
       }
     },
     {
@@ -401,5 +394,5 @@
       }
     }
   ],
-  "updatedAt": 1774623379973
+  "updatedAt": 1774623679474
 }
