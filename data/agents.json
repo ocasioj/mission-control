@@ -6,7 +6,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 71,
       "lastActivity": 1774584003969,
-      "lastActivityAgo": "9m ago",
+      "lastActivityAgo": "14m ago",
       "isActive": false,
       "lastMessage": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /data/.openclaw/hooks/ro",
       "lastModel": "gemini-2.5-flash"
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774583381923,
-      "lastActivityAgo": "20m ago",
+      "lastActivityAgo": "25m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -39,7 +39,7 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 1,
       "lastActivity": 1773547999020,
-      "lastActivityAgo": "11d ago",
+      "lastActivityAgo": "12d ago",
       "isActive": false,
       "lastMessage": "[Sun 2026-03-15 00:12 EDT] Compare hotel options in Montreal, Canada for a family of 4 (2 adults, 2 children), 4 nights.",
       "lastModel": "claude-sonnet-4-5"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774584585920
+  "updatedAt": 1774584886050
 }
