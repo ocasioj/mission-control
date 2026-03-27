@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774594200202,
+      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774584004072,
       "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
       "turns": 1
@@ -82,13 +89,6 @@
       "agentName": "Joe",
       "timestamp": 1774508400160,
       "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774507800278,
-      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
       "turns": 1
     },
     {
@@ -258,19 +258,19 @@
     },
     {
       "day": "2026-03-26",
-      "total": 10,
+      "total": 9,
       "byAgent": {
-        "signal-chat": 9,
+        "signal-chat": 8,
         "main": 1
       }
     },
     {
       "day": "2026-03-27",
-      "total": 3,
+      "total": 4,
       "byAgent": {
-        "signal-chat": 3
+        "signal-chat": 4
       }
     }
   ],
-  "updatedAt": 1774593979033
+  "updatedAt": 1774594279035
 }
