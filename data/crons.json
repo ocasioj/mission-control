@@ -120,11 +120,11 @@
         "kind": "agentTurn",
         "message": "Run the daily health report: exec heygen-health-report. Do not send any additional Signal message — the script sends the report directly. If the script fails, send Jose a brief note with the error."
       },
-      "lastRunAt": "2026-03-26T12:00:00.006Z",
-      "nextRunAt": "2026-03-27T12:00:00.000Z",
-      "lastStatus": "ok",
-      "lastDurationMs": 7899,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-03-27T12:00:00.006Z",
+      "nextRunAt": "2026-03-28T12:00:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 8072,
+      "consecutiveErrors": 1
     },
     {
       "id": "57081334-48ac-4626-88df-d7c29a43b26f",
@@ -199,5 +199,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774612578898
+  "updatedAt": 1774612877838
 }
