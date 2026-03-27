@@ -1,6 +1,27 @@
 {
   "events": [
     {
+      "agentId": "video",
+      "agentName": "Director",
+      "timestamp": 1774587102460,
+      "message": "[Fri 2026-03-27 00:51 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "support",
+      "agentName": "Anchor",
+      "timestamp": 1774587077708,
+      "message": "[Fri 2026-03-27 00:51 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "sales",
+      "agentName": "Closer",
+      "timestamp": 1774587077537,
+      "message": "[Fri 2026-03-27 00:51 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
       "agentId": "social",
       "agentName": "Amp",
       "timestamp": 1774587067429,
@@ -68,7 +89,7 @@
       "agentName": "Joe",
       "timestamp": 1774578842773,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774578841991\",\n  \"sender_id\": \"+",
-      "turns": 20
+      "turns": 28
     },
     {
       "agentId": "signal-chat",
@@ -329,8 +350,9 @@
     },
     {
       "day": "2026-03-27",
-      "total": 11,
+      "total": 14,
       "byAgent": {
+        "sales": 1,
         "planner": 1,
         "research": 1,
         "signal-chat": 4,
@@ -338,9 +360,11 @@
         "image-gen": 1,
         "finance": 1,
         "analyst": 1,
-        "writer": 1
+        "writer": 1,
+        "support": 1,
+        "video": 1
       }
     }
   ],
-  "updatedAt": 1774587078837
+  "updatedAt": 1774587378904
 }
