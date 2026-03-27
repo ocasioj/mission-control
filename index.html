@@ -2364,10 +2364,39 @@
             z-index: 4;
         }
         .cubicle.cubicle-lg {
-            width: 142px; height: 148px;
-            border-color: rgba(245,158,11,0.45);
-            background: rgba(20,15,5,0.65);
-            box-shadow: inset 0 10px 22px rgba(0,0,0,0.2), 0 0 18px rgba(245,158,11,0.1);
+            width: 220px; height: 195px;
+            border-width: 4px;
+            border-color: rgba(245,158,11,0.6);
+            background: rgba(22,14,3,0.78);
+            box-shadow: inset 0 14px 30px rgba(0,0,0,0.25), 0 0 30px rgba(245,158,11,0.2), 0 0 70px rgba(245,158,11,0.07);
+        }
+        /* Joe's executive overrides */
+        .cubicle.cubicle-lg .ws-desk {
+            width: 168px !important; height: 82px !important;
+            background: linear-gradient(180deg, #4a2e10 0%, #321c08 100%) !important;
+            border-color: rgba(245,158,11,0.18) !important;
+            box-shadow: 0 5px 0 rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+        }
+        .cubicle.cubicle-lg .ws-monitor {
+            width: 56px !important; height: 38px !important;
+            font-size: 14px !important;
+        }
+        .cubicle.cubicle-lg .ws-keyboard {
+            width: 54px !important; bottom: 5px !important;
+        }
+        .cubicle.cubicle-lg .ws-chair {
+            width: 58px !important; height: 16px !important;
+        }
+        /* Second monitor pill */
+        .cubicle.cubicle-lg .ws-desk::after {
+            content: ''; display: block;
+            width: 46px; height: 34px; flex-shrink: 0;
+            background: #020510;
+            border: 2px solid rgba(245,158,11,0.55);
+            border-radius: 3px;
+            box-shadow: 0 0 12px rgba(245,158,11,0.28), inset 0 0 6px rgba(245,158,11,0.08);
+            position: static;
         }
         .cubicle-nameplate {
             position: absolute; top: 4px; left: 50%; transform: translateX(-50%);
@@ -2375,7 +2404,11 @@
             text-transform: uppercase; font-family: monospace;
             color: rgba(255,255,255,0.22); white-space: nowrap;
         }
-        .cubicle.cubicle-lg .cubicle-nameplate { color: rgba(245,158,11,0.55); }
+        .cubicle.cubicle-lg .cubicle-nameplate {
+            color: rgba(245,158,11,0.8);
+            font-size: 0.52rem;
+            text-shadow: 0 0 10px rgba(245,158,11,0.45);
+        }
         .cubicle .workstation {
             position: static !important;
             transform: none !important;
@@ -7351,10 +7384,10 @@
         // Row 3 (y=338): sales, social, finance, support
         // Break room: x=528 y=338 (right of row 3)
         const DESK_POS = {
-            'signal-chat': { x: 8,   y: 10  },  // Joe corner (larger)
-            'analyst':     { x: 165, y: 10  },
-            'coder':       { x: 295, y: 10  },
-            'research':    { x: 425, y: 10  },
+            'signal-chat': { x: 8,   y: 10  },  // Joe executive (220px wide)
+            'analyst':     { x: 238, y: 10  },  // starts after Joe's 220px + 10 gap
+            'coder':       { x: 368, y: 10  },
+            'research':    { x: 498, y: 10  },
             'writer':      { x: 8,   y: 175 },
             'main':        { x: 138, y: 175 },
             'image-gen':   { x: 268, y: 175 },
