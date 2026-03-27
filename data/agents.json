@@ -6,7 +6,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 71,
       "lastActivity": 1774581786383,
-      "lastActivityAgo": "20m ago",
+      "lastActivityAgo": "25m ago",
       "isActive": false,
       "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774581780945\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gemini-2.5-flash"
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774581581748,
-      "lastActivityAgo": "24m ago",
+      "lastActivityAgo": "29m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -50,7 +50,7 @@
       "desc": "Image generation tasks",
       "sessionCount": 1,
       "lastActivity": 1773546531824,
-      "lastActivityAgo": "11d ago",
+      "lastActivityAgo": "12d ago",
       "isActive": false,
       "lastMessage": "[Sat 2026-03-14 23:48 EDT] Create a vibrant travel poster for a family trip to Montreal, Canada. Include iconic Montreal",
       "lastModel": "gemini-3-flash-preview"
@@ -61,7 +61,7 @@
       "desc": "Content writing and copywriting",
       "sessionCount": 1,
       "lastActivity": 1773546447705,
-      "lastActivityAgo": "11d ago",
+      "lastActivityAgo": "12d ago",
       "isActive": false,
       "lastMessage": "[Sat 2026-03-14 23:47 EDT] Write a hype message to send to a group chat about an upcoming 4-day family trip to Montreal,",
       "lastModel": "claude-sonnet-4-5"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774583040423
+  "updatedAt": 1774583340352
 }
