@@ -14,18 +14,13 @@
     }
   ],
   "disk": {
-    "usedBytes": 59151466496,
-    "availBytes": 43719852032,
+    "usedBytes": 59160571904,
+    "availBytes": 43710746624,
     "totalBytes": 102888095744,
     "percent": 57
   },
-  "cronErrors": [
-    {
-      "name": "Nightly Memory Summary (Joe)",
-      "errors": 1
-    }
-  ],
+  "cronErrors": [],
   "cronTotal": 10,
   "gatewayUp": true,
-  "updatedAt": 1774571253008
+  "updatedAt": 1774571552953
 }
