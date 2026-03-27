@@ -3079,11 +3079,13 @@
         <div class="sidebar-item" data-view="activity" onclick="switchView('activity')"><span class="sidebar-icon">⚡</span><span class="sidebar-label">Activity</span></div>
         <div class="sidebar-item" data-view="health" onclick="switchView('health')"><span class="sidebar-icon">💚</span><span class="sidebar-label">Health</span></div>
         <div class="sidebar-item" data-view="goals" onclick="switchView('goals')"><span class="sidebar-icon">🎯</span><span class="sidebar-label">Goals</span></div>
+        <div class="sidebar-item" data-view="inbox" onclick="switchView('inbox')"><span class="sidebar-icon">📬</span><span class="sidebar-label">Inbox</span></div>
         <div class="sidebar-section-label">Plan</div>
         <div class="sidebar-item" data-view="calendar" onclick="switchView('calendar')"><span class="sidebar-icon">📅</span><span class="sidebar-label">Calendar</span></div>
         <div class="sidebar-item" data-view="projects" onclick="switchView('projects')"><span class="sidebar-icon">📁</span><span class="sidebar-label">Projects</span></div>
         <div class="sidebar-item" data-view="memory" onclick="switchView('memory')"><span class="sidebar-icon">🧠</span><span class="sidebar-label">Memory</span></div>
         <div class="sidebar-item" data-view="docs" onclick="switchView('docs')"><span class="sidebar-icon">📑</span><span class="sidebar-label">Docs</span></div>
+        <div class="sidebar-item" data-view="content" onclick="switchView('content')"><span class="sidebar-icon">🎬</span><span class="sidebar-label">Content</span></div>
         <div class="sidebar-section-label">Team</div>
         <div class="sidebar-item" data-view="people" onclick="switchView('people')"><span class="sidebar-icon">👤</span><span class="sidebar-label">People</span></div>
         <div class="sidebar-item" data-view="office" onclick="switchView('office')"><span class="sidebar-icon">🏢</span><span class="sidebar-label">Office</span></div>
@@ -3574,6 +3576,66 @@
             </div>
         </div>
     </div><!-- END view-feedback -->
+
+    <!-- Inbox View -->
+    <div id="view-inbox" class="view" style="display:none;">
+        <div style="display:grid;grid-template-columns:220px 1fr;height:100%;overflow:hidden;">
+            <div id="inbox-agents" style="border-right:1px solid #1e293b;overflow-y:auto;padding:12px 8px;"></div>
+            <div id="inbox-thread" style="overflow-y:auto;padding:20px 24px;"></div>
+        </div>
+    </div><!-- END view-inbox -->
+
+    <!-- Content View -->
+    <div id="view-content" class="view" style="display:none;">
+        <div class="view-content" style="max-width:100%;overflow-x:auto;">
+            <div class="section-header-row">
+                <div><h2>🎬 Content</h2><p class="section-subtitle">Video & content pipeline — Idea → Script → Render → Published</p></div>
+                <div style="display:flex;gap:8px;">
+                    <button class="btn-secondary" onclick="renderContentView()">↻ Refresh</button>
+                    <button class="btn-primary" onclick="showNewContentForm()">+ New Idea</button>
+                </div>
+            </div>
+            <div id="content-board" style="display:flex;gap:14px;min-width:900px;align-items:flex-start;padding-bottom:20px;margin-top:16px;"></div>
+            <div style="margin-top:24px;">
+                <div style="font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;">Recent HeyGen Renders</div>
+                <div id="heygen-jobs"></div>
+            </div>
+        </div>
+        <!-- New content modal -->
+        <div id="content-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;">
+            <div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:28px;width:500px;max-width:95vw;">
+                <h3 id="content-modal-title" style="margin:0 0 20px;color:#f1f5f9;">New Content Idea</h3>
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Title</label><input id="ctm-title" type="text" placeholder="5 Things AI Can Do For Your Business" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;"></div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Format</label>
+                        <select id="ctm-format" style="width:100%;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;">
+                            <option value="video">HeyGen Video</option>
+                            <option value="short">YouTube Short</option>
+                            <option value="post">Social Post</option>
+                            <option value="blog">Blog Post</option>
+                        </select>
+                    </div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Script / Notes</label><textarea id="ctm-script" rows="5" placeholder="Write the full script here, or just rough notes for now..." style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;resize:vertical;"></textarea></div>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:20px;">
+                    <button class="btn-primary" onclick="saveContentFromModal()" style="flex:1;">Save</button>
+                    <button class="btn-secondary" onclick="hideContentModal()" style="flex:1;">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <!-- HeyGen render modal -->
+        <div id="heygen-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;">
+            <div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:28px;width:460px;max-width:95vw;">
+                <h3 style="margin:0 0 16px;color:#f1f5f9;">Queue HeyGen Render</h3>
+                <p style="font-size:13px;color:#94a3b8;margin:0 0 16px;" id="heygen-modal-title"></p>
+                <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Script to render</label><textarea id="hm-script" rows="6" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:13px;resize:vertical;"></textarea></div>
+                <div style="display:flex;gap:10px;margin-top:20px;">
+                    <button class="btn-primary" onclick="submitHeyGenRender()" style="flex:1;">🎬 Queue Render</button>
+                    <button class="btn-secondary" onclick="hideHeyGenModal()" style="flex:1;">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- END view-content -->
 
     <!-- Goals View -->
     <div id="view-goals" class="view" style="display:none;">
@@ -7827,6 +7889,225 @@
             saveFeedback();
         }
 
+        // ── Inbox View ────────────────────────────────────────────────────────────
+
+        let INBOX_THREADS = [];
+        let INBOX_ACTIVE  = 0;
+
+        async function renderInboxView() {
+            const agentsEl = document.getElementById('inbox-agents');
+            const threadEl = document.getElementById('inbox-thread');
+            if (!agentsEl) return;
+            agentsEl.innerHTML  = '<div style="color:#94a3b8;font-size:13px;padding:8px;">Loading...</div>';
+            threadEl.innerHTML  = '';
+
+            let data;
+            try {
+                const r = await fetch(`${MC_BASE}/api/inbox`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                data = await r.json();
+            } catch(e) {
+                agentsEl.innerHTML = '<div style="color:#ef4444;font-size:12px;padding:8px;">Could not reach server.</div>';
+                return;
+            }
+
+            INBOX_THREADS = data.threads || [];
+            if (!INBOX_THREADS.length) {
+                agentsEl.innerHTML = '<div style="color:#64748b;font-size:12px;padding:8px;">No recent conversations.</div>';
+                return;
+            }
+            renderInboxAgentList();
+            showInboxThread(0);
+        }
+
+        function renderInboxAgentList() {
+            const agentsEl = document.getElementById('inbox-agents');
+            const AGENT_COLORS = { 'signal-chat':'#6366f1','main':'#3b82f6','coder':'#22c55e','analyst':'#f59e0b','research':'#ec4899','default':'#64748b' };
+            agentsEl.innerHTML = INBOX_THREADS.map((t, i) => {
+                const color = AGENT_COLORS[t.agentId] || '#64748b';
+                const last = t.msgs[t.msgs.length - 1];
+                const preview = (last?.text || '').slice(0, 60).replace(/</g,'&lt;');
+                const ts = last?.ts ? new Date(last.ts).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true}) : '';
+                return `<div onclick="showInboxThread(${i})" style="padding:10px 10px;border-radius:8px;cursor:pointer;margin-bottom:4px;background:${INBOX_ACTIVE===i?'#334155':'transparent'};">
+                    <div style="display:flex;align-items:center;gap:7px;">
+                        <span style="width:8px;height:8px;border-radius:50%;background:${color};flex-shrink:0;"></span>
+                        <span style="font-size:13px;font-weight:600;color:#f1f5f9;">${t.agentId}</span>
+                    </div>
+                    <div style="font-size:11px;color:#64748b;margin-top:3px;margin-left:15px;">${ts}</div>
+                    <div style="font-size:11px;color:#475569;margin-top:2px;margin-left:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:175px;">${preview}</div>
+                </div>`;
+            }).join('');
+        }
+
+        function showInboxThread(idx) {
+            INBOX_ACTIVE = idx;
+            renderInboxAgentList();
+            const t = INBOX_THREADS[idx];
+            const threadEl = document.getElementById('inbox-thread');
+            if (!threadEl || !t) return;
+            threadEl.innerHTML = t.msgs.map(m => {
+                const isUser = m.role === 'user';
+                const text = (m.text || '').replace(/</g,'&lt;').replace(/\n/g,'<br>');
+                const ts = m.ts ? new Date(m.ts).toLocaleString('en-US',{hour:'numeric',minute:'2-digit',hour12:true}) : '';
+                return `<div style="display:flex;flex-direction:${isUser?'row-reverse':'row'};align-items:flex-start;gap:10px;margin-bottom:14px;">
+                    <div style="width:28px;height:28px;border-radius:50%;background:${isUser?'#1d4ed8':'#334155'};display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">${isUser?'👤':'🤖'}</div>
+                    <div style="max-width:72%;background:${isUser?'#1e3a5f':'#1e293b'};border:1px solid ${isUser?'#1d4ed8':'#334155'};border-radius:${isUser?'12px 12px 2px 12px':'12px 12px 12px 2px'};padding:10px 14px;">
+                        <div style="font-size:13px;color:#e2e8f0;line-height:1.5;">${text}</div>
+                        <div style="font-size:10px;color:#475569;margin-top:5px;text-align:${isUser?'left':'right'};">${ts}</div>
+                    </div>
+                </div>`;
+            }).join('');
+            threadEl.scrollTop = threadEl.scrollHeight;
+        }
+
+        // ── Content / Video Pipeline View ─────────────────────────────────────────
+
+        const CONTENT_COLS = [
+            { id: 'idea',       label: 'Idea',       color: '#6366f1' },
+            { id: 'script',     label: 'Script',     color: '#3b82f6' },
+            { id: 'rendering',  label: 'Rendering',  color: '#f59e0b' },
+            { id: 'review',     label: 'Review',     color: '#f97316' },
+            { id: 'published',  label: 'Published',  color: '#22c55e' },
+        ];
+
+        const FORMAT_ICON = { video: '🎥', short: '📱', post: '📣', blog: '✍️' };
+
+        let CONTENT_DATA = { pieces: [] };
+        let CONTENT_SHA  = null;
+        let HEYGEN_RENDER_ID = null;
+
+        async function renderContentView() {
+            const board = document.getElementById('content-board');
+            const hgEl  = document.getElementById('heygen-jobs');
+            if (!board) return;
+            board.innerHTML = '<div style="color:#94a3b8;font-size:13px;">Loading...</div>';
+
+            // Load content pipeline from GitHub
+            try {
+                const r = await fetch(
+                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/content.json`,
+                    { headers: { 'Authorization': `token ${STATE.token}`, 'Accept': 'application/vnd.github.v3+json' } }
+                );
+                if (r.status === 404) { CONTENT_DATA = { pieces: [] }; CONTENT_SHA = null; }
+                else { const gh = await r.json(); CONTENT_SHA = gh.sha; CONTENT_DATA = JSON.parse(atob(gh.content.replace(/\n/g,''))); }
+            } catch(e) { CONTENT_DATA = { pieces: [] }; }
+
+            renderContentBoard();
+
+            // Load HeyGen jobs
+            try {
+                const r = await fetch(`${MC_BASE}/api/heygen/jobs`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                const d = await r.json();
+                const statusColor = { sent:'#22c55e', queued:'#f59e0b', failed:'#ef4444', abandoned:'#64748b' };
+                hgEl.innerHTML = d.jobs.length ? `<div style="display:flex;flex-direction:column;gap:6px;">${d.jobs.slice(0,10).map(j => {
+                    const color = statusColor[j.status] || '#64748b';
+                    const ts = j.queued_at ? new Date(j.queued_at*1000).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true}) : '';
+                    return `<div style="background:#1e293b;border:1px solid #334155;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:12px;">
+                        <span style="width:8px;height:8px;border-radius:50%;background:${color};flex-shrink:0;"></span>
+                        <div style="flex:1;min-width:0;"><div style="font-size:12px;color:#94a3b8;font-family:monospace;">${j.id.slice(0,16)}…</div></div>
+                        <span style="font-size:11px;color:${color};font-weight:600;">${j.status}</span>
+                        <span style="font-size:11px;color:#475569;">${ts}</span>
+                        ${j.video_url ? `<a href="${j.video_url}" target="_blank" style="font-size:11px;color:#6366f1;">▶ Watch</a>` : ''}
+                    </div>`;
+                }).join('')}</div>` : '<div style="color:#64748b;font-size:13px;">No HeyGen jobs yet.</div>';
+            } catch(e) { hgEl.innerHTML = '<div style="color:#64748b;font-size:13px;">Could not load HeyGen jobs.</div>'; }
+        }
+
+        function renderContentBoard() {
+            const board = document.getElementById('content-board');
+            if (!board) return;
+            const pieces = CONTENT_DATA.pieces || [];
+            board.innerHTML = CONTENT_COLS.map(col => {
+                const colPieces = pieces.filter(p => p.stage === col.id);
+                return `<div style="flex:1;min-width:160px;background:#1e293b;border:1px solid #334155;border-radius:10px;overflow:hidden;" ondragover="event.preventDefault()" ondrop="contentDrop(event,'${col.id}')">
+                    <div style="padding:12px 14px;border-bottom:1px solid #334155;border-top:3px solid ${col.color};">
+                        <div style="font-size:12px;font-weight:600;color:#f1f5f9;">${col.label}</div>
+                        <div style="font-size:11px;color:#64748b;margin-top:2px;">${colPieces.length} item${colPieces.length!==1?'s':''}</div>
+                    </div>
+                    <div style="padding:10px;display:flex;flex-direction:column;gap:8px;min-height:80px;">
+                        ${colPieces.map(p => `<div draggable="true" ondragstart="contentDragStart(event,'${p.id}')" style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px 12px;cursor:grab;">
+                            <div style="font-size:11px;color:#64748b;margin-bottom:4px;">${FORMAT_ICON[p.format]||'📄'} ${p.format}</div>
+                            <div style="font-size:13px;font-weight:600;color:#f1f5f9;line-height:1.3;">${p.title}</div>
+                            ${p.script ? `<div style="font-size:11px;color:#475569;margin-top:5px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;">${p.script.slice(0,100)}</div>` : ''}
+                            <div style="display:flex;gap:5px;margin-top:8px;flex-wrap:wrap;">
+                                ${p.format==='video'||p.format==='short' ? `<button onclick="openHeyGenModal('${p.id}')" style="background:#7c3aed;border:none;color:#fff;border-radius:4px;padding:3px 8px;cursor:pointer;font-size:10px;">🎬 Render</button>` : ''}
+                                <button onclick="deleteContentPiece('${p.id}')" style="background:none;border:none;color:#475569;cursor:pointer;font-size:11px;margin-left:auto;">✕</button>
+                            </div>
+                        </div>`).join('')}
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        let contentDragId = null;
+        function contentDragStart(e, id) { contentDragId = id; e.dataTransfer.effectAllowed = 'move'; }
+        function contentDrop(e, stageId) {
+            if (!contentDragId) return;
+            const piece = CONTENT_DATA.pieces.find(p => p.id === contentDragId);
+            if (piece) { piece.stage = stageId; saveContent('Move content piece'); }
+            contentDragId = null;
+        }
+
+        async function saveContent(msg) {
+            try {
+                const content = btoa(unescape(encodeURIComponent(JSON.stringify(CONTENT_DATA, null, 2))));
+                const r = await fetch(
+                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/content.json`,
+                    { method: 'PUT', headers: { 'Authorization': `token ${STATE.token}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ message: msg || 'Update content', content, sha: CONTENT_SHA || undefined, branch: CONFIG.branch }) }
+                );
+                if (!r.ok) throw new Error((await r.json()).message);
+                const res = await r.json(); CONTENT_SHA = res.content.sha;
+                renderContentBoard();
+            } catch(e) { showToast('error', 'Save failed: ' + e.message); }
+        }
+
+        function showNewContentForm() { document.getElementById('content-modal').style.display = 'flex'; }
+        function hideContentModal()  { document.getElementById('content-modal').style.display = 'none'; }
+        function saveContentFromModal() {
+            const title  = document.getElementById('ctm-title').value.trim();
+            const format = document.getElementById('ctm-format').value;
+            const script = document.getElementById('ctm-script').value.trim();
+            if (!title) { showToast('error', 'Title is required'); return; }
+            CONTENT_DATA.pieces.push({ id: crypto.randomUUID(), title, format, script, stage: 'idea', ts: Date.now() });
+            hideContentModal();
+            document.getElementById('ctm-title').value = '';
+            document.getElementById('ctm-script').value = '';
+            saveContent('Add content idea');
+        }
+        function deleteContentPiece(id) {
+            CONTENT_DATA.pieces = CONTENT_DATA.pieces.filter(p => p.id !== id);
+            saveContent('Delete content piece');
+        }
+
+        function openHeyGenModal(pieceId) {
+            HEYGEN_RENDER_ID = pieceId;
+            const piece = CONTENT_DATA.pieces.find(p => p.id === pieceId);
+            document.getElementById('heygen-modal-title').textContent = piece?.title || '';
+            document.getElementById('hm-script').value = piece?.script || '';
+            document.getElementById('heygen-modal').style.display = 'flex';
+        }
+        function hideHeyGenModal() { document.getElementById('heygen-modal').style.display = 'none'; }
+        async function submitHeyGenRender() {
+            const script = document.getElementById('hm-script').value.trim();
+            if (!script) { showToast('error', 'Script is required'); return; }
+            try {
+                const r = await fetch(`${MC_BASE}/api/heygen/queue`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-Gateway-Token': MC_TOKEN },
+                    body: JSON.stringify({ script })
+                });
+                const j = await r.json();
+                if (!j.ok) throw new Error(j.error);
+                showToast('success', '🎬 Queued for HeyGen render');
+                hideHeyGenModal();
+                // Move piece to rendering stage
+                if (HEYGEN_RENDER_ID) {
+                    const piece = CONTENT_DATA.pieces.find(p => p.id === HEYGEN_RENDER_ID);
+                    if (piece) { piece.stage = 'rendering'; saveContent('Move to rendering'); }
+                }
+            } catch(e) { showToast('error', 'Queue failed: ' + e.message); }
+        }
+
         // ── Activity View ─────────────────────────────────────────────────────────
 
         async function renderActivityView() {
@@ -8198,6 +8479,8 @@
             if (viewName === 'factory') renderFactoryView();
             if (viewName === 'pipeline') renderPipelineView();
             if (viewName === 'feedback') renderFeedbackView();
+            if (viewName === 'inbox') renderInboxView();
+            if (viewName === 'content') renderContentView();
             if (viewName !== 'office' && OFFICE_REFRESH_TIMER) { clearTimeout(OFFICE_REFRESH_TIMER); OFFICE_REFRESH_TIMER = null; }
             if (viewName !== 'office' && OFFICE_CLOCK_TIMER) { clearInterval(OFFICE_CLOCK_TIMER); OFFICE_CLOCK_TIMER = null; }
             if (viewName !== 'radar' && RADAR_REFRESH_TIMER) { clearTimeout(RADAR_REFRESH_TIMER); RADAR_REFRESH_TIMER = null; }
