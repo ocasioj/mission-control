@@ -2080,9 +2080,9 @@
                 repeating-linear-gradient(180deg, transparent 0px, transparent 59px, rgba(255,255,255,0.045) 59px, rgba(255,255,255,0.045) 60px);
             border: 2px solid #2a1a0a; border-top: none;
             border-radius: 0 0 14px 14px;
-            padding: 0.6rem 0.75rem 0.75rem;
+            padding: 0.6rem 0.75rem 1.5rem;
             position: relative; overflow: hidden;
-            height: 520px;
+            min-height: 490px;
             box-shadow: inset 0 0 80px rgba(59,130,246,0.04);
         }
         /* Office props */
@@ -7345,19 +7345,27 @@
         // Cubicles open toward the viewer (no bottom wall)
         // Row 1 (top) y=18: Joe(corner), analyst, coder, research
         // Row 2 (mid) y=188: writer, main, image-gen
-        // Row 3 (front) y=355: default
-        // Break room: bottom-right x=470 y=330
+        // Cubicle grid — 3 rows, 13 agents total
+        // Row 1 (y=10): Joe(lg), analyst, coder, research
+        // Row 2 (y=175): writer, main, image-gen, planner, video
+        // Row 3 (y=338): sales, social, finance, support
+        // Break room: x=528 y=338 (right of row 3)
         const DESK_POS = {
-            'signal-chat': { x: 8,   y: 18  },  // Joe's corner (larger cubicle)
-            'analyst':     { x: 172, y: 18  },
-            'coder':       { x: 310, y: 18  },
-            'research':    { x: 448, y: 18  },
-            'writer':      { x: 85,  y: 188 },
-            'main':        { x: 225, y: 188 },
-            'image-gen':   { x: 380, y: 188 },
-            'default':     { x: 50,  y: 355 },
+            'signal-chat': { x: 8,   y: 10  },  // Joe corner (larger)
+            'analyst':     { x: 165, y: 10  },
+            'coder':       { x: 295, y: 10  },
+            'research':    { x: 425, y: 10  },
+            'writer':      { x: 8,   y: 175 },
+            'main':        { x: 138, y: 175 },
+            'image-gen':   { x: 268, y: 175 },
+            'planner':     { x: 398, y: 175 },
+            'video':       { x: 528, y: 175 },
+            'sales':       { x: 8,   y: 338 },
+            'social':      { x: 138, y: 338 },
+            'finance':     { x: 268, y: 338 },
+            'support':     { x: 398, y: 338 },
         };
-        const BREAK_ROOM_POS = { x: 470, y: 335 };
+        const BREAK_ROOM_POS = { x: 528, y: 338 };
 
         let OFFICE_WALK_TIMER = null;
 
@@ -7475,15 +7483,15 @@
                 </div>
             `;
 
-            // Ambient props
+            // Ambient props — placed in corridor areas between rows
             const props = `
-                <div class="office-prop" style="left:8px;top:340px;"><div class="prop-plant">🌴</div><div class="prop-label">Palm</div></div>
-                <div class="office-prop" style="left:630px;top:15px;"><div class="prop-plant">🪴</div><div class="prop-label">Ficus</div></div>
-                <div class="office-prop" style="left:630px;top:195px;"><div class="prop-plant">🌿</div></div>
-                <div class="office-prop" style="left:580px;top:180px;"><div class="prop-coffee">💧</div><div class="prop-label">Cooler</div></div>
-                <div class="office-prop" style="left:630px;top:455px;font-size:10px;color:rgba(255,255,255,0.08);font-family:monospace;writing-mode:vertical-rl;">JOSE & CO. HQ</div>
-                <div class="office-rug" style="left:70px;top:155px;width:390px;height:5px;opacity:0.5;"></div>
-                <div class="office-rug" style="left:70px;top:322px;width:390px;height:5px;opacity:0.5;"></div>
+                <div class="office-rug" style="left:0;top:148px;width:100%;height:6px;opacity:0.4;"></div>
+                <div class="office-rug" style="left:0;top:310px;width:100%;height:6px;opacity:0.4;"></div>
+                <div class="office-prop" style="left:680px;top:10px;"><div class="prop-plant">🌴</div></div>
+                <div class="office-prop" style="left:680px;top:175px;"><div class="prop-plant">🪴</div></div>
+                <div class="office-prop" style="left:680px;top:338px;"><div class="prop-plant">🌿</div></div>
+                <div class="office-prop" style="left:658px;top:155px;"><div class="prop-coffee">💧</div><div class="prop-label">Water</div></div>
+                <div class="office-prop" style="left:658px;top:460px;font-size:10px;color:rgba(255,255,255,0.07);font-family:monospace;writing-mode:vertical-rl;">JOSE & CO. HQ</div>
                 ${breakRoom}
             `;
 
