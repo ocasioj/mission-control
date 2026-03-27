@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774570887024,
+      "message": "System: [2026-03-26 16:27:14 EDT] Exec completed (fresh-sl, code 0) :: Running Nano Banana Pro on /d",
+      "turns": 3
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774555209993,
       "message": "[cron:afe9314b-2aa4-4cb9-a138-c9ce8d5014ab pre-reset-summary-1774555201] Your session is about to re",
       "turns": 1
@@ -266,9 +273,11 @@
     },
     {
       "day": "2026-03-27",
-      "total": 0,
-      "byAgent": {}
+      "total": 1,
+      "byAgent": {
+        "signal-chat": 1
+      }
     }
   ],
-  "updatedAt": 1774570652449
+  "updatedAt": 1774570952365
 }
