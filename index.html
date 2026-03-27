@@ -3089,11 +3089,11 @@
         <div class="sidebar-item" data-view="office" onclick="switchView('office')"><span class="sidebar-icon">🏢</span><span class="sidebar-label">Office</span></div>
         <div class="sidebar-item" data-view="team" onclick="switchView('team')"><span class="sidebar-icon">🔗</span><span class="sidebar-label">Team</span></div>
         <div class="sidebar-section-label">System</div>
-        <div class="sidebar-item" data-view="system" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">⚙️</span><span class="sidebar-label">System</span></div>
+        <div class="sidebar-item" data-view="system" onclick="switchView('system')"><span class="sidebar-icon">⚙️</span><span class="sidebar-label">System</span></div>
         <div class="sidebar-item" data-view="radar" onclick="switchView('radar')"><span class="sidebar-icon">📡</span><span class="sidebar-label">Radar</span></div>
-        <div class="sidebar-item" data-view="factory" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🏭</span><span class="sidebar-label">Factory</span></div>
-        <div class="sidebar-item" data-view="pipeline" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🔀</span><span class="sidebar-label">Pipeline</span></div>
-        <div class="sidebar-item" data-view="feedback" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">💬</span><span class="sidebar-label">Feedback</span></div>
+        <div class="sidebar-item" data-view="factory" onclick="switchView('factory')"><span class="sidebar-icon">🏭</span><span class="sidebar-label">Factory</span></div>
+        <div class="sidebar-item" data-view="pipeline" onclick="switchView('pipeline')"><span class="sidebar-icon">🔀</span><span class="sidebar-label">Pipeline</span></div>
+        <div class="sidebar-item" data-view="feedback" onclick="switchView('feedback')"><span class="sidebar-icon">💬</span><span class="sidebar-label">Feedback</span></div>
     </nav>
 
     <header class="header">
@@ -3457,6 +3457,123 @@
             <div id="radar-content"><div class="empty-state-large">Loading radar...</div></div>
         </div>
     </div><!-- END view-radar -->
+
+    <!-- System View -->
+    <div id="view-system" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>⚙️ System</h2><p class="section-subtitle">Infrastructure health, containers, and live logs</p></div>
+                <button class="btn-secondary" onclick="renderSystemView()">↻ Refresh</button>
+            </div>
+            <div id="system-stats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;"></div>
+            <div id="system-containers" style="margin-bottom:20px;"></div>
+            <div id="system-logs"></div>
+        </div>
+    </div><!-- END view-system -->
+
+    <!-- Factory View -->
+    <div id="view-factory" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>🏭 Factory</h2><p class="section-subtitle">Manage cron automations — schedule, run, pause, delete</p></div>
+                <button class="btn-primary" onclick="showNewCronForm()">+ New Job</button>
+            </div>
+            <div id="factory-content"><div class="empty-state-large">Loading jobs...</div></div>
+        </div>
+        <!-- New/Edit cron modal -->
+        <div id="cron-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;display:none;align-items:center;justify-content:center;">
+            <div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:28px;width:480px;max-width:95vw;">
+                <h3 id="cron-modal-title" style="margin:0 0 20px;color:#f1f5f9;">New Cron Job</h3>
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Name</label><input id="cm-name" type="text" placeholder="Daily Report" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;"></div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Cron Expression (UTC)</label><input id="cm-expr" type="text" placeholder="0 7 * * *" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;font-family:monospace;"></div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Timezone</label><input id="cm-tz" type="text" placeholder="America/New_York" value="America/New_York" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;"></div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Prompt / Message</label><textarea id="cm-prompt" rows="4" placeholder="Run the daily billing update..." style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;resize:vertical;"></textarea></div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Delivery</label>
+                        <select id="cm-delivery" style="width:100%;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;">
+                            <option value="announce">Announce (send to Signal)</option>
+                            <option value="none">None (silent)</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:20px;">
+                    <button class="btn-primary" onclick="saveCronFromModal()" style="flex:1;">Save Job</button>
+                    <button class="btn-secondary" onclick="hideCronModal()" style="flex:1;">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- END view-factory -->
+
+    <!-- Pipeline View -->
+    <div id="view-pipeline" class="view" style="display:none;">
+        <div class="view-content" style="max-width:100%;overflow-x:auto;">
+            <div class="section-header-row">
+                <div><h2>🔀 Pipeline</h2><p class="section-subtitle">Sales CRM — move deals through your funnel</p></div>
+                <button class="btn-primary" onclick="showNewDealForm()">+ New Deal</button>
+            </div>
+            <div id="pipeline-board" style="display:flex;gap:14px;min-width:800px;align-items:flex-start;padding-bottom:20px;"></div>
+        </div>
+        <!-- New deal modal -->
+        <div id="deal-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;">
+            <div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:28px;width:420px;max-width:95vw;">
+                <h3 style="margin:0 0 20px;color:#f1f5f9;">New Deal</h3>
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Contact / Company</label><input id="dm-name" type="text" placeholder="ACME Corp" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;"></div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Deal Value ($)</label><input id="dm-value" type="number" placeholder="5000" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;"></div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Notes</label><input id="dm-notes" type="text" placeholder="Intro call done" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;"></div>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:20px;">
+                    <button class="btn-primary" onclick="saveDealFromModal()" style="flex:1;">Add Deal</button>
+                    <button class="btn-secondary" onclick="hideDealModal()" style="flex:1;">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- END view-pipeline -->
+
+    <!-- Feedback View -->
+    <div id="view-feedback" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>💬 Feedback</h2><p class="section-subtitle">Rate and annotate agent sessions</p></div>
+                <button class="btn-primary" onclick="showFeedbackForm()">+ Add Feedback</button>
+            </div>
+            <div style="display:grid;grid-template-columns:220px 1fr;gap:20px;margin-top:8px;">
+                <div id="feedback-agents" style="display:flex;flex-direction:column;gap:8px;"></div>
+                <div id="feedback-entries"><div class="empty-state-large">Loading feedback...</div></div>
+            </div>
+        </div>
+        <!-- Add feedback modal -->
+        <div id="feedback-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;">
+            <div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:28px;width:420px;max-width:95vw;">
+                <h3 style="margin:0 0 20px;color:#f1f5f9;">Add Feedback</h3>
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Agent</label>
+                        <select id="fm-agent" style="width:100%;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;">
+                            <option value="signal-chat">signal-chat</option>
+                            <option value="coder">coder</option>
+                            <option value="analyst">analyst</option>
+                            <option value="research">research</option>
+                            <option value="main">main</option>
+                        </select>
+                    </div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Rating</label>
+                        <div id="fm-stars" style="display:flex;gap:6px;font-size:28px;cursor:pointer;">
+                            <span onclick="setFmStar(1)" data-star="1">☆</span>
+                            <span onclick="setFmStar(2)" data-star="2">☆</span>
+                            <span onclick="setFmStar(3)" data-star="3">☆</span>
+                            <span onclick="setFmStar(4)" data-star="4">☆</span>
+                            <span onclick="setFmStar(5)" data-star="5">☆</span>
+                        </div>
+                    </div>
+                    <div><label style="color:#94a3b8;font-size:12px;display:block;margin-bottom:4px;">Comment</label><textarea id="fm-comment" rows="3" placeholder="Great briefing today..." style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px 10px;color:#f1f5f9;font-size:14px;resize:vertical;"></textarea></div>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:20px;">
+                    <button class="btn-primary" onclick="submitFeedback()" style="flex:1;">Save</button>
+                    <button class="btn-secondary" onclick="hideFeedbackModal()" style="flex:1;">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- END view-feedback -->
 
     <!-- Goals View -->
     <div id="view-goals" class="view" style="display:none;">
@@ -7305,6 +7422,411 @@
             }, 60000);
         }
 
+        // ── System View ───────────────────────────────────────────────────────────
+
+        async function renderSystemView() {
+            const statsEl = document.getElementById('system-stats');
+            const ctEl    = document.getElementById('system-containers');
+            const logsEl  = document.getElementById('system-logs');
+            if (!statsEl) return;
+            statsEl.innerHTML = '<div style="color:#94a3b8;font-size:13px;">Loading...</div>';
+
+            let data;
+            try {
+                const r = await fetch(`${MC_BASE}/api/system`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                data = await r.json();
+            } catch(e) {
+                statsEl.innerHTML = '<div class="empty-state-large">Could not reach Mission Control server.</div>';
+                return;
+            }
+
+            const statCard = (label, value, sub, pct) => {
+                const bar = pct != null ? `<div style="margin-top:8px;height:4px;background:#1e293b;border-radius:2px;"><div style="height:4px;width:${pct}%;background:${pct>85?'#ef4444':pct>65?'#f59e0b':'#22c55e'};border-radius:2px;"></div></div>` : '';
+                return `<div style="background:#1e293b;border:1px solid #334155;border-radius:10px;padding:16px;">
+                    <div style="font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.5px;">${label}</div>
+                    <div style="font-size:22px;font-weight:700;color:#f1f5f9;margin-top:4px;">${value}</div>
+                    ${sub ? `<div style="font-size:12px;color:#94a3b8;margin-top:2px;">${sub}</div>` : ''}
+                    ${bar}
+                </div>`;
+            };
+
+            const { mem, disk, containers, logTail } = data;
+            statsEl.innerHTML = [
+                statCard('Memory', `${mem.usedMb.toLocaleString()} MB`, `of ${mem.totalMb.toLocaleString()} MB total`, mem.pct),
+                statCard('Disk', `${disk.usedGb} GB`, `of ${disk.totalGb} GB total`, disk.pct),
+                statCard('Containers', containers.length, `${containers.filter(c => c.state === 'running').length} running`, null),
+            ].join('');
+
+            const stateColor = s => s === 'running' ? '#22c55e' : '#ef4444';
+            ctEl.innerHTML = `<div style="background:#1e293b;border:1px solid #334155;border-radius:10px;overflow:hidden;">
+                <div style="padding:12px 16px;border-bottom:1px solid #334155;font-size:12px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.5px;">Containers</div>
+                <table style="width:100%;border-collapse:collapse;">
+                    <tbody>${containers.map(c => `<tr style="border-bottom:1px solid #1e293b;">
+                        <td style="padding:10px 16px;font-size:13px;color:#f1f5f9;">${c.name}</td>
+                        <td style="padding:10px 16px;"><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;color:${stateColor(c.state)};"><span style="width:6px;height:6px;border-radius:50%;background:${stateColor(c.state)};display:inline-block;"></span>${c.state}</span></td>
+                        <td style="padding:10px 16px;font-size:12px;color:#64748b;">${c.status}</td>
+                    </tr>`).join('')}</tbody>
+                </table>
+            </div>`;
+
+            logsEl.innerHTML = `<div style="background:#0f172a;border:1px solid #334155;border-radius:10px;overflow:hidden;">
+                <div style="padding:12px 16px;border-bottom:1px solid #334155;font-size:12px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.5px;">Today's Log (last 50 lines)</div>
+                <pre style="margin:0;padding:14px 16px;font-size:11px;color:#94a3b8;font-family:monospace;white-space:pre-wrap;word-break:break-all;max-height:360px;overflow-y:auto;">${logTail.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>
+            </div>`;
+        }
+
+        // ── Factory View ──────────────────────────────────────────────────────────
+
+        let FACTORY_JOBS = [];
+
+        async function renderFactoryView() {
+            const el = document.getElementById('factory-content');
+            if (!el) return;
+            el.innerHTML = '<div class="empty-state-large">Loading cron jobs...</div>';
+
+            let data;
+            try {
+                const r = await fetchGitHubDataFile('crons.json');
+                data = r;
+            } catch(e) {
+                el.innerHTML = '<div class="empty-state-large">Could not load cron jobs.</div>';
+                return;
+            }
+
+            FACTORY_JOBS = data.jobs || [];
+            renderFactoryTable();
+        }
+
+        function renderFactoryTable() {
+            const el = document.getElementById('factory-content');
+            if (!el) return;
+            if (!FACTORY_JOBS.length) { el.innerHTML = '<div class="empty-state-large">No cron jobs configured.</div>'; return; }
+
+            const stateColor = j => {
+                if (!j.enabled) return '#64748b';
+                if ((j.state?.consecutiveErrors ?? 0) > 0) return '#ef4444';
+                return '#22c55e';
+            };
+            const fmtTime = ms => ms ? new Date(ms).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true}) : '—';
+
+            el.innerHTML = `<div style="background:#1e293b;border:1px solid #334155;border-radius:10px;overflow:hidden;">
+                <table style="width:100%;border-collapse:collapse;">
+                    <thead><tr style="border-bottom:1px solid #334155;">
+                        <th style="padding:10px 16px;text-align:left;font-size:11px;color:#64748b;font-weight:600;text-transform:uppercase;">Status</th>
+                        <th style="padding:10px 16px;text-align:left;font-size:11px;color:#64748b;font-weight:600;text-transform:uppercase;">Name</th>
+                        <th style="padding:10px 16px;text-align:left;font-size:11px;color:#64748b;font-weight:600;text-transform:uppercase;">Schedule</th>
+                        <th style="padding:10px 16px;text-align:left;font-size:11px;color:#64748b;font-weight:600;text-transform:uppercase;">Last Run</th>
+                        <th style="padding:10px 16px;text-align:left;font-size:11px;color:#64748b;font-weight:600;text-transform:uppercase;">Next Run</th>
+                        <th style="padding:10px 16px;text-align:left;font-size:11px;color:#64748b;font-weight:600;text-transform:uppercase;">Actions</th>
+                    </tr></thead>
+                    <tbody>${FACTORY_JOBS.map((j,i) => `<tr style="border-bottom:1px solid #0f172a;">
+                        <td style="padding:10px 16px;"><span style="width:8px;height:8px;border-radius:50%;background:${stateColor(j)};display:inline-block;" title="${j.enabled ? 'enabled' : 'disabled'}"></span></td>
+                        <td style="padding:10px 16px;font-size:13px;color:#f1f5f9;font-weight:500;">${j.name || '—'}</td>
+                        <td style="padding:10px 16px;font-size:12px;color:#94a3b8;font-family:monospace;">${j.schedule?.expr || '—'} <span style="color:#475569;">(${j.schedule?.tz || 'UTC'})</span></td>
+                        <td style="padding:10px 16px;font-size:12px;color:${j.state?.lastRunStatus==='ok'?'#22c55e':'#ef4444'};">${fmtTime(j.state?.lastRunAtMs)}</td>
+                        <td style="padding:10px 16px;font-size:12px;color:#94a3b8;">${fmtTime(j.state?.nextRunAtMs)}</td>
+                        <td style="padding:10px 16px;display:flex;gap:6px;align-items:center;">
+                            <button onclick="runCronJob('${j.id}')" title="Run now" style="background:#1d4ed8;border:none;color:#fff;border-radius:5px;padding:4px 9px;cursor:pointer;font-size:12px;">▶</button>
+                            <button onclick="toggleCronJob(${i})" title="${j.enabled?'Pause':'Enable'}" style="background:#334155;border:none;color:#f1f5f9;border-radius:5px;padding:4px 9px;cursor:pointer;font-size:12px;">${j.enabled?'⏸':'▷'}</button>
+                            <button onclick="editCronJob(${i})" title="Edit" style="background:#334155;border:none;color:#f1f5f9;border-radius:5px;padding:4px 9px;cursor:pointer;font-size:12px;">✏</button>
+                            <button onclick="deleteCronJob(${i})" title="Delete" style="background:#7f1d1d;border:none;color:#fca5a5;border-radius:5px;padding:4px 9px;cursor:pointer;font-size:12px;">🗑</button>
+                        </td>
+                    </tr>`).join('')}</tbody>
+                </table>
+            </div>`;
+        }
+
+        async function saveCronJobs(successMsg) {
+            try {
+                const r = await fetch(`${MC_BASE}/api/cron/save`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-Gateway-Token': MC_TOKEN },
+                    body: JSON.stringify({ jobs: FACTORY_JOBS })
+                });
+                const j = await r.json();
+                if (!j.ok) throw new Error(j.error);
+                showToast('success', successMsg || 'Saved');
+                renderFactoryTable();
+            } catch(e) {
+                showToast('error', 'Save failed: ' + e.message);
+            }
+        }
+
+        async function runCronJob(jobId) {
+            try {
+                const r = await fetch(`${MC_BASE}/api/cron/run`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-Gateway-Token': MC_TOKEN },
+                    body: JSON.stringify({ jobId })
+                });
+                const j = await r.json();
+                if (!j.ok) throw new Error(j.error);
+                showToast('success', `▶ Running: ${j.name}`);
+            } catch(e) {
+                showToast('error', 'Run failed: ' + e.message);
+            }
+        }
+
+        function toggleCronJob(idx) {
+            FACTORY_JOBS[idx].enabled = !FACTORY_JOBS[idx].enabled;
+            saveCronJobs(FACTORY_JOBS[idx].enabled ? '✓ Job enabled' : '⏸ Job paused');
+        }
+
+        function deleteCronJob(idx) {
+            const name = FACTORY_JOBS[idx].name;
+            if (!confirm(`Delete "${name}"?`)) return;
+            FACTORY_JOBS.splice(idx, 1);
+            saveCronJobs('🗑 Job deleted');
+        }
+
+        let EDIT_CRON_IDX = null;
+        function showNewCronForm() {
+            EDIT_CRON_IDX = null;
+            document.getElementById('cron-modal-title').textContent = 'New Cron Job';
+            document.getElementById('cm-name').value = '';
+            document.getElementById('cm-expr').value = '';
+            document.getElementById('cm-tz').value = 'America/New_York';
+            document.getElementById('cm-prompt').value = '';
+            document.getElementById('cm-delivery').value = 'announce';
+            document.getElementById('cron-modal').style.display = 'flex';
+        }
+        function editCronJob(idx) {
+            EDIT_CRON_IDX = idx;
+            const j = FACTORY_JOBS[idx];
+            document.getElementById('cron-modal-title').textContent = 'Edit Cron Job';
+            document.getElementById('cm-name').value = j.name || '';
+            document.getElementById('cm-expr').value = j.schedule?.expr || '';
+            document.getElementById('cm-tz').value = j.schedule?.tz || 'America/New_York';
+            document.getElementById('cm-prompt').value = j.payload?.message || '';
+            document.getElementById('cm-delivery').value = j.delivery?.mode || 'none';
+            document.getElementById('cron-modal').style.display = 'flex';
+        }
+        function hideCronModal() { document.getElementById('cron-modal').style.display = 'none'; }
+        function saveCronFromModal() {
+            const name = document.getElementById('cm-name').value.trim();
+            const expr = document.getElementById('cm-expr').value.trim();
+            const tz   = document.getElementById('cm-tz').value.trim() || 'America/New_York';
+            const msg  = document.getElementById('cm-prompt').value.trim();
+            const del  = document.getElementById('cm-delivery').value;
+            if (!name || !expr || !msg) { showToast('error', 'Name, expression, and prompt are required'); return; }
+            if (EDIT_CRON_IDX !== null) {
+                const j = FACTORY_JOBS[EDIT_CRON_IDX];
+                j.name = name; j.schedule = { ...j.schedule, expr, tz, kind: 'cron' };
+                j.payload = { kind: 'agentTurn', message: msg };
+                j.delivery = { ...j.delivery, mode: del };
+                j.updatedAtMs = Date.now();
+            } else {
+                FACTORY_JOBS.push({
+                    id: crypto.randomUUID(), agentId: 'signal-chat',
+                    sessionKey: 'agent:signal-chat:signal:direct:+16462458614',
+                    name, enabled: true, createdAtMs: Date.now(), updatedAtMs: Date.now(),
+                    schedule: { tz, expr, kind: 'cron' }, sessionTarget: 'isolated', wakeMode: 'now',
+                    payload: { kind: 'agentTurn', message: msg },
+                    delivery: { mode: del, channel: 'signal', to: '+16462458614' },
+                    state: {}
+                });
+            }
+            hideCronModal();
+            saveCronJobs(EDIT_CRON_IDX !== null ? '✓ Job updated' : '✓ Job created');
+        }
+
+        // ── Pipeline View ─────────────────────────────────────────────────────────
+
+        const PIPELINE_COLS = [
+            { id: 'lead',        label: 'Lead',        color: '#6366f1' },
+            { id: 'qualified',   label: 'Qualified',   color: '#3b82f6' },
+            { id: 'proposal',    label: 'Proposal',    color: '#f59e0b' },
+            { id: 'negotiation', label: 'Negotiation', color: '#f97316' },
+            { id: 'closed_won',  label: 'Closed Won',  color: '#22c55e' },
+            { id: 'closed_lost', label: 'Closed Lost', color: '#ef4444' },
+        ];
+
+        let PIPELINE_DATA = { deals: [] };
+        let PIPELINE_SHA  = null;
+
+        async function renderPipelineView() {
+            const board = document.getElementById('pipeline-board');
+            if (!board) return;
+            board.innerHTML = '<div style="color:#94a3b8;font-size:13px;">Loading pipeline...</div>';
+            try {
+                const r = await fetch(
+                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/pipeline.json`,
+                    { headers: { 'Authorization': `token ${STATE.token}`, 'Accept': 'application/vnd.github.v3+json' } }
+                );
+                if (r.status === 404) {
+                    PIPELINE_DATA = { deals: [] }; PIPELINE_SHA = null;
+                } else {
+                    const gh = await r.json();
+                    PIPELINE_SHA = gh.sha;
+                    PIPELINE_DATA = JSON.parse(atob(gh.content.replace(/\n/g, '')));
+                }
+            } catch(e) { PIPELINE_DATA = { deals: [] }; }
+            renderPipelineBoard();
+        }
+
+        function renderPipelineBoard() {
+            const board = document.getElementById('pipeline-board');
+            if (!board) return;
+            const deals = PIPELINE_DATA.deals || [];
+            board.innerHTML = PIPELINE_COLS.map(col => {
+                const colDeals = deals.filter(d => d.stage === col.id);
+                const total = colDeals.reduce((s, d) => s + (d.value || 0), 0);
+                return `<div style="flex:1;min-width:160px;background:#1e293b;border:1px solid #334155;border-radius:10px;overflow:hidden;" ondragover="event.preventDefault()" ondrop="pipelineDrop(event,'${col.id}')">
+                    <div style="padding:12px 14px;border-bottom:1px solid #334155;border-top:3px solid ${col.color};">
+                        <div style="font-size:12px;font-weight:600;color:#f1f5f9;">${col.label}</div>
+                        <div style="font-size:11px;color:#64748b;margin-top:2px;">${colDeals.length} deal${colDeals.length!==1?'s':''} · $${total.toLocaleString()}</div>
+                    </div>
+                    <div style="padding:10px;display:flex;flex-direction:column;gap:8px;min-height:80px;">
+                        ${colDeals.map(d => `<div draggable="true" ondragstart="pipelineDragStart(event,'${d.id}')" style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px 12px;cursor:grab;">
+                            <div style="font-size:13px;font-weight:600;color:#f1f5f9;">${d.name}</div>
+                            ${d.value ? `<div style="font-size:12px;color:#22c55e;margin-top:3px;">$${d.value.toLocaleString()}</div>` : ''}
+                            ${d.notes ? `<div style="font-size:11px;color:#64748b;margin-top:4px;">${d.notes}</div>` : ''}
+                            <div style="font-size:10px;color:#475569;margin-top:6px;">${d.ts ? new Date(d.ts).toLocaleDateString() : ''}</div>
+                            <button onclick="deleteDeal('${d.id}')" style="float:right;background:none;border:none;color:#475569;cursor:pointer;font-size:12px;margin-top:-20px;">✕</button>
+                        </div>`).join('')}
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        let pipelineDragId = null;
+        function pipelineDragStart(e, id) { pipelineDragId = id; e.dataTransfer.effectAllowed = 'move'; }
+        function pipelineDrop(e, stageId) {
+            if (!pipelineDragId) return;
+            const deal = PIPELINE_DATA.deals.find(d => d.id === pipelineDragId);
+            if (deal) { deal.stage = stageId; savePipeline(); }
+            pipelineDragId = null;
+        }
+
+        async function savePipeline() {
+            try {
+                const content = btoa(unescape(encodeURIComponent(JSON.stringify(PIPELINE_DATA, null, 2))));
+                const r = await fetch(
+                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/pipeline.json`,
+                    { method: 'PUT', headers: { 'Authorization': `token ${STATE.token}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ message: 'Update pipeline', content, sha: PIPELINE_SHA || undefined, branch: CONFIG.branch }) }
+                );
+                if (!r.ok) throw new Error((await r.json()).message);
+                const res = await r.json();
+                PIPELINE_SHA = res.content.sha;
+                renderPipelineBoard();
+            } catch(e) { showToast('error', 'Save failed: ' + e.message); }
+        }
+
+        function showNewDealForm() { document.getElementById('deal-modal').style.display = 'flex'; }
+        function hideDealModal()  { document.getElementById('deal-modal').style.display = 'none'; }
+        function saveDealFromModal() {
+            const name  = document.getElementById('dm-name').value.trim();
+            const value = parseFloat(document.getElementById('dm-value').value) || 0;
+            const notes = document.getElementById('dm-notes').value.trim();
+            if (!name) { showToast('error', 'Contact name is required'); return; }
+            PIPELINE_DATA.deals.push({ id: crypto.randomUUID(), name, value, notes, stage: 'lead', ts: Date.now() });
+            hideDealModal();
+            document.getElementById('dm-name').value = '';
+            document.getElementById('dm-value').value = '';
+            document.getElementById('dm-notes').value = '';
+            savePipeline();
+        }
+        function deleteDeal(id) {
+            PIPELINE_DATA.deals = PIPELINE_DATA.deals.filter(d => d.id !== id);
+            savePipeline();
+        }
+
+        // ── Feedback View ─────────────────────────────────────────────────────────
+
+        let FEEDBACK_DATA = { entries: [] };
+        let FEEDBACK_SHA  = null;
+        let FEEDBACK_FILTER = null;
+        let FM_STARS = 0;
+
+        async function renderFeedbackView() {
+            const agentsEl  = document.getElementById('feedback-agents');
+            const entriesEl = document.getElementById('feedback-entries');
+            if (!agentsEl) return;
+            agentsEl.innerHTML  = '<div style="color:#94a3b8;font-size:13px;">Loading...</div>';
+            entriesEl.innerHTML = '';
+            try {
+                const r = await fetch(
+                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/feedback.json`,
+                    { headers: { 'Authorization': `token ${STATE.token}`, 'Accept': 'application/vnd.github.v3+json' } }
+                );
+                if (r.status === 404) {
+                    FEEDBACK_DATA = { entries: [] }; FEEDBACK_SHA = null;
+                } else {
+                    const gh = await r.json();
+                    FEEDBACK_SHA = gh.sha;
+                    FEEDBACK_DATA = JSON.parse(atob(gh.content.replace(/\n/g, '')));
+                }
+            } catch(e) { FEEDBACK_DATA = { entries: [] }; }
+            renderFeedbackUI();
+        }
+
+        function renderFeedbackUI() {
+            const agentsEl  = document.getElementById('feedback-agents');
+            const entriesEl = document.getElementById('feedback-entries');
+            if (!agentsEl) return;
+            const entries = FEEDBACK_DATA.entries || [];
+            const agentIds = [...new Set(entries.map(e => e.agentId))];
+            const avgStars = id => {
+                const es = entries.filter(e => e.agentId === id);
+                return es.length ? (es.reduce((s,e)=>s+(e.stars||0),0)/es.length).toFixed(1) : '—';
+            };
+            agentsEl.innerHTML = [
+                `<div onclick="FEEDBACK_FILTER=null;renderFeedbackUI()" style="padding:10px 12px;border-radius:8px;cursor:pointer;background:${!FEEDBACK_FILTER?'#334155':'transparent'};color:#f1f5f9;font-size:13px;font-weight:600;">All agents <span style="color:#64748b;">(${entries.length})</span></div>`,
+                ...agentIds.map(id => `<div onclick="FEEDBACK_FILTER='${id}';renderFeedbackUI()" style="padding:10px 12px;border-radius:8px;cursor:pointer;background:${FEEDBACK_FILTER===id?'#334155':'transparent'};color:#f1f5f9;font-size:13px;">${id} <span style="color:#f59e0b;">${avgStars(id)}★</span></div>`)
+            ].join('');
+
+            const filtered = FEEDBACK_FILTER ? entries.filter(e => e.agentId === FEEDBACK_FILTER) : entries;
+            const starsHtml = n => '★'.repeat(n) + '☆'.repeat(5-n);
+            if (!filtered.length) { entriesEl.innerHTML = '<div class="empty-state-large">No feedback yet. Click "+ Add Feedback" to add some.</div>'; return; }
+            entriesEl.innerHTML = filtered.slice().reverse().map(e => `<div style="background:#1e293b;border:1px solid #334155;border-radius:10px;padding:14px 16px;margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                    <div>
+                        <span style="font-size:13px;font-weight:600;color:#f1f5f9;">${e.agentId}</span>
+                        <span style="color:#f59e0b;margin-left:8px;font-size:14px;">${starsHtml(e.stars||0)}</span>
+                    </div>
+                    <div style="font-size:11px;color:#475569;">${new Date(e.ts).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true})}</div>
+                </div>
+                ${e.comment ? `<div style="margin-top:8px;font-size:13px;color:#94a3b8;">${e.comment}</div>` : ''}
+            </div>`).join('');
+        }
+
+        async function saveFeedback() {
+            try {
+                const content = btoa(unescape(encodeURIComponent(JSON.stringify(FEEDBACK_DATA, null, 2))));
+                const r = await fetch(
+                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/feedback.json`,
+                    { method: 'PUT', headers: { 'Authorization': `token ${STATE.token}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ message: 'Add feedback', content, sha: FEEDBACK_SHA || undefined, branch: CONFIG.branch }) }
+                );
+                if (!r.ok) throw new Error((await r.json()).message);
+                const res = await r.json();
+                FEEDBACK_SHA = res.content.sha;
+                showToast('success', '✓ Feedback saved');
+                renderFeedbackUI();
+            } catch(e) { showToast('error', 'Save failed: ' + e.message); }
+        }
+
+        function setFmStar(n) {
+            FM_STARS = n;
+            document.querySelectorAll('#fm-stars span').forEach((s,i) => s.textContent = i < n ? '★' : '☆');
+        }
+        function showFeedbackForm() {
+            FM_STARS = 0;
+            document.querySelectorAll('#fm-stars span').forEach(s => s.textContent = '☆');
+            document.getElementById('fm-comment').value = '';
+            document.getElementById('feedback-modal').style.display = 'flex';
+        }
+        function hideFeedbackModal() { document.getElementById('feedback-modal').style.display = 'none'; }
+        function submitFeedback() {
+            const agentId = document.getElementById('fm-agent').value;
+            const comment = document.getElementById('fm-comment').value.trim();
+            if (!FM_STARS) { showToast('error', 'Please select a star rating'); return; }
+            FEEDBACK_DATA.entries.push({ id: crypto.randomUUID(), agentId, stars: FM_STARS, comment, ts: Date.now() });
+            hideFeedbackModal();
+            saveFeedback();
+        }
+
         // ── Activity View ─────────────────────────────────────────────────────────
 
         async function renderActivityView() {
@@ -7672,6 +8194,10 @@
             if (viewName === 'health') renderHealthView();
             if (viewName === 'goals') renderGoalsView();
             if (viewName === 'radar') renderRadarView();
+            if (viewName === 'system') renderSystemView();
+            if (viewName === 'factory') renderFactoryView();
+            if (viewName === 'pipeline') renderPipelineView();
+            if (viewName === 'feedback') renderFeedbackView();
             if (viewName !== 'office' && OFFICE_REFRESH_TIMER) { clearTimeout(OFFICE_REFRESH_TIMER); OFFICE_REFRESH_TIMER = null; }
             if (viewName !== 'office' && OFFICE_CLOCK_TIMER) { clearInterval(OFFICE_CLOCK_TIMER); OFFICE_CLOCK_TIMER = null; }
             if (viewName !== 'radar' && RADAR_REFRESH_TIMER) { clearTimeout(RADAR_REFRESH_TIMER); RADAR_REFRESH_TIMER = null; }
