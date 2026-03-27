@@ -12,7 +12,7 @@
       "agentName": "Joe",
       "timestamp": 1774644314887,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
-      "turns": 10
+      "turns": 13
     },
     {
       "agentId": "video",
@@ -351,5 +351,5 @@
       }
     }
   ],
-  "updatedAt": 1774653679001
+  "updatedAt": 1774653979033
 }
