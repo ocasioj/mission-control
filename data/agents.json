@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "main",
+      "name": "Joe (Web)",
+      "desc": "Web chat & group @mention handler",
+      "sessionCount": 7,
+      "lastActivity": 1774585182366,
+      "lastActivityAgo": "3s ago",
+      "isActive": true,
+      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
+      "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 71,
       "lastActivity": 1774584003969,
-      "lastActivityAgo": "14m ago",
+      "lastActivityAgo": "19m ago",
       "isActive": false,
       "lastMessage": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /data/.openclaw/hooks/ro",
       "lastModel": "gemini-2.5-flash"
-    },
-    {
-      "id": "main",
-      "name": "Joe (Web)",
-      "desc": "Web chat & group @mention handler",
-      "sessionCount": 7,
-      "lastActivity": 1774583381923,
-      "lastActivityAgo": "25m ago",
-      "isActive": false,
-      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
-      "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "planner",
@@ -28,7 +28,7 @@
       "desc": "Trip planning and scheduling",
       "sessionCount": 1,
       "lastActivity": 1773548092913,
-      "lastActivityAgo": "11d ago",
+      "lastActivityAgo": "12d ago",
       "isActive": false,
       "lastMessage": "[Sun 2026-03-15 00:13 EDT] Build a detailed 4-day family trip itinerary for Montreal, Canada. Group: 2 adults, 2 childre",
       "lastModel": "claude-sonnet-4-5"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774584886050
+  "updatedAt": 1774585186038
 }
