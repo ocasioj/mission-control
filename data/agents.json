@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774615782250,
-      "lastActivityAgo": "16m ago",
+      "lastActivityAgo": "21m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 69,
       "lastActivity": 1774614300007,
-      "lastActivityAgo": "41m ago",
+      "lastActivityAgo": "46m ago",
       "isActive": false,
       "lastMessage": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer canary: exec pm-visua",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774616778951
+  "updatedAt": 1774617077392
 }
