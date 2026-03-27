@@ -3428,13 +3428,13 @@
     <div id="qa-btn" onclick="toggleQuickActions()" title="Quick Actions">⚡</div>
     <div id="qa-panel" style="display:none;">
         <div style="font-size:0.75rem;font-weight:700;color:var(--text-secondary);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.85rem;">Quick Actions</div>
-        <div class="qa-preset" onclick="sendQuickAction('Good morning Joe — what\'s on the agenda today?')">🌅 Morning briefing</div>
-        <div class="qa-preset" onclick="sendQuickAction('Ask Scout to do a quick research summary on AI agent trends this week.')">🔍 Scout research</div>
-        <div class="qa-preset" onclick="sendQuickAction('Ask Nova to pull the latest IBM stock data and give me a quick summary.')">📊 Nova: IBM update</div>
-        <div class="qa-preset" onclick="sendQuickAction('Ask Director to outline a YouTube video idea for this week.')">🎬 Director: video idea</div>
-        <div class="qa-preset" onclick="sendQuickAction('Ask Amp to draft 3 LinkedIn post ideas for today.')">📣 Amp: post ideas</div>
-        <div class="qa-preset" onclick="sendQuickAction('Ask Ledger to give me a quick financial summary.')">💰 Ledger: summary</div>
-        <div class="qa-preset" onclick="sendQuickAction('Ask Closer to check the sales pipeline and recommend next steps.')">🤝 Closer: pipeline</div>
+        <div class="qa-preset" onclick="sendQuickAction('Good morning — what\'s on the agenda today?')">🌅 Morning briefing</div>
+        <div class="qa-preset" onclick="sendQuickAction('Do a quick research summary on AI agent trends this week.')">🔍 AI trends research</div>
+        <div class="qa-preset" onclick="sendQuickAction('Pull the latest IBM stock data and give me a quick summary.')">📊 IBM stock update</div>
+        <div class="qa-preset" onclick="sendQuickAction('Outline a YouTube video idea I can shoot this week.')">🎬 Video idea</div>
+        <div class="qa-preset" onclick="sendQuickAction('Draft 3 LinkedIn post ideas for today.')">📣 LinkedIn post ideas</div>
+        <div class="qa-preset" onclick="sendQuickAction('Give me a quick financial summary for the week.')">💰 Financial summary</div>
+        <div class="qa-preset" onclick="sendQuickAction('What are the open cron job errors and what needs attention?')">🔧 Cron health check</div>
         <div style="margin-top:0.75rem;border-top:1px solid var(--border);padding-top:0.75rem;">
             <textarea id="qa-custom" placeholder="Type any message to send via Signal..." rows="2" style="width:100%;background:var(--bg-secondary);border:1px solid var(--border);border-radius:6px;color:var(--text-primary);padding:8px;font-size:0.8rem;resize:vertical;font-family:inherit;"></textarea>
             <button onclick="sendQuickAction(document.getElementById('qa-custom').value)" style="margin-top:6px;width:100%;background:var(--accent-blue);border:none;color:white;padding:8px;border-radius:6px;cursor:pointer;font-size:0.82rem;font-weight:600;">Send via Signal</button>
@@ -4528,7 +4528,7 @@
         async function pingAgent() {
             showToast('success', '📡 Pinging Joe...');
             try {
-                const res = await fetch('http://localhost:61949/api/ping-joe', { method: 'POST' });
+                const res = await fetch('https://control.reservadoai.tech/api/ping-joe', { method: 'POST', headers: { 'X-Gateway-Token': 'UyMUSmqc2l0lmvgX9ofsamPHZgKoapM4' } });
                 const data = await res.json();
                 if (data.ok) {
                     showToast('success', '📡 Joe has been pinged via Signal!');
@@ -6547,7 +6547,9 @@
             }).join('');
         }
 
-        const MC_BASE = 'http://localhost:61949';
+        const MC_BASE = 'https://control.reservadoai.tech';
+        const MC_TOKEN = 'UyMUSmqc2l0lmvgX9ofsamPHZgKoapM4';
+        const MC_HEADERS = { 'Content-Type': 'application/json', 'X-Gateway-Token': MC_TOKEN };
 
         async function fetchGitHubDataFile(filename) {
             const url = `https://raw.githubusercontent.com/ocasioj/mission-control/main/data/${filename}?_=${Date.now()}`;
@@ -7327,11 +7329,10 @@
 
         async function sendQuickAction(msg) {
             if (!msg?.trim()) return;
-            const MC_URL = 'http://localhost:3100';
             try {
-                const r = await fetch(`${MC_URL}/api/quick-action`, {
+                const r = await fetch(`${MC_BASE}/api/quick-action`, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: MC_HEADERS,
                     body: JSON.stringify({ message: msg.trim() }),
                 });
                 const j = await r.json();
