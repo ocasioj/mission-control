@@ -5,9 +5,9 @@
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
-      "lastActivity": 1774628382301,
-      "lastActivityAgo": "26m ago",
-      "isActive": false,
+      "lastActivity": 1774630181365,
+      "lastActivityAgo": "1m ago",
+      "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -28,7 +28,7 @@
       "desc": "Image generation tasks",
       "sessionCount": 2,
       "lastActivity": 1774623012089,
-      "lastActivityAgo": "1h ago",
+      "lastActivityAgo": "2h ago",
       "isActive": false,
       "lastMessage": "",
       "lastModel": "delivery-mirror"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774629979845
+  "updatedAt": 1774630277556
 }
