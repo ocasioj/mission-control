@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774645203775,
+      "message": "[cron:c5722016-ddbf-4aa7-8995-79815b2fc702 Revenue Prospecting Agent (Joe)] You are Jose's proactive",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774644314887,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
       "turns": 3
@@ -328,12 +335,12 @@
     },
     {
       "day": "2026-03-27",
-      "total": 22,
+      "total": 23,
       "byAgent": {
         "sales": 1,
         "planner": 1,
         "research": 1,
-        "signal-chat": 12,
+        "signal-chat": 13,
         "social": 1,
         "finance": 1,
         "analyst": 1,
@@ -344,5 +351,5 @@
       }
     }
   ],
-  "updatedAt": 1774644978956
+  "updatedAt": 1774645279265
 }
