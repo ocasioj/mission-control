@@ -108,20 +108,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774497604148,
-      "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774497600335,
-      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily Billing Update (Joe)] Run this exact command and re",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774413108867,
       "message": "[cron:779a4a3d-4ce1-456c-b6bf-d877868f928f Mission Control UI Update Status] The dev agent is still ",
       "turns": 1
@@ -286,9 +272,9 @@
     },
     {
       "day": "2026-03-26",
-      "total": 13,
+      "total": 11,
       "byAgent": {
-        "signal-chat": 12,
+        "signal-chat": 10,
         "main": 1
       }
     },
@@ -300,5 +286,5 @@
       }
     }
   ],
-  "updatedAt": 1774584287765
+  "updatedAt": 1774584587843
 }
