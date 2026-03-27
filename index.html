@@ -1963,50 +1963,57 @@
         .mem-md code { font-family: monospace; font-size: 0.8rem; background: var(--bg-card); padding: 1px 5px; border-radius: 4px; }
 
         /* ── Office View ──────────────────────────────────────────────────── */
-        /* Back wall */
+        /* Game-style back wall */
         .office-wall {
-            background: linear-gradient(180deg, #d9c0a0 0%, #c8a878 100%);
-            border: 2px solid #8b6840;
-            border-bottom: 5px solid #6b4c2a;
+            background: linear-gradient(180deg, #0c0c1e 0%, #141430 100%);
+            border: 2px solid #1e1e4a;
+            border-bottom: 4px solid #2a1a0a;
             border-radius: 12px 12px 0 0;
-            padding: 0.65rem 1rem 0.8rem;
+            padding: 0.6rem 1rem 0.75rem;
             display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;
             position: relative;
+            box-shadow: inset 0 0 60px rgba(59,130,246,0.05);
+        }
+        .office-wall::before {
+            content: '';
+            position: absolute; inset: 0; border-radius: 10px 10px 0 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.07) 3px, rgba(0,0,0,0.07) 4px);
+            pointer-events: none;
         }
         .office-wall::after {
             content: '';
-            position: absolute; bottom: 0; left: 0; right: 0; height: 5px;
-            background: repeating-linear-gradient(90deg, #5a3810 0px, #5a3810 9px, #6b4c2a 9px, #6b4c2a 18px);
+            position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+            background: repeating-linear-gradient(90deg, #2a1a0a 0px, #2a1a0a 9px, #3d2b1f 9px, #3d2b1f 18px);
         }
         /* Day/night window */
         .office-window {
             flex: 0 0 auto; width: 80px; height: 56px;
-            border: 3px solid #5a3810; border-radius: 5px 5px 2px 2px;
+            border: 3px solid #1a2a5e; border-radius: 5px 5px 2px 2px;
             overflow: hidden; position: relative;
-            box-shadow: inset 0 0 0 2px rgba(0,0,0,0.15);
+            box-shadow: inset 0 0 0 1px rgba(59,130,246,0.15), 0 0 14px rgba(59,130,246,0.1);
         }
         .office-window .sky { position: absolute; inset: 0; bottom: 14px; }
         .office-window .ground { position: absolute; bottom: 0; left: 0; right: 0; height: 14px; }
         .office-window .win-bar-v {
             position: absolute; top: 0; bottom: 0; left: 50%;
-            width: 3px; background: #5a3810; transform: translateX(-50%); z-index: 2;
+            width: 3px; background: #1a2a5e; transform: translateX(-50%); z-index: 2;
         }
         .office-window .win-bar-h {
             position: absolute; left: 0; right: 0; top: 44%;
-            height: 3px; background: #5a3810; z-index: 2;
+            height: 3px; background: #1a2a5e; z-index: 2;
         }
         /* TV / mission screen */
         .office-tv {
             flex: 1; min-width: 140px; height: 56px;
-            background: #080810; border: 3px solid #2a2a3e;
+            background: #020408; border: 2px solid #0a1020;
             border-radius: 6px; padding: 5px 8px;
             overflow: hidden; position: relative;
-            box-shadow: 0 0 10px rgba(59,130,246,0.25), inset 0 0 0 1px #1a1a2e;
+            box-shadow: 0 0 18px rgba(59,130,246,0.45), inset 0 0 0 1px #0d1f3c;
             display: flex; align-items: center;
         }
         .office-tv .tv-scanlines {
             position: absolute; inset: 0; pointer-events: none;
-            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.12) 2px, rgba(0,0,0,0.12) 4px);
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.18) 2px, rgba(0,0,0,0.18) 4px);
         }
         .office-tv .tv-text {
             font-size: 0.5rem; color: rgba(100,200,255,0.9);
@@ -2018,43 +2025,59 @@
         /* Bulletin board */
         .office-bulletin {
             flex: 0 0 auto; width: 88px; height: 56px;
-            background: #c8860a; border: 3px solid #7c4d00;
+            background: #120800; border: 2px solid #f59e0b;
             border-radius: 4px; padding: 6px 5px 4px;
-            position: relative;
+            position: relative; box-shadow: 0 0 10px rgba(245,158,11,0.2);
         }
         .office-bulletin .bul-pin {
             position: absolute; top: -5px; left: 50%;
             transform: translateX(-50%);
             width: 9px; height: 9px; border-radius: 50%;
             background: #cc2200; border: 1.5px solid #880000;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 0 5px rgba(204,34,0,0.6);
         }
         .office-bulletin .bul-note {
             background: #ffffcc; border-radius: 2px;
             font-size: 0.44rem; color: #333;
             padding: 2px 3px; margin-bottom: 3px;
             font-family: monospace;
-            box-shadow: 1px 1px 2px rgba(0,0,0,0.12);
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.18);
         }
         /* Clock */
         .office-clock {
-            flex: 0 0 auto; text-align: center; padding: 2px 6px;
+            flex: 0 0 auto; text-align: center; padding: 3px 8px;
+            border: 1px solid rgba(59,130,246,0.22); border-radius: 6px;
+            background: rgba(5,10,25,0.6);
         }
         .office-clock .clk-time {
             font-size: 1.05rem; font-weight: 800;
-            color: #3d1a00; font-family: monospace; letter-spacing: 0.04em;
+            color: #60a5fa; font-family: monospace; letter-spacing: 0.08em;
+            text-shadow: 0 0 12px rgba(96,165,250,0.65);
         }
         .office-clock .clk-label {
-            font-size: 0.43rem; color: #6b4c2a;
+            font-size: 0.43rem; color: rgba(96,165,250,0.45);
             text-transform: uppercase; letter-spacing: 0.12em; font-family: monospace;
         }
+        /* HUD bar */
+        .office-hud {
+            display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+            padding: 0.42rem 0.85rem; margin-bottom: 0.85rem;
+            background: rgba(0,0,0,0.38);
+            border: 1px solid rgba(59,130,246,0.15);
+            border-radius: 8px; font-family: monospace; font-size: 0.62rem;
+        }
+        .hud-stat { display: flex; align-items: center; gap: 5px; color: rgba(255,255,255,0.45); }
+        .hud-stat-val { font-weight: 800; color: #fff; font-size: 0.72rem; }
+        .hud-stat-val.green { color: #10b981; text-shadow: 0 0 7px rgba(16,185,129,0.55); }
+        .hud-stat-val.blue  { color: #60a5fa; text-shadow: 0 0 7px rgba(96,165,250,0.55); }
+        .hud-divider { width: 1px; height: 14px; background: rgba(255,255,255,0.09); }
         /* Floor */
         .office-room {
-            background: #b8935c;
+            background: #0e0a06;
             background-image:
-                repeating-linear-gradient(90deg, transparent 0px, transparent 44px, rgba(0,0,0,0.09) 44px, rgba(0,0,0,0.09) 47px),
-                repeating-linear-gradient(180deg, transparent 0px, transparent 22px, rgba(255,255,255,0.06) 22px, rgba(255,255,255,0.06) 24px);
-            border: 2px solid #8b6840; border-top: none;
+                repeating-linear-gradient(90deg, transparent 0px, transparent 47px, rgba(255,255,255,0.035) 47px, rgba(255,255,255,0.035) 48px),
+                repeating-linear-gradient(180deg, transparent 0px, transparent 23px, rgba(255,255,255,0.025) 23px, rgba(255,255,255,0.025) 24px);
+            border: 2px solid #2a1a0a; border-top: none;
             border-radius: 0 0 14px 14px;
             padding: 1rem 1.25rem 1.25rem;
             position: relative; overflow: hidden;
@@ -2062,21 +2085,23 @@
         /* Joe's private office */
         .private-office {
             display: inline-flex; flex-direction: column;
-            border: 2.5px solid #f59e0b;
+            border: 2px solid #f59e0b;
             border-radius: 10px; padding: 0.5rem 0.75rem 0.75rem;
-            background: rgba(245,158,11,0.05);
+            background: rgba(245,158,11,0.06);
             position: relative; vertical-align: top;
+            box-shadow: 0 0 22px rgba(245,158,11,0.14), inset 0 0 30px rgba(245,158,11,0.03);
         }
         .private-office-sign {
             font-size: 0.52rem; font-weight: 800;
             color: #f59e0b; letter-spacing: 0.12em;
             text-transform: uppercase; font-family: monospace;
             margin-bottom: 0.4rem; text-align: center;
+            text-shadow: 0 0 10px rgba(245,158,11,0.55);
         }
         .private-office-door {
             position: absolute; bottom: -2px; right: 12px;
             width: 17px; height: 23px;
-            background: #c8860a; border: 2px solid #7c4d00;
+            background: #1a0f05; border: 2px solid #f59e0b;
             border-radius: 3px 3px 0 0;
         }
         .private-office-door::after {
@@ -2086,22 +2111,26 @@
         }
         /* Zone boxes */
         .office-zone {
-            background: rgba(0,0,0,0.04);
-            border: 2px solid rgba(0,0,0,0.09);
-            border-radius: 8px;
+            background: rgba(0,0,0,0.28);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
             padding: 0.7rem 0.7rem 0.6rem;
             margin-bottom: 0.75rem;
+            position: relative;
         }
+        .office-zone.zone-intel { border-color: rgba(59,130,246,0.28); box-shadow: 0 0 18px rgba(59,130,246,0.07); }
+        .office-zone.zone-eng   { border-color: rgba(16,185,129,0.28); box-shadow: 0 0 18px rgba(16,185,129,0.07); }
+        .office-zone.zone-biz   { border-color: rgba(249,115,22,0.28); box-shadow: 0 0 18px rgba(249,115,22,0.07); }
         .office-zone-label {
             font-size: 0.54rem; font-weight: 800;
             letter-spacing: 0.12em; text-transform: uppercase;
-            color: rgba(0,0,0,0.32); margin-bottom: 0.65rem;
+            color: rgba(255,255,255,0.28); margin-bottom: 0.65rem;
             font-family: monospace; display: flex; align-items: center; gap: 5px;
         }
-        /* Cubicle-style dividers between workstations */
+        /* Cubicle dividers */
         .office-desks-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0; }
         .office-desks-row .workstation {
-            border-right: 2px solid rgba(0,0,0,0.07);
+            border-right: 1px solid rgba(255,255,255,0.04);
             padding: 0 0.6rem;
         }
         .office-desks-row .workstation:last-child { border-right: none; }
@@ -2110,88 +2139,105 @@
             display: flex; flex-direction: column; align-items: center;
             gap: 0; position: relative; cursor: pointer;
         }
-        .workstation:hover .sim { transform: scale(1.1); }
+        .workstation:hover .sim-char { transform: scale(1.1); }
         .ws-bubble {
-            position: absolute; bottom: calc(100% + 6px); left: 50%;
+            position: absolute; bottom: calc(100% + 8px); left: 50%;
             transform: translateX(-50%);
-            background: rgba(20,30,60,0.95);
-            border: 1px solid rgba(59,130,246,0.45);
-            color: rgba(255,255,255,0.9);
+            background: rgba(8,12,30,0.97);
+            border: 1px solid rgba(59,130,246,0.5);
+            color: rgba(255,255,255,0.92);
             font-size: 0.57rem; padding: 4px 9px; border-radius: 8px;
             white-space: nowrap; max-width: 170px; overflow: hidden; text-overflow: ellipsis;
             z-index: 30; pointer-events: none; font-family: -apple-system, sans-serif;
+            box-shadow: 0 0 12px rgba(59,130,246,0.22);
         }
         .ws-bubble::after {
             content: ''; position: absolute; top: 100%; left: 50%;
             transform: translateX(-50%);
-            border: 4px solid transparent; border-top-color: rgba(59,130,246,0.45);
+            border: 4px solid transparent; border-top-color: rgba(59,130,246,0.5);
         }
         /* Wood desk */
         .ws-desk {
-            width: 88px; height: 54px;
-            background: #7c5a28;
+            width: 88px; height: 52px;
+            background: linear-gradient(180deg, #3a2510 0%, #2a1808 100%);
             border-radius: 6px 6px 3px 3px;
-            border: 2px solid rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-bottom: 3px solid #0f0903;
             position: relative; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 0 rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.12);
+            box-shadow: 0 4px 0 rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.07);
             z-index: 2;
         }
-        .ws-desk.corner { width: 108px; height: 64px; background: #8b6830; }
+        .ws-desk.corner { width: 108px; height: 62px; }
         .ws-monitor {
             width: 40px; height: 28px;
-            background: #0a0a12; border: 2px solid #1a1a2e;
+            background: #030508; border: 2px solid #0a1020;
             border-radius: 3px; display: flex; align-items: center; justify-content: center;
             font-size: 11px; position: relative; overflow: hidden;
         }
         .ws-desk.corner .ws-monitor { width: 52px; height: 36px; font-size: 14px; }
         .ws-monitor.on {
-            background: #060d1f; border-color: rgba(59,130,246,0.6);
-            box-shadow: 0 0 10px rgba(59,130,246,0.35);
+            background: #020612; border-color: rgba(59,130,246,0.7);
+            box-shadow: 0 0 14px rgba(59,130,246,0.5), inset 0 0 8px rgba(59,130,246,0.1);
         }
         .ws-monitor.on::after {
             content: ''; position: absolute; top: -100%; left: 0; right: 0;
-            height: 40%; background: linear-gradient(transparent, rgba(59,130,246,0.15), transparent);
+            height: 40%; background: linear-gradient(transparent, rgba(59,130,246,0.2), transparent);
             animation: mon-scan 2.5s linear infinite;
         }
         @keyframes mon-scan { 0%{top:-40%} 100%{top:110%} }
         .ws-keyboard {
             position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
             width: 34px; height: 7px;
-            background: rgba(255,255,255,0.07); border-radius: 2px;
-            border: 1px solid rgba(255,255,255,0.04);
+            background: rgba(255,255,255,0.04); border-radius: 2px;
+            border: 1px solid rgba(255,255,255,0.03);
         }
         .ws-chair {
-            width: 36px; height: 14px; background: #374151;
-            border-radius: 3px 3px 0 0; border: 2px solid rgba(0,0,0,0.2);
+            width: 36px; height: 13px; background: #131825;
+            border-radius: 3px 3px 0 0; border: 1px solid rgba(255,255,255,0.06);
             margin-top: -2px; z-index: 1;
-            box-shadow: 0 2px 0 rgba(0,0,0,0.22);
+            box-shadow: 0 2px 0 rgba(0,0,0,0.4);
         }
-        /* Sims character */
-        .sim {
+        /* ── Sims Character ──────────────────────────────────────────────── */
+        .sim-char {
             display: flex; flex-direction: column; align-items: center;
-            gap: 0; margin-top: 2px; z-index: 3; transition: transform 0.3s;
+            margin-top: 3px; z-index: 3; transition: transform 0.3s;
         }
-        .sim.active { animation: sim-bounce 1.8s ease-in-out infinite; }
-        .sim.idle { opacity: 0.5; }
-        @keyframes sim-bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)} }
-        @keyframes sim-walk {
-            0%,100%{transform:translateX(0) rotate(0deg)}
-            25%{transform:translateX(-2px) rotate(-2deg)}
-            75%{transform:translateX(2px) rotate(2deg)}
+        /* Plumbob — the iconic Sims diamond */
+        .sim-plumbob {
+            width: 13px; height: 13px;
+            transform: rotate(45deg);
+            margin-bottom: 3px; border-radius: 1px; flex-shrink: 0;
         }
+        .sim-plumbob.mood-green {
+            background: linear-gradient(135deg, #00e676, #1de9b6);
+            box-shadow: 0 0 8px #00e676, 0 0 20px rgba(0,230,118,0.35);
+            animation: plumbob-float 2s ease-in-out infinite;
+        }
+        .sim-plumbob.mood-yellow {
+            background: linear-gradient(135deg, #ffd600, #ff9800);
+            box-shadow: 0 0 6px #ffd600, 0 0 14px rgba(255,214,0,0.3);
+            animation: plumbob-float 3.5s ease-in-out infinite;
+        }
+        .sim-plumbob.mood-gray { background: #222235; box-shadow: none; }
+        @keyframes plumbob-float {
+            0%,100%{transform:rotate(45deg) translateY(0) scale(1)}
+            50%{transform:rotate(45deg) translateY(-4px) scale(1.06)}
+        }
+        /* Hair */
         .sim-hair {
-            width: 24px; height: 9px;
+            width: 28px; height: 10px;
             border-radius: 50% 50% 0 0;
             margin-bottom: -3px; z-index: 4;
-            border: 1.5px solid rgba(0,0,0,0.18);
+            border: 1.5px solid rgba(0,0,0,0.28);
         }
+        /* Head */
         .sim-head {
-            width: 22px; height: 22px; border-radius: 50%;
-            border: 2px solid rgba(0,0,0,0.12);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 12px; line-height: 1;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.18);
-            position: relative;
+            width: 26px; height: 26px; border-radius: 50%;
+            border: 2px solid rgba(0,0,0,0.18);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            position: relative; overflow: hidden;
         }
         .sim-tie {
             position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%);
@@ -2199,51 +2245,104 @@
             clip-path: polygon(20% 0%, 80% 0%, 100% 55%, 50% 100%, 0% 55%);
             z-index: 5;
         }
-        .sim-body {
+        /* CSS eyes */
+        .sim-eyes { display: flex; gap: 5px; }
+        .sim-eye {
+            width: 5px; height: 5px; border-radius: 50%;
+            background: #1a1a2e; position: relative;
+        }
+        .sim-eye::after {
+            content: ''; position: absolute;
+            width: 2px; height: 2px; border-radius: 50%;
+            background: rgba(255,255,255,0.6); top: 0; left: 0;
+        }
+        /* CSS mouth */
+        .sim-mouth {
+            width: 9px; height: 4px;
+            border-radius: 0 0 9px 9px;
+            border: 2px solid rgba(0,0,0,0.38);
+            border-top: none; margin-top: -1px;
+        }
+        .sim-mouth.sleep {
+            border-radius: 9px 9px 0 0;
+            border-bottom: none; border-top: 2px solid rgba(0,0,0,0.22);
+            width: 7px; height: 3px;
+        }
+        /* Torso + arms */
+        .sim-upper {
+            display: flex; align-items: flex-start; gap: 1px; margin-top: 2px;
+        }
+        .sim-torso {
             width: 18px; height: 16px;
-            border-radius: 3px 3px 0 0; border: 1.5px solid rgba(0,0,0,0.18);
-            margin-top: 1px;
+            border-radius: 3px 3px 0 0; border: 1.5px solid rgba(0,0,0,0.22);
         }
+        .sim-arm {
+            width: 5px; height: 13px; border-radius: 3px; margin-top: 2px;
+            border: 1.5px solid rgba(0,0,0,0.22);
+        }
+        .sim-char.active .sim-arm-l { animation: arm-l 0.65s ease-in-out infinite alternate; transform-origin: top center; }
+        .sim-char.active .sim-arm-r { animation: arm-r 0.65s ease-in-out infinite alternate; transform-origin: top center; }
+        @keyframes arm-l { 0%{transform:rotate(-8deg)} 100%{transform:rotate(8deg)} }
+        @keyframes arm-r { 0%{transform:rotate(8deg)} 100%{transform:rotate(-8deg)} }
+        /* Legs */
         .sim-legs { display: flex; gap: 2px; margin-top: 1px; }
+        .sim-leg-wrap { display: flex; flex-direction: column; align-items: center; }
         .sim-leg {
-            width: 7px; height: 10px; background: #2d3748;
-            border-radius: 0 0 3px 3px; border: 1px solid rgba(0,0,0,0.22);
+            width: 7px; height: 11px; background: #111827;
+            border-radius: 0 0 2px 2px; border: 1px solid rgba(0,0,0,0.3);
         }
+        .sim-shoe {
+            width: 9px; height: 4px; background: #080d18;
+            border-radius: 0 0 3px 3px; border: 1px solid rgba(0,0,0,0.35);
+            margin-left: -1px;
+        }
+        /* Bounce animation */
+        .sim-char.active { animation: sim-bounce 1.6s ease-in-out infinite; }
+        .sim-char.idle   { opacity: 0.52; filter: grayscale(0.45); }
+        @keyframes sim-bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+        /* Mood bar */
+        .sim-moodbar {
+            width: 36px; height: 4px;
+            background: rgba(255,255,255,0.07); border-radius: 2px;
+            margin-top: 4px; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+        .sim-moodbar-fill { height: 100%; border-radius: 2px; }
         /* Nameplate */
         .ws-nameplate {
             font-size: 0.54rem; font-weight: 700;
-            color: rgba(0,0,0,0.38);
+            color: rgba(255,255,255,0.28);
             text-transform: uppercase; letter-spacing: 0.06em;
-            margin-top: 4px; text-align: center; font-family: monospace;
+            margin-top: 5px; text-align: center; font-family: monospace;
         }
         .ws-nameplate .ws-dot {
             display: inline-block; width: 5px; height: 5px;
             border-radius: 50%; margin-right: 3px; vertical-align: middle;
         }
-        /* Break zone (water cooler area) */
+        /* Break zone */
         .break-zone {
             display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
             padding: 0.7rem 0.6rem;
-            border: 2px dashed rgba(0,0,0,0.1);
-            border-radius: 10px; background: rgba(255,255,255,0.18);
+            border: 1px dashed rgba(255,255,255,0.09);
+            border-radius: 10px; background: rgba(255,255,255,0.02);
             min-width: 72px;
         }
         .amenity { display: flex; flex-direction: column; align-items: center; gap: 2px; }
-        .amenity-icon { font-size: 1.55rem; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15)); }
-        .amenity-label { font-size: 0.43rem; color: rgba(0,0,0,0.28); text-transform: uppercase; letter-spacing: 0.1em; font-family: monospace; }
+        .amenity-icon { font-size: 1.45rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+        .amenity-label { font-size: 0.43rem; color: rgba(255,255,255,0.18); text-transform: uppercase; letter-spacing: 0.1em; font-family: monospace; }
         /* Status bar */
         .office-status-bar {
-            margin-top: 0.75rem; padding: 0.5rem 1rem;
-            background: rgba(0,0,0,0.07); border-radius: 8px;
-            border: 1px solid rgba(0,0,0,0.07);
-            font-size: 0.65rem; color: rgba(0,0,0,0.38);
+            margin-top: 0.75rem; padding: 0.45rem 1rem;
+            background: rgba(0,0,0,0.32); border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.65rem; color: rgba(255,255,255,0.22);
             font-family: monospace; display: flex; gap: 0.5rem; align-items: center;
         }
         .status-dot { width: 5px; height: 5px; border-radius: 50%; background: #10b981; flex-shrink: 0; animation: blink 2s ease-in-out infinite; }
         /* Agent profile modal */
         .agent-modal-overlay {
             position: fixed; inset: 0; z-index: 1000;
-            background: rgba(0,0,0,0.55);
+            background: rgba(0,0,0,0.65);
             display: flex; align-items: center; justify-content: center;
             animation: fadeIn 0.15s ease;
         }
@@ -2251,7 +2350,7 @@
             background: var(--bg-primary); border: 1px solid var(--border);
             border-radius: 16px; padding: 1.5rem;
             width: 320px; max-width: 90vw;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             animation: scaleIn 0.15s ease; position: relative;
         }
         @keyframes scaleIn { from{transform:scale(0.9);opacity:0} to{transform:scale(1);opacity:1} }
@@ -6829,20 +6928,25 @@
 
         function buildWorkstation(a, isCorner) {
             if (!a) return '';
-            const on = a.isActive;
+            const on    = a.isActive;
             const color = TEAM_COLOR[a.id] || '#6b7280';
             const skin  = AGENT_SKIN[a.id]  || '#f5c5a3';
             const hair  = AGENT_HAIR[a.id]  || '#2c1a0a';
             const isJoe = a.id === 'signal-chat';
+
+            const moodClass  = on ? 'mood-green' : 'mood-yellow';
+            const charClass  = on ? 'active' : 'idle';
+            const moodFill   = on ? 75 + Math.floor(Math.random()*22) : 18 + Math.floor(Math.random()*28);
+            const moodColor  = on ? '#10b981' : '#f59e0b';
+            const mouthClass = on ? '' : 'sleep';
 
             const bubble = on && a.lastMessage
                 ? `<div class="ws-bubble">${escapeHtml(a.lastMessage.slice(0,45))}${a.lastMessage.length>45?'…':''}</div>`
                 : '';
             const screenContent = on
                 ? `<div class="typing-dots"><span></span><span></span><span></span></div>`
-                : `<span style="opacity:0.15;font-size:${isCorner?'13':'9'}px">💤</span>`;
+                : `<span style="opacity:0.12;font-size:${isCorner?'13':'9'}px">💤</span>`;
             const tieEl = isJoe ? `<div class="sim-tie"></div>` : '';
-            const face  = isJoe && on ? '😎' : on ? '😊' : '😴';
 
             return `<div class="workstation" onclick="showAgentModal('${a.id}')">
                 ${bubble}
@@ -6851,14 +6955,27 @@
                     <div class="ws-keyboard"></div>
                 </div>
                 <div class="ws-chair"></div>
-                <div class="sim${on?' active':' idle'}">
+                <div class="sim-char ${charClass}">
+                    <div class="sim-plumbob ${moodClass}"></div>
                     <div class="sim-hair" style="background:${hair}"></div>
-                    <div class="sim-head" style="background:${skin}">${face}${tieEl}</div>
-                    <div class="sim-body" style="background:${color}"></div>
-                    <div class="sim-legs"><div class="sim-leg"></div><div class="sim-leg"></div></div>
+                    <div class="sim-head" style="background:${skin}">
+                        <div class="sim-eyes"><div class="sim-eye"></div><div class="sim-eye"></div></div>
+                        <div class="sim-mouth ${mouthClass}"></div>
+                        ${tieEl}
+                    </div>
+                    <div class="sim-upper">
+                        <div class="sim-arm sim-arm-l" style="background:${skin}"></div>
+                        <div class="sim-torso" style="background:${color}"></div>
+                        <div class="sim-arm sim-arm-r" style="background:${skin}"></div>
+                    </div>
+                    <div class="sim-legs">
+                        <div class="sim-leg-wrap"><div class="sim-leg" style="background:${color}"></div><div class="sim-shoe"></div></div>
+                        <div class="sim-leg-wrap"><div class="sim-leg" style="background:${color}"></div><div class="sim-shoe"></div></div>
+                    </div>
+                    <div class="sim-moodbar"><div class="sim-moodbar-fill" style="width:${moodFill}%;background:${moodColor}"></div></div>
                 </div>
                 <div class="ws-nameplate">
-                    <span class="ws-dot" style="background:${on?color:'rgba(0,0,0,0.15)'}"></span>${escapeHtml(a.name)}
+                    <span class="ws-dot" style="background:${on?color:'rgba(255,255,255,0.08)'}"></span>${escapeHtml(a.name)}
                 </div>
             </div>`;
         }
@@ -6924,8 +7041,8 @@
 
             const am = {};
             agents.forEach(a => am[a.id] = a);
-            const active = agents.filter(a => a.isActive);
-            const now    = new Date();
+            const active  = agents.filter(a => a.isActive);
+            const now     = new Date();
             const timeStr = now.toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
             const hour    = now.getHours();
 
@@ -6934,10 +7051,10 @@
             const win = getWindowStyle(hour);
             const MISSION = 'We build with intelligence. An autonomous organization of AI agents doing real work 24/7. One person. A full team of specialists — each with a defined role, a distinct voice, and a shared mission: help Jose move faster, think sharper, and build better.';
 
-            const zone = (label, emoji, color, ids) => {
+            const zone = (label, emoji, color, cls, ids) => {
                 const desks = ids.filter(id => am[id]).map(id => buildWorkstation(am[id], false)).join('');
                 if (!desks) return '';
-                return `<div class="office-zone">
+                return `<div class="office-zone ${cls}">
                     <div class="office-zone-label"><span style="color:${color}">${emoji}</span> ${label}</div>
                     <div class="office-desks-row">${desks}</div>
                 </div>`;
@@ -6971,15 +7088,24 @@
                     </div>
                 </div>
                 <div class="office-room">
+                    <div class="office-hud">
+                        <div class="hud-stat">🟢 Active <span class="hud-stat-val green">${active.length}</span></div>
+                        <div class="hud-divider"></div>
+                        <div class="hud-stat">👥 Agents <span class="hud-stat-val blue">${agents.length}</span></div>
+                        <div class="hud-divider"></div>
+                        <div class="hud-stat">🕐 <span class="hud-stat-val" id="office-hud-clock">${timeStr}</span></div>
+                        <div class="hud-divider"></div>
+                        <div class="hud-stat">Jose &amp; Co. HQ</div>
+                    </div>
                     <div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:flex-start">
                         <div class="private-office">
                             <div class="private-office-sign">⭐ Chief of Staff</div>
                             <div class="office-desks-row">${buildWorkstation(am['signal-chat'], true)}</div>
                             <div class="private-office-door"></div>
                         </div>
-                        ${zone('Intelligence', '🧠', '#3b82f6', ['analyst','research'])}
-                        ${zone('Engineering & Creative', '⚡', '#10b981', ['coder','writer','video','image-gen','social'])}
-                        ${zone('Business Ops', '💼', '#f97316', ['finance','sales','support','planner'])}
+                        ${zone('Intelligence', '🧠', '#3b82f6', 'zone-intel', ['analyst','research'])}
+                        ${zone('Engineering & Creative', '⚡', '#10b981', 'zone-eng', ['coder','writer','video','image-gen','social'])}
+                        ${zone('Business Ops', '💼', '#f97316', 'zone-biz', ['finance','sales','support','planner'])}
                         <div class="break-zone">
                             <div class="amenity"><div class="amenity-icon">💧</div><div class="amenity-label">Water</div></div>
                             <div class="amenity"><div class="amenity-icon">☕</div><div class="amenity-label">Coffee</div></div>
@@ -6988,7 +7114,7 @@
                     </div>
                     <div class="office-status-bar">
                         <div class="status-dot"></div>
-                        <span>${active.length>0 ? active.map(a=>escapeHtml(a.name)).join(', ')+' working' : 'All agents idle'} · Jose & Co. HQ · ${timeStr}</span>
+                        <span>${active.length>0 ? active.map(a=>escapeHtml(a.name)).join(', ')+' working' : 'All agents idle'} · Jose &amp; Co. HQ · ${timeStr}</span>
                     </div>
                 </div>
             `;
@@ -6996,8 +7122,11 @@
             // Live clock tick
             if (OFFICE_CLOCK_TIMER) clearInterval(OFFICE_CLOCK_TIMER);
             OFFICE_CLOCK_TIMER = setInterval(() => {
+                const t = new Date().toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
                 const clk = document.getElementById('office-clock-display');
-                if (clk) clk.textContent = new Date().toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
+                const hud = document.getElementById('office-hud-clock');
+                if (clk) clk.textContent = t;
+                if (hud) hud.textContent = t;
             }, 1000);
 
             if (OFFICE_REFRESH_TIMER) clearTimeout(OFFICE_REFRESH_TIMER);
