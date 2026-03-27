@@ -120,13 +120,6 @@
       "turns": 1
     },
     {
-      "agentId": "research",
-      "agentName": "Scout",
-      "timestamp": 1774622438026,
-      "message": "[Fri 2026-03-27 10:40 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1774614300103,
@@ -377,11 +370,10 @@
     },
     {
       "day": "2026-03-27",
-      "total": 29,
+      "total": 28,
       "byAgent": {
         "sales": 1,
         "planner": 1,
-        "research": 1,
         "signal-chat": 11,
         "social": 1,
         "image-gen": 7,
@@ -394,5 +386,5 @@
       }
     }
   ],
-  "updatedAt": 1774625779781
+  "updatedAt": 1774626079944
 }
