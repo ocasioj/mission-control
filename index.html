@@ -9423,46 +9423,21 @@
     <script>
         // === LOGIN/AUTH GATE ===
         async function checkAuth() {
-            // Check both old and new token keys, migrate if needed
+            // Fetch token from MC server at runtime — never stored in source
             let token = localStorage.getItem('gh_token');
             if (!token) {
-                const oldToken = localStorage.getItem('github_token');
-                if (oldToken) {
-                    // Migrate old token to new key
-                    localStorage.setItem('gh_token', oldToken);
-                    localStorage.removeItem('github_token');
-                    localStorage.removeItem('github_user'); // Clean up old user data
-                    token = oldToken;
-                    console.log('Migrated token from github_token to gh_token');
-                }
+                try {
+                    const r = await fetch(`${MC_BASE}/api/gh-token`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                    const j = await r.json();
+                    if (j.token) { token = j.token; localStorage.setItem('gh_token', token); }
+                } catch(e) { /* fall through */ }
             }
-
-            if (!token) {
-                showLoginScreen();
-                return;
-            }
-
-            // Validate token
-            try {
-                const response = await fetch('https://api.github.com/user', {
-                    headers: { 'Authorization': `token ${token}` }
-                });
-
-                if (response.ok) {
-                    const user = await response.json();
-                    STATE.token = token;
-                    STATE.user = user;
-                    showDashboard();
-                    await loadTasksFromGitHub();
-                    if (!(await loadCronsFromGateway())) await loadCronsFromGitHub();
-                } else {
-                    localStorage.removeItem('gh_token');
-                    showLoginScreen();
-                }
-            } catch (e) {
-                console.error('Auth check failed:', e);
-                showLoginScreen();
-            }
+            if (!token) { showLoginScreen(); return; }
+            STATE.token = token;
+            STATE.user = { login: 'ocasioj', name: 'Jose' };
+            showDashboard();
+            await loadTasksFromGitHub();
+            if (!(await loadCronsFromGateway())) await loadCronsFromGitHub();
         }
 
         function showLoginScreen() {
