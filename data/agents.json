@@ -5,10 +5,10 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 70,
-      "lastActivity": 1774654852595,
-      "lastActivityAgo": "24s ago",
+      "lastActivity": 1774654960277,
+      "lastActivityAgo": "3m ago",
       "isActive": true,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774654845836\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774654955932\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -17,8 +17,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774654835487,
-      "lastActivityAgo": "41s ago",
-      "isActive": true,
+      "lastActivityAgo": "5m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774654877486
+  "updatedAt": 1774655177297
 }
