@@ -108,13 +108,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774578842773,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774578841991\",\n  \"sender_id\": \"+",
-      "turns": 59
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774576809729,
       "message": "[cron:1ddee939-84fd-4369-8309-c61b206eab7e pre-reset-summary-1774576801] Your session is about to re",
       "turns": 1
@@ -364,12 +357,12 @@
     },
     {
       "day": "2026-03-27",
-      "total": 17,
+      "total": 16,
       "byAgent": {
         "sales": 2,
         "planner": 1,
         "research": 1,
-        "signal-chat": 4,
+        "signal-chat": 3,
         "social": 1,
         "image-gen": 1,
         "finance": 1,
@@ -380,5 +373,5 @@
       }
     }
   ],
-  "updatedAt": 1774591279033
+  "updatedAt": 1774591579034
 }
