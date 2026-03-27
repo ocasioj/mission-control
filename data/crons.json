@@ -138,10 +138,10 @@
         "kind": "agentTurn",
         "message": "Run python3 /data/.openclaw/workspace-signal-chat/daily_briefing.py. If successful, return stdout exactly as plain text. Keep it concise. If it fails, return a short error summary with the failing step."
       },
-      "lastRunAt": "2026-03-26T11:00:00.009Z",
-      "nextRunAt": "2026-03-27T11:00:00.000Z",
+      "lastRunAt": "2026-03-27T11:00:00.009Z",
+      "nextRunAt": "2026-03-28T11:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 22678,
+      "lastDurationMs": 25078,
       "consecutiveErrors": 0
     },
     {
@@ -199,5 +199,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774608977739
+  "updatedAt": 1774609277672
 }
