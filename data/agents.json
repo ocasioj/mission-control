@@ -6,8 +6,8 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 70,
       "lastActivity": 1774637929673,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
+      "lastActivityAgo": "7m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.\n\n[Bootstrap truncation warning]\nSome workspace bootstrap files w",
       "lastModel": "gemini-2.5-flash"
     },
@@ -17,8 +17,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774637925832,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
+      "lastActivityAgo": "7m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -28,8 +28,8 @@
       "desc": "YouTube video pipeline — script, HeyGen, thumbnail, publish",
       "sessionCount": 1,
       "lastActivity": 1774637914319,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
+      "lastActivityAgo": "7m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash"
     },
@@ -39,8 +39,8 @@
       "desc": "Customer support, issue logging, response drafts",
       "sessionCount": 1,
       "lastActivity": 1774637910214,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
+      "lastActivityAgo": "7m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -50,8 +50,8 @@
       "desc": "Prospecting, cold outreach, follow-ups, pipeline tracking",
       "sessionCount": 1,
       "lastActivity": 1774637906105,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
+      "lastActivityAgo": "7m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -61,8 +61,8 @@
       "desc": "LinkedIn and X content distribution and engagement",
       "sessionCount": 1,
       "lastActivity": 1774637898669,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
+      "lastActivityAgo": "7m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -72,8 +72,8 @@
       "desc": "SaaS metrics, revenue, expenses, and burn rate",
       "sessionCount": 1,
       "lastActivity": 1774637874074,
-      "lastActivityAgo": "3m ago",
-      "isActive": true,
+      "lastActivityAgo": "8m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -83,8 +83,8 @@
       "desc": "Trip planning and scheduling",
       "sessionCount": 1,
       "lastActivity": 1774637869506,
-      "lastActivityAgo": "3m ago",
-      "isActive": true,
+      "lastActivityAgo": "8m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -94,8 +94,8 @@
       "desc": "Content writing and copywriting",
       "sessionCount": 1,
       "lastActivity": 1774637865266,
-      "lastActivityAgo": "3m ago",
-      "isActive": true,
+      "lastActivityAgo": "8m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -105,8 +105,8 @@
       "desc": "Deep research and information retrieval",
       "sessionCount": 1,
       "lastActivity": 1774637859926,
-      "lastActivityAgo": "3m ago",
-      "isActive": true,
+      "lastActivityAgo": "8m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
       "lastModel": "gemini-3-pro-preview"
     },
@@ -116,8 +116,8 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 1,
       "lastActivity": 1774637846032,
-      "lastActivityAgo": "3m ago",
-      "isActive": true,
+      "lastActivityAgo": "8m ago",
+      "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash"
     },
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774638077349
+  "updatedAt": 1774638377306
 }
