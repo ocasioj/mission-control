@@ -7546,16 +7546,15 @@
             if (!el) return;
             el.innerHTML = '<div class="empty-state-large">Loading cron jobs...</div>';
 
-            let data;
             try {
-                const r = await fetchGitHubDataFile('crons.json');
-                data = r;
+                const r = await fetch(`${MC_BASE}/api/cron/list`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                const data = await r.json();
+                FACTORY_JOBS = data.jobs || [];
             } catch(e) {
                 el.innerHTML = '<div class="empty-state-large">Could not load cron jobs.</div>';
                 return;
             }
 
-            FACTORY_JOBS = data.jobs || [];
             renderFactoryTable();
         }
 
