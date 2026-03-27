@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774644314887,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
+      "turns": 2
+    },
+    {
       "agentId": "video",
       "agentName": "Director",
       "timestamp": 1774637913143,
@@ -321,12 +328,12 @@
     },
     {
       "day": "2026-03-27",
-      "total": 21,
+      "total": 22,
       "byAgent": {
         "sales": 1,
         "planner": 1,
         "research": 1,
-        "signal-chat": 11,
+        "signal-chat": 12,
         "social": 1,
         "finance": 1,
         "analyst": 1,
@@ -337,5 +344,5 @@
       }
     }
   ],
-  "updatedAt": 1774644079296
+  "updatedAt": 1774644379165
 }
