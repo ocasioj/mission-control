@@ -139,10 +139,10 @@
       "name": "BILLING.md",
       "path": "/openclaw-data/workspace-signal-chat/BILLING.md",
       "category": "Notes",
-      "sizeBytes": 895,
-      "wordCount": 183,
-      "modifiedAt": 1774504371961.384,
-      "content": "# Billing Ledger: AI Usage\n\n## Monthly Overview: March 2026\n| Provider | Model | Tokens (In/Out) | Estimated Cost |\n| :--- | :--- | :--- | :--- |\n| **Anthropic** | Claude Sonnet 4 5 | 182 / 17,982 | $1.03 |\n| **Anthropic** | Claude Sonnet 4 6 | 6 / 268 | $0.18 |\n| **Anthropic** | Claude Haiku 4 5 | 36 / 462 | $0.16 |\n| **Google** | Gemini 2.5 Flash | 8,531,439 / 59,467 | $3.00 |\n| **Google** | Gemini 3 Flash Preview | 1,473,715 / 14,186 | $0.80 |\n| **Google** | Gemini 3 Pro Preview | 89,966 / 2,591 | $0.22 |\n| **Google** | Gemini 2.5 Flash Lite | 380,665 / 7,077 | $0.04 |\n| **OpenAI** | Gpt 5 Mini | 1,215,797 / 17,260 | $0.36 |\n| **OpenAI** | Gpt 4O Mini | 485,397 / 1,771 | $0.10 |\n\n## Totals\n- **Total Tokens:** 12,298,267\n- **Total Est. Cost:** $5.87\n\n---\n*Note: Costs are estimated from per-response usage telemetry recorded in session JSONL logs. Updated: Thursday, March 26, 2026.\n"
+      "sizeBytes": 836,
+      "wordCount": 169,
+      "modifiedAt": 1774584002024.5698,
+      "content": "# Billing Ledger: AI Usage\n\n## Monthly Overview: March 2026\n| Provider | Model | Tokens (In/Out) | Estimated Cost |\n| :--- | :--- | :--- | :--- |\n| **Anthropic** | Claude Sonnet 4 5 | 182 / 17,982 | $1.03 |\n| **Anthropic** | Claude Haiku 4 5 | 36 / 462 | $0.16 |\n| **Google** | Gemini 2.5 Flash | 4,808,171 / 42,930 | $1.66 |\n| **Google** | Gemini 3 Flash Preview | 1,430,851 / 13,600 | $0.78 |\n| **Google** | Gemini 3 Pro Preview | 47,110 / 1,822 | $0.12 |\n| **Google** | Gemini 2.5 Flash Lite | 197,895 / 5,329 | $0.02 |\n| **OpenAI** | Gpt 5 Mini | 1,215,797 / 17,260 | $0.36 |\n| **OpenAI** | Gpt 4O Mini | 485,397 / 1,771 | $0.10 |\n\n## Totals\n- **Total Tokens:** 8,286,595\n- **Total Est. Cost:** $4.22\n\n---\n*Note: Costs are estimated from per-response usage telemetry recorded in session JSONL logs. Updated: Friday, March 27, 2026.\n"
     },
     {
       "name": "BUGS.md",
@@ -334,5 +334,5 @@
       "content": "# Todo List: Rene\n"
     }
   ],
-  "updatedAt": 1774583837549
+  "updatedAt": 1774584137615
 }
