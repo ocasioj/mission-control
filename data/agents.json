@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 69,
+      "lastActivity": 1774644350801,
+      "lastActivityAgo": "26s ago",
+      "isActive": true,
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644343807\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774643130807,
-      "lastActivityAgo": "15m ago",
+      "lastActivityAgo": "20m ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 69,
-      "lastActivity": 1774637929673,
-      "lastActivityAgo": "1h ago",
-      "isActive": false,
-      "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.\n\n[Bootstrap truncation warning]\nSome workspace bootstrap files w",
-      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "video",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774644077287
+  "updatedAt": 1774644377319
 }
