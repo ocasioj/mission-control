@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774651235838,
-      "lastActivityAgo": "5m ago",
+      "lastActivityAgo": "10m ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
@@ -127,7 +127,7 @@
       "desc": "Image generation tasks",
       "sessionCount": 2,
       "lastActivity": 1774623012089,
-      "lastActivityAgo": "7h ago",
+      "lastActivityAgo": "8h ago",
       "isActive": false,
       "lastMessage": "",
       "lastModel": "delivery-mirror"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774651577318
+  "updatedAt": 1774651877447
 }
