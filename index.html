@@ -2376,6 +2376,39 @@
         .agent-modal-stat-label { color: var(--text-secondary); }
         .agent-modal-stat-value { font-weight: 600; text-align: right; max-width: 55%; }
 
+        /* ── Radar View ───────────────────────────────────────────────────── */
+        .radar-layout { display: grid; grid-template-columns: 1fr 300px; gap: 1.5rem; align-items: start; }
+        @media (max-width: 900px) { .radar-layout { grid-template-columns: 1fr; } }
+        .radar-chart-wrap { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem; }
+        .radar-chart-title { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: 0.75rem; }
+        .radar-bars { display: flex; align-items: flex-end; gap: 3px; height: 60px; }
+        .radar-bar-col { display: flex; flex-direction: column; align-items: center; gap: 3px; flex: 1; }
+        .radar-bar { width: 100%; border-radius: 3px 3px 0 0; min-height: 2px; transition: height 0.4s; background: var(--accent-blue); opacity: 0.8; }
+        .radar-bar:hover { opacity: 1; }
+        .radar-bar-label { font-size: 0.48rem; color: var(--text-secondary); font-family: monospace; white-space: nowrap; }
+        .radar-agents { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+        .radar-agent-pill {
+            display: flex; align-items: center; gap: 6px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 20px; padding: 4px 10px; font-size: 0.75rem;
+            cursor: default;
+        }
+        .radar-agent-pill .pill-count { font-weight: 700; font-size: 0.8rem; }
+        .radar-feed { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .radar-feed-header { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); display: flex; justify-content: space-between; align-items: center; }
+        .radar-event { display: flex; gap: 0.75rem; padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); }
+        .radar-event:last-child { border-bottom: none; }
+        .radar-event-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+        .radar-event-body { flex: 1; min-width: 0; }
+        .radar-event-agent { font-size: 0.78rem; font-weight: 700; margin-bottom: 2px; }
+        .radar-event-snippet { font-size: 0.74rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .radar-event-meta { font-size: 0.65rem; color: #555; margin-top: 3px; font-family: monospace; display: flex; gap: 8px; }
+        .radar-sidebar { display: flex; flex-direction: column; gap: 1rem; }
+        .radar-stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
+        .radar-stat-card-title { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: 0.6rem; }
+        .radar-stat-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; font-size: 0.8rem; border-bottom: 1px solid var(--border); }
+        .radar-stat-row:last-child { border-bottom: none; }
+
         /* ── Activity View ────────────────────────────────────────────────── */
         .activity-layout { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; }
         .activity-feed { flex: 1; min-width: 280px; }
@@ -3057,7 +3090,7 @@
         <div class="sidebar-item" data-view="team" onclick="switchView('team')"><span class="sidebar-icon">🔗</span><span class="sidebar-label">Team</span></div>
         <div class="sidebar-section-label">System</div>
         <div class="sidebar-item" data-view="system" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">⚙️</span><span class="sidebar-label">System</span></div>
-        <div class="sidebar-item" data-view="radar" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">📡</span><span class="sidebar-label">Radar</span></div>
+        <div class="sidebar-item" data-view="radar" onclick="switchView('radar')"><span class="sidebar-icon">📡</span><span class="sidebar-label">Radar</span></div>
         <div class="sidebar-item" data-view="factory" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🏭</span><span class="sidebar-label">Factory</span></div>
         <div class="sidebar-item" data-view="pipeline" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">🔀</span><span class="sidebar-label">Pipeline</span></div>
         <div class="sidebar-item" data-view="feedback" onclick="showToast('info','Coming soon')"><span class="sidebar-icon">💬</span><span class="sidebar-label">Feedback</span></div>
@@ -3413,6 +3446,17 @@
             <div id="health-content"><div class="empty-state-large">Loading health data...</div></div>
         </div>
     </div><!-- END view-health -->
+
+    <!-- Radar View -->
+    <div id="view-radar" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>📡 Radar</h2><p class="section-subtitle" id="radar-subtitle">Live agent activity — last 24 hours</p></div>
+                <button onclick="renderRadarView()" style="background:var(--bg-card);border:1px solid var(--border);color:var(--text-secondary);padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px;">↻ Refresh</button>
+            </div>
+            <div id="radar-content"><div class="empty-state-large">Loading radar...</div></div>
+        </div>
+    </div><!-- END view-radar -->
 
     <!-- Goals View -->
     <div id="view-goals" class="view" style="display:none;">
@@ -7137,6 +7181,130 @@
             }, 60000);
         }
 
+        // ── Radar View ────────────────────────────────────────────────────────────
+
+        let RADAR_REFRESH_TIMER = null;
+
+        async function renderRadarView() {
+            const el  = document.getElementById('radar-content');
+            const sub = document.getElementById('radar-subtitle');
+            if (!el) return;
+            el.innerHTML = '<div class="empty-state-large">Loading radar...</div>';
+
+            let data;
+            try {
+                const r = await fetch(`${MC_BASE}/api/radar`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                data = await r.json();
+            } catch(e) {
+                el.innerHTML = '<div class="empty-state-large">Could not reach Mission Control server.</div>';
+                return;
+            }
+
+            const { events = [], hourly = [], agentTotals = {}, updatedAt } = data;
+            const totalTurns = Object.values(agentTotals).reduce((a, b) => (a as number) + (b as number), 0) as number;
+            const now = Date.now();
+
+            if (sub) sub.textContent = `${totalTurns} turns across ${Object.keys(agentTotals).length} agents in the last 24h`;
+
+            // Hourly bar chart — hourly[0] = current hour, [23] = 23h ago
+            const hourlyTotals = hourly.map(h => Object.values(h).reduce((a: number, b) => a + (b as number), 0));
+            const maxBar = Math.max(...hourlyTotals, 1);
+            const bars = hourly.map((h, i) => {
+                const total = hourlyTotals[i];
+                const heightPct = Math.round((total / maxBar) * 100);
+                const label = i === 0 ? 'now' : i % 4 === 0 ? `-${i}h` : '';
+                const color = i < 2 ? 'var(--accent-blue)' : i < 6 ? 'rgba(59,130,246,0.6)' : 'rgba(59,130,246,0.3)';
+                return `<div class="radar-bar-col" title="${total} turns ${i === 0 ? 'this hour' : `${i}h ago`}">
+                    <div class="radar-bar" style="height:${heightPct}%;background:${color}"></div>
+                    <div class="radar-bar-label">${label}</div>
+                </div>`;
+            }).join('');
+
+            // Agent pills sorted by count
+            const sortedAgents = Object.entries(agentTotals).sort((a, b) => (b[1] as number) - (a[1] as number));
+            const pills = sortedAgents.map(([id, count]) => {
+                const color = TEAM_COLOR[id] || '#6b7280';
+                const emoji = AGENT_EMOJI[id] || '🤖';
+                return `<div class="radar-agent-pill" style="border-color:${color}22">
+                    <span>${emoji}</span>
+                    <span style="color:${color}">${AGENT_ROLE_TITLE[id] || id}</span>
+                    <span class="pill-count" style="color:${color}">${count}</span>
+                </div>`;
+            }).join('');
+
+            // Activity feed
+            function timeAgo(ts) {
+                const s = Math.floor((now - ts) / 1000);
+                if (s < 60) return `${s}s ago`;
+                if (s < 3600) return `${Math.floor(s/60)}m ago`;
+                if (s < 86400) return `${Math.floor(s/3600)}h ago`;
+                return `${Math.floor(s/86400)}d ago`;
+            }
+
+            const feedRows = events.map(ev => {
+                const color = TEAM_COLOR[ev.agentId] || '#6b7280';
+                const emoji = AGENT_EMOJI[ev.agentId] || '🤖';
+                const role  = AGENT_ROLE_TITLE[ev.agentId] || ev.agentId;
+                const cost  = ev.cost > 0 ? `$${ev.cost.toFixed(4)}` : '';
+                const model = ev.model ? ev.model.replace('claude-','').replace('gemini-','').replace('-latest','') : '';
+                return `<div class="radar-event">
+                    <div class="radar-event-dot" style="background:${color}"></div>
+                    <div class="radar-event-body">
+                        <div class="radar-event-agent">${emoji} ${escapeHtml(role)}</div>
+                        <div class="radar-event-snippet">${escapeHtml(ev.snippet)}${ev.snippet.length >= 140 ? '…' : ''}</div>
+                        <div class="radar-event-meta">
+                            <span>${timeAgo(ev.ts)}</span>
+                            ${model ? `<span>${escapeHtml(model)}</span>` : ''}
+                            ${cost ? `<span style="color:#10b981">${cost}</span>` : ''}
+                        </div>
+                    </div>
+                </div>`;
+            }).join('') || '<div style="padding:1rem;color:var(--text-secondary);font-size:0.8rem">No activity in the last 24 hours.</div>';
+
+            // Top agents sidebar
+            const topRows = sortedAgents.slice(0, 8).map(([id, count]) => {
+                const color = TEAM_COLOR[id] || '#6b7280';
+                return `<div class="radar-stat-row">
+                    <span>${AGENT_EMOJI[id] || '🤖'} ${escapeHtml(AGENT_ROLE_TITLE[id] || id)}</span>
+                    <span style="font-weight:700;color:${color}">${count}</span>
+                </div>`;
+            }).join('');
+
+            el.innerHTML = `
+                <div class="radar-chart-wrap">
+                    <div class="radar-chart-title">Turns per hour — last 24h (left = oldest, right = now)</div>
+                    <div class="radar-bars" style="flex-direction:row-reverse">${bars}</div>
+                </div>
+                <div class="radar-agents">${pills || '<span style="color:var(--text-secondary);font-size:0.8rem">No activity yet.</span>'}</div>
+                <div class="radar-layout">
+                    <div class="radar-feed">
+                        <div class="radar-feed-header">
+                            <span>Live Feed</span>
+                            <span style="font-weight:400;text-transform:none;letter-spacing:0">${events.length} events</span>
+                        </div>
+                        ${feedRows}
+                    </div>
+                    <div class="radar-sidebar">
+                        <div class="radar-stat-card">
+                            <div class="radar-stat-card-title">24h Summary</div>
+                            <div class="radar-stat-row"><span>Total turns</span><span style="font-weight:700">${totalTurns}</span></div>
+                            <div class="radar-stat-row"><span>Active agents</span><span style="font-weight:700">${Object.keys(agentTotals).length}</span></div>
+                            <div class="radar-stat-row"><span>Busiest hour</span><span style="font-weight:700">${Math.max(...hourlyTotals)} turns</span></div>
+                        </div>
+                        <div class="radar-stat-card">
+                            <div class="radar-stat-card-title">Turns by Agent</div>
+                            ${topRows || '<div style="color:var(--text-secondary);font-size:0.8rem">No data.</div>'}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            if (RADAR_REFRESH_TIMER) clearTimeout(RADAR_REFRESH_TIMER);
+            RADAR_REFRESH_TIMER = setTimeout(() => {
+                if (document.getElementById('view-radar')?.style.display !== 'none') renderRadarView();
+            }, 60000);
+        }
+
         // ── Activity View ─────────────────────────────────────────────────────────
 
         async function renderActivityView() {
@@ -7503,8 +7671,10 @@
             if (viewName === 'activity') renderActivityView();
             if (viewName === 'health') renderHealthView();
             if (viewName === 'goals') renderGoalsView();
+            if (viewName === 'radar') renderRadarView();
             if (viewName !== 'office' && OFFICE_REFRESH_TIMER) { clearTimeout(OFFICE_REFRESH_TIMER); OFFICE_REFRESH_TIMER = null; }
             if (viewName !== 'office' && OFFICE_CLOCK_TIMER) { clearInterval(OFFICE_CLOCK_TIMER); OFFICE_CLOCK_TIMER = null; }
+            if (viewName !== 'radar' && RADAR_REFRESH_TIMER) { clearTimeout(RADAR_REFRESH_TIMER); RADAR_REFRESH_TIMER = null; }
         }
 
         function generateChangesSummary() {
