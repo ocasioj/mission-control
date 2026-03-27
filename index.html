@@ -1788,6 +1788,8 @@
             padding: 2rem;
             max-width: 1200px;
         }
+        /* Office gets full content width */
+        #view-office .section-container { max-width: none; }
         .section-header {
             margin-bottom: 2rem;
         }
@@ -2061,10 +2063,11 @@
         /* HUD bar */
         .office-hud {
             display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
-            padding: 0.42rem 0.85rem; margin-bottom: 0.85rem;
-            background: rgba(0,0,0,0.38);
-            border: 1px solid rgba(59,130,246,0.15);
+            padding: 0.42rem 0.85rem;
+            background: rgba(0,0,0,0.55);
+            border: 1px solid rgba(59,130,246,0.18);
             border-radius: 8px; font-family: monospace; font-size: 0.62rem;
+            position: absolute; top: 8px; left: 8px; right: 8px; z-index: 50;
         }
         .hud-stat { display: flex; align-items: center; gap: 5px; color: rgba(255,255,255,0.45); }
         .hud-stat-val { font-weight: 800; color: #fff; font-size: 0.72rem; }
@@ -2073,17 +2076,21 @@
         .hud-divider { width: 1px; height: 14px; background: rgba(255,255,255,0.09); }
         /* Floor */
         .office-room {
-            background: #141c2e;
+            background: #1c2540;
             background-image:
-                radial-gradient(ellipse 70% 45% at 50% 30%, rgba(59,130,246,0.06) 0%, transparent 70%),
-                repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255,255,255,0.055) 59px, rgba(255,255,255,0.055) 60px),
-                repeating-linear-gradient(180deg, transparent 0px, transparent 59px, rgba(255,255,255,0.045) 59px, rgba(255,255,255,0.045) 60px);
+                /* Ceiling light spots — always on regardless of time */
+                radial-gradient(ellipse 28% 35% at 18% 0%, rgba(255,250,220,0.16) 0%, transparent 60%),
+                radial-gradient(ellipse 28% 35% at 50% 0%, rgba(255,250,220,0.14) 0%, transparent 60%),
+                radial-gradient(ellipse 28% 35% at 82% 0%, rgba(255,250,220,0.16) 0%, transparent 60%),
+                /* Floor tile grid */
+                repeating-linear-gradient(90deg, transparent 0px, transparent 79px, rgba(255,255,255,0.05) 79px, rgba(255,255,255,0.05) 80px),
+                repeating-linear-gradient(180deg, transparent 0px, transparent 79px, rgba(255,255,255,0.04) 79px, rgba(255,255,255,0.04) 80px);
             border: 2px solid #2a1a0a; border-top: none;
             border-radius: 0 0 14px 14px;
-            padding: 0.6rem 0.75rem 1.5rem;
+            padding: 52px 0.75rem 2rem;
             position: relative; overflow: hidden;
-            min-height: 490px;
-            box-shadow: inset 0 0 80px rgba(59,130,246,0.04);
+            min-height: 680px;
+            box-shadow: inset 0 0 60px rgba(59,130,246,0.03);
         }
         /* Office props */
         .office-prop {
@@ -2353,26 +2360,26 @@
             position: absolute;
             display: flex; flex-direction: column; align-items: center;
             justify-content: flex-end; padding-bottom: 6px;
-            width: 118px; height: 128px;
-            border-left:  3px solid rgba(140,155,200,0.32);
-            border-top:   3px solid rgba(140,155,200,0.32);
-            border-right: 3px solid rgba(140,155,200,0.32);
+            width: 148px; height: 162px;
+            border-left:  3px solid rgba(140,155,200,0.35);
+            border-top:   3px solid rgba(140,155,200,0.35);
+            border-right: 3px solid rgba(140,155,200,0.35);
             border-bottom: none;
             border-radius: 5px 5px 0 0;
-            background: rgba(18,24,42,0.55);
-            box-shadow: inset 0 10px 22px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.25);
+            background: rgba(20,28,52,0.6);
+            box-shadow: inset 0 10px 22px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.25), inset 0 0 40px rgba(255,250,220,0.02);
             z-index: 4;
         }
         .cubicle.cubicle-lg {
-            width: 220px; height: 195px;
+            width: 260px; height: 225px;
             border-width: 4px;
-            border-color: rgba(245,158,11,0.6);
-            background: rgba(22,14,3,0.78);
-            box-shadow: inset 0 14px 30px rgba(0,0,0,0.25), 0 0 30px rgba(245,158,11,0.2), 0 0 70px rgba(245,158,11,0.07);
+            border-color: rgba(245,158,11,0.65);
+            background: rgba(24,16,4,0.82);
+            box-shadow: inset 0 14px 30px rgba(0,0,0,0.28), 0 0 35px rgba(245,158,11,0.22), 0 0 80px rgba(245,158,11,0.08);
         }
         /* Joe's executive overrides */
         .cubicle.cubicle-lg .ws-desk {
-            width: 168px !important; height: 82px !important;
+            width: 200px !important; height: 92px !important;
             background: linear-gradient(180deg, #4a2e10 0%, #321c08 100%) !important;
             border-color: rgba(245,158,11,0.18) !important;
             box-shadow: 0 5px 0 rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1) !important;
@@ -7369,36 +7376,64 @@
                     <span class="agent-modal-stat-label">Last Message</span>
                     <span class="agent-modal-stat-value" style="font-size:0.75rem;color:var(--text-secondary);max-width:100%">${escapeHtml(a.lastMessage.slice(0,120))}${a.lastMessage.length>120?'…':''}</span>
                 </div>`:''}
+                <div style="margin-top:12px;border-top:1px solid var(--border);padding-top:12px;">
+                    <div style="font-size:0.7rem;color:var(--text-muted);margin-bottom:6px;">Send a task or message directly to this agent:</div>
+                    <textarea id="agent-msg-input-${a.id}" placeholder="e.g. Analyze last week's revenue data and summarize..." style="width:100%;min-height:72px;background:var(--bg-input,#0f1623);border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--text);font-size:0.78rem;resize:vertical;box-sizing:border-box;"></textarea>
+                    <button onclick="sendToAgent('${a.id}')" style="margin-top:8px;width:100%;background:${color};border:none;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:700;font-size:0.82rem;">📨 Send to ${escapeHtml(a.name)}</button>
+                </div>
             </div>`;
             overlay.addEventListener('click', e => { if (e.target===overlay) overlay.remove(); });
             document.body.appendChild(overlay);
         }
 
-        // Cubicle grid positions on the 700×520 floor canvas
-        // Cubicles open toward the viewer (no bottom wall)
-        // Row 1 (top) y=18: Joe(corner), analyst, coder, research
-        // Row 2 (mid) y=188: writer, main, image-gen
-        // Cubicle grid — 3 rows, 13 agents total
-        // Row 1 (y=10): Joe(lg), analyst, coder, research
-        // Row 2 (y=175): writer, main, image-gen, planner, video
-        // Row 3 (y=338): sales, social, finance, support
-        // Break room: x=528 y=338 (right of row 3)
+        async function sendToAgent(agentId) {
+            const input = document.getElementById('agent-msg-input-' + agentId);
+            if (!input) return;
+            const message = input.value.trim();
+            if (!message) { showToast('Enter a message first'); return; }
+            const btn = input.nextElementSibling;
+            if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+            try {
+                const resp = await fetch('/api/message-agent', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-Gateway-Token': STATE.gatewayToken || '' },
+                    body: JSON.stringify({ to: agentId, from: 'signal-chat', message }),
+                });
+                const d = await resp.json();
+                if (d.ok) {
+                    showToast('✅ Message sent to ' + agentId);
+                    document.getElementById('agent-modal-overlay')?.remove();
+                } else {
+                    showToast('❌ ' + (d.error || 'Failed'));
+                    if (btn) { btn.disabled = false; btn.textContent = '📨 Send'; }
+                }
+            } catch(e) {
+                showToast('❌ Network error');
+                if (btn) { btn.disabled = false; btn.textContent = '📨 Send'; }
+            }
+        }
+
+        // Cubicle grid — 3 rows, 13 agents
+        // Cubicles: regular=148px wide, Joe=260px wide, 14px gap
+        // Row 1 (y=10): Joe, analyst, coder, research
+        // Row 2 (y=261): writer, main, image-gen, planner, video
+        // Row 3 (y=449): sales, social, finance, support + break room
         const DESK_POS = {
-            'signal-chat': { x: 8,   y: 10  },  // Joe executive (220px wide)
-            'analyst':     { x: 238, y: 10  },  // starts after Joe's 220px + 10 gap
-            'coder':       { x: 368, y: 10  },
-            'research':    { x: 498, y: 10  },
-            'writer':      { x: 8,   y: 175 },
-            'main':        { x: 138, y: 175 },
-            'image-gen':   { x: 268, y: 175 },
-            'planner':     { x: 398, y: 175 },
-            'video':       { x: 528, y: 175 },
-            'sales':       { x: 8,   y: 338 },
-            'social':      { x: 138, y: 338 },
-            'finance':     { x: 268, y: 338 },
-            'support':     { x: 398, y: 338 },
+            'signal-chat': { x: 8,   y: 10  },  // Joe executive (260px)
+            'analyst':     { x: 282, y: 10  },
+            'coder':       { x: 444, y: 10  },
+            'research':    { x: 606, y: 10  },
+            'writer':      { x: 8,   y: 261 },
+            'main':        { x: 170, y: 261 },
+            'image-gen':   { x: 332, y: 261 },
+            'planner':     { x: 494, y: 261 },
+            'video':       { x: 656, y: 261 },
+            'sales':       { x: 8,   y: 449 },
+            'social':      { x: 170, y: 449 },
+            'finance':     { x: 332, y: 449 },
+            'support':     { x: 494, y: 449 },
         };
-        const BREAK_ROOM_POS = { x: 528, y: 338 };
+        const BREAK_ROOM_POS = { x: 656, y: 449 };
 
         let OFFICE_WALK_TIMER = null;
 
@@ -7516,15 +7551,15 @@
                 </div>
             `;
 
-            // Ambient props — placed in corridor areas between rows
+            // Ambient props — corridor separators and decorations
             const props = `
-                <div class="office-rug" style="left:0;top:148px;width:100%;height:6px;opacity:0.4;"></div>
-                <div class="office-rug" style="left:0;top:310px;width:100%;height:6px;opacity:0.4;"></div>
-                <div class="office-prop" style="left:680px;top:10px;"><div class="prop-plant">🌴</div></div>
-                <div class="office-prop" style="left:680px;top:175px;"><div class="prop-plant">🪴</div></div>
-                <div class="office-prop" style="left:680px;top:338px;"><div class="prop-plant">🌿</div></div>
-                <div class="office-prop" style="left:658px;top:155px;"><div class="prop-coffee">💧</div><div class="prop-label">Water</div></div>
-                <div class="office-prop" style="left:658px;top:460px;font-size:10px;color:rgba(255,255,255,0.07);font-family:monospace;writing-mode:vertical-rl;">JOSE & CO. HQ</div>
+                <div class="office-rug" style="left:0;top:233px;width:100%;height:6px;opacity:0.35;"></div>
+                <div class="office-rug" style="left:0;top:421px;width:100%;height:6px;opacity:0.35;"></div>
+                <div class="office-prop" style="left:820px;top:10px;"><div class="prop-plant">🌴</div></div>
+                <div class="office-prop" style="left:820px;top:261px;"><div class="prop-plant">🪴</div></div>
+                <div class="office-prop" style="left:820px;top:449px;"><div class="prop-plant">🌿</div></div>
+                <div class="office-prop" style="left:800px;top:230px;"><div class="prop-coffee">💧</div><div class="prop-label">Water</div></div>
+                <div class="office-prop" style="left:818px;top:630px;font-size:10px;color:rgba(255,255,255,0.07);font-family:monospace;writing-mode:vertical-rl;">JOSE & CO. HQ</div>
                 ${breakRoom}
             `;
 
