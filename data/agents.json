@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774592381879,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
+      "lastActivityAgo": "6m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,21 +17,10 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 69,
       "lastActivity": 1774591354770,
-      "lastActivityAgo": "18m ago",
+      "lastActivityAgo": "23m ago",
       "isActive": false,
       "lastMessage": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /data/.openclaw/hooks/ro",
       "lastModel": "gemini-2.5-flash"
-    },
-    {
-      "id": "video",
-      "name": "Director",
-      "desc": "YouTube video pipeline — script, HeyGen, thumbnail, publish",
-      "sessionCount": 1,
-      "lastActivity": 1774589036337,
-      "lastActivityAgo": "57m ago",
-      "isActive": false,
-      "lastMessage": "[Fri 2026-03-27 01:23 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
-      "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "planner",
@@ -142,7 +131,18 @@
       "isActive": false,
       "lastMessage": "",
       "lastModel": ""
+    },
+    {
+      "id": "video",
+      "name": "Director",
+      "desc": "YouTube video pipeline — script, HeyGen, thumbnail, publish",
+      "sessionCount": 0,
+      "lastActivity": 0,
+      "lastActivityAgo": "never",
+      "isActive": false,
+      "lastMessage": "",
+      "lastModel": ""
     }
   ],
-  "updatedAt": 1774592477023
+  "updatedAt": 1774592777178
 }
