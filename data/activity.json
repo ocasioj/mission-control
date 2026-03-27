@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774594800282,
+      "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774594200202,
       "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
       "turns": 1
@@ -266,11 +273,11 @@
     },
     {
       "day": "2026-03-27",
-      "total": 4,
+      "total": 5,
       "byAgent": {
-        "signal-chat": 4
+        "signal-chat": 5
       }
     }
   ],
-  "updatedAt": 1774594578713
+  "updatedAt": 1774594878989
 }
