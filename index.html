@@ -2158,8 +2158,9 @@
             gap: 0; cursor: pointer; position: relative;
         }
         .workstation:hover .sim-char { transform: scale(1.12); }
-        /* Walking animations */
+        /* Walking animations — only fire when char is detached onto the floor */
         .sim-char.walking { animation: walk-sway 0.55s ease-in-out infinite !important; }
+        .office-room > .sim-char { pointer-events: none; }
         @keyframes walk-sway { 0%,100%{transform:rotate(-4deg) translateY(-1px)} 50%{transform:rotate(4deg) translateY(1px)} }
         .sim-char.walking .sim-leg-wrap:nth-child(1) .sim-leg { animation: walk-leg-l 0.38s ease-in-out infinite alternate; }
         .sim-char.walking .sim-leg-wrap:nth-child(2) .sim-leg { animation: walk-leg-r 0.38s ease-in-out infinite alternate; }
@@ -7470,46 +7471,71 @@
 
             OFFICE_WALK_TIMER = setInterval(() => {
                 const a = active[Math.floor(Math.random() * active.length)];
-                // find the cubicle wrapper — it holds the workstation
                 const cub = document.getElementById('cub-' + a.id);
                 if (!cub || cub.dataset.walking === '1') return;
+
+                const char = cub.querySelector('.sim-char');
+                if (!char) return;
+                const floor = cub.closest('.office-room');
+                if (!floor) return;
 
                 const home = DESK_POS[a.id] || { x: 100, y: 200 };
                 const goBreakRoom = Math.random() < 0.35;
 
-                // Walk destination: break room 35% of time, otherwise wander near desk
+                // Destination: break room or random wander
                 let wx, wy;
                 if (goBreakRoom) {
-                    wx = BREAK_ROOM_POS.x - 20 + Math.random() * 40;
-                    wy = BREAK_ROOM_POS.y + 30 + Math.random() * 30;
+                    wx = BREAK_ROOM_POS.x + 10 + Math.random() * 50;
+                    wy = BREAK_ROOM_POS.y + 50 + Math.random() * 30;
                 } else {
-                    wx = Math.max(5, Math.min(560, home.x + (Math.random() * 140 - 70)));
-                    wy = Math.max(5, Math.min(440, home.y + (Math.random() * 100 - 50)));
+                    wx = Math.max(10, Math.min(750, home.x + (Math.random() * 160 - 80)));
+                    wy = Math.max(10, Math.min(500, home.y + (Math.random() * 120 - 60)));
                 }
 
+                // Calculate char's current position relative to floor canvas
+                const floorRect = floor.getBoundingClientRect();
+                const charRect  = char.getBoundingClientRect();
+                const startX = charRect.left - floorRect.left;
+                const startY = charRect.top  - floorRect.top;
+
+                // Detach char from cubicle — place it absolutely on the floor at same position
                 cub.dataset.walking = '1';
-                cub.style.left = wx + 'px';
-                cub.style.top  = wy + 'px';
-                cub.style.zIndex = '20';
-                cub.style.border = 'none';
-                cub.style.background = 'none';
-                cub.style.boxShadow = 'none';
-                const char = cub.querySelector('.sim-char');
-                if (char) { char.classList.add('walking'); char.classList.remove('active'); }
+                char.style.cssText = `
+                    position:absolute;
+                    left:${startX}px; top:${startY}px;
+                    margin:0; z-index:50;
+                    transition:left 1.1s cubic-bezier(.4,0,.2,1), top 1.1s cubic-bezier(.4,0,.2,1);
+                `;
+                floor.appendChild(char);
+                char.classList.add('walking');
+                char.classList.remove('active', 'idle');
+
+                // Trigger movement after one frame so transition fires
+                requestAnimationFrame(() => requestAnimationFrame(() => {
+                    char.style.left = wx + 'px';
+                    char.style.top  = wy + 'px';
+                }));
 
                 const stayMs = goBreakRoom ? 3000 + Math.random() * 3000 : 2000 + Math.random() * 2000;
+
                 setTimeout(() => {
-                    cub.style.left = home.x + 'px';
-                    cub.style.top  = home.y + 'px';
+                    // Walk back toward desk before re-docking
+                    char.style.left = (home.x + 30) + 'px';
+                    char.style.top  = (home.y + 90) + 'px';
+
                     setTimeout(() => {
+                        // Re-dock: return char into cubicle workstation
+                        const ws = cub.querySelector('.workstation');
+                        char.style.cssText = '';
+                        char.classList.remove('walking');
+                        if (a.isActive) char.classList.add('active');
+                        else char.classList.add('idle');
+                        if (ws) ws.appendChild(char);
+                        else cub.appendChild(char);
                         cub.dataset.walking = '0';
-                        cub.style.zIndex = '';
-                        cub.style.border = '';
-                        cub.style.background = '';
-                        cub.style.boxShadow = '';
-                        if (char) { char.classList.remove('walking'); if (a.isActive) char.classList.add('active'); }
                     }, 1200);
                 }, stayMs);
+
             }, 4000 + Math.random() * 2000);
         }
 
