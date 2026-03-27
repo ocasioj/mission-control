@@ -94,13 +94,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774527900089,
-      "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774413108867,
       "message": "[cron:779a4a3d-4ce1-456c-b6bf-d877868f928f Mission Control UI Update Status] The dev agent is still ",
       "turns": 1
@@ -258,9 +251,9 @@
     },
     {
       "day": "2026-03-26",
-      "total": 3,
+      "total": 2,
       "byAgent": {
-        "signal-chat": 3
+        "signal-chat": 2
       }
     },
     {
@@ -272,5 +265,5 @@
       }
     }
   ],
-  "updatedAt": 1774614378927
+  "updatedAt": 1774614679478
 }
