@@ -1,6 +1,69 @@
 {
   "events": [
     {
+      "agentId": "video",
+      "agentName": "Director",
+      "timestamp": 1774637913143,
+      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
+      "agentId": "support",
+      "agentName": "Anchor",
+      "timestamp": 1774637909144,
+      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
+      "agentId": "sales",
+      "agentName": "Closer",
+      "timestamp": 1774637901472,
+      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
+      "agentId": "social",
+      "agentName": "Amp",
+      "timestamp": 1774637877127,
+      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
+      "agentId": "finance",
+      "agentName": "Ledger",
+      "timestamp": 1774637872705,
+      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
+      "agentId": "planner",
+      "agentName": "Atlas",
+      "timestamp": 1774637868258,
+      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
+      "agentId": "writer",
+      "agentName": "Quill",
+      "timestamp": 1774637863131,
+      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
+      "agentId": "research",
+      "agentName": "Scout",
+      "timestamp": 1774637854499,
+      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
+      "agentId": "analyst",
+      "agentName": "Nova",
+      "timestamp": 1774637844767,
+      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1774623600486,
@@ -40,7 +103,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1774599579148,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
+      "turns": 2
     },
     {
       "agentId": "signal-chat",
@@ -159,7 +222,7 @@
       "agentName": "Joe",
       "timestamp": 1774316704262,
       "message": "[Mon 2026-03-23 21:45 EDT] Iam testing out image remixing",
-      "turns": 8
+      "turns": 9
     },
     {
       "agentId": "main",
@@ -258,12 +321,21 @@
     },
     {
       "day": "2026-03-27",
-      "total": 12,
+      "total": 21,
       "byAgent": {
+        "sales": 1,
+        "planner": 1,
+        "research": 1,
         "signal-chat": 11,
-        "main": 1
+        "social": 1,
+        "finance": 1,
+        "analyst": 1,
+        "writer": 1,
+        "support": 1,
+        "main": 1,
+        "video": 1
       }
     }
   ],
-  "updatedAt": 1774637779960
+  "updatedAt": 1774638080183
 }
