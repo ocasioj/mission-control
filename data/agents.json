@@ -6,7 +6,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 71,
       "lastActivity": 1774581786383,
-      "lastActivityAgo": "5m ago",
+      "lastActivityAgo": "10m ago",
       "isActive": false,
       "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774581780945\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gemini-2.5-flash"
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774581581748,
-      "lastActivityAgo": "9m ago",
+      "lastActivityAgo": "14m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -72,7 +72,7 @@
       "desc": "Deep research and information retrieval",
       "sessionCount": 1,
       "lastActivity": 1773545341117,
-      "lastActivityAgo": "11d ago",
+      "lastActivityAgo": "12d ago",
       "isActive": false,
       "lastMessage": "[Sat 2026-03-14 23:28 EDT] Find the top things to do and best areas to stay for a weekend trip to Inwood, New York. Cove",
       "lastModel": "gemini-3-pro-preview"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774582140441
+  "updatedAt": 1774582440392
 }
