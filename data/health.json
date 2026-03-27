@@ -14,13 +14,18 @@
     }
   ],
   "disk": {
-    "usedBytes": 59257217024,
-    "availBytes": 43614101504,
+    "usedBytes": 59257450496,
+    "availBytes": 43613868032,
     "totalBytes": 102888095744,
     "percent": 58
   },
-  "cronErrors": [],
+  "cronErrors": [
+    {
+      "name": "OpenClaw Daily Health Report",
+      "errors": 1
+    }
+  ],
   "cronTotal": 11,
   "gatewayUp": true,
-  "updatedAt": 1774612580993
+  "updatedAt": 1774612879975
 }
