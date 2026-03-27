@@ -1,13 +1,6 @@
 {
   "events": [
     {
-      "agentId": "video",
-      "agentName": "Director",
-      "timestamp": 1774589031230,
-      "message": "[Fri 2026-03-27 01:23 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1774584004072,
@@ -273,12 +266,11 @@
     },
     {
       "day": "2026-03-27",
-      "total": 4,
+      "total": 3,
       "byAgent": {
-        "signal-chat": 3,
-        "video": 1
+        "signal-chat": 3
       }
     }
   ],
-  "updatedAt": 1774592478982
+  "updatedAt": 1774592779643
 }
