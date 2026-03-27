@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774577981703,
-      "lastActivityAgo": "30s ago",
-      "isActive": true,
+      "lastActivityAgo": "5m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 70,
       "lastActivity": 1774576809539,
-      "lastActivityAgo": "20m ago",
+      "lastActivityAgo": "25m ago",
       "isActive": false,
       "lastMessage": "[cron:1ddee939-84fd-4369-8309-c61b206eab7e pre-reset-summary-1774576801] Your session is about to reset due to size. Qui",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1774578012543
+  "updatedAt": 1774578311803
 }
