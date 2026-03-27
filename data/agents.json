@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774624782158,
-      "lastActivityAgo": "16m ago",
+      "lastActivityAgo": "21m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 70,
       "lastActivity": 1774623609836,
-      "lastActivityAgo": "36m ago",
+      "lastActivityAgo": "41m ago",
       "isActive": false,
       "lastMessage": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exec `joe-repair --chec",
       "lastModel": "gemini-2.5-flash"
@@ -28,7 +28,7 @@
       "desc": "Image generation tasks",
       "sessionCount": 9,
       "lastActivity": 1774623451016,
-      "lastActivityAgo": "38m ago",
+      "lastActivityAgo": "43m ago",
       "isActive": false,
       "lastMessage": "Continue where you left off. The previous model attempt failed or timed out.",
       "lastModel": "claude-sonnet-4-5"
@@ -39,7 +39,7 @@
       "desc": "YouTube video pipeline — script, HeyGen, thumbnail, publish",
       "sessionCount": 2,
       "lastActivity": 1774622478326,
-      "lastActivityAgo": "54m ago",
+      "lastActivityAgo": "59m ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 10:41 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -50,7 +50,7 @@
       "desc": "SaaS metrics, revenue, expenses, and burn rate",
       "sessionCount": 1,
       "lastActivity": 1774622473109,
-      "lastActivityAgo": "55m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 10:40 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -61,7 +61,7 @@
       "desc": "Customer support, issue logging, response drafts",
       "sessionCount": 1,
       "lastActivity": 1774622466910,
-      "lastActivityAgo": "55m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 10:41 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -72,21 +72,10 @@
       "desc": "Prospecting, cold outreach, follow-ups, pipeline tracking",
       "sessionCount": 1,
       "lastActivity": 1774622466105,
-      "lastActivityAgo": "55m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 10:40 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "research",
-      "name": "Scout",
-      "desc": "Deep research and information retrieval",
-      "sessionCount": 2,
-      "lastActivity": 1774622464777,
-      "lastActivityAgo": "55m ago",
-      "isActive": false,
-      "lastMessage": "[Fri 2026-03-27 10:40 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
-      "lastModel": "gemini-3-pro-preview"
     },
     {
       "id": "writer",
@@ -94,7 +83,7 @@
       "desc": "Content writing and copywriting",
       "sessionCount": 2,
       "lastActivity": 1774622459010,
-      "lastActivityAgo": "55m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 10:40 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -105,7 +94,7 @@
       "desc": "LinkedIn and X content distribution and engagement",
       "sessionCount": 1,
       "lastActivity": 1774622458626,
-      "lastActivityAgo": "55m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 10:40 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -116,7 +105,7 @@
       "desc": "Trip planning and scheduling",
       "sessionCount": 2,
       "lastActivity": 1774622453293,
-      "lastActivityAgo": "55m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 10:40 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -127,10 +116,21 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 2,
       "lastActivity": 1774622448529,
-      "lastActivityAgo": "55m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 10:40 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
+    },
+    {
+      "id": "research",
+      "name": "Scout",
+      "desc": "Deep research and information retrieval",
+      "sessionCount": 1,
+      "lastActivity": 1773545341117,
+      "lastActivityAgo": "12d ago",
+      "isActive": false,
+      "lastMessage": "[Sat 2026-03-14 23:28 EDT] Find the top things to do and best areas to stay for a weekend trip to Inwood, New York. Cove",
+      "lastModel": "gemini-3-pro-preview"
     },
     {
       "id": "coder",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774625777472
+  "updatedAt": 1774626077585
 }
