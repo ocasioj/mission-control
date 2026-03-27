@@ -1,6 +1,55 @@
 {
   "events": [
     {
+      "agentId": "social",
+      "agentName": "Amp",
+      "timestamp": 1774587067429,
+      "message": "[Fri 2026-03-27 00:51 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "finance",
+      "agentName": "Ledger",
+      "timestamp": 1774587067049,
+      "message": "[Fri 2026-03-27 00:51 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "image-gen",
+      "agentName": "Pixel",
+      "timestamp": 1774587066770,
+      "message": "[Fri 2026-03-27 00:51 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "planner",
+      "agentName": "Atlas",
+      "timestamp": 1774587049384,
+      "message": "[Fri 2026-03-27 00:50 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "writer",
+      "agentName": "Quill",
+      "timestamp": 1774587049210,
+      "message": "[Fri 2026-03-27 00:50 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "analyst",
+      "agentName": "Nova",
+      "timestamp": 1774587048674,
+      "message": "[Fri 2026-03-27 00:50 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "research",
+      "agentName": "Scout",
+      "timestamp": 1774587048412,
+      "message": "[Fri 2026-03-27 00:50 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1774584004072,
@@ -19,7 +68,7 @@
       "agentName": "Joe",
       "timestamp": 1774578842773,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774578841991\",\n  \"sender_id\": \"+",
-      "turns": 14
+      "turns": 20
     },
     {
       "agentId": "signal-chat",
@@ -280,11 +329,18 @@
     },
     {
       "day": "2026-03-27",
-      "total": 4,
+      "total": 11,
       "byAgent": {
-        "signal-chat": 4
+        "planner": 1,
+        "research": 1,
+        "signal-chat": 4,
+        "social": 1,
+        "image-gen": 1,
+        "finance": 1,
+        "analyst": 1,
+        "writer": 1
       }
     }
   ],
-  "updatedAt": 1774586779018
+  "updatedAt": 1774587078837
 }
