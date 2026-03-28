@@ -14,13 +14,13 @@
     }
   ],
   "disk": {
-    "usedBytes": 64075952128,
-    "availBytes": 38795366400,
+    "usedBytes": 64097189888,
+    "availBytes": 38774128640,
     "totalBytes": 102888095744,
     "percent": 62
   },
   "cronErrors": [],
   "cronTotal": 1,
   "gatewayUp": true,
-  "updatedAt": 1774682793421
+  "updatedAt": 1774683093019
 }
