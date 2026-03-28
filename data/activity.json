@@ -1,6 +1,97 @@
 {
   "events": [
     {
+      "agentId": "sales",
+      "agentName": "Closer",
+      "timestamp": 1774659708340,
+      "message": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "social",
+      "agentName": "Amp",
+      "timestamp": 1774659700494,
+      "message": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "social",
+      "agentName": "Amp",
+      "timestamp": 1774659659842,
+      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "support",
+      "agentName": "Anchor",
+      "timestamp": 1774659644431,
+      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "video",
+      "agentName": "Director",
+      "timestamp": 1774659639668,
+      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "finance",
+      "agentName": "Ledger",
+      "timestamp": 1774659632738,
+      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "planner",
+      "agentName": "Atlas",
+      "timestamp": 1774659621795,
+      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "image-gen",
+      "agentName": "Pixel",
+      "timestamp": 1774659616684,
+      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "writer",
+      "agentName": "Quill",
+      "timestamp": 1774659611440,
+      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "research",
+      "agentName": "Scout",
+      "timestamp": 1774659594535,
+      "message": "[Fri 2026-03-27 20:59 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "analyst",
+      "agentName": "Nova",
+      "timestamp": 1774659589740,
+      "message": "[Fri 2026-03-27 20:59 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "analyst",
+      "agentName": "Nova",
+      "timestamp": 1774659538650,
+      "message": "[Fri 2026-03-27 20:58 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "writer",
+      "agentName": "Quill",
+      "timestamp": 1774659502612,
+      "message": "[Fri 2026-03-27 20:58 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
       "agentId": "analyst",
       "agentName": "Nova",
       "timestamp": 1774659318634,
@@ -47,7 +138,7 @@
       "agentName": "Joe",
       "timestamp": 1774644314887,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
-      "turns": 36
+      "turns": 65
     },
     {
       "agentId": "video",
@@ -380,14 +471,21 @@
     },
     {
       "day": "2026-03-28",
-      "total": 5,
+      "total": 18,
       "byAgent": {
-        "research": 1,
+        "sales": 1,
+        "planner": 1,
+        "research": 2,
         "signal-chat": 1,
-        "image-gen": 1,
-        "analyst": 2
+        "social": 2,
+        "image-gen": 2,
+        "finance": 1,
+        "analyst": 4,
+        "writer": 2,
+        "support": 1,
+        "video": 1
       }
     }
   ],
-  "updatedAt": 1774659438898
+  "updatedAt": 1774659739060
 }
