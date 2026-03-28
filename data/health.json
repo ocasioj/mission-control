@@ -4,23 +4,23 @@
       "name": "openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
       "state": "running",
-      "status": "Up 40 minutes (healthy)"
+      "status": "Up 45 minutes (healthy)"
     },
     {
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/hostinger/hvps-openclaw@sha256:c677c4994dfc34827e99f422f672e7164e0a82716182874fdef5967de02747ea",
       "state": "running",
-      "status": "Up 44 minutes (healthy)"
+      "status": "Up 49 minutes (healthy)"
     }
   ],
   "disk": {
-    "usedBytes": 60698148864,
-    "availBytes": 42173169664,
+    "usedBytes": 60698656768,
+    "availBytes": 42172661760,
     "totalBytes": 102888095744,
     "percent": 59
   },
   "cronErrors": [],
   "cronTotal": 0,
   "gatewayUp": true,
-  "updatedAt": 1774661240132
+  "updatedAt": 1774661539556
 }
