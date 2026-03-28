@@ -1,6 +1,20 @@
 {
   "events": [
     {
+      "agentId": "research",
+      "agentName": "Scout",
+      "timestamp": 1774666921480,
+      "message": "[Fri 2026-03-27 23:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "research",
+      "agentName": "Scout",
+      "timestamp": 1774666904213,
+      "message": "[Fri 2026-03-27 23:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
       "agentId": "planner",
       "agentName": "Atlas",
       "timestamp": 1774666717628,
@@ -145,7 +159,7 @@
       "agentName": "Joe",
       "timestamp": 1774644314887,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
-      "turns": 72
+      "turns": 76
     },
     {
       "agentId": "video",
@@ -405,20 +419,6 @@
       "timestamp": 1774180200112,
       "message": "[cron:a87d4a99-9f49-40ab-ba1f-9a7f1338ba5b Luis Daily Todo Reminder] Read todo_luis.md. Provide a co",
       "turns": 1
-    },
-    {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1774166820208,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
-    },
-    {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1774080937548,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
     }
   ],
   "digest": [
@@ -478,11 +478,11 @@
     },
     {
       "day": "2026-03-28",
-      "total": 19,
+      "total": 21,
       "byAgent": {
         "sales": 1,
         "planner": 2,
-        "research": 2,
+        "research": 4,
         "signal-chat": 1,
         "social": 2,
         "image-gen": 2,
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774666892369
+  "updatedAt": 1774667192367
 }
