@@ -1,25 +1,25 @@
 {
   "agents": [
     {
-      "id": "analyst",
-      "name": "Nova",
-      "desc": "Data analysis and reporting",
-      "sessionCount": 1,
-      "lastActivity": 1774658747886,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
-      "lastMessage": "[Fri 2026-03-27 20:45 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Ke",
-      "lastModel": "gemini-2.5-flash"
-    },
-    {
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 71,
-      "lastActivity": 1774658744415,
-      "lastActivityAgo": "1m ago",
+      "lastActivity": 1774658856613,
+      "lastActivityAgo": "4m ago",
       "isActive": true,
-      "lastMessage": "[Fri 2026-03-27 20:45 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
+      "lastMessage": "[Fri 2026-03-27 20:47 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Ke",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
+      "id": "analyst",
+      "name": "Nova",
+      "desc": "Data analysis and reporting",
+      "sessionCount": 2,
+      "lastActivity": 1774658853555,
+      "lastActivityAgo": "4m ago",
+      "isActive": true,
+      "lastMessage": "[Fri 2026-03-27 20:47 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -28,7 +28,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774658438930,
-      "lastActivityAgo": "6m ago",
+      "lastActivityAgo": "11m ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
@@ -127,7 +127,7 @@
       "desc": "Image generation tasks",
       "sessionCount": 2,
       "lastActivity": 1774623012089,
-      "lastActivityAgo": "9h ago",
+      "lastActivityAgo": "10h ago",
       "isActive": false,
       "lastMessage": "",
       "lastModel": "delivery-mirror"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774658837365
+  "updatedAt": 1774659137374
 }
