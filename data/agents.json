@@ -5,9 +5,9 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 65,
-      "lastActivity": 1774706418999,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
+      "lastActivity": 1774706400177,
+      "lastActivityAgo": "6m ago",
+      "isActive": false,
       "lastMessage": "[cron:42942ad3-d60c-4ffd-b64d-0417bb23cb70 Daily NBA + MLB Picks] Run the daily picks script and send results to Jose. S",
       "lastModel": "claude-sonnet-4-6"
     },
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774705493145,
-      "lastActivityAgo": "16m ago",
+      "lastActivityAgo": "21m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -50,7 +50,7 @@
       "desc": "Prospecting, cold outreach, follow-ups, pipeline tracking",
       "sessionCount": 2,
       "lastActivity": 1774659710454,
-      "lastActivityAgo": "12h ago",
+      "lastActivityAgo": "13h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -61,7 +61,7 @@
       "desc": "LinkedIn and X content distribution and engagement",
       "sessionCount": 3,
       "lastActivity": 1774659702593,
-      "lastActivityAgo": "12h ago",
+      "lastActivityAgo": "13h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774706491013
+  "updatedAt": 1774706790975
 }
