@@ -226,6 +226,15 @@
       "content": "# Complaint Log\n- Date: 2026-02-24 | User: Luis | Complaint: Henry does not have access to Jose's phone microphone.\n- Date: 2026-02-24 | User: Giovanni | Complaint: Henry did not correctly log the \"Panty Raid\" task.\n- Date: 2026-02-24 | User: Giovanni | Complaint: Henry is being messy with the task lists.\n- Date: 2026-02-24 | User: Giovanni | Complaint: Henry failed to respond to the mention about the group dinner.\n- Date: 2026-02-24 | User: Giovanni | Complaint: Henry's tone is too aggressive for simple requests.\n"
     },
     {
+      "name": "gambling_agent_plan.md",
+      "path": "/openclaw-data/workspace-signal-chat/gambling_agent_plan.md",
+      "category": "Notes",
+      "sizeBytes": 1537,
+      "wordCount": 225,
+      "modifiedAt": 1774671095755.7983,
+      "content": "# Gambling Research Agent Project Plan\n\n## Project Goal\nTo create an app or agent that provides the best educated guesses for sports betting based on extensive gambling research.\n\n## Scope\n\n### Sports:\n*   NBA (National Basketball Association)\n*   MLB (Major League Baseball)\n*   NCAA Men's Basketball (National Collegiate Athletic Association)\n\n### Bet Types:\n*   Moneyline (who wins)\n*   Spread (who wins with a handicap)\n*   Over/Under totals (total points/runs scored)\n*   Player Props (individual player performance)\n\n## Existing Tools & Data:\n*   `/data/.openclaw/workspace-coder/fetch_odds.py`: Python script to fetch historical odds.\n*   `run_fetch_odds.sh`: Shell script to execute `fetch_odds.py` with an API key (already updated).\n*   **Data Source:** The Odds API for historical MLB and NBA odds.\n\n## Next Steps (Initial Phase - Architecture & Data Requirements)\n\n### Subagent Task:\n*   A `dev` subagent has been spawned to:\n    *   Research comprehensive data requirements for all specified sports and bet types.\n    *   Propose a high-level architecture for the gambling research agent.\n\n### Expected Outcome:\n*   Detailed data sources needed (beyond just odds).\n*   A proposed system design for data ingestion, storage, analysis, and prediction.\n\n### Action for Joe:\n*   Monitor the `dev` subagent's progress and integrate its findings into this plan.\n*   Ensure all necessary data points for each bet type and sport are identified and sourced.\n\n---\n\n*This document will be continuously updated as the project progresses.*"
+    },
+    {
       "name": "login-flowchart.excalidraw.md",
       "path": "/openclaw-data/workspace-signal-chat/login-flowchart.excalidraw.md",
       "category": "Notes",
@@ -343,5 +352,5 @@
       "content": "# Todo List: Rene\n"
     }
   ],
-  "updatedAt": 1774671092028
+  "updatedAt": 1774671391832
 }
