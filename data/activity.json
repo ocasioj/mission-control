@@ -3,9 +3,16 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774679318336,
+      "message": "[Queued messages while agent was busy]\n\n---\nQueued #1\nConversation info (untrusted metadata):\n```jso",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774678511233,
       "message": "[Sat 2026-03-28 02:15 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, n",
-      "turns": 2
+      "turns": 5
     },
     {
       "agentId": "signal-chat",
@@ -412,13 +419,6 @@
       "timestamp": 1774317612172,
       "message": "[cron:be4bdecf-fee9-43d8-89b3-a69dc81cbc75 pre-reset-summary-1774317601] Your session is about to re",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774316704262,
-      "message": "[Mon 2026-03-23 21:45 EDT] Iam testing out image remixing",
-      "turns": 9
     }
   ],
   "digest": [
@@ -478,12 +478,12 @@
     },
     {
       "day": "2026-03-28",
-      "total": 27,
+      "total": 28,
       "byAgent": {
         "sales": 1,
         "planner": 4,
         "research": 6,
-        "signal-chat": 3,
+        "signal-chat": 4,
         "social": 2,
         "image-gen": 2,
         "finance": 1,
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774679192385
+  "updatedAt": 1774679492588
 }
