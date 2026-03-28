@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774658742368,
+      "message": "[Fri 2026-03-27 20:45 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774645203775,
       "message": "[cron:c5722016-ddbf-4aa7-8995-79815b2fc702 Revenue Prospecting Agent (Joe)] You are Jose's proactive",
       "turns": 1
@@ -75,7 +82,7 @@
       "agentName": "Nova",
       "timestamp": 1774637844767,
       "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
-      "turns": 3
+      "turns": 6
     },
     {
       "agentId": "signal-chat",
@@ -345,9 +352,11 @@
     },
     {
       "day": "2026-03-28",
-      "total": 0,
-      "byAgent": {}
+      "total": 1,
+      "byAgent": {
+        "signal-chat": 1
+      }
     }
   ],
-  "updatedAt": 1774658466200
+  "updatedAt": 1774658766252
 }
