@@ -1,26 +1,26 @@
 {
   "agents": [
     {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 70,
-      "lastActivity": 1774676485588,
-      "lastActivityAgo": "5s ago",
-      "isActive": true,
-      "lastMessage": "Continue where you left off. The previous model attempt failed or timed out.",
-      "lastModel": "gemini-3-pro-preview"
-    },
-    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
-      "lastActivity": 1774674451885,
-      "lastActivityAgo": "33m ago",
-      "isActive": false,
-      "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
+      "lastActivity": 1774676696063,
+      "lastActivityAgo": "1m ago",
+      "isActive": true,
+      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 70,
+      "lastActivity": 1774676688744,
+      "lastActivityAgo": "1m ago",
+      "isActive": true,
+      "lastMessage": "Continue where you left off. The previous model attempt failed or timed out.",
+      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "planner",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774676490850
+  "updatedAt": 1774676790819
 }
