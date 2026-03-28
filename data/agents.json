@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "main",
+      "name": "Joe (Web)",
+      "desc": "Web chat & group @mention handler",
+      "sessionCount": 7,
+      "lastActivity": 1774665677475,
+      "lastActivityAgo": "13s ago",
+      "isActive": true,
+      "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
+      "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 71,
       "lastActivity": 1774665130812,
-      "lastActivityAgo": "4m ago",
-      "isActive": true,
+      "lastActivityAgo": "9m ago",
+      "isActive": false,
       "lastMessage": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"gateway-client\",\n  \"id\": \"gateway-client\"\n}\n```\n\n[Fri 2026-03-27 22:3",
       "lastModel": "gemini-2.5-flash"
-    },
-    {
-      "id": "main",
-      "name": "Joe (Web)",
-      "desc": "Web chat & group @mention handler",
-      "sessionCount": 7,
-      "lastActivity": 1774662193764,
-      "lastActivityAgo": "53m ago",
-      "isActive": false,
-      "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
-      "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "sales",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774665390811
+  "updatedAt": 1774665690813
 }
