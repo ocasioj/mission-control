@@ -6,8 +6,8 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 73,
       "lastActivity": 1774672561625,
-      "lastActivityAgo": "29s ago",
-      "isActive": true,
+      "lastActivityAgo": "5m ago",
+      "isActive": false,
       "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774672523842\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gemini-2.5-flash"
     },
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774671699798,
-      "lastActivityAgo": "14m ago",
+      "lastActivityAgo": "19m ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
@@ -28,7 +28,7 @@
       "desc": "Trip planning and scheduling",
       "sessionCount": 5,
       "lastActivity": 1774669120794,
-      "lastActivityAgo": "57m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 23:38 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774672590817
+  "updatedAt": 1774672890858
 }
