@@ -1,37 +1,37 @@
 {
   "agents": [
     {
-      "id": "main",
-      "name": "Joe (Web)",
-      "desc": "Web chat & group @mention handler",
-      "sessionCount": 7,
-      "lastActivity": 1774658438930,
-      "lastActivityAgo": "25s ago",
-      "isActive": true,
-      "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
-      "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
       "id": "analyst",
       "name": "Nova",
       "desc": "Data analysis and reporting",
       "sessionCount": 1,
-      "lastActivity": 1774658302833,
-      "lastActivityAgo": "2m ago",
+      "lastActivity": 1774658747886,
+      "lastActivityAgo": "16s ago",
       "isActive": true,
-      "lastMessage": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"gateway-client\",\n  \"id\": \"gateway-client\"\n}\n```\n\n[Fri 2026-03-27 20:3",
+      "lastMessage": "[Fri 2026-03-27 20:45 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Ke",
       "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 70,
-      "lastActivity": 1774655797301,
-      "lastActivityAgo": "44m ago",
-      "isActive": false,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774655789290\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "sessionCount": 71,
+      "lastActivity": 1774658744415,
+      "lastActivityAgo": "20s ago",
+      "isActive": true,
+      "lastMessage": "[Fri 2026-03-27 20:45 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
+    },
+    {
+      "id": "main",
+      "name": "Joe (Web)",
+      "desc": "Web chat & group @mention handler",
+      "sessionCount": 7,
+      "lastActivity": 1774658438930,
+      "lastActivityAgo": "5m ago",
+      "isActive": false,
+      "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
+      "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "video",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774658464442
+  "updatedAt": 1774658764432
 }
