@@ -5,22 +5,44 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 71,
-      "lastActivity": 1774658856613,
-      "lastActivityAgo": "4m ago",
+      "lastActivity": 1774659338233,
+      "lastActivityAgo": "1m ago",
       "isActive": true,
-      "lastMessage": "[Fri 2026-03-27 20:47 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Ke",
+      "lastMessage": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"gateway-client\",\n  \"id\": \"gateway-client\"\n}\n```\n\n[Fri 2026-03-27 20:5",
       "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "analyst",
       "name": "Nova",
       "desc": "Data analysis and reporting",
-      "sessionCount": 2,
-      "lastActivity": 1774658853555,
-      "lastActivityAgo": "4m ago",
+      "sessionCount": 3,
+      "lastActivity": 1774659320659,
+      "lastActivityAgo": "1m ago",
       "isActive": true,
-      "lastMessage": "[Fri 2026-03-27 20:47 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
+      "lastMessage": "[Fri 2026-03-27 20:55 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
+    },
+    {
+      "id": "image-gen",
+      "name": "Pixel",
+      "desc": "Image generation tasks",
+      "sessionCount": 3,
+      "lastActivity": 1774659251418,
+      "lastActivityAgo": "3m ago",
+      "isActive": true,
+      "lastMessage": "[Fri 2026-03-27 20:54 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
+      "lastModel": "gemini-3-flash-preview"
+    },
+    {
+      "id": "research",
+      "name": "Scout",
+      "desc": "Deep research and information retrieval",
+      "sessionCount": 2,
+      "lastActivity": 1774659237440,
+      "lastActivityAgo": "3m ago",
+      "isActive": true,
+      "lastMessage": "[Fri 2026-03-27 20:53 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
+      "lastModel": "gemini-3-pro-preview"
     },
     {
       "id": "main",
@@ -28,7 +50,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774658438930,
-      "lastActivityAgo": "11m ago",
+      "lastActivityAgo": "16m ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "lastModel": "gemini-2.5-flash-lite"
@@ -111,28 +133,6 @@
       "lastModel": "gemini-2.5-flash-lite"
     },
     {
-      "id": "research",
-      "name": "Scout",
-      "desc": "Deep research and information retrieval",
-      "sessionCount": 1,
-      "lastActivity": 1774637859926,
-      "lastActivityAgo": "5h ago",
-      "isActive": false,
-      "lastMessage": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
-      "lastModel": "gemini-3-pro-preview"
-    },
-    {
-      "id": "image-gen",
-      "name": "Pixel",
-      "desc": "Image generation tasks",
-      "sessionCount": 2,
-      "lastActivity": 1774623012089,
-      "lastActivityAgo": "10h ago",
-      "isActive": false,
-      "lastMessage": "",
-      "lastModel": "delivery-mirror"
-    },
-    {
       "id": "coder",
       "name": "Dev",
       "desc": "Software development and code tasks",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774659137374
+  "updatedAt": 1774659437229
 }
