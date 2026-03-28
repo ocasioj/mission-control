@@ -13,12 +13,12 @@
         "message": "Run the daily picks script and send results to Jose. Steps:\n1. Run: `cd /data/.openclaw/workspace-coder && /data/linuxbrew/.linuxbrew/bin/python3 picks.py --sport all --season 2023-24`\n2. Parse the output and format it cleanly\n3. Send it to Jose via Signal: message(action='send', target='+16462458614', message='<formatted picks>')\n\nContext: This is the gambling research agent project. We have NBA + MLB moneyline models trained. The picks script fetches today's odds from The Odds API and runs predictions. Best value picks are those with HIGH confidence AND positive edge.",
         "timeoutSeconds": 300
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-03-28T14:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-03-28T14:00:00.003Z",
+      "nextRunAt": "2026-03-29T14:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 108415,
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774706491556
+  "updatedAt": 1774706791463
 }
