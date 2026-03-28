@@ -5,9 +5,9 @@
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
-      "lastActivity": 1774701893269,
-      "lastActivityAgo": "26m ago",
-      "isActive": false,
+      "lastActivity": 1774703696067,
+      "lastActivityAgo": "1m ago",
+      "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 63,
       "lastActivity": 1774700290141,
-      "lastActivityAgo": "53m ago",
+      "lastActivityAgo": "58m ago",
       "isActive": false,
       "lastMessage": "Continue where you left off. The previous model attempt failed or timed out.",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774703490953
+  "updatedAt": 1774703790940
 }
