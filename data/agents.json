@@ -5,11 +5,11 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 65,
-      "lastActivity": 1774724240099,
-      "lastActivityAgo": "4m ago",
+      "lastActivity": 1774724726482,
+      "lastActivityAgo": "1m ago",
       "isActive": true,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774724199124\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
-      "lastModel": "gemini-2.5-flash"
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774724714928\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastModel": "claude-sonnet-4-6"
     },
     {
       "id": "main",
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774723493897,
-      "lastActivityAgo": "16m ago",
+      "lastActivityAgo": "21m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -50,7 +50,7 @@
       "desc": "Prospecting, cold outreach, follow-ups, pipeline tracking",
       "sessionCount": 2,
       "lastActivity": 1774659710454,
-      "lastActivityAgo": "17h ago",
+      "lastActivityAgo": "18h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -61,7 +61,7 @@
       "desc": "LinkedIn and X content distribution and engagement",
       "sessionCount": 3,
       "lastActivity": 1774659702593,
-      "lastActivityAgo": "17h ago",
+      "lastActivityAgo": "18h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774724490945
+  "updatedAt": 1774724790942
 }
