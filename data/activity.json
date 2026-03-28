@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774691824336,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774691821550\",\n  \"sender_id\": \"+",
+      "turns": 1
+    },
+    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1774685691488,
@@ -13,13 +20,6 @@
       "timestamp": 1774679318336,
       "message": "[Queued messages while agent was busy]\n\n---\nQueued #1\nConversation info (untrusted metadata):\n```jso",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774678511233,
-      "message": "[Sat 2026-03-28 02:15 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, n",
-      "turns": 14
     },
     {
       "agentId": "signal-chat",
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774691792453
+  "updatedAt": 1774692092359
 }
