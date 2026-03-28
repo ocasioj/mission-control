@@ -7428,14 +7428,14 @@
                 });
                 const d = await resp.json();
                 if (d.ok) {
-                    showToast('✅ Message sent to ' + agentId);
+                    showToast('success', 'Message sent to ' + agentId + ' — response coming to Signal');
                     document.getElementById('agent-modal-overlay')?.remove();
                 } else {
-                    showToast('❌ ' + (d.error || 'Failed'));
+                    showToast('error', d.error || 'Failed to send');
                     if (btn) { btn.disabled = false; btn.textContent = '📨 Send'; }
                 }
             } catch(e) {
-                showToast('❌ Network error');
+                showToast('error', 'Network error — check MC server');
                 if (btn) { btn.disabled = false; btn.textContent = '📨 Send'; }
             }
         }
