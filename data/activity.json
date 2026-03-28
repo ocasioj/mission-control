@@ -3,6 +3,13 @@
     {
       "agentId": "research",
       "agentName": "Scout",
+      "timestamp": 1774668874611,
+      "message": "[Fri 2026-03-27 23:34 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "research",
+      "agentName": "Scout",
       "timestamp": 1774668590267,
       "message": "[Fri 2026-03-27 23:29 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
@@ -173,7 +180,7 @@
       "agentName": "Joe",
       "timestamp": 1774644314887,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
-      "turns": 93
+      "turns": 97
     },
     {
       "agentId": "video",
@@ -412,13 +419,6 @@
       "timestamp": 1774238412051,
       "message": "[cron:eb719f71-6630-4bff-8c43-bebe782883f9 pre-reset-summary-1774238402] Your session is about to re",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774231208851,
-      "message": "[cron:11eab809-c6a3-4891-85f8-7bf7ce214c66 pre-reset-summary-1774231201] Your session is about to re",
-      "turns": 1
     }
   ],
   "digest": [
@@ -478,11 +478,11 @@
     },
     {
       "day": "2026-03-28",
-      "total": 23,
+      "total": 24,
       "byAgent": {
         "sales": 1,
         "planner": 3,
-        "research": 5,
+        "research": 6,
         "signal-chat": 1,
         "social": 2,
         "image-gen": 2,
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774668692573
+  "updatedAt": 1774668993274
 }
