@@ -5,7 +5,7 @@
       "agentName": "Joe",
       "timestamp": 1774691824336,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774691821550\",\n  \"sender_id\": \"+",
-      "turns": 8
+      "turns": 10
     },
     {
       "agentId": "main",
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774692392453
+  "updatedAt": 1774692692595
 }
