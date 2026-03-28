@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774694693037,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
+      "lastActivityAgo": "6m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 67,
       "lastActivity": 1774693155351,
-      "lastActivityAgo": "27m ago",
+      "lastActivityAgo": "32m ago",
       "isActive": false,
       "lastMessage": "[Sat 2026-03-28 06:19 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Ke",
       "lastModel": "claude-sonnet-4-6"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774694791074
+  "updatedAt": 1774695090902
 }
