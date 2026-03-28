@@ -18,25 +18,7 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
-    },
-    {
-      "id": "a79a4899-4197-4480-9b6d-a3f618ba6f1e",
-      "name": "pre-reset-summary-1774677601",
-      "schedule": "",
-      "scheduleHuman": "",
-      "timezone": "UTC",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
-      },
-      "lastRunAt": null,
-      "nextRunAt": "2026-03-28T06:00:01.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774677691347
+  "updatedAt": 1774677991666
 }
