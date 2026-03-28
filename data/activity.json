@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774678511233,
+      "message": "[Sat 2026-03-28 02:15 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, n",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774670409967,
       "message": "[cron:434b00fc-eab4-4e30-b2b1-bad14beff4e1 pre-reset-summary-1774670401] Your session is about to re",
       "turns": 1
@@ -292,7 +299,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1774599579148,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 3
+      "turns": 4
     },
     {
       "agentId": "signal-chat",
@@ -412,13 +419,6 @@
       "timestamp": 1774316704262,
       "message": "[Mon 2026-03-23 21:45 EDT] Iam testing out image remixing",
       "turns": 9
-    },
-    {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1774253011777,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
     }
   ],
   "digest": [
@@ -478,12 +478,12 @@
     },
     {
       "day": "2026-03-28",
-      "total": 26,
+      "total": 27,
       "byAgent": {
         "sales": 1,
         "planner": 4,
         "research": 6,
-        "signal-chat": 2,
+        "signal-chat": 3,
         "social": 2,
         "image-gen": 2,
         "finance": 1,
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774678292702
+  "updatedAt": 1774678592532
 }
