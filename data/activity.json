@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "planner",
+      "agentName": "Atlas",
+      "timestamp": 1774667973046,
+      "message": "[Fri 2026-03-27 23:19 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
       "agentId": "research",
       "agentName": "Scout",
       "timestamp": 1774666921480,
@@ -159,7 +166,7 @@
       "agentName": "Joe",
       "timestamp": 1774644314887,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
-      "turns": 80
+      "turns": 82
     },
     {
       "agentId": "video",
@@ -412,13 +419,6 @@
       "timestamp": 1774180500095,
       "message": "[cron:ea15cc17-34c8-4216-ba61-b8552019b0aa Giovanni Daily Todo Reminder] Read todo_giovanni.md. Prov",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774180200112,
-      "message": "[cron:a87d4a99-9f49-40ab-ba1f-9a7f1338ba5b Luis Daily Todo Reminder] Read todo_luis.md. Provide a co",
-      "turns": 1
     }
   ],
   "digest": [
@@ -478,10 +478,10 @@
     },
     {
       "day": "2026-03-28",
-      "total": 21,
+      "total": 22,
       "byAgent": {
         "sales": 1,
-        "planner": 2,
+        "planner": 3,
         "research": 4,
         "signal-chat": 1,
         "social": 2,
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774667792614
+  "updatedAt": 1774668092265
 }
