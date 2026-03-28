@@ -7421,9 +7421,9 @@
             const btn = input.nextElementSibling;
             if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
             try {
-                const resp = await fetch('/api/message-agent', {
+                const resp = await fetch(`${MC_BASE}/api/message-agent`, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'X-Gateway-Token': STATE.gatewayToken || '' },
+                    headers: MC_HEADERS,
                     body: JSON.stringify({ to: agentId, from: 'signal-chat', message }),
                 });
                 const d = await resp.json();
