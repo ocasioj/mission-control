@@ -4,7 +4,7 @@
       "name": "openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
       "state": "running",
-      "status": "Up 3 hours (healthy)"
+      "status": "Up 4 hours (healthy)"
     },
     {
       "name": "openclaw-pa62-openclaw-1",
@@ -14,13 +14,13 @@
     }
   ],
   "disk": {
-    "usedBytes": 64072781824,
-    "availBytes": 38798536704,
+    "usedBytes": 64072929280,
+    "availBytes": 38798389248,
     "totalBytes": 102888095744,
     "percent": 62
   },
   "cronErrors": [],
-  "cronTotal": 1,
+  "cronTotal": 2,
   "gatewayUp": true,
-  "updatedAt": 1774677393120
+  "updatedAt": 1774677692977
 }
