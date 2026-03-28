@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774670609804,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774670607464\",\n  \"sender_id\": \"+",
+      "turns": 4
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774670409967,
       "message": "[cron:434b00fc-eab4-4e30-b2b1-bad14beff4e1 pre-reset-summary-1774670401] Your session is about to re",
       "turns": 1
@@ -188,13 +195,6 @@
       "timestamp": 1774645203775,
       "message": "[cron:c5722016-ddbf-4aa7-8995-79815b2fc702 Revenue Prospecting Agent (Joe)] You are Jose's proactive",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774644314887,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
-      "turns": 114
     },
     {
       "agentId": "video",
@@ -461,12 +461,12 @@
     },
     {
       "day": "2026-03-27",
-      "total": 23,
+      "total": 22,
       "byAgent": {
         "sales": 1,
         "planner": 1,
         "research": 1,
-        "signal-chat": 13,
+        "signal-chat": 12,
         "social": 1,
         "finance": 1,
         "analyst": 1,
@@ -478,12 +478,12 @@
     },
     {
       "day": "2026-03-28",
-      "total": 26,
+      "total": 27,
       "byAgent": {
         "sales": 1,
         "planner": 4,
         "research": 6,
-        "signal-chat": 2,
+        "signal-chat": 3,
         "social": 2,
         "image-gen": 2,
         "finance": 1,
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774670492509
+  "updatedAt": 1774670792798
 }
