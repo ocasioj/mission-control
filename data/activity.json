@@ -3,6 +3,27 @@
     {
       "agentId": "analyst",
       "agentName": "Nova",
+      "timestamp": 1774659318634,
+      "message": "[Fri 2026-03-27 20:55 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "image-gen",
+      "agentName": "Pixel",
+      "timestamp": 1774659249202,
+      "message": "[Fri 2026-03-27 20:54 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "research",
+      "agentName": "Scout",
+      "timestamp": 1774659212843,
+      "message": "[Fri 2026-03-27 20:53 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "analyst",
+      "agentName": "Nova",
       "timestamp": 1774658851771,
       "message": "[Fri 2026-03-27 20:47 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
@@ -26,7 +47,7 @@
       "agentName": "Joe",
       "timestamp": 1774644314887,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
-      "turns": 26
+      "turns": 36
     },
     {
       "agentId": "video",
@@ -359,12 +380,14 @@
     },
     {
       "day": "2026-03-28",
-      "total": 2,
+      "total": 5,
       "byAgent": {
+        "research": 1,
         "signal-chat": 1,
-        "analyst": 1
+        "image-gen": 1,
+        "analyst": 2
       }
     }
   ],
-  "updatedAt": 1774659139025
+  "updatedAt": 1774659438898
 }
