@@ -3,20 +3,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774677610748,
-      "message": "[cron:a79a4899-4197-4480-9b6d-a3f618ba6f1e pre-reset-summary-1774677601] Your session is about to re",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774670609804,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774670607464\",\n  \"sender_id\": \"+",
-      "turns": 52
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774670409967,
       "message": "[cron:434b00fc-eab4-4e30-b2b1-bad14beff4e1 pre-reset-summary-1774670401] Your session is about to re",
       "turns": 1
@@ -419,6 +405,20 @@
       "timestamp": 1774317612172,
       "message": "[cron:be4bdecf-fee9-43d8-89b3-a69dc81cbc75 pre-reset-summary-1774317601] Your session is about to re",
       "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774316704262,
+      "message": "[Mon 2026-03-23 21:45 EDT] Iam testing out image remixing",
+      "turns": 9
+    },
+    {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1774253011777,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
     }
   ],
   "digest": [
@@ -478,12 +478,12 @@
     },
     {
       "day": "2026-03-28",
-      "total": 28,
+      "total": 26,
       "byAgent": {
         "sales": 1,
         "planner": 4,
         "research": 6,
-        "signal-chat": 4,
+        "signal-chat": 2,
         "social": 2,
         "image-gen": 2,
         "finance": 1,
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774677692446
+  "updatedAt": 1774677993059
 }
