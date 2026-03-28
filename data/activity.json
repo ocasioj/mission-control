@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774713611095,
+      "message": "[cron:7022a12c-7d3e-4482-b0e2-8e90da897572 pre-reset-summary-1774713602] Your session is about to re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774706403443,
       "message": "[cron:42942ad3-d60c-4ffd-b64d-0417bb23cb70 Daily NBA + MLB Picks] Run the daily picks script and sen",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1774353000125,
       "message": "[cron:bc3495eb-13fd-4ed7-bcb1-e5e3720ec092 Luis Daily Todo Video Briefing] Read todo_luis.md. Summar",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774332008947,
-      "message": "[cron:1ad3d5d9-df53-4018-8e86-1f2be4ce6875 pre-reset-summary-1774332001] Your session is about to re",
-      "turns": 1
     }
   ],
   "digest": [
@@ -477,12 +477,12 @@
     },
     {
       "day": "2026-03-28",
-      "total": 30,
+      "total": 31,
       "byAgent": {
         "sales": 1,
         "planner": 4,
         "research": 6,
-        "signal-chat": 5,
+        "signal-chat": 6,
         "social": 2,
         "image-gen": 2,
         "finance": 1,
@@ -494,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774713392845
+  "updatedAt": 1774713692744
 }
