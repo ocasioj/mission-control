@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "planner",
+      "agentName": "Atlas",
+      "timestamp": 1774666717628,
+      "message": "[Fri 2026-03-27 22:58 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
       "agentId": "sales",
       "agentName": "Closer",
       "timestamp": 1774659708340,
@@ -138,7 +145,7 @@
       "agentName": "Joe",
       "timestamp": 1774644314887,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774644311311\",\n  \"sender_id\": \"+",
-      "turns": 70
+      "turns": 72
     },
     {
       "agentId": "video",
@@ -471,10 +478,10 @@
     },
     {
       "day": "2026-03-28",
-      "total": 18,
+      "total": 19,
       "byAgent": {
         "sales": 1,
-        "planner": 1,
+        "planner": 2,
         "research": 2,
         "signal-chat": 1,
         "social": 2,
@@ -487,5 +494,5 @@
       }
     }
   ],
-  "updatedAt": 1774666592428
+  "updatedAt": 1774666892369
 }
