@@ -1,4 +1,24 @@
 {
-  "crons": [],
-  "updatedAt": 1774674391222
+  "crons": [
+    {
+      "id": "42942ad3-d60c-4ffd-b64d-0417bb23cb70",
+      "name": "Daily NBA + MLB Picks",
+      "schedule": "0 10 * * *",
+      "scheduleHuman": "0 10 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the daily picks script and send results to Jose. Steps:\n1. Run: `cd /data/.openclaw/workspace-coder && /data/linuxbrew/.linuxbrew/bin/python3 picks.py --sport all --season 2023-24`\n2. Parse the output and format it cleanly\n3. Send it to Jose via Signal: message(action='send', target='+16462458614', message='<formatted picks>')\n\nContext: This is the gambling research agent project. We have NBA + MLB moneyline models trained. The picks script fetches today's odds from The Odds API and runs predictions. Best value picks are those with HIGH confidence AND positive edge.",
+        "timeoutSeconds": 300
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-03-28T14:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    }
+  ],
+  "updatedAt": 1774674691345
 }
