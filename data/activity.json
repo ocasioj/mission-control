@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774792802953,
+      "message": "[cron:42942ad3-d60c-4ffd-b64d-0417bb23cb70 Daily NBA + MLB Picks] Run the daily picks script and sen",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774791204307,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774791201673\",\n  \"sender_id\": \"+",
       "turns": 6
@@ -412,13 +419,6 @@
       "timestamp": 1774332008947,
       "message": "[cron:1ad3d5d9-df53-4018-8e86-1f2be4ce6875 pre-reset-summary-1774332001] Your session is about to re",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774317612172,
-      "message": "[cron:be4bdecf-fee9-43d8-89b3-a69dc81cbc75 pre-reset-summary-1774317601] Your session is about to re",
-      "turns": 1
     }
   ],
   "digest": [
@@ -486,12 +486,12 @@
     },
     {
       "day": "2026-03-29",
-      "total": 3,
+      "total": 4,
       "byAgent": {
-        "signal-chat": 2,
+        "signal-chat": 3,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774792593187
+  "updatedAt": 1774792892805
 }
