@@ -3,9 +3,16 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774821603553,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774807531240,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774807528608\",\n  \"sender_id\": \"+",
-      "turns": 56
+      "turns": 57
     },
     {
       "agentId": "signal-chat",
@@ -412,13 +419,6 @@
       "timestamp": 1774353300105,
       "message": "[cron:973d6718-4497-49a2-84e7-e01b79d20958 Giovanni Daily Todo Video Briefing] Read todo_giovanni.md",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774353000125,
-      "message": "[cron:bc3495eb-13fd-4ed7-bcb1-e5e3720ec092 Luis Daily Todo Video Briefing] Read todo_luis.md. Summar",
-      "turns": 1
     }
   ],
   "digest": [
@@ -486,12 +486,12 @@
     },
     {
       "day": "2026-03-29",
-      "total": 5,
+      "total": 6,
       "byAgent": {
-        "signal-chat": 4,
+        "signal-chat": 5,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774821392949
+  "updatedAt": 1774821692925
 }
