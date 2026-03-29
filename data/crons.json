@@ -89,12 +89,31 @@
         "message": "Run the sharp money alert script and report results: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py",
         "timeoutSeconds": 60
       },
-      "lastRunAt": "2026-03-29T22:30:00.003Z",
-      "nextRunAt": "2026-03-29T23:00:00.000Z",
+      "lastRunAt": "2026-03-29T23:00:00.002Z",
+      "nextRunAt": "2026-03-29T23:30:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 18501,
+      "lastDurationMs": 16285,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "ec94eafa-e7d2-4304-aca7-db1a1c09dfc5",
+      "name": "Dashboard Data Refresh",
+      "schedule": "0 8 * * *",
+      "scheduleHuman": "0 8 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Refresh the gambling dashboard data. Run: cd /data/.openclaw/workspace-coder/dashboard && python3 generate_dashboard_data.py. Report any errors if it fails.",
+        "timeoutSeconds": 60
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-03-30T12:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774824991715
+  "updatedAt": 1774825291593
 }
