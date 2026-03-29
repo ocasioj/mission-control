@@ -37,7 +37,26 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "0da84fc9-a8d8-4bfc-93e8-c25a031ba095",
+      "name": "Gambling Agent Model Retraining",
+      "schedule": "0 4 * * 1",
+      "scheduleHuman": "0 4 * * 1",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "timeoutSeconds": 300,
+        "kind": "agentTurn",
+        "message": "Run the weekly model retraining pipeline: cd /data/.openclaw/workspace-coder && bash retrain_pipeline.sh. Report any errors if it fails."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-03-30T08:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774753591571
+  "updatedAt": 1774753891618
 }
