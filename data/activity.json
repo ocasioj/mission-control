@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774789202365,
+      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
+      "turns": 2
+    },
+    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1774772091485,
@@ -412,13 +419,6 @@
       "timestamp": 1774316704262,
       "message": "[Mon 2026-03-23 21:45 EDT] Iam testing out image remixing",
       "turns": 9
-    },
-    {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1774253011777,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
     }
   ],
   "digest": [
@@ -486,11 +486,12 @@
     },
     {
       "day": "2026-03-29",
-      "total": 1,
+      "total": 2,
       "byAgent": {
+        "signal-chat": 1,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774788992766
+  "updatedAt": 1774789293356
 }
