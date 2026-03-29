@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 70,
+      "lastActivity": 1774824659943,
+      "lastActivityAgo": "31s ago",
+      "isActive": true,
+      "lastMessage": "[Sun 2026-03-29 18:50 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Ke",
+      "lastModel": "claude-sonnet-4-6"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774824293566,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
+      "lastActivityAgo": "6m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 70,
-      "lastActivity": 1774823924098,
-      "lastActivityAgo": "7m ago",
-      "isActive": false,
-      "lastMessage": "[Sun 2026-03-29 18:38 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Ke",
-      "lastModel": "claude-sonnet-4-6"
     },
     {
       "id": "planner",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774824391409
+  "updatedAt": 1774824691186
 }
