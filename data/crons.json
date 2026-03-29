@@ -113,7 +113,26 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c",
+      "name": "Auto-Result Logging + CLV",
+      "schedule": "0 7 * * *",
+      "scheduleHuman": "0 7 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the auto-result logging script to settle pending bets and update CLV. Execute: cd /data/.openclaw/workspace-coder && python3 auto_results.py --days 3. If any bets were settled, send Jose a brief Signal summary with the results and net P/L. If no bets to settle, run silently with no message.",
+        "timeoutSeconds": 120
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-03-30T09:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774827991685
+  "updatedAt": 1774828292127
 }
