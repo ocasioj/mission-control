@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774827002765,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774825202162,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1774411006020,
       "message": "[cron:9ce79520-cab2-4c0b-9a67-3e6bc8d468da Mission Control UI Update Status] The dev agent is still ",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774396474373,
-      "message": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"gateway-client\",\n  \"id\": \"gateway-client\"\n}\n```\n\n",
-      "turns": 15
     }
   ],
   "digest": [
@@ -486,12 +486,12 @@
     },
     {
       "day": "2026-03-29",
-      "total": 8,
+      "total": 9,
       "byAgent": {
-        "signal-chat": 7,
+        "signal-chat": 8,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774826792941
+  "updatedAt": 1774827093225
 }
