@@ -3,16 +3,16 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774821603553,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
+      "timestamp": 1774821848219,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774821846119\",\n  \"sender_id\": \"+",
+      "turns": 2
     },
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774807531240,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774807528608\",\n  \"sender_id\": \"+",
-      "turns": 57
+      "timestamp": 1774821603553,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
     },
     {
       "agentId": "signal-chat",
@@ -493,5 +493,5 @@
       }
     }
   ],
-  "updatedAt": 1774821692925
+  "updatedAt": 1774821992843
 }
