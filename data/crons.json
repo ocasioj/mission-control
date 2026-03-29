@@ -18,7 +18,26 @@
       "lastStatus": "ok",
       "lastDurationMs": 108415,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "b68ad8d3-2b94-425f-9a97-d5ab979e5a93",
+      "name": "Daily Gambling Picks → Signal",
+      "schedule": "0 9 * * *",
+      "scheduleHuman": "0 9 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the daily gambling picks and send them to Jose via Signal. Execute: cd /data/.openclaw/workspace-coder && python3 send_picks_signal.py. Report any errors if the script fails.",
+        "timeoutSeconds": 120
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-03-29T13:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774752691631
+  "updatedAt": 1774752991565
 }
