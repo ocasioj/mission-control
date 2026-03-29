@@ -3,16 +3,9 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774749610881,
-      "message": "[cron:ec31a96f-da0a-4bf9-bfef-e6368224d3e6 pre-reset-summary-1774749601] Your session is about to re",
+      "timestamp": 1774749980343,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774749978051\",\n  \"sender_id\": \"+",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774724201803,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774724199124\",\n  \"sender_id\": \"+",
-      "turns": 32
     },
     {
       "agentId": "signal-chat",
@@ -419,6 +412,13 @@
       "timestamp": 1774353000125,
       "message": "[cron:bc3495eb-13fd-4ed7-bcb1-e5e3720ec092 Luis Daily Todo Video Briefing] Read todo_luis.md. Summar",
       "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774332008947,
+      "message": "[cron:1ad3d5d9-df53-4018-8e86-1f2be4ce6875 pre-reset-summary-1774332001] Your session is about to re",
+      "turns": 1
     }
   ],
   "digest": [
@@ -469,12 +469,12 @@
     },
     {
       "day": "2026-03-28",
-      "total": 30,
+      "total": 29,
       "byAgent": {
         "sales": 1,
         "planner": 4,
         "research": 6,
-        "signal-chat": 5,
+        "signal-chat": 4,
         "social": 2,
         "image-gen": 2,
         "finance": 1,
@@ -493,5 +493,5 @@
       }
     }
   ],
-  "updatedAt": 1774749692727
+  "updatedAt": 1774749992576
 }
