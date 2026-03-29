@@ -5,10 +5,10 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 72,
-      "lastActivity": 1774827977755,
-      "lastActivityAgo": "13s ago",
+      "lastActivity": 1774828136796,
+      "lastActivityAgo": "2m ago",
       "isActive": true,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774827928690\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastMessage": "[Sun 2026-03-29 19:48 EDT] OpenClaw runtime context (internal):\nThis context is runtime-generated, not user-authored. Ke",
       "lastModel": "claude-sonnet-4-6"
     },
     {
@@ -17,8 +17,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774827892314,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
+      "lastActivityAgo": "6m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774827991223
+  "updatedAt": 1774828291332
 }
