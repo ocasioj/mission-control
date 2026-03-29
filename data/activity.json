@@ -5,14 +5,7 @@
       "agentName": "Joe",
       "timestamp": 1774749980343,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774749978051\",\n  \"sender_id\": \"+",
-      "turns": 8
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774706403443,
-      "message": "[cron:42942ad3-d60c-4ffd-b64d-0417bb23cb70 Daily NBA + MLB Picks] Run the daily picks script and sen",
-      "turns": 1
+      "turns": 9
     },
     {
       "agentId": "main",
@@ -26,13 +19,6 @@
       "agentName": "Joe",
       "timestamp": 1774679318336,
       "message": "[Queued messages while agent was busy]\n\n---\nQueued #1\nConversation info (untrusted metadata):\n```jso",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774670409967,
-      "message": "[cron:434b00fc-eab4-4e30-b2b1-bad14beff4e1 pre-reset-summary-1774670401] Your session is about to re",
       "turns": 1
     },
     {
@@ -419,6 +405,20 @@
       "timestamp": 1774332008947,
       "message": "[cron:1ad3d5d9-df53-4018-8e86-1f2be4ce6875 pre-reset-summary-1774332001] Your session is about to re",
       "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774317612172,
+      "message": "[cron:be4bdecf-fee9-43d8-89b3-a69dc81cbc75 pre-reset-summary-1774317601] Your session is about to re",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774316704262,
+      "message": "[Mon 2026-03-23 21:45 EDT] Iam testing out image remixing",
+      "turns": 9
     }
   ],
   "digest": [
@@ -469,12 +469,12 @@
     },
     {
       "day": "2026-03-28",
-      "total": 29,
+      "total": 27,
       "byAgent": {
         "sales": 1,
         "planner": 4,
         "research": 6,
-        "signal-chat": 4,
+        "signal-chat": 2,
         "social": 2,
         "image-gen": 2,
         "finance": 1,
@@ -493,5 +493,5 @@
       }
     }
   ],
-  "updatedAt": 1774752992634
+  "updatedAt": 1774753292693
 }
