@@ -10,17 +10,17 @@
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/hostinger/hvps-openclaw@sha256:c677c4994dfc34827e99f422f672e7164e0a82716182874fdef5967de02747ea",
       "state": "running",
-      "status": "Up 20 hours (healthy)"
+      "status": "Up 21 hours (healthy)"
     }
   ],
   "disk": {
-    "usedBytes": 65262985216,
-    "availBytes": 37608333312,
+    "usedBytes": 65263058944,
+    "availBytes": 37608259584,
     "totalBytes": 102888095744,
     "percent": 63
   },
   "cronErrors": [],
   "cronTotal": 1,
   "gatewayUp": true,
-  "updatedAt": 1774746093412
+  "updatedAt": 1774746393281
 }
