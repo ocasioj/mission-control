@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774876284682,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774876281842\",\n  \"sender_id\": \"+",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774875661353,
       "message": "[cron:ce11b760-f125-4828-aee0-aadbd29e4c37 Daily Gambling Picks] Run the daily gambling picks and se",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1774623600486,
       "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774614300103,
-      "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
-      "turns": 1
     }
   ],
   "digest": [
@@ -485,12 +485,12 @@
     },
     {
       "day": "2026-03-30",
-      "total": 16,
+      "total": 17,
       "byAgent": {
-        "signal-chat": 15,
+        "signal-chat": 16,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774875993700
+  "updatedAt": 1774876293684
 }
