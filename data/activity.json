@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774886404550,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774876284682,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774876281842\",\n  \"sender_id\": \"+",
       "turns": 27
@@ -412,13 +419,6 @@
       "timestamp": 1774637844767,
       "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
       "turns": 6
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774623600486,
-      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
-      "turns": 1
     }
   ],
   "digest": [
@@ -485,12 +485,12 @@
     },
     {
       "day": "2026-03-30",
-      "total": 17,
+      "total": 18,
       "byAgent": {
-        "signal-chat": 16,
+        "signal-chat": 17,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774886193725
+  "updatedAt": 1774886493749
 }
