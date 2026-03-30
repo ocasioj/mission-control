@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774854320161,
-      "lastActivityAgo": "16m ago",
+      "lastActivityAgo": "21m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -138,11 +138,11 @@
       "desc": "Software development and code tasks",
       "sessionCount": 1,
       "lastActivity": 1771917768200,
-      "lastActivityAgo": "33d ago",
+      "lastActivityAgo": "34d ago",
       "isActive": false,
       "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"604f90f6-947d-485f-8ff0-0d6992d47b8f\",\n  \"sender\": \"o",
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774855291406
+  "updatedAt": 1774855591422
 }
