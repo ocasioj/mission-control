@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774841402301,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774839602522,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
@@ -40,7 +47,7 @@
       "agentName": "Joe",
       "timestamp": 1774832217100,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774832214401\",\n  \"sender_id\": \"+",
-      "turns": 13
+      "turns": 15
     },
     {
       "agentId": "signal-chat",
@@ -412,13 +419,6 @@
       "timestamp": 1774594800282,
       "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774594200202,
-      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
-      "turns": 1
     }
   ],
   "digest": [
@@ -486,11 +486,11 @@
     },
     {
       "day": "2026-03-30",
-      "total": 8,
+      "total": 9,
       "byAgent": {
-        "signal-chat": 8
+        "signal-chat": 9
       }
     }
   ],
-  "updatedAt": 1774841193064
+  "updatedAt": 1774841493161
 }
