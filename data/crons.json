@@ -59,7 +59,7 @@
     },
     {
       "id": "ec94eafa-e7d2-4304-aca7-db1a1c09dfc5",
-      "name": "Dashboard Data Refresh",
+      "name": "Dashboard Data Refresh + GitHub Push",
       "schedule": "0 8 * * *",
       "scheduleHuman": "0 8 * * *",
       "timezone": "America/New_York",
@@ -67,8 +67,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Refresh the gambling dashboard data. Run: cd /data/.openclaw/workspace-coder/dashboard && python3 generate_dashboard_data.py. Report any errors if it fails.",
-        "timeoutSeconds": 60
+        "message": "Refresh the gambling dashboard and push to GitHub. Run: /data/.openclaw/workspace-coder/dashboard/push_dashboard.sh. Report any errors if it fails.",
+        "timeoutSeconds": 120
       },
       "lastRunAt": "2026-03-30T12:00:00.005Z",
       "nextRunAt": "2026-03-31T12:00:00.000Z",
@@ -94,7 +94,26 @@
       "lastStatus": "ok",
       "lastDurationMs": 9617,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "402cdbe8-4933-4c2d-94c0-292ae8b24100",
+      "name": "Weekly P&L Report",
+      "schedule": "0 20 * * 0",
+      "scheduleHuman": "0 20 * * 0",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the weekly gambling P&L report and send it to Jose: cd /data/.openclaw/workspace-coder && python3 weekly_report.py. Report any errors if it fails.",
+        "timeoutSeconds": 60
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-06T00:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774903292177
+  "updatedAt": 1774903592169
 }
