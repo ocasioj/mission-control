@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 76,
+      "lastActivity": 1774832400006,
+      "lastActivityAgo": "1m ago",
+      "isActive": true,
+      "lastMessage": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script and report results:",
+      "lastModel": "claude-sonnet-4-6"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774831497287,
-      "lastActivityAgo": "11m ago",
+      "lastActivityAgo": "16m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 74,
-      "lastActivity": 1774830600004,
-      "lastActivityAgo": "26m ago",
-      "isActive": false,
-      "lastMessage": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script and report results:",
-      "lastModel": "claude-sonnet-4-6"
     },
     {
       "id": "planner",
@@ -72,7 +72,7 @@
       "desc": "Customer support, issue logging, response drafts",
       "sessionCount": 2,
       "lastActivity": 1774659646727,
-      "lastActivityAgo": "1d ago",
+      "lastActivityAgo": "2d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -83,7 +83,7 @@
       "desc": "YouTube video pipeline — script, HeyGen, thumbnail, publish",
       "sessionCount": 2,
       "lastActivity": 1774659641525,
-      "lastActivityAgo": "1d ago",
+      "lastActivityAgo": "2d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
@@ -94,7 +94,7 @@
       "desc": "SaaS metrics, revenue, expenses, and burn rate",
       "sessionCount": 2,
       "lastActivity": 1774659634858,
-      "lastActivityAgo": "1d ago",
+      "lastActivityAgo": "2d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -105,7 +105,7 @@
       "desc": "Image generation tasks",
       "sessionCount": 4,
       "lastActivity": 1774659619798,
-      "lastActivityAgo": "1d ago",
+      "lastActivityAgo": "2d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-3-flash-preview"
@@ -116,7 +116,7 @@
       "desc": "Content writing and copywriting",
       "sessionCount": 3,
       "lastActivity": 1774659613966,
-      "lastActivityAgo": "1d ago",
+      "lastActivityAgo": "2d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -127,7 +127,7 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 5,
       "lastActivity": 1774659591006,
-      "lastActivityAgo": "1d ago",
+      "lastActivityAgo": "2d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 20:59 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774832191252
+  "updatedAt": 1774832491311
 }
