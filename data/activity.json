@@ -33,7 +33,7 @@
       "agentName": "Joe",
       "timestamp": 1774832217100,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774832214401\",\n  \"sender_id\": \"+",
-      "turns": 6
+      "turns": 7
     },
     {
       "agentId": "signal-chat",
@@ -492,5 +492,5 @@
       }
     }
   ],
-  "updatedAt": 1774838193139
+  "updatedAt": 1774838493555
 }
