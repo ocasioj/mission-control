@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774837803213,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774836003290,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1774584004072,
       "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774584000108,
-      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily Billing Update (Joe)] Run this exact command and re",
-      "turns": 1
     }
   ],
   "digest": [
@@ -486,11 +486,11 @@
     },
     {
       "day": "2026-03-30",
-      "total": 6,
+      "total": 7,
       "byAgent": {
-        "signal-chat": 6
+        "signal-chat": 7
       }
     }
   ],
-  "updatedAt": 1774837593020
+  "updatedAt": 1774837892931
 }
