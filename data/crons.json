@@ -51,10 +51,10 @@
         "message": "Run the sharp money alert script and report results: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py",
         "timeoutSeconds": 60
       },
-      "lastRunAt": "2026-03-30T18:00:00.002Z",
-      "nextRunAt": "2026-03-30T19:00:00.000Z",
+      "lastRunAt": "2026-03-30T19:00:00.003Z",
+      "nextRunAt": "2026-03-30T20:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 17154,
+      "lastDurationMs": 16040,
       "consecutiveErrors": 0
     },
     {
@@ -96,5 +96,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774896992135
+  "updatedAt": 1774897292225
 }
