@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774857602969,
+      "message": "[cron:0da84fc9-a8d8-4bfc-93e8-c25a031ba095 Gambling Agent Model Retraining] Run the weekly model ret",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774850411006,
       "message": "[cron:da774dc3-dbdc-4f09-a994-d507be6d32f9 pre-reset-summary-1774850402] Your session is about to re",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1774595400083,
       "message": "[cron:804004cf-3ce2-4427-a060-d336b08398b0 Daily Backup Configs] Run a safe backup: copy /data/.open",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774594800282,
-      "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
-      "turns": 1
     }
   ],
   "digest": [
@@ -486,11 +486,11 @@
     },
     {
       "day": "2026-03-30",
-      "total": 9,
+      "total": 10,
       "byAgent": {
-        "signal-chat": 9
+        "signal-chat": 10
       }
     }
   ],
-  "updatedAt": 1774857393151
+  "updatedAt": 1774857693306
 }
