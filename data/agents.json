@@ -4,11 +4,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 75,
-      "lastActivity": 1774828827203,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
-      "lastMessage": "[cron:00c5ca4d-4c6b-4c08-87d9-ac06c7644159 pre-reset-summary-1774828802] Your session is about to reset due to size. Qui",
+      "sessionCount": 73,
+      "lastActivity": 1774828825171,
+      "lastActivityAgo": "6m ago",
+      "isActive": false,
+      "lastMessage": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script and report results:",
       "lastModel": "claude-sonnet-4-6"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774827892314,
-      "lastActivityAgo": "16m ago",
+      "lastActivityAgo": "21m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774828891323
+  "updatedAt": 1774829191230
 }
