@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "main",
+      "name": "Joe (Web)",
+      "desc": "Web chat & group @mention handler",
+      "sessionCount": 7,
+      "lastActivity": 1774872318709,
+      "lastActivityAgo": "1m ago",
+      "isActive": true,
+      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
+      "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 88,
       "lastActivity": 1774872000110,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
+      "lastActivityAgo": "6m ago",
+      "isActive": false,
       "lastMessage": "[cron:ec94eafa-e7d2-4304-aca7-db1a1c09dfc5 Dashboard Data Refresh] Refresh the gambling dashboard data. Run: cd /data/.o",
       "lastModel": "claude-sonnet-4-6"
-    },
-    {
-      "id": "main",
-      "name": "Joe (Web)",
-      "desc": "Web chat & group @mention handler",
-      "sessionCount": 7,
-      "lastActivity": 1774870518919,
-      "lastActivityAgo": "26m ago",
-      "isActive": false,
-      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
-      "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "planner",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774872093807
+  "updatedAt": 1774872391501
 }
