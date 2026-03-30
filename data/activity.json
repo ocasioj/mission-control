@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774861202357,
+      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
+      "turns": 1
+    },
+    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1774857917831,
@@ -412,13 +419,6 @@
       "timestamp": 1774609200182,
       "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774595400083,
-      "message": "[cron:804004cf-3ce2-4427-a060-d336b08398b0 Daily Backup Configs] Run a safe backup: copy /data/.open",
-      "turns": 1
     }
   ],
   "digest": [
@@ -485,12 +485,12 @@
     },
     {
       "day": "2026-03-30",
-      "total": 11,
+      "total": 12,
       "byAgent": {
-        "signal-chat": 10,
+        "signal-chat": 11,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774860993745
+  "updatedAt": 1774861293453
 }
