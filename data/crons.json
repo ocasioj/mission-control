@@ -108,10 +108,10 @@
         "message": "Refresh the gambling dashboard data. Run: cd /data/.openclaw/workspace-coder/dashboard && python3 generate_dashboard_data.py. Report any errors if it fails.",
         "timeoutSeconds": 60
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-03-30T12:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-03-30T12:00:00.005Z",
+      "nextRunAt": "2026-03-31T12:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 12009,
       "consecutiveErrors": 0
     },
     {
@@ -134,5 +134,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774871792093
+  "updatedAt": 1774872096399
 }
