@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1774875661353,
+      "message": "[cron:ce11b760-f125-4828-aee0-aadbd29e4c37 Daily Gambling Picks] Run the daily gambling picks and se",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774875602652,
+      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1774872003324,
       "message": "[cron:ec94eafa-e7d2-4304-aca7-db1a1c09dfc5 Dashboard Data Refresh] Refresh the gambling dashboard da",
       "turns": 1
@@ -138,13 +152,6 @@
       "agentName": "Joe",
       "timestamp": 1774792802953,
       "message": "[cron:42942ad3-d60c-4ffd-b64d-0417bb23cb70 Daily NBA + MLB Picks] Run the daily picks script and sen",
-      "turns": 2
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774789202365,
-      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
       "turns": 2
     },
     {
@@ -412,13 +419,6 @@
       "timestamp": 1774614300103,
       "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774613700120,
-      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
-      "turns": 1
     }
   ],
   "digest": [
@@ -478,19 +478,19 @@
     },
     {
       "day": "2026-03-29",
-      "total": 7,
+      "total": 6,
       "byAgent": {
-        "signal-chat": 7
+        "signal-chat": 6
       }
     },
     {
       "day": "2026-03-30",
-      "total": 14,
+      "total": 16,
       "byAgent": {
-        "signal-chat": 13,
+        "signal-chat": 15,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1774875393745
+  "updatedAt": 1774875693913
 }
