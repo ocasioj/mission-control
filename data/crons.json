@@ -58,25 +58,6 @@
       "consecutiveErrors": 1
     },
     {
-      "id": "ce11b760-f125-4828-aee0-aadbd29e4c37",
-      "name": "Daily Gambling Picks",
-      "schedule": "0 9 * * *",
-      "scheduleHuman": "0 9 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run the daily gambling picks and send them to Jose via Signal. Execute this command: cd /data/.openclaw/workspace-coder && python3 send_picks_signal.py. Report back with the output.",
-        "timeoutSeconds": 120
-      },
-      "lastRunAt": "2026-03-30T13:00:59.402Z",
-      "nextRunAt": "2026-03-31T13:00:00.000Z",
-      "lastStatus": "ok",
-      "lastDurationMs": 21389,
-      "consecutiveErrors": 0
-    },
-    {
       "id": "441e0c46-57a4-4e8a-947b-95fde9dedb5e",
       "name": "Sharp Money Line Alerts",
       "schedule": "*/30 12-23 * * *",
@@ -134,5 +115,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774876592608
+  "updatedAt": 1774876892556
 }
