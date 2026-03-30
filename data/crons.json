@@ -41,8 +41,8 @@
     {
       "id": "441e0c46-57a4-4e8a-947b-95fde9dedb5e",
       "name": "Sharp Money Line Alerts",
-      "schedule": "*/30 12-23 * * *",
-      "scheduleHuman": "*/30 12-23 * * *",
+      "schedule": "0 12-23 * * *",
+      "scheduleHuman": "0 12-23 * * *",
       "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
@@ -96,5 +96,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774880792486
+  "updatedAt": 1774881092429
 }
