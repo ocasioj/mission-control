@@ -127,12 +127,12 @@
         "message": "Run the auto-result logging script to settle pending bets and update CLV. Execute: cd /data/.openclaw/workspace-coder && python3 auto_results.py --days 3. If any bets were settled, send Jose a brief Signal summary with the results and net P/L. If no bets to settle, run silently with no message.",
         "timeoutSeconds": 120
       },
-      "lastRunAt": "2026-03-30T09:00:00.003Z",
-      "nextRunAt": "2026-03-30T11:00:00.000Z",
+      "lastRunAt": "2026-03-30T11:00:00.003Z",
+      "nextRunAt": "2026-03-31T11:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 9264,
+      "lastDurationMs": 9617,
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774868192026
+  "updatedAt": 1774868492163
 }
