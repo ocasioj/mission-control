@@ -5,10 +5,10 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 95,
-      "lastActivity": 1774902943916,
-      "lastActivityAgo": "47s ago",
+      "lastActivity": 1774903272317,
+      "lastActivityAgo": "19s ago",
       "isActive": true,
-      "lastMessage": "System: [2026-03-30 16:33:12 EDT] Gateway restart restart ok (gateway.restart)\nSystem: GitHub token updated with repo sc",
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774903269831\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "claude-sonnet-4-6"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1774901132851,
-      "lastActivityAgo": "30m ago",
+      "lastActivityAgo": "35m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1774902991620
+  "updatedAt": 1774903291552
 }
