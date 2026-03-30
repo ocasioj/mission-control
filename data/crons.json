@@ -32,10 +32,10 @@
         "message": "Run the daily gambling picks and send them to Jose via Signal. Execute: cd /data/.openclaw/workspace-coder && python3 send_picks_signal.py. Report any errors if the script fails.",
         "timeoutSeconds": 120
       },
-      "lastRunAt": "2026-03-29T13:00:00.004Z",
-      "nextRunAt": "2026-03-30T13:00:00.000Z",
+      "lastRunAt": "2026-03-30T13:00:00.003Z",
+      "nextRunAt": "2026-03-31T13:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 21207,
+      "lastDurationMs": 59399,
       "consecutiveErrors": 0
     },
     {
@@ -70,10 +70,10 @@
         "message": "Run the daily gambling picks and send them to Jose via Signal. Execute this command: cd /data/.openclaw/workspace-coder && python3 send_picks_signal.py. Report back with the output.",
         "timeoutSeconds": 120
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-03-30T13:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-03-30T13:00:59.402Z",
+      "nextRunAt": "2026-03-31T13:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 21389,
       "consecutiveErrors": 0
     },
     {
@@ -134,5 +134,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774875392167
+  "updatedAt": 1774875692235
 }
