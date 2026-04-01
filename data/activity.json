@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775048402342,
+      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775046302085,
       "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
       "turns": 2
@@ -412,13 +419,6 @@
       "timestamp": 1774658742368,
       "message": "[Fri 2026-03-27 20:45 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774645203775,
-      "message": "[cron:c5722016-ddbf-4aa7-8995-79815b2fc702 Revenue Prospecting Agent (Joe)] You are Jose's proactive",
-      "turns": 1
     }
   ],
   "digest": [
@@ -485,12 +485,12 @@
     },
     {
       "day": "2026-04-01",
-      "total": 17,
+      "total": 18,
       "byAgent": {
-        "signal-chat": 16,
+        "signal-chat": 17,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775048194543
+  "updatedAt": 1775048494327
 }
