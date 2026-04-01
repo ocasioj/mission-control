@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 69042970624,
-    "availBytes": 33828347904,
+    "usedBytes": 69043097600,
+    "availBytes": 33828220928,
     "totalBytes": 102888095744,
     "percent": 67
   },
@@ -29,11 +29,15 @@
       "errors": 1
     },
     {
+      "name": "HeyGen DLQ/Retry Daily Report",
+      "errors": 1
+    },
+    {
       "name": "Gambling Agent Model Retraining",
       "errors": 1
     }
   ],
   "cronTotal": 23,
   "gatewayUp": true,
-  "updatedAt": 1775026594819
+  "updatedAt": 1775026894490
 }
