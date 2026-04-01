@@ -139,10 +139,10 @@
       "name": "API_USAGE.md",
       "path": "/openclaw-data/workspace-signal-chat/API_USAGE.md",
       "category": "Notes",
-      "sizeBytes": 722,
-      "wordCount": 108,
-      "modifiedAt": 1775084217399.5005,
-      "content": "# API Usage — April 2026\n\nLast updated: 2026-04-01 18:56 EDT\n\n```\nAPI Usage Meter — 2026-04-01\n\nAI Tokens (today | month-to-date):\n  Anthropic    $9.72 today | $9.72 mtd  [budget $20] (est.)\n  OpenAI       $0.00 today | $0.00 mtd  [budget $20] (est.)\n  Google       $0.09 today | $0.09 mtd  [budget $10] (est.)\n\nLive APIs:\n  OpenRouter  : $1.64 used (no cap)\n  ElevenLabs  : 1,312 / 36,998 chars | next $5.42 (resets Apr 24)\n  Odds API    : 784 / 20,000 requests\n  HeyGen      : 507 credits remaining\n  Brave Search: no monthly cap on current plan\n  Twitter/X   : 1,760 / 2,000,000 posts/mo (resets day 12)\n  Twilio      : $0.00 this month  [budget $20]\n\nUpdated /data/.openclaw/workspace-signal-chat/API_USAGE.md\n```\n"
+      "sizeBytes": 784,
+      "wordCount": 119,
+      "modifiedAt": 1775084750670.5767,
+      "content": "# API Usage — April 2026\n\nLast updated: 2026-04-01 19:05 EDT\n\n```\nAPI Usage Meter — 2026-04-01\n\nAI Tokens (today | month-to-date):\n  Anthropic    $9.72 today | $9.72 mtd  [budget $20] (est.)\n  OpenAI       $0.00 today | $0.00 mtd  [budget $20] (est.)\n  Google       $0.12 today | $0.12 mtd  [budget $10] (est.)\n\nLive APIs:\n  OpenRouter  : $1.64 used (no cap)\n  ElevenLabs  : 1,312 / 36,998 chars | next $5.42 (resets Apr 24)\n  Odds API    : $0.98 est. | 784 / 20,000 requests\n  HeyGen      : $25.35 remaining (507 credits @ $0.05)\n  Brave Search: metered @ $0.005/query (usage not countable via API)\n  Twitter/X   : $8.80 est. | 1,760 / 2,000,000 posts (resets day 12)\n  Twilio      : $0.00 this month  [budget $20]\n\nUpdated /data/.openclaw/workspace-signal-chat/API_USAGE.md\n```\n"
     },
     {
       "name": "BILLING.md",
@@ -361,5 +361,5 @@
       "content": "# Todo List: Rene\n"
     }
   ],
-  "updatedAt": 1775084493624
+  "updatedAt": 1775084793086
 }
