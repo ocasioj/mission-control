@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775082043735,
-      "lastActivityAgo": "10m ago",
+      "lastActivityAgo": "15m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 101,
       "lastActivity": 1775080813514,
-      "lastActivityAgo": "31m ago",
+      "lastActivityAgo": "36m ago",
       "isActive": false,
       "lastMessage": "[cron:7bc3a548-d805-4171-9b25-a85c835a0b7d Line Alert Digest — 6pm ET] Send the line movement email digest. Run: cd /dat",
       "lastModel": "claude-sonnet-4-6"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775082692074
+  "updatedAt": 1775082992019
 }
