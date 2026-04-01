@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 99,
+      "lastActivity": 1775044818285,
+      "lastActivityAgo": "1m ago",
+      "isActive": true,
+      "lastMessage": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report: exec heygen-health",
+      "lastModel": "claude-sonnet-4-6"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775044107204,
-      "lastActivityAgo": "8m ago",
+      "lastActivityAgo": "13m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 97,
-      "lastActivity": 1775041224587,
-      "lastActivityAgo": "56m ago",
-      "isActive": false,
-      "lastMessage": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/workspace-signal-chat/d",
-      "lastModel": "claude-sonnet-4-6"
     },
     {
       "id": "planner",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775044591980
+  "updatedAt": 1775044892104
 }
