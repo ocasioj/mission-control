@@ -14,16 +14,12 @@
     }
   ],
   "disk": {
-    "usedBytes": 69050503168,
-    "availBytes": 33820815360,
+    "usedBytes": 69050597376,
+    "availBytes": 33820721152,
     "totalBytes": 102888095744,
     "percent": 67
   },
   "cronErrors": [
-    {
-      "name": "Daily Email Digest",
-      "errors": 1
-    },
     {
       "name": "Nightly Memory Summary (Joe)",
       "errors": 1
@@ -51,5 +47,5 @@
   ],
   "cronTotal": 23,
   "gatewayUp": true,
-  "updatedAt": 1775048495053
+  "updatedAt": 1775048797549
 }
