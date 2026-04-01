@@ -439,7 +439,45 @@
       "lastStatus": "error",
       "lastDurationMs": 35093,
       "consecutiveErrors": 1
+    },
+    {
+      "id": "7bc3a548-d805-4171-9b25-a85c835a0b7d",
+      "name": "Line Alert Digest — 6pm ET",
+      "schedule": "0 18 * * *",
+      "scheduleHuman": "0 18 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, use the send_email tool: to=[TO value], subject=[SUBJECT value], htmlBody=[read contents of HTML_PATH], body='Line movement digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent or silently exit if no alerts.",
+        "timeoutSeconds": 60
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-01T22:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e",
+      "name": "Line Alert Digest — 10am ET",
+      "schedule": "0 10 * * *",
+      "scheduleHuman": "0 10 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, use the send_email tool: to=[TO value], subject=[SUBJECT value], htmlBody=[read contents of HTML_PATH], body='Line movement digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent or silently exit if no alerts.",
+        "timeoutSeconds": 60
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-02T14:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775064392765
+  "updatedAt": 1775064692709
 }
