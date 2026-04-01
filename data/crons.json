@@ -49,7 +49,8 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py. The script already filters — only send a Signal message if it outputs actual alerts. If the output contains 'No significant line movement detected', do nothing and stay silent.",
-        "timeoutSeconds": 60
+        "timeoutSeconds": 60,
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T19:00:00.005Z",
       "nextRunAt": "2026-04-01T20:00:00.000Z",
@@ -68,7 +69,8 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Refresh the gambling dashboard and push to GitHub. Run: /data/.openclaw/workspace-coder/dashboard/push_dashboard.sh. Report any errors if it fails.",
-        "timeoutSeconds": 120
+        "timeoutSeconds": 120,
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T12:00:00.003Z",
       "nextRunAt": "2026-04-02T12:00:00.000Z",
@@ -87,7 +89,8 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run the auto-result logging script to settle pending bets and update CLV, then fetch fresh injury data for all sports. Execute: cd /data/.openclaw/workspace-coder && python3 auto_results.py --days 3 && python3 fetch_injuries.py --sport all. If any bets were settled, send Jose a brief Signal summary with the results and net P/L. If no bets to settle, run silently with no message.",
-        "timeoutSeconds": 180
+        "timeoutSeconds": 180,
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T11:00:00.006Z",
       "nextRunAt": "2026-04-02T11:00:00.000Z",
@@ -144,7 +147,8 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the daily gambling picks email digest to Jose. Run: cd /data/.openclaw/workspace-coder && python3 email_digest.py 2>&1. Parse the output to get HTML_PATH, SUBJECT, and TO fields. Then use the send_email tool with: to=[TO value], subject=[SUBJECT value], htmlBody=[contents of HTML_PATH file], body='Daily picks digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent.",
-        "timeoutSeconds": 60
+        "timeoutSeconds": 60,
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T13:05:00.008Z",
       "nextRunAt": "2026-04-02T13:05:00.000Z",
@@ -234,7 +238,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py daily"
+        "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py daily",
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": null,
       "nextRunAt": "2026-04-02T04:00:00.000Z",
@@ -270,7 +275,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run a safe backup: copy /data/.openclaw/workspace-signal-chat/memory/admin-changes.md, /data/.openclaw/workspace-signal-chat/config/video_pipeline.json, /data/.openclaw/workspace-signal-chat/config/mcporter.json, and /data/.openclaw/cron/jobs.json to /data/.openclaw/workspace-signal-chat/backups/$(date +%F)/. Ensure the backup dir exists and log result to /data/.openclaw/workspace-signal-chat/logs/cron_runs.log. Do not send any external messages; just perform local file operations and log a success/failure entry."
+        "message": "Run a safe backup: copy /data/.openclaw/workspace-signal-chat/memory/admin-changes.md, /data/.openclaw/workspace-signal-chat/config/video_pipeline.json, /data/.openclaw/workspace-signal-chat/config/mcporter.json, and /data/.openclaw/cron/jobs.json to /data/.openclaw/workspace-signal-chat/backups/$(date +%F)/. Ensure the backup dir exists and log result to /data/.openclaw/workspace-signal-chat/logs/cron_runs.log. Do not send any external messages; just perform local file operations and log a success/failure entry.",
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T07:10:00.003Z",
       "nextRunAt": "2026-04-02T07:10:00.000Z",
@@ -288,7 +294,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run log rotation script: python3 /data/.openclaw/hooks/rotate_logs.py. Respond with HEARTBEAT_OK if successful."
+        "message": "Run log rotation script: python3 /data/.openclaw/hooks/rotate_logs.py. Respond with HEARTBEAT_OK if successful.",
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": null,
       "nextRunAt": "2026-04-02T04:00:00.000Z",
@@ -306,7 +313,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "message": "Run /data/.openclaw/hooks/heygen_dlq_report.py to scan retry and DLQ queues. Send a daily summary of stuck/failed HeyGen jobs to +16462458614 via Signal.",
-        "kind": "agentTurn"
+        "kind": "agentTurn",
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T07:00:00.007Z",
       "nextRunAt": "2026-04-02T07:00:00.000Z",
@@ -324,7 +332,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run a self health check: exec `joe-repair --check`. If any issues are found, run `joe-repair --fix` to repair them, then send Jose a brief Signal DM summarizing what you found and fixed. If everything is healthy, do nothing — no message needed."
+        "message": "Run a self health check: exec `joe-repair --check`. If any issues are found, run `joe-repair --fix` to repair them, then send Jose a brief Signal DM summarizing what you found and fixed. If everything is healthy, do nothing — no message needed.",
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T15:00:00.006Z",
       "nextRunAt": "2026-04-02T15:00:00.000Z",
@@ -342,7 +351,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the daily health report: exec heygen-health-report. Do not send any additional Signal message — the script sends the report directly. If the script fails, send Jose a brief note with the error."
+        "message": "Run the daily health report: exec heygen-health-report. Do not send any additional Signal message — the script sends the report directly. If the script fails, send Jose a brief note with the error.",
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T12:00:18.284Z",
       "nextRunAt": "2026-04-02T12:00:00.000Z",
@@ -378,7 +388,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the daily Gmail canary: exec gmail-health-report. Do not send any additional Signal message on success. If it fails, the script sends an alert directly."
+        "message": "Run the daily Gmail canary: exec gmail-health-report. Do not send any additional Signal message on success. If it fails, the script sends an alert directly.",
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T12:15:00.005Z",
       "nextRunAt": "2026-04-02T12:15:00.000Z",
@@ -396,7 +407,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the daily PM Visualizer canary: exec pm-visualizer-health-report. Do not send additional Signal message on success. If it fails, the script sends an alert directly."
+        "message": "Run the daily PM Visualizer canary: exec pm-visualizer-health-report. Do not send additional Signal message on success. If it fails, the script sends an alert directly.",
+        "model": "anthropic/claude-haiku-4-5"
       },
       "lastRunAt": "2026-04-01T12:25:00.004Z",
       "nextRunAt": "2026-04-02T12:25:00.000Z",
@@ -479,5 +491,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775072792731
+  "updatedAt": 1775073092710
 }
