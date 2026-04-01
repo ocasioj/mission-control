@@ -70,10 +70,10 @@
         "message": "Refresh the gambling dashboard and push to GitHub. Run: /data/.openclaw/workspace-coder/dashboard/push_dashboard.sh. Report any errors if it fails.",
         "timeoutSeconds": 120
       },
-      "lastRunAt": "2026-03-31T12:00:00.002Z",
-      "nextRunAt": "2026-04-01T12:00:00.000Z",
+      "lastRunAt": "2026-04-01T12:00:00.003Z",
+      "nextRunAt": "2026-04-02T12:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 16909,
+      "lastDurationMs": 18281,
       "consecutiveErrors": 0
     },
     {
@@ -344,11 +344,11 @@
         "kind": "agentTurn",
         "message": "Run the daily health report: exec heygen-health-report. Do not send any additional Signal message — the script sends the report directly. If the script fails, send Jose a brief note with the error."
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-01T12:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-04-01T12:00:18.284Z",
+      "nextRunAt": "2026-04-02T12:00:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 19571,
+      "consecutiveErrors": 1
     },
     {
       "id": "57081334-48ac-4626-88df-d7c29a43b26f",
@@ -423,5 +423,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775044592573
+  "updatedAt": 1775044892714
 }
