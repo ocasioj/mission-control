@@ -178,13 +178,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774954803415,
-      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1774875661353,
       "message": "[cron:ce11b760-f125-4828-aee0-aadbd29e4c37 Daily Gambling Picks] Run the daily gambling picks and se",
       "turns": 1
@@ -419,6 +412,13 @@
       "timestamp": 1774637913143,
       "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "turns": 1
+    },
+    {
+      "agentId": "support",
+      "agentName": "Anchor",
+      "timestamp": 1774637909144,
+      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
+      "turns": 1
     }
   ],
   "digest": [
@@ -478,9 +478,9 @@
     },
     {
       "day": "2026-03-31",
-      "total": 13,
+      "total": 12,
       "byAgent": {
-        "signal-chat": 13
+        "signal-chat": 12
       }
     },
     {
@@ -492,5 +492,5 @@
       }
     }
   ],
-  "updatedAt": 1775041293980
+  "updatedAt": 1775041594021
 }
