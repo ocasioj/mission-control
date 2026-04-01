@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775044820212,
+      "message": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775044802904,
+      "message": "[cron:ec94eafa-e7d2-4304-aca7-db1a1c09dfc5 Dashboard Data Refresh + GitHub Push] Refresh the gamblin",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775041226331,
       "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
       "turns": 2
@@ -405,20 +419,6 @@
       "timestamp": 1774637928689,
       "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.\n\n[Bootstrap truncation warning]\nSome workspa",
       "turns": 1
-    },
-    {
-      "agentId": "video",
-      "agentName": "Director",
-      "timestamp": 1774637913143,
-      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
-      "turns": 1
-    },
-    {
-      "agentId": "support",
-      "agentName": "Anchor",
-      "timestamp": 1774637909144,
-      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
-      "turns": 1
     }
   ],
   "digest": [
@@ -485,12 +485,12 @@
     },
     {
       "day": "2026-04-01",
-      "total": 13,
+      "total": 15,
       "byAgent": {
-        "signal-chat": 12,
+        "signal-chat": 14,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775044593918
+  "updatedAt": 1775044894314
 }
