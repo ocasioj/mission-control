@@ -4,28 +4,32 @@
       "name": "openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
       "state": "running",
-      "status": "Up 2 days (healthy)"
+      "status": "Up 4 days (healthy)"
     },
     {
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/hostinger/hvps-openclaw@sha256:c677c4994dfc34827e99f422f672e7164e0a82716182874fdef5967de02747ea",
       "state": "running",
-      "status": "Up 16 hours (healthy)"
+      "status": "Up 3 hours (healthy)"
     }
   ],
   "disk": {
-    "usedBytes": 65686089728,
-    "availBytes": 37185228800,
+    "usedBytes": 69615259648,
+    "availBytes": 33256058880,
     "totalBytes": 102888095744,
-    "percent": 64
+    "percent": 68
   },
   "cronErrors": [
+    {
+      "name": "Daily Email Digest",
+      "errors": 1
+    },
     {
       "name": "Gambling Agent Model Retraining",
       "errors": 1
     }
   ],
-  "cronTotal": 6,
+  "cronTotal": 22,
   "gatewayUp": true,
-  "updatedAt": 1774904494278
+  "updatedAt": 1775019094529
 }
