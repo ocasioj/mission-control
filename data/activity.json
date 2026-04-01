@@ -3,50 +3,148 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774904403854,
+      "timestamp": 1775016198540,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775016195846\",\n  \"sender_id\": \"+",
+      "turns": 23
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775012425137,
+      "message": "[cron:b2f38f7b-82dd-42c9-9eeb-6935fd4b8a8d Nightly CLV Summary] Run the nightly CLV summary to check",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775012405465,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
     },
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774900803183,
+      "timestamp": 1775010773109,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775010770057\",\n  \"sender_id\": \"u",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775008804217,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
     },
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774897202984,
+      "timestamp": 1775005203149,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
     },
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774893603736,
+      "timestamp": 1775001604521,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
     },
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774890003072,
+      "timestamp": 1774998003015,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
     },
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774886690476,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1774886687802\",\n  \"sender_id\": \"+",
-      "turns": 24
+      "timestamp": 1774994403769,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
     },
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1774886404550,
+      "timestamp": 1774990802828,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774987203789,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774983602755,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774980112559,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774980005824,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774976402452,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774972805866,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774962301960,
+      "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774962002914,
+      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774958402845,
+      "message": "[cron:ec94eafa-e7d2-4304-aca7-db1a1c09dfc5 Dashboard Data Refresh + GitHub Push] Refresh the gamblin",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774954803415,
+      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
+      "turns": 1
+    },
+    {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1774944193206,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
       "turns": 1
     },
     {
@@ -54,41 +152,6 @@
       "agentName": "Joe",
       "timestamp": 1774875661353,
       "message": "[cron:ce11b760-f125-4828-aee0-aadbd29e4c37 Daily Gambling Picks] Run the daily gambling picks and se",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774875602652,
-      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774872003324,
-      "message": "[cron:ec94eafa-e7d2-4304-aca7-db1a1c09dfc5 Dashboard Data Refresh] Refresh the gambling dashboard da",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774868402751,
-      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774861202357,
-      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
-      "turns": 1
-    },
-    {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1774857917831,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
       "turns": 1
     },
     {
@@ -103,90 +166,6 @@
       "agentName": "Joe",
       "timestamp": 1774850411006,
       "message": "[cron:da774dc3-dbdc-4f09-a994-d507be6d32f9 pre-reset-summary-1774850402] Your session is about to re",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774841402301,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774839602522,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774837803213,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774836003290,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774834203038,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774832402514,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774830602444,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774828805463,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774827002765,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774825202162,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774823402750,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774821603553,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
     },
     {
@@ -393,6 +372,13 @@
       "turns": 1
     },
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774637928689,
+      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.\n\n[Bootstrap truncation warning]\nSome workspa",
+      "turns": 1
+    },
+    {
       "agentId": "video",
       "agentName": "Director",
       "timestamp": 1774637913143,
@@ -419,23 +405,23 @@
       "timestamp": 1774637877127,
       "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
       "turns": 1
+    },
+    {
+      "agentId": "finance",
+      "agentName": "Ledger",
+      "timestamp": 1774637872705,
+      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
+      "turns": 1
+    },
+    {
+      "agentId": "planner",
+      "agentName": "Atlas",
+      "timestamp": 1774637868258,
+      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
+      "turns": 1
     }
   ],
   "digest": [
-    {
-      "day": "2026-03-24",
-      "total": 7,
-      "byAgent": {
-        "signal-chat": 7
-      }
-    },
-    {
-      "day": "2026-03-25",
-      "total": 3,
-      "byAgent": {
-        "signal-chat": 3
-      }
-    },
     {
       "day": "2026-03-26",
       "total": 1,
@@ -445,12 +431,12 @@
     },
     {
       "day": "2026-03-27",
-      "total": 21,
+      "total": 22,
       "byAgent": {
         "sales": 1,
         "planner": 1,
         "research": 1,
-        "signal-chat": 12,
+        "signal-chat": 13,
         "social": 1,
         "finance": 1,
         "analyst": 1,
@@ -478,19 +464,33 @@
     },
     {
       "day": "2026-03-29",
-      "total": 6,
+      "total": 2,
       "byAgent": {
-        "signal-chat": 6
+        "signal-chat": 2
       }
     },
     {
       "day": "2026-03-30",
-      "total": 23,
+      "total": 3,
       "byAgent": {
-        "signal-chat": 22,
+        "signal-chat": 3
+      }
+    },
+    {
+      "day": "2026-03-31",
+      "total": 14,
+      "byAgent": {
+        "signal-chat": 13,
         "main": 1
+      }
+    },
+    {
+      "day": "2026-04-01",
+      "total": 7,
+      "byAgent": {
+        "signal-chat": 7
       }
     }
   ],
-  "updatedAt": 1774904493671
+  "updatedAt": 1775019093860
 }
