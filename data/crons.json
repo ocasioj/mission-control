@@ -51,10 +51,10 @@
         "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py. The script already filters — only send a Signal message if it outputs actual alerts. If the output contains 'No significant line movement detected', do nothing and stay silent.",
         "timeoutSeconds": 60
       },
-      "lastRunAt": "2026-04-01T16:00:00.005Z",
-      "nextRunAt": "2026-04-01T17:00:00.000Z",
+      "lastRunAt": "2026-04-01T17:00:00.009Z",
+      "nextRunAt": "2026-04-01T18:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 24241,
+      "lastDurationMs": 31636,
       "consecutiveErrors": 0
     },
     {
@@ -441,5 +441,5 @@
       "consecutiveErrors": 1
     }
   ],
-  "updatedAt": 1775062592661
+  "updatedAt": 1775062892968
 }
