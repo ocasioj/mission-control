@@ -139,10 +139,10 @@
       "name": "API_USAGE.md",
       "path": "/openclaw-data/workspace-signal-chat/API_USAGE.md",
       "category": "Notes",
-      "sizeBytes": 992,
-      "wordCount": 122,
-      "modifiedAt": 1775020699258.0513,
-      "content": "# API Usage — April 2026\n\nLast updated: 2026-04-01 01:18 EDT\n\n```\nWeekly API Usage Summary — Apr 2026 (wk 1 of 4)\n\nAI Token Spend (month-to-date):\n  Anthropic    $1.82 / $20\n  OpenAI       $1.48 / $20\n  Google       $0.00 / $10\n\nLive APIs (month-to-date):\n  OpenRouter  : $1.64 used (no cap)\n  ElevenLabs  : 1,312 / 36,998 chars | next $5.42 (resets Apr 24)\n  Odds API    : 273 / 20,000 requests\n  HeyGen      : 507 credits remaining\n\nBudget Progress:\n  Anthropic    [░░░░░░░░░░]    9%  $1.82 / $20.00\n  OpenAI       [░░░░░░░░░░]    7%  $1.48 / $20.00\n  Google       [░░░░░░░░░░]    0%  $0.00 / $10.00\n  OpenRouter   [█░░░░░░░░░]   16%  $1.64 / $10.00\n  ElevenLabs   [█████░░░░░]   54%  $5.42 / $10.00\n  Odds API     [█████░░░░░]   55%  273 / 500 req\n\nEst. month-end total: ~$310.92  (1/30 days elapsed)\n\nUpdated /data/.openclaw/workspace-signal-chat/API_USAGE.md\n```\n"
+      "sizeBytes": 587,
+      "wordCount": 87,
+      "modifiedAt": 1775082691532.3013,
+      "content": "# API Usage — April 2026\n\nLast updated: 2026-04-01 18:31 EDT\n\n```\nAPI Usage Meter — 2026-04-01\n\nAI Tokens (today | month-to-date):\n  Anthropic    $9.36 today | $9.36 mtd  [budget $20] (est.)\n  OpenAI       $0.00 today | $0.00 mtd  [budget $20] (est.)\n  Google       $0.09 today | $0.09 mtd  [budget $10] (est.)\n\nLive APIs:\n  OpenRouter  : $1.64 used (no cap)\n  ElevenLabs  : 1,312 / 36,998 chars | next $5.42 (resets Apr 24)\n  Odds API    : 784 / 20,000 requests [OVER BUDGET ❌]\n  HeyGen      : 507 credits remaining\n\nUpdated /data/.openclaw/workspace-signal-chat/API_USAGE.md\n```\n"
     },
     {
       "name": "BILLING.md",
@@ -361,5 +361,5 @@
       "content": "# Todo List: Rene\n"
     }
   ],
-  "updatedAt": 1775082393344
+  "updatedAt": 1775082693507
 }
