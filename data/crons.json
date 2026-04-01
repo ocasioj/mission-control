@@ -13,10 +13,10 @@
         "message": "Run the daily gambling picks and send them to Jose via Signal. Execute: cd /data/.openclaw/workspace-coder && python3 send_picks_signal.py. Report any errors if the script fails.",
         "timeoutSeconds": 120
       },
-      "lastRunAt": "2026-03-30T13:00:00.003Z",
-      "nextRunAt": "2026-03-31T13:00:00.000Z",
+      "lastRunAt": "2026-03-31T13:00:00.003Z",
+      "nextRunAt": "2026-04-01T13:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 59399,
+      "lastDurationMs": 56276,
       "consecutiveErrors": 0
     },
     {
@@ -28,7 +28,7 @@
       "enabled": true,
       "sessionTarget": "isolated",
       "payload": {
-        "timeoutSeconds": 300,
+        "timeoutSeconds": 600,
         "kind": "agentTurn",
         "message": "Run the weekly model retraining pipeline: cd /data/.openclaw/workspace-coder && bash retrain_pipeline.sh. Report any errors if it fails."
       },
@@ -48,13 +48,13 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the sharp money alert script and report results: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py",
+        "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py. The script already filters — only send a Signal message if it outputs actual alerts. If the output contains 'No significant line movement detected', do nothing and stay silent.",
         "timeoutSeconds": 60
       },
-      "lastRunAt": "2026-03-30T21:00:00.003Z",
-      "nextRunAt": "2026-03-30T22:00:00.000Z",
+      "lastRunAt": "2026-04-01T03:00:00.004Z",
+      "nextRunAt": "2026-04-01T16:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 17055,
+      "lastDurationMs": 21949,
       "consecutiveErrors": 0
     },
     {
@@ -70,10 +70,10 @@
         "message": "Refresh the gambling dashboard and push to GitHub. Run: /data/.openclaw/workspace-coder/dashboard/push_dashboard.sh. Report any errors if it fails.",
         "timeoutSeconds": 120
       },
-      "lastRunAt": "2026-03-30T12:00:00.005Z",
-      "nextRunAt": "2026-03-31T12:00:00.000Z",
+      "lastRunAt": "2026-03-31T12:00:00.002Z",
+      "nextRunAt": "2026-04-01T12:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 12009,
+      "lastDurationMs": 16909,
       "consecutiveErrors": 0
     },
     {
@@ -86,13 +86,13 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the auto-result logging script to settle pending bets and update CLV. Execute: cd /data/.openclaw/workspace-coder && python3 auto_results.py --days 3. If any bets were settled, send Jose a brief Signal summary with the results and net P/L. If no bets to settle, run silently with no message.",
-        "timeoutSeconds": 120
+        "message": "Run the auto-result logging script to settle pending bets and update CLV, then fetch fresh injury data for all sports. Execute: cd /data/.openclaw/workspace-coder && python3 auto_results.py --days 3 && python3 fetch_injuries.py --sport all. If any bets were settled, send Jose a brief Signal summary with the results and net P/L. If no bets to settle, run silently with no message.",
+        "timeoutSeconds": 180
       },
-      "lastRunAt": "2026-03-30T11:00:00.003Z",
-      "nextRunAt": "2026-03-31T11:00:00.000Z",
+      "lastRunAt": "2026-03-31T11:00:00.006Z",
+      "nextRunAt": "2026-04-01T11:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 9617,
+      "lastDurationMs": 21173,
       "consecutiveErrors": 0
     },
     {
@@ -113,7 +113,297 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "b2f38f7b-82dd-42c9-9eeb-6935fd4b8a8d",
+      "name": "Nightly CLV Summary",
+      "schedule": "0 23 * * *",
+      "scheduleHuman": "0 23 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the nightly CLV summary to check closing line value for recent bets: cd /data/.openclaw/workspace-coder && python3 clv_summary.py --days 2. Only send Signal report if there is actual CLV data to share. If no data found, run silently.",
+        "timeoutSeconds": 120
+      },
+      "lastRunAt": "2026-04-01T03:00:21.953Z",
+      "nextRunAt": "2026-04-02T03:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 18576,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "56482540-4ab6-4960-a112-93008aa9a2e4",
+      "name": "Daily Email Digest",
+      "schedule": "5 9 * * *",
+      "scheduleHuman": "5 9 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Send the daily gambling picks email digest to Jose. Run: cd /data/.openclaw/workspace-coder && python3 email_digest.py 2>&1. Parse the output to get HTML_PATH, SUBJECT, and TO fields. Then use the send_email tool with: to=[TO value], subject=[SUBJECT value], htmlBody=[contents of HTML_PATH file], body='Daily picks digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent.",
+        "timeoutSeconds": 60
+      },
+      "lastRunAt": "2026-03-31T13:05:00.002Z",
+      "nextRunAt": "2026-04-01T13:05:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 60011,
+      "consecutiveErrors": 1
+    },
+    {
+      "id": "64f0e208-22d2-447a-8ff5-22c699cecbf7",
+      "name": "pre-reset-summary-1774965601",
+      "schedule": "",
+      "scheduleHuman": "",
+      "timezone": "UTC",
+      "enabled": false,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
+      },
+      "lastRunAt": "2026-03-31T14:00:08.429Z",
+      "nextRunAt": null,
+      "lastStatus": "error",
+      "lastDurationMs": 28455,
+      "consecutiveErrors": 1
+    },
+    {
+      "id": "436e5ab3-2d96-4c43-83b2-5272ece402e9",
+      "name": "pre-reset-summary-1774972801",
+      "schedule": "",
+      "scheduleHuman": "",
+      "timezone": "UTC",
+      "enabled": false,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
+      },
+      "lastRunAt": "2026-03-31T16:00:24.373Z",
+      "nextRunAt": null,
+      "lastStatus": "error",
+      "lastDurationMs": 18441,
+      "consecutiveErrors": 1
+    },
+    {
+      "id": "cb01dd9a-5036-4615-ad22-9ee973e1565f",
+      "name": "pre-reset-summary-1775008802",
+      "schedule": "",
+      "scheduleHuman": "",
+      "timezone": "UTC",
+      "enabled": false,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
+      },
+      "lastRunAt": "2026-04-01T02:00:24.500Z",
+      "nextRunAt": null,
+      "lastStatus": "error",
+      "lastDurationMs": 6595,
+      "consecutiveErrors": 1
+    },
+    {
+      "id": "34f8d0b5-f48c-48b4-bab2-0efc4565f7d3",
+      "name": "pre-reset-summary-1775016001",
+      "schedule": "",
+      "scheduleHuman": "",
+      "timezone": "UTC",
+      "enabled": false,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
+      },
+      "lastRunAt": "2026-04-01T04:00:08.831Z",
+      "nextRunAt": null,
+      "lastStatus": "error",
+      "lastDurationMs": 18168,
+      "consecutiveErrors": 1
+    },
+    {
+      "id": "70cbb04a-5477-4fe7-8573-fb7ff27651f9",
+      "name": "Daily Billing Update (Joe)",
+      "schedule": "0 0 * * *",
+      "scheduleHuman": "0 0 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/daily_billing_update.py"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-02T04:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "b24ff533-ec0e-4129-855e-87e9affdd0ae",
+      "name": "Nightly Memory Summary (Joe)",
+      "schedule": "50 2 * * *",
+      "scheduleHuman": "50 2 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Before your session resets in 10 minutes, review today’s conversation and update MEMORY.md with anything important: unfinished tasks, decisions Jose made, things to follow up on, and any new facts about Jose or his contacts. Be concise — bullet points only. Do not reply to this message."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-01T06:50:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "804004cf-3ce2-4427-a060-d336b08398b0",
+      "name": "Daily Backup Configs",
+      "schedule": "10 3 * * *",
+      "scheduleHuman": "10 3 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run a safe backup: copy /data/.openclaw/workspace-signal-chat/memory/admin-changes.md, /data/.openclaw/workspace-signal-chat/config/video_pipeline.json, /data/.openclaw/workspace-signal-chat/config/mcporter.json, and /data/.openclaw/cron/jobs.json to /data/.openclaw/workspace-signal-chat/backups/$(date +%F)/. Ensure the backup dir exists and log result to /data/.openclaw/workspace-signal-chat/logs/cron_runs.log. Do not send any external messages; just perform local file operations and log a success/failure entry."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-01T07:10:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "e64d74c3-9e0b-4a68-abd6-15b197839525",
+      "name": "Daily Log Rotation",
+      "schedule": "0 0 * * *",
+      "scheduleHuman": "0 0 * * *",
+      "timezone": "UTC",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run log rotation script: python3 /data/.openclaw/hooks/rotate_logs.py. Respond with HEARTBEAT_OK if successful."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-02T04:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "b4b4b1cc-7b9a-46da-860b-c4b57da1021a",
+      "name": "HeyGen DLQ/Retry Daily Report",
+      "schedule": "0 3 * * *",
+      "scheduleHuman": "0 3 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "message": "Run /data/.openclaw/hooks/heygen_dlq_report.py to scan retry and DLQ queues. Send a daily summary of stuck/failed HeyGen jobs to +16462458614 via Signal.",
+        "kind": "agentTurn"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-01T07:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "0c26b4b2-456f-4dfe-b7e7-b2c9df150025",
+      "name": "Joe Daily Self-Repair Check",
+      "schedule": "0 11 * * *",
+      "scheduleHuman": "0 11 * * *",
+      "timezone": "UTC",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run a self health check: exec `joe-repair --check`. If any issues are found, run `joe-repair --fix` to repair them, then send Jose a brief Signal DM summarizing what you found and fixed. If everything is healthy, do nothing — no message needed."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-01T15:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "e107c6e6-1de3-47e3-a99a-8d31567982b0",
+      "name": "OpenClaw Daily Health Report",
+      "schedule": "0 8 * * *",
+      "scheduleHuman": "0 8 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the daily health report: exec heygen-health-report. Do not send any additional Signal message — the script sends the report directly. If the script fails, send Jose a brief note with the error."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-01T12:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "57081334-48ac-4626-88df-d7c29a43b26f",
+      "name": "Daily X Morning Briefing",
+      "schedule": "0 7 * * *",
+      "scheduleHuman": "0 7 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run python3 /data/.openclaw/workspace-signal-chat/daily_briefing.py. If successful, return stdout exactly as plain text. Keep it concise. If it fails, return a short error summary with the failing step."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-01T11:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "d53c81c6-d8c9-413b-8814-5b0ceb7e366a",
+      "name": "Gmail Daily Canary",
+      "schedule": "15 8 * * *",
+      "scheduleHuman": "15 8 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the daily Gmail canary: exec gmail-health-report. Do not send any additional Signal message on success. If it fails, the script sends an alert directly."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-01T12:15:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0",
+      "name": "PM Visualizer Daily Canary",
+      "schedule": "25 8 * * *",
+      "scheduleHuman": "25 8 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the daily PM Visualizer canary: exec pm-visualizer-health-report. Do not send additional Signal message on success. If it fails, the script sends an alert directly."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-01T12:25:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1774904492303
+  "updatedAt": 1775019092605
 }
