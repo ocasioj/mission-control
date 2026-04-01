@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 69050208256,
-    "availBytes": 33821110272,
+    "usedBytes": 69050503168,
+    "availBytes": 33820815360,
     "totalBytes": 102888095744,
     "percent": 67
   },
@@ -41,11 +41,15 @@
       "errors": 1
     },
     {
+      "name": "Daily Gambling Picks → Signal",
+      "errors": 1
+    },
+    {
       "name": "Gambling Agent Model Retraining",
       "errors": 1
     }
   ],
   "cronTotal": 23,
   "gatewayUp": true,
-  "updatedAt": 1775048195238
+  "updatedAt": 1775048495053
 }
