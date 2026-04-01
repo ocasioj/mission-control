@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775026202391,
+      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775016198540,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775016195846\",\n  \"sender_id\": \"+",
       "turns": 27
@@ -412,13 +419,6 @@
       "timestamp": 1774637872705,
       "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
       "turns": 1
-    },
-    {
-      "agentId": "planner",
-      "agentName": "Atlas",
-      "timestamp": 1774637868258,
-      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
-      "turns": 1
     }
   ],
   "digest": [
@@ -486,11 +486,11 @@
     },
     {
       "day": "2026-04-01",
-      "total": 7,
+      "total": 8,
       "byAgent": {
-        "signal-chat": 7
+        "signal-chat": 8
       }
     }
   ],
-  "updatedAt": 1775025994337
+  "updatedAt": 1775026293894
 }
