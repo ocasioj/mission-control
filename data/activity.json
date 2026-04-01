@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775045702595,
+      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775044820212,
       "message": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report",
       "turns": 2
@@ -412,13 +419,6 @@
       "timestamp": 1774637928689,
       "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.\n\n[Bootstrap truncation warning]\nSome workspa",
       "turns": 1
-    },
-    {
-      "agentId": "video",
-      "agentName": "Director",
-      "timestamp": 1774637913143,
-      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
-      "turns": 1
     }
   ],
   "digest": [
@@ -485,12 +485,12 @@
     },
     {
       "day": "2026-04-01",
-      "total": 15,
+      "total": 16,
       "byAgent": {
-        "signal-chat": 14,
+        "signal-chat": 15,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775045494159
+  "updatedAt": 1775045794438
 }
