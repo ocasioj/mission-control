@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775027402373,
+      "message": "[cron:804004cf-3ce2-4427-a060-d336b08398b0 Daily Backup Configs] Run a safe backup: copy /data/.open",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775026803942,
       "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
       "turns": 2
@@ -412,13 +419,6 @@
       "timestamp": 1774637901472,
       "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
       "turns": 1
-    },
-    {
-      "agentId": "social",
-      "agentName": "Amp",
-      "timestamp": 1774637877127,
-      "message": "[Fri 2026-03-27 14:57 EDT] Reply with just the word OK.",
-      "turns": 1
     }
   ],
   "digest": [
@@ -486,11 +486,11 @@
     },
     {
       "day": "2026-04-01",
-      "total": 9,
+      "total": 10,
       "byAgent": {
-        "signal-chat": 9
+        "signal-chat": 10
       }
     }
   ],
-  "updatedAt": 1775027193979
+  "updatedAt": 1775027493944
 }
