@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775167224923,
+      "message": "[cron:7bc3a548-d805-4171-9b25-a85c835a0b7d Line Alert Digest — 6pm ET] Send the line movement email ",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775167202976,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775166742305,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775166739900\",\n  \"sender_id\": \"+",
       "turns": 2
@@ -405,20 +419,6 @@
       "timestamp": 1774659249202,
       "message": "[Fri 2026-03-27 20:54 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "research",
-      "agentName": "Scout",
-      "timestamp": 1774659212843,
-      "message": "[Fri 2026-03-27 20:53 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "analyst",
-      "agentName": "Nova",
-      "timestamp": 1774658851771,
-      "message": "[Fri 2026-03-27 20:47 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -483,12 +483,12 @@
     },
     {
       "day": "2026-04-02",
-      "total": 27,
+      "total": 29,
       "byAgent": {
-        "signal-chat": 26,
+        "signal-chat": 28,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775166994066
+  "updatedAt": 1775167294192
 }
