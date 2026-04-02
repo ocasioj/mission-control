@@ -3,16 +3,16 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775084402894,
+      "timestamp": 1775088005399,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
     },
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775080815436,
-      "message": "[cron:7bc3a548-d805-4171-9b25-a85c835a0b7d Line Alert Digest — 6pm ET] Send the line movement email ",
-      "turns": 2
+      "timestamp": 1775084402894,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
     },
     {
       "agentId": "signal-chat",
@@ -193,13 +193,6 @@
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1775005203149,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775001604521,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
     },
@@ -419,16 +412,16 @@
       "timestamp": 1774658742368,
       "message": "[Fri 2026-03-27 20:45 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1774645203775,
+      "message": "[cron:c5722016-ddbf-4aa7-8995-79815b2fc702 Revenue Prospecting Agent (Joe)] You are Jose's proactive",
+      "turns": 1
     }
   ],
   "digest": [
-    {
-      "day": "2026-03-26",
-      "total": 1,
-      "byAgent": {
-        "signal-chat": 1
-      }
-    },
     {
       "day": "2026-03-27",
       "total": 22,
@@ -483,12 +476,19 @@
     },
     {
       "day": "2026-04-01",
-      "total": 29,
+      "total": 27,
       "byAgent": {
-        "signal-chat": 28,
+        "signal-chat": 26,
         "main": 1
+      }
+    },
+    {
+      "day": "2026-04-02",
+      "total": 1,
+      "byAgent": {
+        "signal-chat": 1
       }
     }
   ],
-  "updatedAt": 1775087793859
+  "updatedAt": 1775088093664
 }
