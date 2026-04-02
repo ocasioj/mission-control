@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775132102174,
+      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775131213340,
       "message": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report",
       "turns": 1
@@ -187,13 +194,6 @@
       "agentName": "Joe",
       "timestamp": 1775046302085,
       "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
-      "turns": 2
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775045702595,
-      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
       "turns": 2
     },
     {
@@ -476,19 +476,19 @@
     },
     {
       "day": "2026-04-01",
-      "total": 14,
+      "total": 13,
       "byAgent": {
-        "signal-chat": 14
+        "signal-chat": 13
       }
     },
     {
       "day": "2026-04-02",
-      "total": 15,
+      "total": 16,
       "byAgent": {
-        "signal-chat": 14,
+        "signal-chat": 15,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775131894419
+  "updatedAt": 1775132194243
 }
