@@ -14,16 +14,12 @@
     }
   ],
   "disk": {
-    "usedBytes": 70541578240,
-    "availBytes": 32329740288,
+    "usedBytes": 70541746176,
+    "availBytes": 32329572352,
     "totalBytes": 102888095744,
     "percent": 69
   },
   "cronErrors": [
-    {
-      "name": "OpenClaw Daily Health Report",
-      "errors": 1
-    },
     {
       "name": "Daily Gambling Picks → Signal",
       "errors": 1
@@ -35,5 +31,5 @@
   ],
   "cronTotal": 26,
   "gatewayUp": true,
-  "updatedAt": 1775130994870
+  "updatedAt": 1775131294744
 }
