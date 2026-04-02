@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775112643586,
-      "lastActivityAgo": "48s ago",
-      "isActive": true,
+      "lastActivityAgo": "5m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -15,10 +15,10 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 101,
+      "sessionCount": 100,
       "lastActivity": 1775112600009,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
+      "lastActivityAgo": "6m ago",
+      "isActive": false,
       "lastMessage": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets in 10 minutes, revie",
       "lastModel": "claude-sonnet-4-6"
     },
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775112692142
+  "updatedAt": 1775112992096
 }
