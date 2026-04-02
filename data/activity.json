@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775095613010,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775095609369\",\n  \"sender_id\": \"+",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775091602713,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1774637928689,
       "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.\n\n[Bootstrap truncation warning]\nSome workspa",
       "turns": 1
-    },
-    {
-      "agentId": "video",
-      "agentName": "Director",
-      "timestamp": 1774637913143,
-      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.",
-      "turns": 1
     }
   ],
   "digest": [
@@ -484,11 +484,11 @@
     },
     {
       "day": "2026-04-02",
-      "total": 2,
+      "total": 3,
       "byAgent": {
-        "signal-chat": 2
+        "signal-chat": 3
       }
     }
   ],
-  "updatedAt": 1775095593900
+  "updatedAt": 1775095893788
 }
