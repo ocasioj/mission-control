@@ -410,10 +410,10 @@
         "message": "Run the daily PM Visualizer canary: exec pm-visualizer-health-report. Do not send additional Signal message on success. If it fails, the script sends an alert directly.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-01T12:25:00.004Z",
-      "nextRunAt": "2026-04-02T12:25:00.000Z",
+      "lastRunAt": "2026-04-02T12:25:00.004Z",
+      "nextRunAt": "2026-04-03T12:25:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 15576,
+      "lastDurationMs": 8527,
       "consecutiveErrors": 0
     },
     {
@@ -491,5 +491,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775132493032
+  "updatedAt": 1775132793060
 }
