@@ -52,10 +52,10 @@
         "timeoutSeconds": 60,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-02T21:00:00.005Z",
-      "nextRunAt": "2026-04-02T22:00:00.000Z",
+      "lastRunAt": "2026-04-02T22:00:00.006Z",
+      "nextRunAt": "2026-04-02T23:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 12031,
+      "lastDurationMs": 22856,
       "consecutiveErrors": 0
     },
     {
@@ -465,11 +465,11 @@
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, use the send_email tool: to=[TO value], subject=[SUBJECT value], htmlBody=[read contents of HTML_PATH], body='Line movement digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent or silently exit if no alerts.",
         "timeoutSeconds": 60
       },
-      "lastRunAt": "2026-04-01T22:00:13.411Z",
-      "nextRunAt": "2026-04-02T22:00:00.000Z",
-      "lastStatus": "ok",
-      "lastDurationMs": 30391,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-04-02T22:00:22.862Z",
+      "nextRunAt": "2026-04-03T22:00:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 60011,
+      "consecutiveErrors": 1
     },
     {
       "id": "dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e",
@@ -491,5 +491,5 @@
       "consecutiveErrors": 1
     }
   ],
-  "updatedAt": 1775166992819
+  "updatedAt": 1775167292914
 }
