@@ -241,10 +241,10 @@
         "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py daily",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-02T04:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-04-02T04:00:00.006Z",
+      "nextRunAt": "2026-04-03T04:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 12163,
       "consecutiveErrors": 0
     },
     {
@@ -297,10 +297,10 @@
         "message": "Run log rotation script: python3 /data/.openclaw/hooks/rotate_logs.py. Respond with HEARTBEAT_OK if successful.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-02T04:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-04-02T04:00:12.169Z",
+      "nextRunAt": "2026-04-03T04:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 6391,
       "consecutiveErrors": 0
     },
     {
@@ -491,5 +491,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775102192548
+  "updatedAt": 1775102492669
 }
