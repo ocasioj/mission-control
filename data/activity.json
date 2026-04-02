@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775102414181,
+      "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775102402482,
+      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily API Usage Meter] Run this exact command and return ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775098820711,
       "message": "[cron:b2f38f7b-82dd-42c9-9eeb-6935fd4b8a8d Nightly CLV Summary] Run the nightly CLV summary to check",
       "turns": 2
@@ -405,20 +419,6 @@
       "timestamp": 1774658742368,
       "message": "[Fri 2026-03-27 20:45 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774645203775,
-      "message": "[cron:c5722016-ddbf-4aa7-8995-79815b2fc702 Revenue Prospecting Agent (Joe)] You are Jose's proactive",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774637928689,
-      "message": "[Fri 2026-03-27 14:58 EDT] Reply with just the word OK.\n\n[Bootstrap truncation warning]\nSome workspa",
-      "turns": 1
     }
   ],
   "digest": [
@@ -484,11 +484,11 @@
     },
     {
       "day": "2026-04-02",
-      "total": 5,
+      "total": 7,
       "byAgent": {
-        "signal-chat": 5
+        "signal-chat": 7
       }
     }
   ],
-  "updatedAt": 1775102193684
+  "updatedAt": 1775102493839
 }
