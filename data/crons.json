@@ -28,7 +28,7 @@
       "enabled": true,
       "sessionTarget": "isolated",
       "payload": {
-        "timeoutSeconds": 600,
+        "timeoutSeconds": 1800,
         "kind": "agentTurn",
         "message": "Run the weekly model retraining pipeline: cd /data/.openclaw/workspace-coder && bash retrain_pipeline.sh. Report any errors if it fails."
       },
@@ -491,5 +491,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775093792637
+  "updatedAt": 1775094092586
 }
