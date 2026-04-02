@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775154044182,
-      "lastActivityAgo": "10m ago",
+      "lastActivityAgo": "15m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 101,
       "lastActivity": 1775152800006,
-      "lastActivityAgo": "31m ago",
+      "lastActivityAgo": "36m ago",
       "isActive": false,
       "lastMessage": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script: cd /data/.openclaw",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775154692257
+  "updatedAt": 1775154992259
 }
