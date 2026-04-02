@@ -52,10 +52,10 @@
         "timeoutSeconds": 60,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-02T22:00:00.006Z",
-      "nextRunAt": "2026-04-02T23:00:00.000Z",
+      "lastRunAt": "2026-04-02T23:00:00.007Z",
+      "nextRunAt": "2026-04-03T00:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 22856,
+      "lastDurationMs": 8987,
       "consecutiveErrors": 0
     },
     {
@@ -491,5 +491,5 @@
       "consecutiveErrors": 1
     }
   ],
-  "updatedAt": 1775170592757
+  "updatedAt": 1775170892884
 }
