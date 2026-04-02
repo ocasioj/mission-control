@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775138403121,
+      "message": "[cron:dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e Line Alert Digest — 10am ET] Send the line movement email",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775135102342,
       "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1774658851771,
       "message": "[Fri 2026-03-27 20:47 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774658742368,
-      "message": "[Fri 2026-03-27 20:45 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -483,12 +483,12 @@
     },
     {
       "day": "2026-04-02",
-      "total": 19,
+      "total": 20,
       "byAgent": {
-        "signal-chat": 18,
+        "signal-chat": 19,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775138194816
+  "updatedAt": 1775138495072
 }
