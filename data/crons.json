@@ -48,7 +48,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py. The script already filters — only send a Signal message if it outputs actual alerts. If the output contains 'No significant line movement detected', do nothing and stay silent.",
+        "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py 2>&1. Read the output carefully. Only send a Signal message if the output explicitly contains the text 'YOUR BET AFFECTED' AND 'Signal alert sent'. If the output says 'skipping Signal' or 'No active bets affected', do NOT send anything to Signal — stay completely silent. Never send the full list of all line movements to Signal under any circumstances.",
         "timeoutSeconds": 60,
         "model": "google/gemini-2.5-flash"
       },
@@ -491,5 +491,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775088692541
+  "updatedAt": 1775088992594
 }
