@@ -14,16 +14,12 @@
     }
   ],
   "disk": {
-    "usedBytes": 70578634752,
-    "availBytes": 32292683776,
+    "usedBytes": 70579183616,
+    "availBytes": 32292134912,
     "totalBytes": 102888095744,
     "percent": 69
   },
   "cronErrors": [
-    {
-      "name": "HeyGen DLQ/Retry Daily Report",
-      "errors": 1
-    },
     {
       "name": "Daily X Morning Briefing",
       "errors": 1
@@ -43,5 +39,5 @@
   ],
   "cronTotal": 26,
   "gatewayUp": true,
-  "updatedAt": 1775112994720
+  "updatedAt": 1775113294672
 }
