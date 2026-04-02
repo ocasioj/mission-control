@@ -92,10 +92,10 @@
         "timeoutSeconds": 180,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-01T11:00:00.006Z",
-      "nextRunAt": "2026-04-02T11:00:00.000Z",
+      "lastRunAt": "2026-04-02T11:00:00.005Z",
+      "nextRunAt": "2026-04-03T11:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 24580,
+      "lastDurationMs": 25868,
       "consecutiveErrors": 0
     },
     {
@@ -372,11 +372,11 @@
         "kind": "agentTurn",
         "message": "Run python3 /data/.openclaw/workspace-signal-chat/daily_briefing.py. If successful, return stdout exactly as plain text. Keep it concise. If it fails, return a short error summary with the failing step."
       },
-      "lastRunAt": "2026-04-01T11:00:24.586Z",
-      "nextRunAt": "2026-04-02T11:00:00.000Z",
-      "lastStatus": "error",
-      "lastDurationMs": 25547,
-      "consecutiveErrors": 1
+      "lastRunAt": "2026-04-02T11:00:25.873Z",
+      "nextRunAt": "2026-04-03T11:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 27820,
+      "consecutiveErrors": 0
     },
     {
       "id": "d53c81c6-d8c9-413b-8814-5b0ceb7e366a",
@@ -491,5 +491,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775127392988
+  "updatedAt": 1775127692787
 }
