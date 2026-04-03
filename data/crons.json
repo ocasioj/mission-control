@@ -408,7 +408,27 @@
       "lastStatus": "ok",
       "lastDurationMs": 39688,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "8886957f-5f4d-4b82-9337-1f64f1c4faf7",
+      "name": "Pre-Game Pick Alerts",
+      "schedule": "0 10-23 * * *",
+      "scheduleHuman": "0 10-23 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "timeoutSeconds": 60,
+        "model": "google/gemini-2.5-flash",
+        "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-03T16:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775231493310
+  "updatedAt": 1775231793187
 }
