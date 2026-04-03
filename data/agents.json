@@ -1,26 +1,26 @@
 {
   "agents": [
     {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 110,
-      "lastActivity": 1775250872994,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
-      "lastMessage": "System: [2026-04-03 17:12:54 EDT] Exec completed (nimble-k, code 0) :: 00 | 47.6% hit | Edge: +45.17% | 💰 $1.00 | Avg: ",
-      "lastModel": "gpt-4.1"
-    },
-    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
-      "lastActivity": 1775249442777,
-      "lastActivityAgo": "25m ago",
-      "isActive": false,
+      "lastActivity": 1775251243519,
+      "lastActivityAgo": "49s ago",
+      "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 110,
+      "lastActivity": 1775251124455,
+      "lastActivityAgo": "2m ago",
+      "isActive": true,
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775251119174\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastModel": "gpt-4.1"
     },
     {
       "id": "analyst",
@@ -28,7 +28,7 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 7,
       "lastActivity": 1775247967306,
-      "lastActivityAgo": "50m ago",
+      "lastActivityAgo": "55m ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-04-03 16:25 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775250992498
+  "updatedAt": 1775251292548
 }
