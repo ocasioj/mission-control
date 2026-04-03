@@ -14,27 +14,15 @@
     }
   ],
   "disk": {
-    "usedBytes": 68815253504,
-    "availBytes": 34056065024,
+    "usedBytes": 68815544320,
+    "availBytes": 34055774208,
     "totalBytes": 102888095744,
     "percent": 67
   },
   "cronErrors": [
     {
-      "name": "Sharp Money Line Alerts",
-      "errors": 1
-    },
-    {
       "name": "Pre-Game Pick Alerts",
-      "errors": 1
-    },
-    {
-      "name": "Nightly Memory Summary (Joe)",
-      "errors": 1
-    },
-    {
-      "name": "OpenClaw Daily Health Report",
-      "errors": 1
+      "errors": 2
     },
     {
       "name": "Line Alert Digest — 6pm ET",
@@ -47,5 +35,5 @@
   ],
   "cronTotal": 24,
   "gatewayUp": true,
-  "updatedAt": 1775256994776
+  "updatedAt": 1775257295109
 }
