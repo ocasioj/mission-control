@@ -1,6 +1,27 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775250020757,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775250007520,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775249910456,
+      "message": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required ",
+      "turns": 3
+    },
+    {
       "agentId": "analyst",
       "agentName": "Nova",
       "timestamp": 1775247950996,
@@ -97,13 +118,6 @@
       "timestamp": 1775224803366,
       "message": "[cron:dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e Line Alert Digest — 10am ET] Send the line movement email",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775223149486,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775223146813\",\n  \"sender_id\": \"+",
-      "turns": 35
     },
     {
       "agentId": "signal-chat",
@@ -405,20 +419,6 @@
       "timestamp": 1774659632738,
       "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "planner",
-      "agentName": "Atlas",
-      "timestamp": 1774659621795,
-      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "image-gen",
-      "agentName": "Pixel",
-      "timestamp": 1774659616684,
-      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -474,13 +474,13 @@
     },
     {
       "day": "2026-04-03",
-      "total": 34,
+      "total": 36,
       "byAgent": {
-        "signal-chat": 31,
+        "signal-chat": 33,
         "analyst": 2,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775249794423
+  "updatedAt": 1775250094199
 }
