@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775251243519,
-      "lastActivityAgo": "49s ago",
-      "isActive": true,
+      "lastActivityAgo": "5m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,8 +17,8 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 110,
       "lastActivity": 1775251124455,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
+      "lastActivityAgo": "7m ago",
+      "isActive": false,
       "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775251119174\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gpt-4.1"
     },
@@ -28,7 +28,7 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 7,
       "lastActivity": 1775247967306,
-      "lastActivityAgo": "55m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-04-03 16:25 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775251292548
+  "updatedAt": 1775251592569
 }
