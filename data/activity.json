@@ -3,6 +3,13 @@
     {
       "agentId": "analyst",
       "agentName": "Nova",
+      "timestamp": 1775247950996,
+      "message": "[Fri 2026-04-03 16:25 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
+      "turns": 1
+    },
+    {
+      "agentId": "analyst",
+      "agentName": "Nova",
       "timestamp": 1775247488635,
       "message": "[Fri 2026-04-03 16:18 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
@@ -96,7 +103,7 @@
       "agentName": "Joe",
       "timestamp": 1775223149486,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775223146813\",\n  \"sender_id\": \"+",
-      "turns": 16
+      "turns": 24
     },
     {
       "agentId": "signal-chat",
@@ -412,13 +419,6 @@
       "timestamp": 1774659616684,
       "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "writer",
-      "agentName": "Quill",
-      "timestamp": 1774659611440,
-      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -474,13 +474,13 @@
     },
     {
       "day": "2026-04-03",
-      "total": 33,
+      "total": 34,
       "byAgent": {
         "signal-chat": 31,
-        "analyst": 1,
+        "analyst": 2,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775247694365
+  "updatedAt": 1775247994359
 }
