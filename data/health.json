@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 70685429760,
-    "availBytes": 32185888768,
+    "usedBytes": 70685655040,
+    "availBytes": 32185663488,
     "totalBytes": 102888095744,
     "percent": 69
   },
@@ -33,11 +33,15 @@
       "errors": 1
     },
     {
+      "name": "OpenClaw Daily Health Report",
+      "errors": 1
+    },
+    {
       "name": "Gambling Agent Model Retraining",
       "errors": 1
     }
   ],
   "cronTotal": 26,
   "gatewayUp": true,
-  "updatedAt": 1775217395658
+  "updatedAt": 1775217694854
 }
