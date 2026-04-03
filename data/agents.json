@@ -4,12 +4,12 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 102,
-      "lastActivity": 1775188325625,
-      "lastActivityAgo": "4m ago",
+      "sessionCount": 103,
+      "lastActivity": 1775188825254,
+      "lastActivityAgo": "1m ago",
       "isActive": true,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775188316950\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
-      "lastModel": "claude-sonnet-4-6"
+      "lastMessage": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /data/.openclaw/hooks/ro",
+      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "main",
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775188243461,
-      "lastActivityAgo": "5m ago",
+      "lastActivityAgo": "10m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775188592349
+  "updatedAt": 1775188892393
 }
