@@ -31,7 +31,8 @@
       "payload": {
         "timeoutSeconds": 600,
         "kind": "agentTurn",
-        "message": "Run the weekly model retraining pipeline: cd /data/.openclaw/workspace-coder && bash retrain_pipeline.sh. Report any errors if it fails."
+        "message": "Run the weekly model retraining pipeline: cd /data/.openclaw/workspace-coder && bash retrain_pipeline.sh. Report any errors if it fails.",
+        "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": "2026-03-30T08:00:00.004Z",
       "nextRunAt": "2026-04-06T08:00:00.000Z",
@@ -158,78 +159,6 @@
       "lastStatus": "ok",
       "lastDurationMs": 29814,
       "consecutiveErrors": 0
-    },
-    {
-      "id": "64f0e208-22d2-447a-8ff5-22c699cecbf7",
-      "name": "pre-reset-summary-1774965601",
-      "schedule": "",
-      "scheduleHuman": "",
-      "timezone": "UTC",
-      "enabled": false,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
-      },
-      "lastRunAt": "2026-03-31T14:00:08.429Z",
-      "nextRunAt": null,
-      "lastStatus": "error",
-      "lastDurationMs": 28455,
-      "consecutiveErrors": 1
-    },
-    {
-      "id": "436e5ab3-2d96-4c43-83b2-5272ece402e9",
-      "name": "pre-reset-summary-1774972801",
-      "schedule": "",
-      "scheduleHuman": "",
-      "timezone": "UTC",
-      "enabled": false,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
-      },
-      "lastRunAt": "2026-03-31T16:00:24.373Z",
-      "nextRunAt": null,
-      "lastStatus": "error",
-      "lastDurationMs": 18441,
-      "consecutiveErrors": 1
-    },
-    {
-      "id": "cb01dd9a-5036-4615-ad22-9ee973e1565f",
-      "name": "pre-reset-summary-1775008802",
-      "schedule": "",
-      "scheduleHuman": "",
-      "timezone": "UTC",
-      "enabled": false,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
-      },
-      "lastRunAt": "2026-04-01T02:00:24.500Z",
-      "nextRunAt": null,
-      "lastStatus": "error",
-      "lastDurationMs": 6595,
-      "consecutiveErrors": 1
-    },
-    {
-      "id": "34f8d0b5-f48c-48b4-bab2-0efc4565f7d3",
-      "name": "pre-reset-summary-1775016001",
-      "schedule": "",
-      "scheduleHuman": "",
-      "timezone": "UTC",
-      "enabled": false,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
-      },
-      "lastRunAt": "2026-04-01T04:00:08.831Z",
-      "nextRunAt": null,
-      "lastStatus": "error",
-      "lastDurationMs": 18168,
-      "consecutiveErrors": 1
     },
     {
       "id": "70cbb04a-5477-4fe7-8573-fb7ff27651f9",
@@ -441,24 +370,6 @@
       "consecutiveErrors": 0
     },
     {
-      "id": "63877d83-3594-4a22-aa4f-24ada46371a0",
-      "name": "pre-reset-summary-1775052001",
-      "schedule": "",
-      "scheduleHuman": "",
-      "timezone": "UTC",
-      "enabled": false,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
-      },
-      "lastRunAt": "2026-04-01T14:00:09.802Z",
-      "nextRunAt": null,
-      "lastStatus": "error",
-      "lastDurationMs": 35093,
-      "consecutiveErrors": 1
-    },
-    {
       "id": "7bc3a548-d805-4171-9b25-a85c835a0b7d",
       "name": "Line Alert Digest — 6pm ET",
       "schedule": "0 18 * * *",
@@ -469,7 +380,8 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, use the send_email tool: to=[TO value], subject=[SUBJECT value], htmlBody=[read contents of HTML_PATH], body='Line movement digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 60
+        "timeoutSeconds": 60,
+        "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": "2026-04-02T22:00:22.862Z",
       "nextRunAt": "2026-04-03T22:00:00.000Z",
@@ -488,7 +400,8 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, use the send_email tool: to=[TO value], subject=[SUBJECT value], htmlBody=[read contents of HTML_PATH], body='Line movement digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 60
+        "timeoutSeconds": 60,
+        "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": "2026-04-03T14:00:00.008Z",
       "nextRunAt": "2026-04-04T14:00:00.000Z",
@@ -497,5 +410,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775229393097
+  "updatedAt": 1775229693014
 }
