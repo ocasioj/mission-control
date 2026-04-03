@@ -111,7 +111,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run the weekly gambling P&L report and send it to Jose: cd /data/.openclaw/workspace-coder && python3 weekly_report.py. Report any errors if it fails.",
-        "timeoutSeconds": 60,
+        "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": null,
@@ -468,5 +468,5 @@
       "consecutiveErrors": 1
     }
   ],
-  "updatedAt": 1775254893145
+  "updatedAt": 1775255193071
 }
