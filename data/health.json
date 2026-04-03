@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 70643425280,
-    "availBytes": 32227893248,
+    "usedBytes": 70643494912,
+    "availBytes": 32227823616,
     "totalBytes": 102888095744,
     "percent": 69
   },
@@ -29,11 +29,15 @@
       "errors": 1
     },
     {
+      "name": "Nightly Memory Summary (Joe)",
+      "errors": 1
+    },
+    {
       "name": "Gambling Agent Model Retraining",
       "errors": 1
     }
   ],
   "cronTotal": 26,
   "gatewayUp": true,
-  "updatedAt": 1775198794836
+  "updatedAt": 1775199094725
 }
