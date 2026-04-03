@@ -5,22 +5,33 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 109,
-      "lastActivity": 1775246413616,
-      "lastActivityAgo": "16m ago",
-      "isActive": false,
-      "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /data/.openclaw/workspa",
-      "lastModel": "gemini-2.5-flash"
+      "lastActivity": 1775247678712,
+      "lastActivityAgo": "13s ago",
+      "isActive": true,
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775247671662\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastModel": "gpt-4.1"
     },
     {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
-      "lastActivity": 1775245843685,
-      "lastActivityAgo": "25m ago",
-      "isActive": false,
+      "lastActivity": 1775247643826,
+      "lastActivityAgo": "48s ago",
+      "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
+      "id": "analyst",
+      "name": "Nova",
+      "desc": "Data analysis and reporting",
+      "sessionCount": 6,
+      "lastActivity": 1775247491666,
+      "lastActivityAgo": "3m ago",
+      "isActive": true,
+      "lastMessage": "[Fri 2026-04-03 16:18 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
+      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "planner",
@@ -122,17 +133,6 @@
       "lastModel": "gemini-2.5-flash-lite"
     },
     {
-      "id": "analyst",
-      "name": "Nova",
-      "desc": "Data analysis and reporting",
-      "sessionCount": 5,
-      "lastActivity": 1774659591006,
-      "lastActivityAgo": "6d ago",
-      "isActive": false,
-      "lastMessage": "[Fri 2026-03-27 20:59 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
-      "lastModel": "gemini-2.5-flash"
-    },
-    {
       "id": "coder",
       "name": "Dev",
       "desc": "Software development and code tasks",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775247392539
+  "updatedAt": 1775247692522
 }
