@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775228403644,
+      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775224803366,
       "message": "[cron:dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e Line Alert Digest — 10am ET] Send the line movement email",
       "turns": 1
@@ -208,13 +215,6 @@
       "agentName": "Joe",
       "timestamp": 1775145602937,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775142002666,
-      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
       "turns": 1
     },
     {
@@ -467,19 +467,19 @@
     },
     {
       "day": "2026-04-02",
-      "total": 10,
+      "total": 9,
       "byAgent": {
-        "signal-chat": 10
+        "signal-chat": 9
       }
     },
     {
       "day": "2026-04-03",
-      "total": 21,
+      "total": 22,
       "byAgent": {
-        "signal-chat": 20,
+        "signal-chat": 21,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775228194494
+  "updatedAt": 1775228494218
 }
