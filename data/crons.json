@@ -282,10 +282,10 @@
         "message": "Run a safe backup: copy /data/.openclaw/workspace-signal-chat/memory/admin-changes.md, /data/.openclaw/workspace-signal-chat/config/video_pipeline.json, /data/.openclaw/workspace-signal-chat/config/mcporter.json, and /data/.openclaw/cron/jobs.json to /data/.openclaw/workspace-signal-chat/backups/$(date +%F)/. Ensure the backup dir exists and log result to /data/.openclaw/workspace-signal-chat/logs/cron_runs.log. Do not send any external messages; just perform local file operations and log a success/failure entry.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-02T07:10:00.004Z",
-      "nextRunAt": "2026-04-03T07:10:00.000Z",
+      "lastRunAt": "2026-04-03T07:10:00.005Z",
+      "nextRunAt": "2026-04-04T07:10:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 17302,
+      "lastDurationMs": 8775,
       "consecutiveErrors": 0
     },
     {
@@ -497,5 +497,5 @@
       "consecutiveErrors": 1
     }
   ],
-  "updatedAt": 1775199992833
+  "updatedAt": 1775200293021
 }
