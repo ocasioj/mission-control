@@ -490,12 +490,12 @@
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, use the send_email tool: to=[TO value], subject=[SUBJECT value], htmlBody=[read contents of HTML_PATH], body='Line movement digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent or silently exit if no alerts.",
         "timeoutSeconds": 60
       },
-      "lastRunAt": "2026-04-02T14:00:00.005Z",
-      "nextRunAt": "2026-04-03T14:00:00.000Z",
-      "lastStatus": "error",
-      "lastDurationMs": 60024,
-      "consecutiveErrors": 1
+      "lastRunAt": "2026-04-03T14:00:00.008Z",
+      "nextRunAt": "2026-04-04T14:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 39688,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775224592948
+  "updatedAt": 1775224893007
 }
