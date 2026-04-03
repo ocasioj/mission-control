@@ -54,11 +54,11 @@
         "timeoutSeconds": 60,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-03T21:00:00.004Z",
-      "nextRunAt": "2026-04-03T22:00:00.000Z",
-      "lastStatus": "ok",
-      "lastDurationMs": 18685,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-04-03T22:00:00.008Z",
+      "nextRunAt": "2026-04-03T23:00:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 18676,
+      "consecutiveErrors": 1
     },
     {
       "id": "ec94eafa-e7d2-4304-aca7-db1a1c09dfc5",
@@ -383,11 +383,11 @@
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-02T22:00:22.862Z",
-      "nextRunAt": "2026-04-03T22:00:00.000Z",
+      "lastRunAt": "2026-04-03T22:00:18.684Z",
+      "nextRunAt": "2026-04-04T22:00:00.000Z",
       "lastStatus": "error",
-      "lastDurationMs": 60011,
-      "consecutiveErrors": 1
+      "lastDurationMs": 59455,
+      "consecutiveErrors": 2
     },
     {
       "id": "dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e",
@@ -423,11 +423,11 @@
         "model": "google/gemini-2.5-flash",
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-03T21:00:18.689Z",
-      "nextRunAt": "2026-04-03T22:00:00.000Z",
-      "lastStatus": "ok",
-      "lastDurationMs": 8102,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-04-03T22:01:18.139Z",
+      "nextRunAt": "2026-04-03T23:00:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 9293,
+      "consecutiveErrors": 1
     },
     {
       "id": "263990b7-a67c-4eaa-831d-58b28a811971",
@@ -448,7 +448,25 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "15fad57e-ffd4-4d39-8c5f-7eb2b22759e2",
+      "name": "pre-reset-summary-1775253601",
+      "schedule": "",
+      "scheduleHuman": "",
+      "timezone": "UTC",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-03T22:00:01.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775253393023
+  "updatedAt": 1775253693207
 }
