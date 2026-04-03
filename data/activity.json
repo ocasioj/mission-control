@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775221202509,
+      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775219102079,
       "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
       "turns": 1
@@ -202,13 +209,6 @@
       "timestamp": 1775135102342,
       "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775134802701,
-      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
-      "turns": 2
     },
     {
       "agentId": "signal-chat",
@@ -467,19 +467,19 @@
     },
     {
       "day": "2026-04-02",
-      "total": 13,
+      "total": 12,
       "byAgent": {
-        "signal-chat": 13
+        "signal-chat": 12
       }
     },
     {
       "day": "2026-04-03",
-      "total": 17,
+      "total": 18,
       "byAgent": {
-        "signal-chat": 16,
+        "signal-chat": 17,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775220994211
+  "updatedAt": 1775221294183
 }
