@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775199602345,
+      "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775199003721,
       "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1774659249202,
       "message": "[Fri 2026-03-27 20:54 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "research",
-      "agentName": "Scout",
-      "timestamp": 1774659212843,
-      "message": "[Fri 2026-03-27 20:53 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -475,11 +475,11 @@
     },
     {
       "day": "2026-04-03",
-      "total": 8,
+      "total": 9,
       "byAgent": {
-        "signal-chat": 8
+        "signal-chat": 9
       }
     }
   ],
-  "updatedAt": 1775199394091
+  "updatedAt": 1775199694261
 }
