@@ -19,7 +19,7 @@
       "agentName": "Joe",
       "timestamp": 1775249910456,
       "message": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required ",
-      "turns": 8
+      "turns": 10
     },
     {
       "agentId": "analyst",
@@ -482,5 +482,5 @@
       }
     }
   ],
-  "updatedAt": 1775252794173
+  "updatedAt": 1775253094161
 }
