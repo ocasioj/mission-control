@@ -4,10 +4,10 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 103,
+      "sessionCount": 102,
       "lastActivity": 1775178000005,
-      "lastActivityAgo": "1m ago",
-      "isActive": true,
+      "lastActivityAgo": "6m ago",
+      "isActive": false,
       "lastMessage": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script: cd /data/.openclaw",
       "lastModel": "gemini-2.5-flash"
     },
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775177443620,
-      "lastActivityAgo": "10m ago",
+      "lastActivityAgo": "15m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -50,7 +50,7 @@
       "desc": "Prospecting, cold outreach, follow-ups, pipeline tracking",
       "sessionCount": 2,
       "lastActivity": 1774659710454,
-      "lastActivityAgo": "5d ago",
+      "lastActivityAgo": "6d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -61,7 +61,7 @@
       "desc": "LinkedIn and X content distribution and engagement",
       "sessionCount": 3,
       "lastActivity": 1774659702593,
-      "lastActivityAgo": "5d ago",
+      "lastActivityAgo": "6d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775178092302
+  "updatedAt": 1775178392347
 }
