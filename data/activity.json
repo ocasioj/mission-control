@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1775204442116,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1775200202478,
@@ -201,13 +208,6 @@
       "agentName": "Joe",
       "timestamp": 1775127603065,
       "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
-      "turns": 1
-    },
-    {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1775118041677,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
       "turns": 1
     },
     {
@@ -467,19 +467,19 @@
     },
     {
       "day": "2026-04-02",
-      "total": 20,
+      "total": 19,
       "byAgent": {
-        "signal-chat": 19,
-        "main": 1
+        "signal-chat": 19
       }
     },
     {
       "day": "2026-04-03",
-      "total": 10,
+      "total": 11,
       "byAgent": {
-        "signal-chat": 10
+        "signal-chat": 10,
+        "main": 1
       }
     }
   ],
-  "updatedAt": 1775204194002
+  "updatedAt": 1775204494191
 }
