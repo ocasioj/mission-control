@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775200844055,
-      "lastActivityAgo": "48s ago",
-      "isActive": true,
+      "lastActivityAgo": "5m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 102,
       "lastActivity": 1775200200007,
-      "lastActivityAgo": "11m ago",
+      "lastActivityAgo": "16m ago",
       "isActive": false,
       "lastMessage": "[cron:804004cf-3ce2-4427-a060-d336b08398b0 Daily Backup Configs] Run a safe backup: copy /data/.openclaw/workspace-signa",
       "lastModel": "gemini-2.5-flash"
@@ -138,11 +138,11 @@
       "desc": "Software development and code tasks",
       "sessionCount": 1,
       "lastActivity": 1771917768200,
-      "lastActivityAgo": "37d ago",
+      "lastActivityAgo": "38d ago",
       "isActive": false,
       "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"604f90f6-947d-485f-8ff0-0d6992d47b8f\",\n  \"sender\": \"o",
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775200892335
+  "updatedAt": 1775201192429
 }
