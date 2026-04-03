@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775232014875,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775232003266,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775228403644,
       "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
       "turns": 1
@@ -19,7 +33,7 @@
       "agentName": "Joe",
       "timestamp": 1775223149486,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775223146813\",\n  \"sender_id\": \"+",
-      "turns": 8
+      "turns": 9
     },
     {
       "agentId": "signal-chat",
@@ -207,13 +221,6 @@
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1775149202403,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775145602937,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
     },
@@ -412,13 +419,6 @@
       "timestamp": 1774659318634,
       "message": "[Fri 2026-03-27 20:55 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "image-gen",
-      "agentName": "Pixel",
-      "timestamp": 1774659249202,
-      "message": "[Fri 2026-03-27 20:54 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -467,19 +467,19 @@
     },
     {
       "day": "2026-04-02",
-      "total": 9,
+      "total": 8,
       "byAgent": {
-        "signal-chat": 9
+        "signal-chat": 8
       }
     },
     {
       "day": "2026-04-03",
-      "total": 22,
+      "total": 24,
       "byAgent": {
-        "signal-chat": 21,
+        "signal-chat": 23,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775231794419
+  "updatedAt": 1775232094101
 }
