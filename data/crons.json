@@ -455,18 +455,18 @@
       "schedule": "",
       "scheduleHuman": "",
       "timezone": "UTC",
-      "enabled": true,
+      "enabled": false,
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
         "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-03T22:00:01.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-04-03T22:01:29.441Z",
+      "nextRunAt": null,
+      "lastStatus": "error",
+      "lastDurationMs": 9835,
+      "consecutiveErrors": 1
     }
   ],
-  "updatedAt": 1775253693207
+  "updatedAt": 1775253993225
 }
