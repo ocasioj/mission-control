@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775242818090,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775242802917,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775239214277,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
@@ -405,26 +419,12 @@
       "timestamp": 1774659594535,
       "message": "[Fri 2026-03-27 20:59 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "analyst",
-      "agentName": "Nova",
-      "timestamp": 1774659589740,
-      "message": "[Fri 2026-03-27 20:59 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "analyst",
-      "agentName": "Nova",
-      "timestamp": 1774659538650,
-      "message": "[Fri 2026-03-27 20:58 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
     {
       "day": "2026-03-28",
-      "total": 26,
+      "total": 27,
       "byAgent": {
         "sales": 1,
         "planner": 4,
@@ -433,7 +433,7 @@
         "social": 2,
         "image-gen": 2,
         "finance": 1,
-        "analyst": 4,
+        "analyst": 5,
         "writer": 2,
         "support": 1,
         "video": 1
@@ -474,12 +474,12 @@
     },
     {
       "day": "2026-04-03",
-      "total": 28,
+      "total": 30,
       "byAgent": {
-        "signal-chat": 27,
+        "signal-chat": 29,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775242595190
+  "updatedAt": 1775242894389
 }
