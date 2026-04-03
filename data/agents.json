@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "main",
+      "name": "Joe (Web)",
+      "desc": "Web chat & group @mention handler",
+      "sessionCount": 7,
+      "lastActivity": 1775226043455,
+      "lastActivityAgo": "49s ago",
+      "isActive": true,
+      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
+      "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 103,
       "lastActivity": 1775224800011,
-      "lastActivityAgo": "16m ago",
+      "lastActivityAgo": "21m ago",
       "isActive": false,
       "lastMessage": "[cron:dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e Line Alert Digest — 10am ET] Send the line movement email digest. Run: cd /da",
       "lastModel": "gpt-4.1"
-    },
-    {
-      "id": "main",
-      "name": "Joe (Web)",
-      "desc": "Web chat & group @mention handler",
-      "sessionCount": 7,
-      "lastActivity": 1775224243608,
-      "lastActivityAgo": "25m ago",
-      "isActive": false,
-      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
-      "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "planner",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775225792467
+  "updatedAt": 1775226092471
 }
