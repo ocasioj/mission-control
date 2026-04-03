@@ -29,7 +29,7 @@
       "enabled": true,
       "sessionTarget": "isolated",
       "payload": {
-        "timeoutSeconds": 1800,
+        "timeoutSeconds": 3600,
         "kind": "agentTurn",
         "message": "Run the weekly model retraining pipeline: cd /data/.openclaw/workspace-coder && bash retrain_pipeline.sh. Report any errors if it fails.",
         "model": "google/gemini-2.5-flash"
@@ -380,7 +380,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, use the send_email tool: to=[TO value], subject=[SUBJECT value], htmlBody=[read contents of HTML_PATH], body='Line movement digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 60,
+        "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": "2026-04-02T22:00:22.862Z",
@@ -400,7 +400,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, use the send_email tool: to=[TO value], subject=[SUBJECT value], htmlBody=[read contents of HTML_PATH], body='Line movement digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 60,
+        "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": "2026-04-03T14:00:00.008Z",
@@ -430,5 +430,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775251293115
+  "updatedAt": 1775251593112
 }
