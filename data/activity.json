@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775178002919,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775174406561,
       "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1774659249202,
       "message": "[Fri 2026-03-27 20:54 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "research",
-      "agentName": "Scout",
-      "timestamp": 1774659212843,
-      "message": "[Fri 2026-03-27 20:53 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -475,11 +475,11 @@
     },
     {
       "day": "2026-04-03",
-      "total": 1,
+      "total": 2,
       "byAgent": {
-        "signal-chat": 1
+        "signal-chat": 2
       }
     }
   ],
-  "updatedAt": 1775177794334
+  "updatedAt": 1775178094147
 }
