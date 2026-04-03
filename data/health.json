@@ -4,7 +4,7 @@
       "name": "openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
       "state": "running",
-      "status": "Up 10 minutes (healthy)"
+      "status": "Up 15 minutes (healthy)"
     },
     {
       "name": "openclaw-pa62-openclaw-1",
@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 68737048576,
-    "availBytes": 34134269952,
+    "usedBytes": 68737667072,
+    "availBytes": 34133651456,
     "totalBytes": 102888095744,
     "percent": 67
   },
@@ -23,17 +23,9 @@
     {
       "name": "Pre-Game Pick Alerts",
       "errors": 2
-    },
-    {
-      "name": "Line Alert Digest — 6pm ET",
-      "errors": 2
-    },
-    {
-      "name": "Gambling Agent Model Retraining",
-      "errors": 1
     }
   ],
   "cronTotal": 24,
   "gatewayUp": true,
-  "updatedAt": 1775257965260
+  "updatedAt": 1775258265059
 }
