@@ -428,7 +428,27 @@
       "lastStatus": "ok",
       "lastDurationMs": 8102,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "263990b7-a67c-4eaa-831d-58b28a811971",
+      "name": "Daily Gambling Data Refresh",
+      "schedule": "30 7 * * *",
+      "scheduleHuman": "30 7 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "timeoutSeconds": 600,
+        "model": "google/gemini-2.5-flash",
+        "message": "Run the daily stats and odds data refresh: cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1. Stay silent on success. If it fails, send a brief Signal alert with the error."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-04T11:30:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775252193006
+  "updatedAt": 1775252493213
 }
