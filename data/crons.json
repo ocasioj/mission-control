@@ -11,7 +11,8 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run the daily gambling picks and send them to Jose via Signal. Execute: cd /data/.openclaw/workspace-coder && python3 send_picks_signal.py. Report any errors if the script fails.",
-        "timeoutSeconds": 120
+        "timeoutSeconds": 120,
+        "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": "2026-04-02T13:00:00.003Z",
       "nextRunAt": "2026-04-03T13:00:00.000Z",
@@ -109,7 +110,8 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run the weekly gambling P&L report and send it to Jose: cd /data/.openclaw/workspace-coder && python3 weekly_report.py. Report any errors if it fails.",
-        "timeoutSeconds": 60
+        "timeoutSeconds": 60,
+        "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": null,
       "nextRunAt": "2026-04-06T00:00:00.000Z",
@@ -128,7 +130,8 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run the nightly CLV summary to check closing line value for recent bets: cd /data/.openclaw/workspace-coder && python3 clv_summary.py --days 2. Only send Signal report if there is actual CLV data to share. If no data found, run silently.",
-        "timeoutSeconds": 120
+        "timeoutSeconds": 120,
+        "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": "2026-04-03T03:00:17.004Z",
       "nextRunAt": "2026-04-04T03:00:00.000Z",
@@ -257,7 +260,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Before your session resets in 10 minutes, review today’s conversation and update MEMORY.md with anything important: unfinished tasks, decisions Jose made, things to follow up on, and any new facts about Jose or his contacts. Be concise — bullet points only. Do not reply to this message."
+        "message": "Before your session resets in 10 minutes, review today's conversation and update MEMORY.md with anything important: unfinished tasks, decisions Jose made, things to follow up on, and any new facts about Jose or his contacts. Be concise — bullet points only. Do not reply to this message.",
+        "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": "2026-04-02T06:50:00.004Z",
       "nextRunAt": "2026-04-03T06:50:00.000Z",
@@ -370,7 +374,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run python3 /data/.openclaw/workspace-signal-chat/daily_briefing.py. If successful, return stdout exactly as plain text. Keep it concise. If it fails, return a short error summary with the failing step."
+        "message": "Run python3 /data/.openclaw/workspace-signal-chat/daily_briefing.py. If successful, return stdout exactly as plain text. Keep it concise. If it fails, return a short error summary with the failing step.",
+        "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": "2026-04-02T11:00:25.873Z",
       "nextRunAt": "2026-04-03T11:00:00.000Z",
@@ -426,7 +431,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py weekly"
+        "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py weekly",
+        "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": null,
       "nextRunAt": "2026-04-06T00:00:00.000Z",
@@ -491,5 +497,5 @@
       "consecutiveErrors": 1
     }
   ],
-  "updatedAt": 1775187692812
+  "updatedAt": 1775187992861
 }
