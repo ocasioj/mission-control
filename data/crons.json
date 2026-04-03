@@ -450,23 +450,45 @@
       "consecutiveErrors": 0
     },
     {
-      "id": "15fad57e-ffd4-4d39-8c5f-7eb2b22759e2",
-      "name": "pre-reset-summary-1775253601",
-      "schedule": "",
-      "scheduleHuman": "",
-      "timezone": "UTC",
-      "enabled": false,
+      "id": "disk-space-alert-daily",
+      "name": "Disk Space Alert",
+      "schedule": "30 8 * * *",
+      "scheduleHuman": "30 8 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Your session is about to reset due to size. Quickly update MEMORY.md with anything important from today: unfinished tasks, decisions Jose made, things to follow up on, new facts about Jose or his contacts. Bullet points only. Do not reply."
+        "message": "Check disk usage: run the command: df -h / | tail -1 | awk '{print $5}' and capture the percentage. Also run: df -h / | tail -1 | awk '{print $3\"/\"$2}' for used/total. If usage is 80% or higher, send Jose a Signal message like: \"⚠️ Disk Alert: Server at X% full (Yused/Ztotal). Cleanup needed.\" If below 80%, stay completely silent — do NOT send any message.",
+        "timeoutSeconds": 30,
+        "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-03T22:01:29.441Z",
-      "nextRunAt": null,
-      "lastStatus": "error",
-      "lastDurationMs": 9835,
-      "consecutiveErrors": 1
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-04T12:30:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "prune-picks-data-weekly",
+      "name": "Prune Old Picks Data",
+      "schedule": "0 3 * * 0",
+      "scheduleHuman": "0 3 * * 0",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Prune old picks data files: run: find /data/.openclaw/workspace-coder/picks_data -name \"*.json\" -mtime +30 -delete 2>/dev/null; echo \"Pruned files older than 30 days. Remaining: $(ls /data/.openclaw/workspace-coder/picks_data/*.json 2>/dev/null | wc -l) files.\" Stay silent — do not send any Signal message. Just run the cleanup.",
+        "timeoutSeconds": 30,
+        "model": "google/gemini-2.5-flash-lite"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-05T07:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775258562905
+  "updatedAt": 1775258659935
 }
