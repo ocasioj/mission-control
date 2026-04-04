@@ -41,26 +41,6 @@
       "consecutiveErrors": 0
     },
     {
-      "id": "441e0c46-57a4-4e8a-947b-95fde9dedb5e",
-      "name": "Sharp Money Line Alerts",
-      "schedule": "0 12-23 * * *",
-      "scheduleHuman": "0 12-23 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py 2>&1. Read the output carefully. Only send a Signal message if the output explicitly contains the text 'YOUR BET AFFECTED' AND 'Signal alert sent'. If the output says 'skipping Signal' or 'No active bets affected', do NOT send anything to Signal — stay completely silent. Never send the full list of all line movements to Signal under any circumstances.",
-        "timeoutSeconds": 60,
-        "model": "google/gemini-2.5-flash-lite"
-      },
-      "lastRunAt": "2026-04-04T20:00:00.006Z",
-      "nextRunAt": "2026-04-04T21:00:00.000Z",
-      "lastStatus": "ok",
-      "lastDurationMs": 16483,
-      "consecutiveErrors": 0
-    },
-    {
       "id": "ec94eafa-e7d2-4304-aca7-db1a1c09dfc5",
       "name": "Dashboard Data Refresh + GitHub Push",
       "schedule": "0 8 * * *",
@@ -441,7 +421,7 @@
         "kind": "agentTurn",
         "timeoutSeconds": 600,
         "model": "google/gemini-2.5-flash-lite",
-        "message": "Run the daily stats and odds data refresh: cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1. Stay silent on success. If it fails, send a brief Signal alert with the error."
+        "message": "Run the daily stats and odds data refresh: ODDS_API_KEY=66d34d00c7572b47c00c94f9be6718a9 cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
       "lastRunAt": "2026-04-04T11:30:00.003Z",
       "nextRunAt": "2026-04-05T11:30:00.000Z",
@@ -488,7 +468,27 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "81769ced-23a7-4035-a87e-2050f3aa1c8a",
+      "name": "Sharp Money Line Alerts",
+      "schedule": "0 12-23 * * *",
+      "scheduleHuman": "0 12-23 * * *",
+      "timezone": "America/New_York",
+      "enabled": false,
+      "sessionTarget": "isolated",
+      "payload": {
+        "timeoutSeconds": 60,
+        "model": "google/gemini-2.5-flash-lite",
+        "kind": "agentTurn",
+        "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py 2>&1. Read the output carefully. Only send a Signal message if the output explicitly contains the text 'YOUR BET AFFECTED' AND 'Signal alert sent'. If the output says 'skipping Signal' or 'No active bets affected', do NOT send anything to Signal — stay completely silent. Never send the full list of all line movements to Signal under any circumstances."
+      },
+      "lastRunAt": null,
+      "nextRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775335459937
+  "updatedAt": 1775335759963
 }
