@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775260821275,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775260804800,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775257212313,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
@@ -405,40 +419,9 @@
       "timestamp": 1774659644431,
       "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "video",
-      "agentName": "Director",
-      "timestamp": 1774659639668,
-      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "finance",
-      "agentName": "Ledger",
-      "timestamp": 1774659632738,
-      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
-    {
-      "day": "2026-03-28",
-      "total": 27,
-      "byAgent": {
-        "sales": 1,
-        "planner": 4,
-        "research": 6,
-        "signal-chat": 2,
-        "social": 2,
-        "image-gen": 2,
-        "finance": 1,
-        "analyst": 5,
-        "writer": 2,
-        "support": 1,
-        "video": 1
-      }
-    },
     {
       "day": "2026-03-29",
       "total": 2,
@@ -478,7 +461,14 @@
         "analyst": 2,
         "main": 1
       }
+    },
+    {
+      "day": "2026-04-04",
+      "total": 2,
+      "byAgent": {
+        "signal-chat": 2
+      }
     }
   ],
-  "updatedAt": 1775260760925
+  "updatedAt": 1775261060968
 }
