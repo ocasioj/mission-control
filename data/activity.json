@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775310299870,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775310296976\",\n  \"sender_id\": \"+",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775307902459,
       "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
       "turns": 1
@@ -97,13 +104,6 @@
       "timestamp": 1775285403709,
       "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775279693453,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775279690574\",\n  \"sender_id\": \"+",
-      "turns": 11
     },
     {
       "agentId": "signal-chat",
@@ -421,5 +421,5 @@
       }
     }
   ],
-  "updatedAt": 1775310261119
+  "updatedAt": 1775310561288
 }
