@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775302202933,
+      "message": "[cron:263990b7-a67c-4eaa-831d-58b28a811971 Daily Gambling Data Refresh] Run the daily stats and odds",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775300414644,
       "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
       "turns": 1
@@ -400,12 +407,12 @@
     },
     {
       "day": "2026-04-04",
-      "total": 18,
+      "total": 19,
       "byAgent": {
-        "signal-chat": 17,
+        "signal-chat": 18,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775302161259
+  "updatedAt": 1775302460963
 }
