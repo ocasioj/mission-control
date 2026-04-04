@@ -14,42 +14,13 @@
     }
   ],
   "disk": {
-    "usedBytes": 66130370560,
-    "availBytes": 36740947968,
+    "usedBytes": 66130870272,
+    "availBytes": 36740448256,
     "totalBytes": 102888095744,
     "percent": 64
   },
-  "cronErrors": [
-    {
-      "name": "Sharp Money Line Alerts",
-      "errors": 4
-    },
-    {
-      "name": "Daily API Usage Meter",
-      "errors": 1
-    },
-    {
-      "name": "Nightly Memory Summary (Joe)",
-      "errors": 1
-    },
-    {
-      "name": "HeyGen DLQ/Retry Daily Report",
-      "errors": 1
-    },
-    {
-      "name": "Daily X Morning Briefing",
-      "errors": 1
-    },
-    {
-      "name": "Daily Gambling Data Refresh",
-      "errors": 1
-    },
-    {
-      "name": "Daily Gambling Picks → Signal",
-      "errors": 1
-    }
-  ],
+  "cronErrors": [],
   "cronTotal": 25,
   "gatewayUp": true,
-  "updatedAt": 1775312361653
+  "updatedAt": 1775312661905
 }
