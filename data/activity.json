@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775314814707,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775314803562,
+      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775311313948,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
@@ -19,7 +33,7 @@
       "agentName": "Joe",
       "timestamp": 1775310299870,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775310296976\",\n  \"sender_id\": \"+",
-      "turns": 8
+      "turns": 9
     },
     {
       "agentId": "signal-chat",
@@ -332,13 +346,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775228403644,
-      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775010773109,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775010770057\",\n  \"sender_id\": \"u",
       "turns": 1
@@ -413,20 +420,20 @@
     },
     {
       "day": "2026-04-03",
-      "total": 20,
+      "total": 19,
       "byAgent": {
-        "signal-chat": 18,
+        "signal-chat": 17,
         "analyst": 2
       }
     },
     {
       "day": "2026-04-04",
-      "total": 28,
+      "total": 30,
       "byAgent": {
-        "signal-chat": 27,
+        "signal-chat": 29,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775314761052
+  "updatedAt": 1775315061168
 }
