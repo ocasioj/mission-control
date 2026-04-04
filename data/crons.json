@@ -363,11 +363,11 @@
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash-lite"
       },
-      "lastRunAt": "2026-04-03T22:00:18.684Z",
-      "nextRunAt": "2026-04-04T22:00:00.000Z",
+      "lastRunAt": "2026-04-04T22:00:00.008Z",
+      "nextRunAt": "2026-04-05T22:00:00.000Z",
       "lastStatus": "error",
-      "lastDurationMs": 59455,
-      "consecutiveErrors": 0
+      "lastDurationMs": 120029,
+      "consecutiveErrors": 1
     },
     {
       "id": "dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e",
@@ -403,10 +403,10 @@
         "model": "google/gemini-2.5-flash-lite",
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-04T21:00:00.005Z",
-      "nextRunAt": "2026-04-04T22:00:00.000Z",
+      "lastRunAt": "2026-04-04T22:02:00.037Z",
+      "nextRunAt": "2026-04-04T23:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 8574,
+      "lastDurationMs": 8658,
       "consecutiveErrors": 0
     },
     {
@@ -490,5 +490,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775339959908
+  "updatedAt": 1775340259953
 }
