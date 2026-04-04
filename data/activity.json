@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775275213716,
+      "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775275202697,
+      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily API Usage Meter] Run this exact command and return ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775271697042,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
@@ -297,20 +311,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775188817352,
-      "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775188804147,
-      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily API Usage Meter] Run this exact command and return ",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775010773109,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775010770057\",\n  \"sender_id\": \"u",
       "turns": 1
@@ -392,20 +392,20 @@
     },
     {
       "day": "2026-04-03",
-      "total": 35,
+      "total": 33,
       "byAgent": {
-        "signal-chat": 32,
+        "signal-chat": 30,
         "analyst": 2,
         "main": 1
       }
     },
     {
       "day": "2026-04-04",
-      "total": 9,
+      "total": 11,
       "byAgent": {
-        "signal-chat": 9
+        "signal-chat": 11
       }
     }
   ],
-  "updatedAt": 1775275160942
+  "updatedAt": 1775275461167
 }
