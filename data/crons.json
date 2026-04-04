@@ -268,10 +268,10 @@
         "message": "Run a self health check: exec `joe-repair --check`. If any issues are found, run `joe-repair --fix` to repair them, then send Jose a brief Signal DM summarizing what you found and fixed. If everything is healthy, do nothing — no message needed.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-03T15:00:00.005Z",
-      "nextRunAt": "2026-04-04T15:00:00.000Z",
+      "lastRunAt": "2026-04-04T15:00:00.005Z",
+      "nextRunAt": "2026-04-05T15:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 14849,
+      "lastDurationMs": 12488,
       "consecutiveErrors": 0
     },
     {
@@ -423,10 +423,10 @@
         "model": "google/gemini-2.5-flash-lite",
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-04T14:01:51.750Z",
-      "nextRunAt": "2026-04-04T15:00:00.000Z",
+      "lastRunAt": "2026-04-04T15:00:12.493Z",
+      "nextRunAt": "2026-04-04T16:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 7708,
+      "lastDurationMs": 8181,
       "consecutiveErrors": 0
     },
     {
@@ -490,5 +490,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775314759930
+  "updatedAt": 1775315059959
 }
