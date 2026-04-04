@@ -5,10 +5,10 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 121,
-      "lastActivity": 1775338861304,
-      "lastActivityAgo": "3m ago",
+      "lastActivity": 1775339252303,
+      "lastActivityAgo": "1m ago",
       "isActive": true,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775338840780\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastMessage": "System: [2026-04-04 17:41:37 EDT] Exec completed (good-sum, code 0) :: ia 76ers +118 (Edge: +49.8% — Bet $5.00) 💰 Bankr",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775338533140,
-      "lastActivityAgo": "8m ago",
+      "lastActivityAgo": "13m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775339059434
+  "updatedAt": 1775339359456
 }
