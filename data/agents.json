@@ -6,7 +6,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 122,
       "lastActivity": 1775315291564,
-      "lastActivityAgo": "11m ago",
+      "lastActivityAgo": "16m ago",
       "isActive": false,
       "lastMessage": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"gateway-client\",\n  \"id\": \"gateway-client\"\n}\n```\n\n[Sat 2026-04-04 11:0",
       "lastModel": "gemini-2.5-flash"
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775312457513,
-      "lastActivityAgo": "58m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775315959443
+  "updatedAt": 1775316259428
 }
