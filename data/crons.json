@@ -249,11 +249,11 @@
         "kind": "agentTurn",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-03T07:00:00.002Z",
-      "nextRunAt": "2026-04-04T07:00:00.000Z",
-      "lastStatus": "ok",
-      "lastDurationMs": 11121,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-04-04T07:00:00.002Z",
+      "nextRunAt": "2026-04-05T07:00:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 9719,
+      "consecutiveErrors": 1
     },
     {
       "id": "0c26b4b2-456f-4dfe-b7e7-b2c9df150025",
@@ -490,5 +490,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775285959950
+  "updatedAt": 1775286259874
 }
