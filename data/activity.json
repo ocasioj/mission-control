@@ -3,16 +3,16 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775343603022,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "timestamp": 1775346193871,
+      "message": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required ",
       "turns": 1
     },
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775340218469,
-      "message": "[media attached: /data/.openclaw/media/inbound/976669af-66d5-4295-b663-34dd449b45ef (text/x-signal-p",
-      "turns": 39
+      "timestamp": 1775343603022,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
     },
     {
       "agentId": "signal-chat",
@@ -413,5 +413,5 @@
       }
     }
   ],
-  "updatedAt": 1775345961124
+  "updatedAt": 1775346261075
 }
