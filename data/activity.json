@@ -5,7 +5,7 @@
       "agentName": "Joe",
       "timestamp": 1775340218469,
       "message": "[media attached: /data/.openclaw/media/inbound/976669af-66d5-4295-b663-34dd449b45ef (text/x-signal-p",
-      "turns": 1
+      "turns": 3
     },
     {
       "agentId": "signal-chat",
@@ -316,27 +316,6 @@
       "turns": 1
     },
     {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775253679942,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775253620464,
-      "message": "[cron:7bc3a548-d805-4171-9b25-a85c835a0b7d Line Alert Digest — 6pm ET] Send the line movement email ",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775253603506,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
       "agentId": "analyst",
       "agentName": "Nova",
       "timestamp": 1775247950996,
@@ -427,9 +406,9 @@
     },
     {
       "day": "2026-04-03",
-      "total": 7,
+      "total": 4,
       "byAgent": {
-        "signal-chat": 5,
+        "signal-chat": 2,
         "analyst": 2
       }
     },
@@ -442,5 +421,5 @@
       }
     }
   ],
-  "updatedAt": 1775340261021
+  "updatedAt": 1775340561087
 }
