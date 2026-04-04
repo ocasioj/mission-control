@@ -1,26 +1,26 @@
 {
   "agents": [
     {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 124,
-      "lastActivity": 1775340220601,
-      "lastActivityAgo": "38s ago",
-      "isActive": true,
-      "lastMessage": "[media attached: /data/.openclaw/media/inbound/976669af-66d5-4295-b663-34dd449b45ef (text/x-signal-plain) | /data/.openc",
-      "lastModel": "gemini-2.5-flash"
-    },
-    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
-      "lastActivity": 1775338533140,
-      "lastActivityAgo": "28m ago",
-      "isActive": false,
+      "lastActivity": 1775340336595,
+      "lastActivityAgo": "3m ago",
+      "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 120,
+      "lastActivity": 1775340332087,
+      "lastActivityAgo": "3m ago",
+      "isActive": true,
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775340323841\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "analyst",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775340259446
+  "updatedAt": 1775340559447
 }
