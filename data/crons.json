@@ -74,10 +74,10 @@
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-03T12:00:00.009Z",
-      "nextRunAt": "2026-04-04T12:00:00.000Z",
+      "lastRunAt": "2026-04-04T12:00:00.005Z",
+      "nextRunAt": "2026-04-05T12:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 9700,
+      "lastDurationMs": 10554,
       "consecutiveErrors": 0
     },
     {
@@ -287,10 +287,10 @@
         "message": "Run the daily health report: exec heygen-health-report. Do not send any additional Signal message — the script sends the report directly. If the script fails, send Jose a brief note with the error.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-03T12:00:09.709Z",
-      "nextRunAt": "2026-04-04T12:00:00.000Z",
-      "lastStatus": "error",
-      "lastDurationMs": 7602,
+      "lastRunAt": "2026-04-04T12:00:10.559Z",
+      "nextRunAt": "2026-04-05T12:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 8414,
       "consecutiveErrors": 0
     },
     {
@@ -490,5 +490,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775303959947
+  "updatedAt": 1775304259841
 }
