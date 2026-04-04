@@ -377,13 +377,6 @@
       "timestamp": 1774668590267,
       "message": "[Fri 2026-03-27 23:29 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "planner",
-      "agentName": "Atlas",
-      "timestamp": 1774667973046,
-      "message": "[Fri 2026-03-27 23:19 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -435,5 +428,5 @@
       }
     }
   ],
-  "updatedAt": 1775272761166
+  "updatedAt": 1775273061111
 }
