@@ -1,6 +1,20 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775300414644,
+      "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775300402194,
+      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
+      "turns": 1
+    },
+    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1775290854212,
@@ -304,20 +318,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775214018596,
-      "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775214002352,
-      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775010773109,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775010770057\",\n  \"sender_id\": \"u",
       "turns": 1
@@ -392,20 +392,20 @@
     },
     {
       "day": "2026-04-03",
-      "total": 29,
+      "total": 27,
       "byAgent": {
-        "signal-chat": 27,
+        "signal-chat": 25,
         "analyst": 2
       }
     },
     {
       "day": "2026-04-04",
-      "total": 16,
+      "total": 18,
       "byAgent": {
-        "signal-chat": 15,
+        "signal-chat": 17,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775300361046
+  "updatedAt": 1775300661023
 }
