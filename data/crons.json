@@ -14,11 +14,11 @@
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-03T13:00:00.004Z",
-      "nextRunAt": "2026-04-04T13:00:00.000Z",
-      "lastStatus": "ok",
-      "lastDurationMs": 19353,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-04-04T13:00:00.003Z",
+      "nextRunAt": "2026-04-05T13:00:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 19543,
+      "consecutiveErrors": 1
     },
     {
       "id": "0da84fc9-a8d8-4bfc-93e8-c25a031ba095",
@@ -490,5 +490,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775307559859
+  "updatedAt": 1775307860140
 }
