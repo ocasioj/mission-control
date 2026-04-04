@@ -4,11 +4,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 118,
-      "lastActivity": 1775304010567,
-      "lastActivityAgo": "14m ago",
-      "isActive": false,
-      "lastMessage": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report: exec heygen-health",
+      "sessionCount": 119,
+      "lastActivity": 1775304900003,
+      "lastActivityAgo": "4m ago",
+      "isActive": true,
+      "lastMessage": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmail-health-report. Do ",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775303456569,
-      "lastActivityAgo": "23m ago",
+      "lastActivityAgo": "28m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775304859377
+  "updatedAt": 1775305159455
 }
