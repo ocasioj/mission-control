@@ -356,20 +356,6 @@
       "timestamp": 1774679318336,
       "message": "[Queued messages while agent was busy]\n\n---\nQueued #1\nConversation info (untrusted metadata):\n```jso",
       "turns": 1
-    },
-    {
-      "agentId": "planner",
-      "agentName": "Atlas",
-      "timestamp": 1774669109175,
-      "message": "[Fri 2026-03-27 23:38 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "research",
-      "agentName": "Scout",
-      "timestamp": 1774668874611,
-      "message": "[Fri 2026-03-27 23:34 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -421,5 +407,5 @@
       }
     }
   ],
-  "updatedAt": 1775273661039
+  "updatedAt": 1775273961030
 }
