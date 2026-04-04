@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775307602306,
+      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775305802714,
       "message": "[cron:disk-space-alert-daily Disk Space Alert] Check disk usage: run the command: df -h / | tail -1 ",
       "turns": 1
@@ -325,13 +332,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775221202509,
-      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775010773109,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775010770057\",\n  \"sender_id\": \"u",
       "turns": 1
@@ -406,20 +406,20 @@
     },
     {
       "day": "2026-04-03",
-      "total": 23,
+      "total": 22,
       "byAgent": {
-        "signal-chat": 21,
+        "signal-chat": 20,
         "analyst": 2
       }
     },
     {
       "day": "2026-04-04",
-      "total": 24,
+      "total": 25,
       "byAgent": {
-        "signal-chat": 23,
+        "signal-chat": 24,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775307560957
+  "updatedAt": 1775307861444
 }
