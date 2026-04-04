@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775325622506,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775325603470,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775322014683,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
@@ -332,20 +346,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775239214277,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775239203194,
-      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775010773109,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775010770057\",\n  \"sender_id\": \"u",
       "turns": 1
@@ -420,20 +420,20 @@
     },
     {
       "day": "2026-04-03",
-      "total": 15,
+      "total": 13,
       "byAgent": {
-        "signal-chat": 13,
+        "signal-chat": 11,
         "analyst": 2
       }
     },
     {
       "day": "2026-04-04",
-      "total": 34,
+      "total": 36,
       "byAgent": {
-        "signal-chat": 33,
+        "signal-chat": 35,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775325561215
+  "updatedAt": 1775325861392
 }
