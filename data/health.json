@@ -14,18 +14,18 @@
     }
   ],
   "disk": {
-    "usedBytes": 65238626304,
-    "availBytes": 37632692224,
+    "usedBytes": 65238921216,
+    "availBytes": 37632397312,
     "totalBytes": 102888095744,
     "percent": 63
   },
   "cronErrors": [
     {
       "name": "Sharp Money Line Alerts",
-      "errors": 1
+      "errors": 2
     }
   ],
   "cronTotal": 25,
   "gatewayUp": true,
-  "updatedAt": 1775264361537
+  "updatedAt": 1775264661502
 }
