@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1775290854212,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1775286602547,
@@ -309,13 +316,6 @@
       "turns": 1
     },
     {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1775204442116,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
-    },
-    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1775010773109,
@@ -392,20 +392,20 @@
     },
     {
       "day": "2026-04-03",
-      "total": 30,
+      "total": 29,
       "byAgent": {
         "signal-chat": 27,
-        "analyst": 2,
-        "main": 1
+        "analyst": 2
       }
     },
     {
       "day": "2026-04-04",
-      "total": 15,
+      "total": 16,
       "byAgent": {
-        "signal-chat": 15
+        "signal-chat": 15,
+        "main": 1
       }
     }
   ],
-  "updatedAt": 1775290761059
+  "updatedAt": 1775291060999
 }
