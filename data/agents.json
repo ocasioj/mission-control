@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775308857294,
-      "lastActivityAgo": "3m ago",
-      "isActive": true,
+      "lastActivityAgo": "8m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 120,
       "lastActivity": 1775307900008,
-      "lastActivityAgo": "19m ago",
+      "lastActivityAgo": "24m ago",
       "isActive": false,
       "lastMessage": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email digest to Jose. Run: ",
       "lastModel": "gemini-2.5-flash"
@@ -28,7 +28,7 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 7,
       "lastActivity": 1775247967306,
-      "lastActivityAgo": "16h ago",
+      "lastActivityAgo": "17h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-04-03 16:25 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775309059391
+  "updatedAt": 1775309359344
 }
