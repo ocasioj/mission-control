@@ -4,7 +4,7 @@
       "name": "openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
       "state": "running",
-      "status": "Up 35 minutes (healthy)"
+      "status": "Up 40 minutes (healthy)"
     },
     {
       "name": "openclaw-pa62-openclaw-1",
@@ -14,18 +14,18 @@
     }
   ],
   "disk": {
-    "usedBytes": 65258237952,
-    "availBytes": 37613080576,
+    "usedBytes": 65258164224,
+    "availBytes": 37613154304,
     "totalBytes": 102888095744,
     "percent": 63
   },
   "cronErrors": [
     {
-      "name": "Pre-Game Pick Alerts",
-      "errors": 2
+      "name": "Sharp Money Line Alerts",
+      "errors": 1
     }
   ],
   "cronTotal": 25,
   "gatewayUp": true,
-  "updatedAt": 1775260761476
+  "updatedAt": 1775261061564
 }
