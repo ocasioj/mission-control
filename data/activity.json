@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775264416590,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775264402395,
+      "message": "[cron:441e0c46-57a4-4e8a-947b-95fde9dedb5e Sharp Money Line Alerts] Run the sharp money alert script",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775260821275,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
@@ -384,41 +398,6 @@
       "timestamp": 1774666717628,
       "message": "[Fri 2026-03-27 22:58 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
       "turns": 1
-    },
-    {
-      "agentId": "sales",
-      "agentName": "Closer",
-      "timestamp": 1774659708340,
-      "message": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "social",
-      "agentName": "Amp",
-      "timestamp": 1774659700494,
-      "message": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "social",
-      "agentName": "Amp",
-      "timestamp": 1774659659842,
-      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "support",
-      "agentName": "Anchor",
-      "timestamp": 1774659644431,
-      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
-    },
-    {
-      "agentId": "video",
-      "agentName": "Director",
-      "timestamp": 1774659639668,
-      "message": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -464,11 +443,11 @@
     },
     {
       "day": "2026-04-04",
-      "total": 2,
+      "total": 4,
       "byAgent": {
-        "signal-chat": 2
+        "signal-chat": 4
       }
     }
   ],
-  "updatedAt": 1775264360968
+  "updatedAt": 1775264660965
 }
