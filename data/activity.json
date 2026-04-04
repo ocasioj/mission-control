@@ -356,13 +356,6 @@
       "timestamp": 1774792802953,
       "message": "[cron:42942ad3-d60c-4ffd-b64d-0417bb23cb70 Daily NBA + MLB Picks] Run the daily picks script and sen",
       "turns": 2
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774679318336,
-      "message": "[Queued messages while agent was busy]\n\n---\nQueued #1\nConversation info (untrusted metadata):\n```jso",
-      "turns": 1
     }
   ],
   "digest": [
@@ -414,5 +407,5 @@
       }
     }
   ],
-  "updatedAt": 1775283861020
+  "updatedAt": 1775284161095
 }
