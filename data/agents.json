@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775272844006,
-      "lastActivityAgo": "13m ago",
+      "lastActivityAgo": "18m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 117,
       "lastActivity": 1775271694913,
-      "lastActivityAgo": "32m ago",
+      "lastActivityAgo": "37m ago",
       "isActive": false,
       "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /data/.openclaw/workspa",
       "lastModel": "gemini-2.5-flash"
@@ -39,7 +39,7 @@
       "desc": "Trip planning and scheduling",
       "sessionCount": 5,
       "lastActivity": 1774669120794,
-      "lastActivityAgo": "6d ago",
+      "lastActivityAgo": "7d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 23:38 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -50,7 +50,7 @@
       "desc": "Deep research and information retrieval",
       "sessionCount": 7,
       "lastActivity": 1774668903564,
-      "lastActivityAgo": "6d ago",
+      "lastActivityAgo": "7d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 23:34 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-3-pro-preview"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775273659247
+  "updatedAt": 1775273959360
 }
