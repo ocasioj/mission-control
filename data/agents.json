@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775301657022,
-      "lastActivityAgo": "3m ago",
-      "isActive": true,
+      "lastActivityAgo": "8m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 116,
       "lastActivity": 1775300412317,
-      "lastActivityAgo": "24m ago",
+      "lastActivityAgo": "29m ago",
       "isActive": false,
       "lastMessage": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/workspace-signal-chat/d",
       "lastModel": "gemini-2.5-flash"
@@ -28,7 +28,7 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 7,
       "lastActivity": 1775247967306,
-      "lastActivityAgo": "14h ago",
+      "lastActivityAgo": "15h ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-04-03 16:25 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775301859386
+  "updatedAt": 1775302159425
 }
