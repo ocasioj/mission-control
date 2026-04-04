@@ -5,7 +5,7 @@
       "agentName": "Joe",
       "timestamp": 1775340218469,
       "message": "[media attached: /data/.openclaw/media/inbound/976669af-66d5-4295-b663-34dd449b45ef (text/x-signal-p",
-      "turns": 3
+      "turns": 6
     },
     {
       "agentId": "signal-chat",
@@ -421,5 +421,5 @@
       }
     }
   ],
-  "updatedAt": 1775343261060
+  "updatedAt": 1775343561098
 }
