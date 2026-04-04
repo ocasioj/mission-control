@@ -443,11 +443,11 @@
         "model": "google/gemini-2.5-flash",
         "message": "Run the daily stats and odds data refresh: cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-04T11:30:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
+      "lastRunAt": "2026-04-04T11:30:00.003Z",
+      "nextRunAt": "2026-04-05T11:30:00.000Z",
+      "lastStatus": "error",
+      "lastDurationMs": 12513,
+      "consecutiveErrors": 1
     },
     {
       "id": "disk-space-alert-daily",
@@ -490,5 +490,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775302160015
+  "updatedAt": 1775302459821
 }
