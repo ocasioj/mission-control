@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 65768886272,
-    "availBytes": 37102432256,
+    "usedBytes": 65769066496,
+    "availBytes": 37102252032,
     "totalBytes": 102888095744,
     "percent": 64
   },
@@ -39,9 +39,13 @@
     {
       "name": "Daily X Morning Briefing",
       "errors": 1
+    },
+    {
+      "name": "Daily Gambling Data Refresh",
+      "errors": 1
     }
   ],
   "cronTotal": 25,
   "gatewayUp": true,
-  "updatedAt": 1775302161882
+  "updatedAt": 1775302461512
 }
