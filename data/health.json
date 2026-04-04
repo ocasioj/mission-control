@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 65770782720,
-    "availBytes": 37100535808,
+    "usedBytes": 65771126784,
+    "availBytes": 37100191744,
     "totalBytes": 102888095744,
     "percent": 64
   },
@@ -43,9 +43,13 @@
     {
       "name": "Daily Gambling Data Refresh",
       "errors": 1
+    },
+    {
+      "name": "Daily Gambling Picks → Signal",
+      "errors": 1
     }
   ],
   "cronTotal": 25,
   "gatewayUp": true,
-  "updatedAt": 1775307561520
+  "updatedAt": 1775307862015
 }
