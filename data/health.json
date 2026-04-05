@@ -4,7 +4,7 @@
       "name": "openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
       "state": "running",
-      "status": "Up 31 hours (healthy)"
+      "status": "Up 32 hours (healthy)"
     },
     {
       "name": "openclaw-pa62-openclaw-1",
@@ -14,13 +14,18 @@
     }
   ],
   "disk": {
-    "usedBytes": 67329683456,
-    "availBytes": 35541635072,
+    "usedBytes": 67329949696,
+    "availBytes": 35541368832,
     "totalBytes": 102888095744,
     "percent": 65
   },
-  "cronErrors": [],
+  "cronErrors": [
+    {
+      "name": "Nightly Memory Summary (Joe)",
+      "errors": 1
+    }
+  ],
   "cronTotal": 29,
   "gatewayUp": true,
-  "updatedAt": 1775371761743
+  "updatedAt": 1775372061790
 }
