@@ -350,10 +350,10 @@
         "message": "Run the line movement digest and send email directly: exec python3 /data/.openclaw/workspace-coder/line_alert_digest.py 2>&1. If output contains SEND ERROR, report it. Otherwise stay silent.",
         "timeoutSeconds": 180
       },
-      "lastRunAt": "2026-04-04T22:00:00.008Z",
-      "nextRunAt": "2026-04-05T22:00:00.000Z",
+      "lastRunAt": "2026-04-05T22:00:00.003Z",
+      "nextRunAt": "2026-04-06T22:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 120029,
+      "lastDurationMs": 10326,
       "consecutiveErrors": 0
     },
     {
@@ -388,10 +388,10 @@
         "timeoutSeconds": 60,
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-05T21:00:00.004Z",
-      "nextRunAt": "2026-04-05T22:00:00.000Z",
+      "lastRunAt": "2026-04-05T22:00:10.329Z",
+      "nextRunAt": "2026-04-05T23:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 9139,
+      "lastDurationMs": 9394,
       "consecutiveErrors": 0
     },
     {
@@ -463,24 +463,6 @@
         "timeoutSeconds": 60,
         "kind": "agentTurn",
         "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py 2>&1. Read the output carefully. Only send a Signal message if the output explicitly contains the text 'YOUR BET AFFECTED' AND 'Signal alert sent'. If the output says 'skipping Signal' or 'No active bets affected', do NOT send anything to Signal — stay completely silent. Never send the full list of all line movements to Signal under any circumstances."
-      },
-      "lastRunAt": null,
-      "nextRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
-    },
-    {
-      "id": "dac6265b-140e-4858-a6da-c54b12a89eae",
-      "name": "retrain_gambling_model",
-      "schedule": "0 3 * * *",
-      "scheduleHuman": "0 3 * * *",
-      "timezone": "America/New_York",
-      "enabled": false,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run the gambling model retraining script."
       },
       "lastRunAt": null,
       "nextRunAt": null,
@@ -585,5 +567,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775426286224
+  "updatedAt": 1775426586266
 }
