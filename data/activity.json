@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775361617443,
+      "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775361603534,
+      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily API Usage Meter] Run this exact command and return ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775358020144,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
@@ -127,11 +141,11 @@
     },
     {
       "day": "2026-04-05",
-      "total": 2,
+      "total": 4,
       "byAgent": {
-        "signal-chat": 2
+        "signal-chat": 4
       }
     }
   ],
-  "updatedAt": 1775361561150
+  "updatedAt": 1775361861056
 }
