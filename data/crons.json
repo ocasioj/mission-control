@@ -348,7 +348,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run the line movement digest and send email directly: exec python3 /data/.openclaw/workspace-coder/line_alert_digest.py 2>&1. If output contains SEND ERROR, report it. Otherwise stay silent.",
-        "timeoutSeconds": 60
+        "timeoutSeconds": 180
       },
       "lastRunAt": "2026-04-04T22:00:00.008Z",
       "nextRunAt": "2026-04-05T22:00:00.000Z",
@@ -584,5 +584,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775397860108
+  "updatedAt": 1775398160123
 }
