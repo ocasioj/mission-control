@@ -139,10 +139,10 @@
       "name": "API_USAGE.md",
       "path": "/openclaw-data/workspace-signal-chat/API_USAGE.md",
       "category": "Notes",
-      "sizeBytes": 922,
+      "sizeBytes": 924,
       "wordCount": 132,
-      "modifiedAt": 1775231637884.9636,
-      "content": "# API Usage — April 2026\n\nLast updated: 2026-04-03 11:53 EDT\n\n```\nAPI Usage Meter — 2026-04-03\n\nAI Tokens (today | month-to-date):\n  Anthropic    $0.00 today | $3.59 mtd  [budget $20] (est.)\n  OpenAI       $0.70 today | $0.70 mtd  [budget $20] (est.)\n  Google       $0.45 today | $0.83 mtd  [budget $10] (est.)\n\nLive APIs:\n  OpenRouter  : $1.64 used (no cap)\n  ElevenLabs  : 1,312 / 36,998 chars | next $5.42 (resets Apr 24)\n  Odds API    : $1.98 est. | 1,587 / 20,000 requests\n  HeyGen      : $25.35 remaining (507 credits @ $0.05)\n  Brave Search: metered @ $0.005/query (usage not countable via API)\n  Twitter/X   : $9.93 est. | 1,986 / 2,000,000 posts (resets day 12)\n  Inference.sh: check manually at inference.sh (image-to-video)\n  SportsData.io: check manually at sportsdata.io (props/stats fallback)\n  Twilio      : $0.00 this month  [budget $20]\n\nUpdated /data/.openclaw/workspace-signal-chat/API_USAGE.md\n```\n"
+      "modifiedAt": 1775352765167.907,
+      "content": "# API Usage — April 2026\n\nLast updated: 2026-04-04 21:32 EDT\n\n```\nAPI Usage Meter — 2026-04-04\n\nAI Tokens (today | month-to-date):\n  Anthropic    $0.00 today | $2.97 mtd  [budget $20] (est.)\n  OpenAI       $0.00 today | $0.00 mtd  [budget $20] (est.)\n  Google       $1.67 today | $1.89 mtd  [budget $10] (est.)\n\nLive APIs:\n  OpenRouter  : $1.64 used (no cap)\n  ElevenLabs  : 1,312 / 36,998 chars | next $5.42 (resets Apr 24)\n  Odds API    : $11.31 est. | 9,048 / 20,000 requests\n  HeyGen      : $25.35 remaining (507 credits @ $0.05)\n  Brave Search: metered @ $0.005/query (usage not countable via API)\n  Twitter/X   : $10.51 est. | 2,102 / 2,000,000 posts (resets day 12)\n  Inference.sh: check manually at inference.sh (image-to-video)\n  SportsData.io: check manually at sportsdata.io (props/stats fallback)\n  Twilio      : $0.00 this month  [budget $20]\n\nUpdated /data/.openclaw/workspace-signal-chat/API_USAGE.md\n```\n"
     },
     {
       "name": "BILLING.md",
@@ -370,5 +370,5 @@
       "content": "# Todo List: Rene\n"
     }
   ],
-  "updatedAt": 1775352560544
+  "updatedAt": 1775352860599
 }
