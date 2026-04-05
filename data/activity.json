@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775371802458,
+      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775361617443,
       "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
       "turns": 1
@@ -141,11 +148,11 @@
     },
     {
       "day": "2026-04-05",
-      "total": 4,
+      "total": 5,
       "byAgent": {
-        "signal-chat": 4
+        "signal-chat": 5
       }
     }
   ],
-  "updatedAt": 1775371761205
+  "updatedAt": 1775372061158
 }
