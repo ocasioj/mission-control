@@ -131,7 +131,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1775376334825,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
+      "turns": 2
     },
     {
       "agentId": "signal-chat",
@@ -278,5 +278,5 @@
       }
     }
   ],
-  "updatedAt": 1775413835999
+  "updatedAt": 1775414136142
 }
