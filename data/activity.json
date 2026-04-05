@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775394002717,
+      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775392202727,
       "message": "[cron:disk-space-alert-daily Disk Space Alert] Check disk usage on /docker: run df -h /docker | tail",
       "turns": 1
@@ -224,12 +231,12 @@
     },
     {
       "day": "2026-04-05",
-      "total": 17,
+      "total": 18,
       "byAgent": {
-        "signal-chat": 16,
+        "signal-chat": 17,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775393961200
+  "updatedAt": 1775394261359
 }
