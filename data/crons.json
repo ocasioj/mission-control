@@ -313,10 +313,10 @@
         "kind": "agentTurn",
         "message": "Run the daily PM Visualizer canary: exec pm-visualizer-health-report. Do not send additional Signal message on success. If it fails, the script sends an alert directly."
       },
-      "lastRunAt": "2026-04-04T12:25:00.005Z",
-      "nextRunAt": "2026-04-05T12:25:00.000Z",
+      "lastRunAt": "2026-04-05T12:25:00.004Z",
+      "nextRunAt": "2026-04-06T12:25:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 7363,
+      "lastDurationMs": 5936,
       "consecutiveErrors": 0
     },
     {
@@ -566,5 +566,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775391860231
+  "updatedAt": 1775392160164
 }
