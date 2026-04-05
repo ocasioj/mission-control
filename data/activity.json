@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775394302144,
+      "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775394002717,
       "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
       "turns": 1
@@ -231,12 +238,12 @@
     },
     {
       "day": "2026-04-05",
-      "total": 18,
+      "total": 19,
       "byAgent": {
-        "signal-chat": 17,
+        "signal-chat": 18,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775394261359
+  "updatedAt": 1775394561237
 }
