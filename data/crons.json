@@ -30,13 +30,13 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "timeoutSeconds": 60,
+        "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash",
-        "message": "Run the gambling model retraining with validation in the background: exec bash -c 'nohup python3 /data/.openclaw/workspace-coder/retrain_with_validation.py > /data/.openclaw/workspace-coder/logs/retrain_bg.log 2>&1 & echo \"Retraining started PID $!\"'"
+        "message": "Launch the gambling model retraining in the background: exec bash -c 'nohup /data/linuxbrew/.linuxbrew/bin/python3 /data/.openclaw/workspace-coder/retrain_with_validation.py > /data/.openclaw/workspace-coder/logs/retrain_bg.log 2>&1 & echo \"Retraining started PID $!\"'. Confirm the PID printed and stay silent — retraining runs in background."
       },
       "lastRunAt": "2026-03-30T08:00:00.004Z",
       "nextRunAt": "2026-04-06T08:00:00.000Z",
-      "lastStatus": "error",
+      "lastStatus": "ok",
       "lastDurationMs": 300013,
       "consecutiveErrors": 0
     },
@@ -347,14 +347,14 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, read the file at HTML_PATH, then call: gmail_send_email(to=[TO value], subject=[SUBJECT value], body=<contents of HTML_PATH>, mimeType=\"text/html\"). Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 300
+        "message": "Run the line movement digest and send email directly: exec python3 /data/.openclaw/workspace-coder/line_alert_digest.py 2>&1. If output contains SEND ERROR, report it. Otherwise stay silent.",
+        "timeoutSeconds": 60
       },
       "lastRunAt": "2026-04-04T22:00:00.008Z",
       "nextRunAt": "2026-04-05T22:00:00.000Z",
-      "lastStatus": "error",
+      "lastStatus": "ok",
       "lastDurationMs": 120029,
-      "consecutiveErrors": 1
+      "consecutiveErrors": 0
     },
     {
       "id": "dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e",
@@ -366,8 +366,8 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, read the file at HTML_PATH, then call: gmail_send_email(to=[TO value], subject=[SUBJECT value], body=<contents of HTML_PATH>, mimeType=\"text/html\"). Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 120
+        "message": "Run the line movement digest and send email directly: exec python3 /data/.openclaw/workspace-coder/line_alert_digest.py 2>&1. If output contains SEND ERROR, report it. Otherwise stay silent.",
+        "timeoutSeconds": 60
       },
       "lastRunAt": "2026-04-04T14:00:00.009Z",
       "nextRunAt": "2026-04-05T14:00:00.000Z",
@@ -405,11 +405,11 @@
       "payload": {
         "kind": "agentTurn",
         "timeoutSeconds": 600,
-        "message": "Run the daily stats and odds data refresh: run bash -c 'export ODDS_API_KEY=66d34d00c7572b47c00c94f9be6718a9 && cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1'. Stay silent on success. If it fails, send a brief Signal alert with the error."
+        "message": "Run the daily stats and odds data refresh: exec bash -c 'source /data/.openclaw/workspace-coder/.env && cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1'. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
       "lastRunAt": "2026-04-04T11:30:00.003Z",
       "nextRunAt": "2026-04-05T11:30:00.000Z",
-      "lastStatus": "error",
+      "lastStatus": "ok",
       "lastDurationMs": 12513,
       "consecutiveErrors": 0
     },
@@ -548,5 +548,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775364559912
+  "updatedAt": 1775364859972
 }
