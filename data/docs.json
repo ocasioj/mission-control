@@ -347,9 +347,9 @@
       "path": "/openclaw-data/workspace-signal-chat/todo_jose.md",
       "category": "Todos",
       "sizeBytes": 1470,
-      "wordCount": 239,
-      "modifiedAt": 1775407199927.4246,
-      "content": "# Todo List: Jose Ocasio\n- [x] Fix Agent Browser tool (Port 18800 error)\n- [x] Fix YouTube summary tool (yt-transcribe)\n- [x] Create an Openclaw Mission Control dashboard.\n- [ ] Integrate Openclaw with my existing home assistant.\n- [x] Find the best way to integrate personal email and organize it.\n- [x] Finish Excalidraw integration\n- [x] Fix Zapier integration (trial ending soon)\n- [x] Make my model less woke\n- [x] Add support for FLAC and general audio response generation\n- [x] End-to-end audio workflow (receive → transcribe → TTS → send back)\n- [x] Finish testing PM Visualizer end-to-end in Signal group\n- [x] Implement Mission Control Task Board: Kanban for OpenClaw/sub-agent tasks with live activity feed.\n- [ ] Implement Mission Control Calendar Screen: Display cron jobs and scheduled tasks for proactive OpenClaw actions.\n- [ ] Implement Mission Control Project Screen: Track major projects, linking tasks, memories, and documents.\n- [ ] Implement Mission Control Memory Screen: Organize and display OpenClaw memories like a journal for easy searching.\n- [ ] Implement Mission Control Docs Screen: Store, categorize, and make searchable all documents created by OpenClaw.\n- [ ] Implement Mission Control Team Screen: Show spun-up agents, their roles, and a mission statement.\n- [ ] Implement Mission Control Office Screen: 2D pixel art visualization of agents working at desks.\n- [ ] Create an API usage tracking meter to monitor account balances.\n"
+      "wordCount": 232,
+      "modifiedAt": 1775407238000,
+      "content": "# Todo List: Jose Ocasio\n- [x] Fix Agent Browser tool (Port 18800 error)\n- [x] Fix YouTube summary tool (yt-transcribe)\n- [x] Create an Openclaw Mission Control dashboard.\n- [ ] Integrate Openclaw with my existing home assistant.\n- [x] Find the best way to integrate personal email and organize it.\n- [x] Finish Excalidraw integration\n- [x] Fix Zapier integration (trial ending soon)\n- [x] Make my model less woke\n- [x] Add support for FLAC and general audio response generation\n- [x] End-to-end audio workflow (receive → transcribe → TTS → send back)\n- [x] Finish testing PM Visualizer end-to-end in Signal group\n- [x] Implement Mission Control Task Board: Kanban for OpenClaw/sub-agent tasks with live activity feed.\n- [x] Implement Mission Control Calendar Screen: Display cron jobs and scheduled tasks for proactive OpenClaw actions.\n- [x] Implement Mission Control Project Screen: Track major projects, linking tasks, memories, and documents.\n- [x] Implement Mission Control Memory Screen: Organize and display OpenClaw memories like a journal for easy searching.\n- [x] Implement Mission Control Docs Screen: Store, categorize, and make searchable all documents created by OpenClaw.\n- [x] Implement Mission Control Team Screen: Show spun-up agents, their roles, and a mission statement.\n- [x] Implement Mission Control Office Screen: 2D pixel art visualization of agents working at desks.\n- [x] Create an API usage tracking meter to monitor account balances.\n"
     },
     {
       "name": "todo_luis.md",
@@ -370,5 +370,5 @@
       "content": "# Todo List: Rene\n"
     }
   ],
-  "updatedAt": 1775407208655
+  "updatedAt": 1775407508754
 }
