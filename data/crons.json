@@ -169,9 +169,9 @@
       },
       "lastRunAt": "2026-04-05T06:50:00.005Z",
       "nextRunAt": "2026-04-06T06:50:00.000Z",
-      "lastStatus": "error",
+      "lastStatus": "ok",
       "lastDurationMs": 18599,
-      "consecutiveErrors": 1
+      "consecutiveErrors": 0
     },
     {
       "id": "804004cf-3ce2-4427-a060-d336b08398b0",
@@ -405,7 +405,7 @@
       "payload": {
         "kind": "agentTurn",
         "timeoutSeconds": 600,
-        "message": "Run the daily stats and odds data refresh: exec bash -c 'source /data/.openclaw/workspace-coder/.env && cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1'. Stay silent on success. If it fails, send a brief Signal alert with the error."
+        "message": "Run the daily stats and odds data refresh: exec bash -c 'set -a; source /data/.openclaw/workspace-coder/.env; set +a; cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1'. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
       "lastRunAt": "2026-04-05T11:30:00.006Z",
       "nextRunAt": "2026-04-06T11:30:00.000Z",
@@ -584,5 +584,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775396660462
+  "updatedAt": 1775396960144
 }
