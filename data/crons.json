@@ -488,7 +488,121 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "877727a4-3b9c-4d96-bbde-8e1d71125e74",
+      "name": "OpenClaw Boss Check — Morning",
+      "schedule": "0 7 * * *",
+      "scheduleHuman": "0 7 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the OpenClaw boss health check: bash /data/.openclaw/workspace-signal-chat/scripts/openclaw_boss.sh 2>&1. Report any output.",
+        "model": "google/gemini-2.5-flash-lite"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-06T11:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "5bd977fc-355a-4ffd-8249-b8899a3e4b86",
+      "name": "OpenClaw Boss Check — Afternoon",
+      "schedule": "0 13 * * *",
+      "scheduleHuman": "0 13 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the OpenClaw boss health check: bash /data/.openclaw/workspace-signal-chat/scripts/openclaw_boss.sh 2>&1. Report any output.",
+        "model": "google/gemini-2.5-flash-lite"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-06T17:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "c565768f-f577-4e4f-b9fb-b0952899c131",
+      "name": "OpenClaw Boss Check — Evening",
+      "schedule": "0 21 * * *",
+      "scheduleHuman": "0 21 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the OpenClaw boss health check: bash /data/.openclaw/workspace-signal-chat/scripts/openclaw_boss.sh 2>&1. Report any output.",
+        "model": "google/gemini-2.5-flash-lite"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-07T01:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "6d2ffc12-e736-4707-9aff-3891b22b60e4",
+      "name": "Boss Report → Signal — Morning",
+      "schedule": "30 7 * * *",
+      "scheduleHuman": "30 7 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the boss report sender: python3 /data/.openclaw/workspace-signal-chat/scripts/send_boss_report.py 2>&1. Report the output.",
+        "model": "google/gemini-2.5-flash-lite"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-06T11:30:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "a256bf27-75bb-4b6d-bc85-4983495fd0d5",
+      "name": "Boss Report → Signal — Afternoon",
+      "schedule": "30 13 * * *",
+      "scheduleHuman": "30 13 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the boss report sender: python3 /data/.openclaw/workspace-signal-chat/scripts/send_boss_report.py 2>&1. Report the output.",
+        "model": "google/gemini-2.5-flash-lite"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-06T17:30:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
+    },
+    {
+      "id": "09eed1c6-da4c-403d-b7a2-a7a12980876a",
+      "name": "Boss Report → Signal — Evening",
+      "schedule": "30 21 * * *",
+      "scheduleHuman": "30 21 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the boss report sender: python3 /data/.openclaw/workspace-signal-chat/scripts/send_boss_report.py 2>&1. Report the output.",
+        "model": "google/gemini-2.5-flash-lite"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-07T01:30:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775352259899
+  "updatedAt": 1775352559986
 }
