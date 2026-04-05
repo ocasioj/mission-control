@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 92,
+      "lastActivity": 1775391300006,
+      "lastActivityAgo": "4m ago",
+      "isActive": true,
+      "lastMessage": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmail-health-report. Do ",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775390741410,
-      "lastActivityAgo": "8m ago",
+      "lastActivityAgo": "13m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 91,
-      "lastActivity": 1775390417290,
-      "lastActivityAgo": "14m ago",
-      "isActive": false,
-      "lastMessage": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec python3 /data/.opencla",
-      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "analyst",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775391259570
+  "updatedAt": 1775391559616
 }
