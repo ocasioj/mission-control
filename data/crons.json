@@ -16,7 +16,7 @@
       },
       "lastRunAt": "2026-04-04T13:00:00.003Z",
       "nextRunAt": "2026-04-05T13:00:00.000Z",
-      "lastStatus": "error",
+      "lastStatus": "ok",
       "lastDurationMs": 19543,
       "consecutiveErrors": 0
     },
@@ -29,10 +29,9 @@
       "enabled": true,
       "sessionTarget": "isolated",
       "payload": {
-        "timeoutSeconds": 30,
+        "timeoutSeconds": 60,
         "kind": "agentTurn",
-        "message": "Launch the weekly model retraining pipeline as a background process: cd /data/.openclaw/workspace-coder && nohup bash retrain_pipeline.sh > logs/retrain_bg.log 2>&1 & echo \"Retraining started in background (PID: $!). Will send Signal confirmation when complete.\" — Do NOT wait for it to finish. Just confirm it started and exit.",
-        "model": "google/gemini-2.5-flash-lite"
+        "message": "Run the gambling model retraining in the background: exec bash -c 'nohup bash /data/.openclaw/workspace-coder/retrain_pipeline.sh > /data/.openclaw/workspace-coder/logs/retrain_bg.log 2>&1 & echo \"Retraining started PID $!\"'"
       },
       "lastRunAt": "2026-03-30T08:00:00.004Z",
       "nextRunAt": "2026-04-06T08:00:00.000Z",
@@ -51,8 +50,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Refresh the gambling dashboard and push to GitHub. Run: /data/.openclaw/workspace-coder/dashboard/push_dashboard.sh. Report any errors if it fails.",
-        "timeoutSeconds": 120,
-        "model": "google/gemini-2.5-flash-lite"
+        "timeoutSeconds": 120
       },
       "lastRunAt": "2026-04-04T12:00:00.005Z",
       "nextRunAt": "2026-04-05T12:00:00.000Z",
@@ -71,8 +69,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run the auto-result logging script to settle pending bets and update CLV, then fetch fresh injury data for all sports. Execute: cd /data/.openclaw/workspace-coder && python3 auto_results.py --days 3 && python3 fetch_injuries.py --sport all. If any bets were settled, send Jose a brief Signal summary with the results and net P/L. If no bets to settle, run silently with no message.",
-        "timeoutSeconds": 180,
-        "model": "google/gemini-2.5-flash-lite"
+        "timeoutSeconds": 180
       },
       "lastRunAt": "2026-04-04T11:00:00.006Z",
       "nextRunAt": "2026-04-05T11:00:00.000Z",
@@ -111,8 +108,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run the nightly CLV summary to check closing line value for recent bets: cd /data/.openclaw/workspace-coder && python3 clv_summary.py --days 2. Only send Signal report if there is actual CLV data to share. If no data found, run silently.",
-        "timeoutSeconds": 120,
-        "model": "google/gemini-2.5-flash-lite"
+        "timeoutSeconds": 120
       },
       "lastRunAt": "2026-04-04T03:00:21.986Z",
       "nextRunAt": "2026-04-05T03:00:00.000Z",
@@ -131,8 +127,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the daily gambling picks email digest to Jose. Run: cd /data/.openclaw/workspace-coder && python3 email_digest.py 2>&1. Parse the output to get HTML_PATH, SUBJECT, and TO fields. Then use the send_email tool with: to=[TO value], subject=[SUBJECT value], htmlBody=[contents of HTML_PATH file], body='Daily picks digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent.",
-        "timeoutSeconds": 60,
-        "model": "google/gemini-2.5-flash-lite"
+        "timeoutSeconds": 60
       },
       "lastRunAt": "2026-04-04T13:05:00.005Z",
       "nextRunAt": "2026-04-05T13:05:00.000Z",
@@ -150,12 +145,11 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py daily",
-        "model": "google/gemini-2.5-flash-lite"
+        "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py daily"
       },
       "lastRunAt": "2026-04-04T04:00:00.004Z",
       "nextRunAt": "2026-04-05T04:00:00.000Z",
-      "lastStatus": "error",
+      "lastStatus": "ok",
       "lastDurationMs": 11749,
       "consecutiveErrors": 0
     },
@@ -174,7 +168,7 @@
       },
       "lastRunAt": "2026-04-04T06:50:00.006Z",
       "nextRunAt": "2026-04-05T06:50:00.000Z",
-      "lastStatus": "error",
+      "lastStatus": "ok",
       "lastDurationMs": 23346,
       "consecutiveErrors": 0
     },
@@ -188,8 +182,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run a safe backup: copy /data/.openclaw/workspace-signal-chat/memory/admin-changes.md, /data/.openclaw/workspace-signal-chat/config/video_pipeline.json, /data/.openclaw/workspace-signal-chat/config/mcporter.json, and /data/.openclaw/cron/jobs.json to /data/.openclaw/workspace-signal-chat/backups/$(date +%F)/. Ensure the backup dir exists and log result to /data/.openclaw/workspace-signal-chat/logs/cron_runs.log. Do not send any external messages; just perform local file operations and log a success/failure entry.",
-        "model": "google/gemini-2.5-flash-lite"
+        "message": "Run a safe backup: copy /data/.openclaw/workspace-signal-chat/memory/admin-changes.md, /data/.openclaw/workspace-signal-chat/config/video_pipeline.json, /data/.openclaw/workspace-signal-chat/config/mcporter.json, and /data/.openclaw/cron/jobs.json to /data/.openclaw/workspace-signal-chat/backups/$(date +%F)/. Ensure the backup dir exists and log result to /data/.openclaw/workspace-signal-chat/logs/cron_runs.log. Do not send any external messages; just perform local file operations and log a success/failure entry."
       },
       "lastRunAt": "2026-04-04T07:10:00.005Z",
       "nextRunAt": "2026-04-05T07:10:00.000Z",
@@ -207,8 +200,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run log rotation script: python3 /data/.openclaw/hooks/rotate_logs.py. Respond with HEARTBEAT_OK if successful.",
-        "model": "google/gemini-2.5-flash-lite"
+        "message": "Run log rotation script: python3 /data/.openclaw/hooks/rotate_logs.py. Respond with HEARTBEAT_OK if successful."
       },
       "lastRunAt": "2026-04-04T04:00:11.753Z",
       "nextRunAt": "2026-04-05T04:00:00.000Z",
@@ -226,12 +218,11 @@
       "sessionTarget": "isolated",
       "payload": {
         "message": "Run /data/.openclaw/hooks/heygen_dlq_report.py to scan retry and DLQ queues. Send a daily summary of stuck/failed HeyGen jobs to +16462458614 via Signal.",
-        "kind": "agentTurn",
-        "model": "google/gemini-2.5-flash-lite"
+        "kind": "agentTurn"
       },
       "lastRunAt": "2026-04-04T07:00:00.002Z",
       "nextRunAt": "2026-04-05T07:00:00.000Z",
-      "lastStatus": "error",
+      "lastStatus": "ok",
       "lastDurationMs": 9719,
       "consecutiveErrors": 0
     },
@@ -264,8 +255,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the daily health report: exec heygen-health-report. Do not send any additional Signal message — the script sends the report directly. If the script fails, send Jose a brief note with the error.",
-        "model": "google/gemini-2.5-flash-lite"
+        "message": "Run the daily health report: exec heygen-health-report. Do not send any additional Signal message — the script sends the report directly. If the script fails, send Jose a brief note with the error."
       },
       "lastRunAt": "2026-04-04T12:00:10.559Z",
       "nextRunAt": "2026-04-05T12:00:00.000Z",
@@ -302,8 +292,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the daily Gmail canary: exec gmail-health-report. Do not send any additional Signal message on success. If it fails, the script sends an alert directly.",
-        "model": "google/gemini-2.5-flash-lite"
+        "message": "Run the daily Gmail canary: exec gmail-health-report. Do not send any additional Signal message on success. If it fails, the script sends an alert directly."
       },
       "lastRunAt": "2026-04-04T12:15:00.002Z",
       "nextRunAt": "2026-04-05T12:15:00.000Z",
@@ -321,8 +310,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the daily PM Visualizer canary: exec pm-visualizer-health-report. Do not send additional Signal message on success. If it fails, the script sends an alert directly.",
-        "model": "google/gemini-2.5-flash-lite"
+        "message": "Run the daily PM Visualizer canary: exec pm-visualizer-health-report. Do not send additional Signal message on success. If it fails, the script sends an alert directly."
       },
       "lastRunAt": "2026-04-04T12:25:00.005Z",
       "nextRunAt": "2026-04-05T12:25:00.000Z",
@@ -340,8 +328,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py weekly",
-        "model": "google/gemini-2.5-flash-lite"
+        "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py weekly"
       },
       "lastRunAt": null,
       "nextRunAt": "2026-04-06T00:00:00.000Z",
@@ -360,8 +347,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, read the file at HTML_PATH, then call: gmail_send_email(to=[TO value], subject=[SUBJECT value], body=<contents of HTML_PATH>, mimeType=\"text/html\"). Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 120,
-        "model": "google/gemini-2.5-flash-lite"
+        "timeoutSeconds": 120
       },
       "lastRunAt": "2026-04-04T22:00:00.008Z",
       "nextRunAt": "2026-04-05T22:00:00.000Z",
@@ -380,8 +366,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, read the file at HTML_PATH, then call: gmail_send_email(to=[TO value], subject=[SUBJECT value], body=<contents of HTML_PATH>, mimeType=\"text/html\"). Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 120,
-        "model": "google/gemini-2.5-flash-lite"
+        "timeoutSeconds": 120
       },
       "lastRunAt": "2026-04-04T14:00:00.009Z",
       "nextRunAt": "2026-04-05T14:00:00.000Z",
@@ -400,7 +385,6 @@
       "payload": {
         "kind": "agentTurn",
         "timeoutSeconds": 60,
-        "model": "google/gemini-2.5-flash-lite",
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
       "lastRunAt": "2026-04-05T01:00:00.003Z",
@@ -420,7 +404,6 @@
       "payload": {
         "kind": "agentTurn",
         "timeoutSeconds": 600,
-        "model": "google/gemini-2.5-flash-lite",
         "message": "Run the daily stats and odds data refresh: ODDS_API_KEY=66d34d00c7572b47c00c94f9be6718a9 cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
       "lastRunAt": "2026-04-04T11:30:00.003Z",
@@ -440,8 +423,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Check disk usage: run the command: df -h / | tail -1 | awk '{print $5}' and capture the percentage. Also run: df -h / | tail -1 | awk '{print $3\"/\"$2}' for used/total. If usage is 80% or higher, send Jose a Signal message like: \"⚠️ Disk Alert: Server at X% full (Yused/Ztotal). Cleanup needed.\" If below 80%, stay completely silent — do NOT send any message.",
-        "timeoutSeconds": 30,
-        "model": "google/gemini-2.5-flash-lite"
+        "timeoutSeconds": 30
       },
       "lastRunAt": "2026-04-04T12:30:00.004Z",
       "nextRunAt": "2026-04-05T12:30:00.000Z",
@@ -460,8 +442,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Prune old picks data files: run: find /data/.openclaw/workspace-coder/picks_data -name \"*.json\" -mtime +30 -delete 2>/dev/null; echo \"Pruned files older than 30 days. Remaining: $(ls /data/.openclaw/workspace-coder/picks_data/*.json 2>/dev/null | wc -l) files.\" Stay silent — do not send any Signal message. Just run the cleanup.",
-        "timeoutSeconds": 30,
-        "model": "google/gemini-2.5-flash-lite"
+        "timeoutSeconds": 30
       },
       "lastRunAt": null,
       "nextRunAt": "2026-04-05T07:00:00.000Z",
@@ -479,7 +460,6 @@
       "sessionTarget": "isolated",
       "payload": {
         "timeoutSeconds": 60,
-        "model": "google/gemini-2.5-flash-lite",
         "kind": "agentTurn",
         "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py 2>&1. Read the output carefully. Only send a Signal message if the output explicitly contains the text 'YOUR BET AFFECTED' AND 'Signal alert sent'. If the output says 'skipping Signal' or 'No active bets affected', do NOT send anything to Signal — stay completely silent. Never send the full list of all line movements to Signal under any circumstances."
       },
@@ -488,121 +468,7 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
-    },
-    {
-      "id": "877727a4-3b9c-4d96-bbde-8e1d71125e74",
-      "name": "OpenClaw Boss Check — Morning",
-      "schedule": "0 7 * * *",
-      "scheduleHuman": "0 7 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run the OpenClaw boss health check: bash /data/.openclaw/workspace-signal-chat/scripts/openclaw_boss.sh 2>&1. Report any output.",
-        "model": "google/gemini-2.5-flash-lite"
-      },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-06T11:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
-    },
-    {
-      "id": "5bd977fc-355a-4ffd-8249-b8899a3e4b86",
-      "name": "OpenClaw Boss Check — Afternoon",
-      "schedule": "0 13 * * *",
-      "scheduleHuman": "0 13 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run the OpenClaw boss health check: bash /data/.openclaw/workspace-signal-chat/scripts/openclaw_boss.sh 2>&1. Report any output.",
-        "model": "google/gemini-2.5-flash-lite"
-      },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-06T17:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
-    },
-    {
-      "id": "c565768f-f577-4e4f-b9fb-b0952899c131",
-      "name": "OpenClaw Boss Check — Evening",
-      "schedule": "0 21 * * *",
-      "scheduleHuman": "0 21 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run the OpenClaw boss health check: bash /data/.openclaw/workspace-signal-chat/scripts/openclaw_boss.sh 2>&1. Report any output.",
-        "model": "google/gemini-2.5-flash-lite"
-      },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-07T01:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
-    },
-    {
-      "id": "6d2ffc12-e736-4707-9aff-3891b22b60e4",
-      "name": "Boss Report → Signal — Morning",
-      "schedule": "30 7 * * *",
-      "scheduleHuman": "30 7 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run the boss report sender: python3 /data/.openclaw/workspace-signal-chat/scripts/send_boss_report.py 2>&1. Report the output.",
-        "model": "google/gemini-2.5-flash-lite"
-      },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-06T11:30:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
-    },
-    {
-      "id": "a256bf27-75bb-4b6d-bc85-4983495fd0d5",
-      "name": "Boss Report → Signal — Afternoon",
-      "schedule": "30 13 * * *",
-      "scheduleHuman": "30 13 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run the boss report sender: python3 /data/.openclaw/workspace-signal-chat/scripts/send_boss_report.py 2>&1. Report the output.",
-        "model": "google/gemini-2.5-flash-lite"
-      },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-06T17:30:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
-    },
-    {
-      "id": "09eed1c6-da4c-403d-b7a2-a7a12980876a",
-      "name": "Boss Report → Signal — Evening",
-      "schedule": "30 21 * * *",
-      "scheduleHuman": "30 21 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run the boss report sender: python3 /data/.openclaw/workspace-signal-chat/scripts/send_boss_report.py 2>&1. Report the output.",
-        "model": "google/gemini-2.5-flash-lite"
-      },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-07T01:30:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775352559986
+  "updatedAt": 1775352860059
 }
