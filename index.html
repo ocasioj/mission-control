@@ -7549,11 +7549,17 @@
 
         function startOfficeWalking(agents) {
             if (OFFICE_WALK_TIMER) clearInterval(OFFICE_WALK_TIMER);
-            const active = agents.filter(a => a.isActive && a.id !== 'signal-chat');
-            if (!active.length) return;
+            // Active agents walk often; idle agents occasionally wander too
+            const walkers = agents.filter(a => a.id !== 'signal-chat');
+            if (!walkers.length) return;
 
             OFFICE_WALK_TIMER = setInterval(() => {
-                const a = active[Math.floor(Math.random() * active.length)];
+                // Pick a random agent — active agents have 4x higher chance
+                const pool = walkers.flatMap(a => a.isActive ? [a, a, a, a] : [a]);
+                const a = pool[Math.floor(Math.random() * pool.length)];
+                // Idle agents only walk 20% of the time they're picked
+                if (!a.isActive && Math.random() > 0.20) return;
+
                 const cub = document.getElementById('cub-' + a.id);
                 if (!cub || cub.dataset.walking === '1') return;
 
@@ -7563,7 +7569,8 @@
                 if (!floor) return;
 
                 const home = DESK_POS[a.id] || { x: 100, y: 200 };
-                const goBreakRoom = Math.random() < 0.35;
+                // Idle agents prefer the break room; active agents wander more
+                const goBreakRoom = Math.random() < (a.isActive ? 0.35 : 0.65);
 
                 // Destination: break room or random wander
                 let wx, wy;
@@ -7630,8 +7637,10 @@
 
             let agents = [];
             try {
-                const data = await fetchGitHubDataFile('agents.json');
-                agents = data.agents || [];
+                const r = await fetch(`${MC_BASE}/api/agents`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                if (!r.ok) throw new Error('api/agents failed');
+                const data = await r.json();
+                agents = Array.isArray(data) ? data : (data.agents || []);
             } catch(e) {
                 el.innerHTML = '<div class="empty-state-large">Could not load office data.</div>';
                 return;
