@@ -538,7 +538,8 @@
       "enabled": true,
       "sessionTarget": "isolated",
       "payload": {
-        "prompt": "Run the close_props_lines.py script to capture closing odds for today's pending props before games start: cd /data/.openclaw/workspace-coder && source .env && python3 close_props_lines.py"
+        "prompt": "Run the close_props_lines.py script to capture closing odds for today's pending props before games start: cd /data/.openclaw/workspace-coder && source .env && python3 close_props_lines.py",
+        "kind": "agentTurn"
       },
       "lastRunAt": "2026-04-05T22:30:00.002Z",
       "nextRunAt": "2026-04-06T22:30:00.000Z",
@@ -567,5 +568,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775431986277
+  "updatedAt": 1775432286299
 }
