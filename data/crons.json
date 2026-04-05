@@ -240,10 +240,10 @@
         "message": "Run a self health check: exec `joe-repair --check`. If any issues are found, run `joe-repair --fix` to repair them, then send Jose a brief Signal DM summarizing what you found and fixed. If everything is healthy, do nothing — no message needed.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-04T15:00:00.005Z",
-      "nextRunAt": "2026-04-05T15:00:00.000Z",
+      "lastRunAt": "2026-04-05T15:00:00.004Z",
+      "nextRunAt": "2026-04-06T15:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 12488,
+      "lastDurationMs": 16830,
       "consecutiveErrors": 0
     },
     {
@@ -388,10 +388,10 @@
         "timeoutSeconds": 60,
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-05T14:00:10.132Z",
-      "nextRunAt": "2026-04-05T15:00:00.000Z",
+      "lastRunAt": "2026-04-05T15:00:16.834Z",
+      "nextRunAt": "2026-04-05T16:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 6853,
+      "lastDurationMs": 8289,
       "consecutiveErrors": 0
     },
     {
@@ -546,43 +546,7 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
-    },
-    {
-      "id": "6f0491c8-0618-4dc6-9df1-4bb66fae4552",
-      "name": "Gambling Performance Check",
-      "schedule": "0 8 * * *",
-      "scheduleHuman": "0 8 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "message": "exec python3 /data/.openclaw/workspace-coder/performance_trigger.py",
-        "kind": "agentTurn"
-      },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-06T12:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
-    },
-    {
-      "id": "06b4a182-626f-43bc-a2ba-0120acd7ff33",
-      "name": "Disk Space Alert",
-      "schedule": "0 8 * * *",
-      "scheduleHuman": "0 8 * * *",
-      "timezone": "America/New_York",
-      "enabled": true,
-      "sessionTarget": "isolated",
-      "payload": {
-        "message": "DISK_INFO=$(df -h /docker | tail -1)\nUSAGE_PERCENTAGE=$(echo \"$DISK_INFO\" | awk '{print $5}' | sed 's/%//')\nUSED_SPACE=$(echo \"$DISK_INFO\" | awk '{print $3}')\nAVAILABLE_SPACE=$(echo \"$DISK_INFO\" | awk '{print $4}')\n\nif [ \"$USAGE_PERCENTAGE\" -ge 80 ]; then\n  print(default_api.message(action=\"send\", target=\"+16462458614\", message=f\"⚠️ Disk Alert: /docker at {USAGE_PERCENTAGE}% full ({USED_SPACE} used / {AVAILABLE_SPACE} available). Cleanup needed.\"))\nfi",
-        "kind": "agentTurn"
-      },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-06T12:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
-      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775401208142
+  "updatedAt": 1775401508150
 }
