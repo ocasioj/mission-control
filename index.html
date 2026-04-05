@@ -227,6 +227,31 @@
             color: var(--accent-green);
         }
 
+        .stat-card {
+            background: #0c1424;
+            border: 1px solid #1e3a5f;
+            border-radius: 10px;
+            padding: 14px 16px;
+        }
+        .stat-card .stat-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #475569;
+            margin-bottom: 6px;
+        }
+        .stat-card .stat-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .stat-card .stat-sub {
+            font-size: 0.7rem;
+            color: #334155;
+            margin-top: 4px;
+        }
+
         /* Unsaved Changes Banner */
         .unsaved-banner {
             display: none;
@@ -3252,6 +3277,7 @@
         <div class="sidebar-item" data-view="system" onclick="switchView('system')"><span class="sidebar-icon">⚙️</span><span class="sidebar-label">System</span></div>
         <div class="sidebar-item" data-view="radar" onclick="switchView('radar')"><span class="sidebar-icon">📡</span><span class="sidebar-label">Radar</span></div>
         <div class="sidebar-item" data-view="factory" onclick="switchView('factory')"><span class="sidebar-icon">🏭</span><span class="sidebar-label">Factory</span></div>
+        <div class="sidebar-item" data-view="billing" onclick="switchView('billing')"><span class="sidebar-icon">💰</span><span class="sidebar-label">Billing</span></div>
         <div class="sidebar-item" data-view="pipeline" onclick="switchView('pipeline')"><span class="sidebar-icon">🔀</span><span class="sidebar-label">Pipeline</span></div>
         <div class="sidebar-item" data-view="feedback" onclick="switchView('feedback')"><span class="sidebar-icon">💬</span><span class="sidebar-label">Feedback</span></div>
     </nav>
@@ -3804,6 +3830,16 @@
             <div id="goals-content"><div class="empty-state-large">Loading goals...</div></div>
         </div>
     </div><!-- END view-goals -->
+
+    <div id="view-billing" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>💰 Billing & API Usage</h2><p class="section-subtitle">Token costs, subscription spending, and third-party API credits.</p></div>
+                <button class="btn-secondary" onclick="loadBillingView()" style="margin-left:auto;">↻ Refresh</button>
+            </div>
+            <div id="billing-content"><div class="empty-state-large">Loading billing data...</div></div>
+        </div>
+    </div><!-- END view-billing -->
 
     <!-- Quick Actions floating panel -->
     <div id="qa-btn" onclick="toggleQuickActions()" title="Quick Actions">⚡</div>
@@ -8701,6 +8737,115 @@
                 + `<p style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.5rem">Ask Joe to update goals.json in workspace-signal-chat to customize these.</p>`;
         }
 
+        // ── Billing View ──────────────────────────────────────────────────────────
+
+        async function loadBillingView() {
+            const el = document.getElementById('billing-content');
+            if (!el) return;
+            el.innerHTML = '<div class="empty-state-large">Loading billing data...</div>';
+            let d;
+            try {
+                const resp = await fetch(`${MC_BASE}/api/data`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                d = await resp.json();
+            } catch(e) {
+                el.innerHTML = `<div class="empty-state-large">Could not load billing data: ${e.message}</div>`;
+                return;
+            }
+
+            const mu = d.modelUsage || {};
+            const totalCost = Object.values(mu.byModel || {}).reduce((s, v) => s + (v.cost || 0), 0);
+            const totalInput = Object.values(mu.byModel || {}).reduce((s, v) => s + (v.input || 0), 0);
+            const totalOutput = Object.values(mu.byModel || {}).reduce((s, v) => s + (v.output || 0), 0);
+            const sub = (d.subs || 0);
+
+            // Summary cards
+            const cards = `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:24px">
+                <div class="stat-card">
+                    <div class="stat-label">API Cost (30d)</div>
+                    <div class="stat-value" style="color:#f97316">$${totalCost.toFixed(2)}</div>
+                    <div class="stat-sub">${(totalInput/1e6).toFixed(1)}M in · ${(totalOutput/1e6).toFixed(1)}M out tokens</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Subscriptions</div>
+                    <div class="stat-value" style="color:#94a3b8">$${(sub).toFixed(2)}</div>
+                    <div class="stat-sub">monthly fixed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total MTD</div>
+                    <div class="stat-value" style="color:#e2e8f0">$${(totalCost + sub).toFixed(2)}</div>
+                    <div class="stat-sub">API + subscriptions</div>
+                </div>
+                ${d.el?.subscription ? `<div class="stat-card">
+                    <div class="stat-label">ElevenLabs</div>
+                    <div class="stat-value" style="color:#a78bfa">${(d.el.subscription.character_count||0).toLocaleString()}</div>
+                    <div class="stat-sub">chars used of ${(d.el.subscription.character_limit||0).toLocaleString()}</div>
+                    <div style="background:#1a2540;height:4px;border-radius:2px;margin-top:8px">
+                        <div style="background:#a78bfa;height:4px;border-radius:2px;width:${Math.min(100,Math.round((d.el.subscription.character_count/d.el.subscription.character_limit)*100))}%"></div>
+                    </div>
+                </div>` : ''}
+                ${d.hg?.data?.remaining_quota != null || d.hg?.data?.remaining_credits != null ? `<div class="stat-card">
+                    <div class="stat-label">HeyGen Credits</div>
+                    <div class="stat-value" style="color:#34d399">${d.hg.data.remaining_quota ?? d.hg.data.remaining_credits}</div>
+                    <div class="stat-sub">remaining (~0.5/video)</div>
+                </div>` : ''}
+            </div>`;
+
+            // 30-day bar chart
+            const days = (mu.byDay || {});
+            const dayKeys = Object.keys(days).sort().slice(-30);
+            const dayCosts = dayKeys.map(k => ({ day: k, cost: Object.values(days[k]||{}).reduce((s,v)=>s+(v.cost||0),0) }));
+            const maxC = Math.max(...dayCosts.map(d=>d.cost), 0.01);
+            const chart = dayKeys.length ? `
+                <h3 style="font-size:0.85rem;font-weight:700;color:#94a3b8;margin-bottom:12px">Daily API Cost (last 30 days)</h3>
+                <div style="display:flex;align-items:flex-end;gap:3px;height:80px;margin-bottom:24px">
+                    ${dayCosts.map(({day,cost}) => {
+                        const pct = Math.round((cost/maxC)*100);
+                        const isToday = day === new Date().toISOString().slice(0,10);
+                        return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%" title="${day}: $${cost.toFixed(4)}">
+                            <div style="width:100%;background:${isToday?'#f97316':'#1e3a5f'};border-radius:2px 2px 0 0;height:${pct}%;min-height:${cost>0?'2':'0'}px"></div>
+                        </div>`;
+                    }).join('')}
+                </div>` : '';
+
+            // Per-model table
+            const models = Object.entries(mu.byModel || {}).sort((a,b)=>b[1].cost-a[1].cost);
+            const modelTable = models.length ? `
+                <h3 style="font-size:0.85rem;font-weight:700;color:#94a3b8;margin-bottom:10px">Cost by Model</h3>
+                <table style="width:100%;border-collapse:collapse;margin-bottom:24px;font-size:0.8rem">
+                    <thead><tr style="color:#475569;border-bottom:1px solid #1e3a5f">
+                        <th style="text-align:left;padding:6px 0">Model</th>
+                        <th style="text-align:right;padding:6px 0">Turns</th>
+                        <th style="text-align:right;padding:6px 0">Input M</th>
+                        <th style="text-align:right;padding:6px 0">Output M</th>
+                        <th style="text-align:right;padding:6px 0">Cost</th>
+                    </tr></thead>
+                    <tbody>${models.map(([model,v])=>`
+                        <tr style="border-bottom:1px solid #0f172a">
+                            <td style="padding:6px 0;color:#cbd5e1">${model.replace('claude-','').replace('anthropic/','')}</td>
+                            <td style="text-align:right;color:#64748b">${v.turns||0}</td>
+                            <td style="text-align:right;color:#64748b">${((v.input||0)/1e6).toFixed(2)}</td>
+                            <td style="text-align:right;color:#64748b">${((v.output||0)/1e6).toFixed(2)}</td>
+                            <td style="text-align:right;color:#f97316;font-weight:600">$${(v.cost||0).toFixed(4)}</td>
+                        </tr>`).join('')}
+                    </tbody>
+                </table>` : '';
+
+            // Per-agent cost
+            const agents = Object.entries(mu.byAgent || {}).sort((a,b)=>b[1].cost-a[1].cost).slice(0,10);
+            const agentTable = agents.length ? `
+                <h3 style="font-size:0.85rem;font-weight:700;color:#94a3b8;margin-bottom:10px">Cost by Agent (top 10)</h3>
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-bottom:24px">
+                    ${agents.map(([agent,v])=>`
+                        <div style="background:#0c1424;border:1px solid #1e3a5f;border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center">
+                            <div style="font-size:0.8rem;color:#94a3b8">${agent.replace('workspace-','')}</div>
+                            <div style="font-size:0.85rem;font-weight:700;color:#f97316">$${(v.cost||0).toFixed(3)}</div>
+                        </div>`).join('')}
+                </div>` : '';
+
+            el.innerHTML = cards + chart + modelTable + agentTable
+                + `<p style="font-size:0.72rem;color:var(--text-secondary)">Cost tracking since 2026-02-21 · Based on JSONL session logs · Subscription totals from docker-compose env vars</p>`;
+        }
+
         // ── Quick Actions ──────────────────────────────────────────────────────────
 
         let QA_OPEN = false;
@@ -8893,6 +9038,7 @@
             if (viewName === 'feedback') renderFeedbackView();
             if (viewName === 'inbox') renderInboxView();
             if (viewName === 'content') renderContentView();
+            if (viewName === 'billing') loadBillingView();
             if (viewName !== 'office' && OFFICE_REFRESH_TIMER) { clearTimeout(OFFICE_REFRESH_TIMER); OFFICE_REFRESH_TIMER = null; }
             if (viewName !== 'office' && OFFICE_POLL_TIMER)   { clearInterval(OFFICE_POLL_TIMER);   OFFICE_POLL_TIMER = null; }
             if (viewName !== 'office' && OFFICE_CLOCK_TIMER)  { clearInterval(OFFICE_CLOCK_TIMER);  OFFICE_CLOCK_TIMER = null; }
