@@ -87,13 +87,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775395969126,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775395966449\",\n  \"sender_id\": \"+",
-      "turns": 4
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775394302144,
       "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
       "turns": 1
@@ -306,12 +299,12 @@
     },
     {
       "day": "2026-04-05",
-      "total": 32,
+      "total": 31,
       "byAgent": {
-        "signal-chat": 31,
+        "signal-chat": 30,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775426586277
+  "updatedAt": 1775426886270
 }
