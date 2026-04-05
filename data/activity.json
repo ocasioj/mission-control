@@ -302,13 +302,6 @@
       "turns": 1
     },
     {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775260821275,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
-    },
-    {
       "agentId": "analyst",
       "agentName": "Nova",
       "timestamp": 1775247950996,
@@ -399,9 +392,9 @@
     },
     {
       "day": "2026-04-04",
-      "total": 43,
+      "total": 42,
       "byAgent": {
-        "signal-chat": 42,
+        "signal-chat": 41,
         "main": 1
       }
     },
@@ -413,5 +406,5 @@
       }
     }
   ],
-  "updatedAt": 1775347461121
+  "updatedAt": 1775347761126
 }
