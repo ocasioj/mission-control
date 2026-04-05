@@ -1,10 +1,16 @@
 {
   "containers": [
     {
-      "name": "openclaw-mission-control-mission-control-1",
+      "name": "5b8ce7ee9b3d_openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
+      "state": "created",
+      "status": "Created"
+    },
+    {
+      "name": "openclaw-mission-control-mission-control-1",
+      "image": "sha256:710495a68e896b42c322afa1d7d4ba600cb287d1fec8167dbabfa0dd461ab1d7",
       "state": "running",
-      "status": "Up Less than a second (health: starting)"
+      "status": "Up 5 minutes (healthy)"
     },
     {
       "name": "openclaw-pa62-openclaw-1",
@@ -14,13 +20,13 @@
     }
   ],
   "disk": {
-    "usedBytes": 67717931008,
-    "availBytes": 35153387520,
+    "usedBytes": 67715768320,
+    "availBytes": 35155550208,
     "totalBytes": 102888095744,
     "percent": 66
   },
   "cronErrors": [],
   "cronTotal": 31,
   "gatewayUp": true,
-  "updatedAt": 1775425894527
+  "updatedAt": 1775426194547
 }
