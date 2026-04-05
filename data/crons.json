@@ -369,10 +369,10 @@
         "message": "Run the line movement digest and send email directly: exec python3 /data/.openclaw/workspace-coder/line_alert_digest.py 2>&1. If output contains SEND ERROR, report it. Otherwise stay silent.",
         "timeoutSeconds": 60
       },
-      "lastRunAt": "2026-04-04T14:00:00.009Z",
-      "nextRunAt": "2026-04-05T14:00:00.000Z",
+      "lastRunAt": "2026-04-05T14:00:00.004Z",
+      "nextRunAt": "2026-04-06T14:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 111741,
+      "lastDurationMs": 10128,
       "consecutiveErrors": 0
     },
     {
@@ -388,10 +388,10 @@
         "timeoutSeconds": 60,
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-05T03:00:18.396Z",
-      "nextRunAt": "2026-04-05T14:00:00.000Z",
+      "lastRunAt": "2026-04-05T14:00:10.132Z",
+      "nextRunAt": "2026-04-05T15:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 7117,
+      "lastDurationMs": 6853,
       "consecutiveErrors": 0
     },
     {
@@ -584,5 +584,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775397560529
+  "updatedAt": 1775397860108
 }
