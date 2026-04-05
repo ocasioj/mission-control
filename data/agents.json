@@ -4,11 +4,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 81,
-      "lastActivity": 1775371800009,
-      "lastActivityAgo": "9m ago",
-      "isActive": false,
-      "lastMessage": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets in 10 minutes, revie",
+      "sessionCount": 84,
+      "lastActivity": 1775372409334,
+      "lastActivityAgo": "4m ago",
+      "isActive": true,
+      "lastMessage": "[cron:prune-picks-data-weekly Prune Old Picks Data] Prune old picks data files: run: find /data/.openclaw/workspace-code",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775370937141,
-      "lastActivityAgo": "23m ago",
+      "lastActivityAgo": "28m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775372359497
+  "updatedAt": 1775372659514
 }
