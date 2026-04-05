@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775386802986,
+      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
+      "turns": 1
+    },
+    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1775376334825,
@@ -168,12 +175,12 @@
     },
     {
       "day": "2026-04-05",
-      "total": 9,
+      "total": 10,
       "byAgent": {
-        "signal-chat": 8,
+        "signal-chat": 9,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775386761232
+  "updatedAt": 1775387061332
 }
