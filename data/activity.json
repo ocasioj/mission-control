@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775391302376,
+      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775390419370,
       "message": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec py",
       "turns": 1
@@ -203,12 +210,12 @@
     },
     {
       "day": "2026-04-05",
-      "total": 14,
+      "total": 15,
       "byAgent": {
-        "signal-chat": 13,
+        "signal-chat": 14,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775391261188
+  "updatedAt": 1775391561249
 }
