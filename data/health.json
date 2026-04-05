@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 67370176512,
-    "availBytes": 35501142016,
+    "usedBytes": 67370450944,
+    "availBytes": 35500867584,
     "totalBytes": 102888095744,
     "percent": 65
   },
@@ -23,9 +23,13 @@
     {
       "name": "Nightly Memory Summary (Joe)",
       "errors": 1
+    },
+    {
+      "name": "Daily Gambling Data Refresh",
+      "errors": 1
     }
   ],
   "cronTotal": 29,
   "gatewayUp": true,
-  "updatedAt": 1775388561756
+  "updatedAt": 1775388861923
 }
