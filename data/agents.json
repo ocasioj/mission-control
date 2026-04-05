@@ -6,8 +6,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775388937085,
-      "lastActivityAgo": "3m ago",
-      "isActive": true,
+      "lastActivityAgo": "8m ago",
+      "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 87,
       "lastActivity": 1775388600008,
-      "lastActivityAgo": "9m ago",
+      "lastActivityAgo": "14m ago",
       "isActive": false,
       "lastMessage": "[cron:263990b7-a67c-4eaa-831d-58b28a811971 Daily Gambling Data Refresh] Run the daily stats and odds data refresh: exec ",
       "lastModel": "gemini-2.5-flash"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775389159586
+  "updatedAt": 1775389459547
 }
