@@ -426,10 +426,10 @@
         "message": "Check disk usage on /docker: run df -h /docker | tail -1 and capture the percentage used. If usage is 80% or higher, send Jose a Signal message: '⚠️ Disk Alert: /docker at X% full (Y used / Z available). Cleanup needed.' If below 80%, stay completely silent — do NOT send any message.",
         "timeoutSeconds": 30
       },
-      "lastRunAt": "2026-04-04T12:30:00.004Z",
-      "nextRunAt": "2026-04-05T12:30:00.000Z",
+      "lastRunAt": "2026-04-05T12:30:00.005Z",
+      "nextRunAt": "2026-04-06T12:30:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 12267,
+      "lastDurationMs": 13007,
       "consecutiveErrors": 0
     },
     {
@@ -564,7 +564,25 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "06b4a182-626f-43bc-a2ba-0120acd7ff33",
+      "name": "Disk Space Alert",
+      "schedule": "0 8 * * *",
+      "scheduleHuman": "0 8 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "message": "DISK_INFO=$(df -h /docker | tail -1)\nUSAGE_PERCENTAGE=$(echo \"$DISK_INFO\" | awk '{print $5}' | sed 's/%//')\nUSED_SPACE=$(echo \"$DISK_INFO\" | awk '{print $3}')\nAVAILABLE_SPACE=$(echo \"$DISK_INFO\" | awk '{print $4}')\n\nif [ \"$USAGE_PERCENTAGE\" -ge 80 ]; then\n  print(default_api.message(action=\"send\", target=\"+16462458614\", message=f\"⚠️ Disk Alert: /docker at {USAGE_PERCENTAGE}% full ({USED_SPACE} used / {AVAILABLE_SPACE} available). Cleanup needed.\"))\nfi",
+        "kind": "agentTurn"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-06T12:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775392160164
+  "updatedAt": 1775392460174
 }
