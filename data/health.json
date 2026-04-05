@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 67017162752,
-    "availBytes": 35854155776,
+    "usedBytes": 67018465280,
+    "availBytes": 35852853248,
     "totalBytes": 102888095744,
     "percent": 65
   },
@@ -27,5 +27,5 @@
   ],
   "cronTotal": 25,
   "gatewayUp": true,
-  "updatedAt": 1775351661694
+  "updatedAt": 1775351961688
 }
