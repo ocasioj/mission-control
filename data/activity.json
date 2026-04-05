@@ -3,6 +3,27 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775390419370,
+      "message": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec py",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775390411490,
+      "message": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775390403367,
+      "message": "[cron:ec94eafa-e7d2-4304-aca7-db1a1c09dfc5 Dashboard Data Refresh + GitHub Push] Refresh the gamblin",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775388602419,
       "message": "[cron:263990b7-a67c-4eaa-831d-58b28a811971 Daily Gambling Data Refresh] Run the daily stats and odds",
       "turns": 1
@@ -182,12 +203,12 @@
     },
     {
       "day": "2026-04-05",
-      "total": 11,
+      "total": 14,
       "byAgent": {
-        "signal-chat": 10,
+        "signal-chat": 13,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775390361341
+  "updatedAt": 1775390661219
 }
