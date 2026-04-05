@@ -348,7 +348,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, read the file at HTML_PATH, then call: gmail_send_email(to=[TO value], subject=[SUBJECT value], body=<contents of HTML_PATH>, mimeType=\"text/html\"). Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 180
+        "timeoutSeconds": 300
       },
       "lastRunAt": "2026-04-04T22:00:00.008Z",
       "nextRunAt": "2026-04-05T22:00:00.000Z",
@@ -405,7 +405,7 @@
       "payload": {
         "kind": "agentTurn",
         "timeoutSeconds": 600,
-        "message": "Run the daily stats and odds data refresh: ODDS_API_KEY=66d34d00c7572b47c00c94f9be6718a9 cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1. Stay silent on success. If it fails, send a brief Signal alert with the error."
+        "message": "Run the daily stats and odds data refresh: run bash -c 'export ODDS_API_KEY=66d34d00c7572b47c00c94f9be6718a9 && cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1'. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
       "lastRunAt": "2026-04-04T11:30:00.003Z",
       "nextRunAt": "2026-04-05T11:30:00.000Z",
@@ -423,7 +423,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Check disk usage: run the command: df -h / | tail -1 | awk '{print $5}' and capture the percentage. Also run: df -h / | tail -1 | awk '{print $3\"/\"$2}' for used/total. If usage is 80% or higher, send Jose a Signal message like: \"⚠️ Disk Alert: Server at X% full (Yused/Ztotal). Cleanup needed.\" If below 80%, stay completely silent — do NOT send any message.",
+        "message": "Check disk usage on /docker: run df -h /docker | tail -1 and capture the percentage used. If usage is 80% or higher, send Jose a Signal message: '⚠️ Disk Alert: /docker at X% full (Y used / Z available). Cleanup needed.' If below 80%, stay completely silent — do NOT send any message.",
         "timeoutSeconds": 30
       },
       "lastRunAt": "2026-04-04T12:30:00.004Z",
@@ -527,7 +527,26 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "7f77f782-07ea-4063-8f87-05b21d965c40",
+      "name": "Prune Old Media Files",
+      "schedule": "0 4 1 * *",
+      "scheduleHuman": "0 4 1 * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "timeoutSeconds": 60,
+        "message": "Prune old received/generated media files older than 90 days. Run: find /data/.openclaw/media -type f -mtime +90 -delete 2>/dev/null; echo \"Media pruned. Remaining: $(du -sh /data/.openclaw/media 2>/dev/null | cut -f1)\". Stay silent — do not send a Signal message."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-05-01T08:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775361859964
+  "updatedAt": 1775362160036
 }
