@@ -403,10 +403,10 @@
         "model": "google/gemini-2.5-flash-lite",
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-04T23:00:00.011Z",
-      "nextRunAt": "2026-04-05T00:00:00.000Z",
+      "lastRunAt": "2026-04-05T00:00:00.006Z",
+      "nextRunAt": "2026-04-05T01:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 8076,
+      "lastDurationMs": 11896,
       "consecutiveErrors": 0
     },
     {
@@ -490,5 +490,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775347159930
+  "updatedAt": 1775347460000
 }
