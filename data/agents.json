@@ -6,8 +6,8 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 92,
       "lastActivity": 1775391300006,
-      "lastActivityAgo": "4m ago",
-      "isActive": true,
+      "lastActivityAgo": "9m ago",
+      "isActive": false,
       "lastMessage": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmail-health-report. Do ",
       "lastModel": "gemini-2.5-flash"
     },
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775390741410,
-      "lastActivityAgo": "13m ago",
+      "lastActivityAgo": "18m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775391559616
+  "updatedAt": 1775391859689
 }
