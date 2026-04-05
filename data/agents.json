@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775421336448,
-      "lastActivityAgo": "11m ago",
+      "lastActivityAgo": "15m ago",
       "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 105,
       "lastActivity": 1775419200006,
-      "lastActivityAgo": "47m ago",
+      "lastActivityAgo": "50m ago",
       "isActive": false,
       "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /data/.openclaw/workspa",
       "lastModel": "gemini-2.5-flash"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775422032325
+  "updatedAt": 1775422240045
 }
