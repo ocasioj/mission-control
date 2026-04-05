@@ -6825,9 +6825,23 @@
             if (crons.length === 0) {
                 container.innerHTML = '<div class="empty-state-large">Loading scheduled jobs...</div>';
                 try {
-                    const data = await fetchGitHubDataFile('crons.json');
-                    crons = data.crons || [];
-                } catch(e) { crons = []; }
+                    const r = await fetch(`${MC_BASE}/api/cron/list`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                    const data = await r.json();
+                    crons = (data.jobs || []).map(j => ({
+                        id: j.id, name: j.name || '(unnamed)',
+                        schedule: j.schedule?.expr || '',
+                        scheduleHuman: j.schedule?.expr || '',
+                        timezone: j.schedule?.tz || 'UTC',
+                        enabled: j.enabled !== false,
+                        lastRunAt: j.state?.lastRunAtMs ? new Date(j.state.lastRunAtMs).toISOString() : null,
+                        nextRunAt: j.state?.nextRunAtMs ? new Date(j.state.nextRunAtMs).toISOString() : null,
+                    }));
+                } catch(e) {
+                    try {
+                        const data = await fetchGitHubDataFile('crons.json');
+                        crons = data.crons || [];
+                    } catch(e2) { crons = []; }
+                }
             }
             if (crons.length === 0) {
                 container.innerHTML = '<div class="empty-state-large">No scheduled jobs found. Ask your OpenClaw to schedule proactive tasks and they\'ll appear here.</div>';
@@ -10975,11 +10989,12 @@
         async function checkAuth() {
             // Fetch token from MC server at runtime — never stored in source
             let token = localStorage.getItem('gh_token');
+            let tokenFromServer = false;
             if (!token) {
                 try {
                     const r = await fetch(`${MC_BASE}/api/gh-token`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
                     const j = await r.json();
-                    if (j.token) { token = j.token; localStorage.setItem('gh_token', token); }
+                    if (j.token) { token = j.token; localStorage.setItem('gh_token', token); tokenFromServer = true; }
                 } catch(e) { /* fall through */ }
             }
             if (!token) { showLoginScreen(); return; }
@@ -10989,15 +11004,19 @@
                 const userResp = await fetch('https://api.github.com/user', {
                     headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
                 });
-                if (!userResp.ok) {
-                    // Token invalid — clear it and show login
+                if (userResp.ok) {
+                    const user = await userResp.json();
+                    STATE.user = { login: user.login, name: user.name || user.login, avatar_url: user.avatar_url };
+                    document.getElementById('user-avatar').src = user.avatar_url;
+                } else if (!tokenFromServer) {
+                    // Token came from user input and is invalid — clear and show login
                     localStorage.removeItem('gh_token');
                     showLoginScreen();
                     return;
+                } else {
+                    // Token came from server — trust it, use fallback profile
+                    STATE.user = { login: 'ocasioj', name: 'Jose', avatar_url: 'https://github.com/ocasioj.png' };
                 }
-                const user = await userResp.json();
-                STATE.user = { login: user.login, name: user.name || user.login, avatar_url: user.avatar_url };
-                document.getElementById('user-avatar').src = user.avatar_url;
             } catch(e) {
                 // Network error — use fallback profile, don't block
                 STATE.user = { login: 'ocasioj', name: 'Jose', avatar_url: 'https://github.com/ocasioj.png' };
