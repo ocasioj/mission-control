@@ -347,7 +347,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Send the line movement email digest. Run: cd /data/.openclaw/workspace-coder && python3 line_alert_digest.py 2>&1. Parse stdout for HTML_PATH, SUBJECT, and TO fields. If ALERTS=0 is in output, do nothing — no email needed. Otherwise, read the file at HTML_PATH, then call: gmail_send_email(to=[TO value], subject=[SUBJECT value], body=<contents of HTML_PATH>, mimeType=\"text/html\"). Confirm when sent or silently exit if no alerts.",
-        "timeoutSeconds": 120
+        "timeoutSeconds": 180
       },
       "lastRunAt": "2026-04-04T22:00:00.008Z",
       "nextRunAt": "2026-04-05T22:00:00.000Z",
@@ -470,5 +470,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775353459976
+  "updatedAt": 1775353760023
 }
