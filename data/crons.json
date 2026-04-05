@@ -468,7 +468,25 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "dac6265b-140e-4858-a6da-c54b12a89eae",
+      "name": "retrain_gambling_model",
+      "schedule": "0 3 * * *",
+      "scheduleHuman": "0 3 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the gambling model retraining script."
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-05T07:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775358860074
+  "updatedAt": 1775359160052
 }
