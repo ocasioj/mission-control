@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775388602419,
+      "message": "[cron:263990b7-a67c-4eaa-831d-58b28a811971 Daily Gambling Data Refresh] Run the daily stats and odds",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775386802986,
       "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
       "turns": 1
@@ -175,12 +182,12 @@
     },
     {
       "day": "2026-04-05",
-      "total": 10,
+      "total": 11,
       "byAgent": {
-        "signal-chat": 9,
+        "signal-chat": 10,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775388561230
+  "updatedAt": 1775388861230
 }
