@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 86,
+      "lastActivity": 1775386800008,
+      "lastActivityAgo": "4m ago",
+      "isActive": true,
+      "lastMessage": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging script to settle pendi",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775385336683,
-      "lastActivityAgo": "23m ago",
+      "lastActivityAgo": "28m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 85,
-      "lastActivity": 1775373000006,
-      "lastActivityAgo": "3h ago",
-      "isActive": false,
-      "lastMessage": "[cron:804004cf-3ce2-4427-a060-d336b08398b0 Daily Backup Configs] Run a safe backup: copy /data/.openclaw/workspace-signa",
-      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "analyst",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775386759546
+  "updatedAt": 1775387059568
 }
