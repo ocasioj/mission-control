@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775397612345,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775397603701,
+      "message": "[cron:dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e Line Alert Digest — 10am ET] Run the line movement digest",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775395969126,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775395966449\",\n  \"sender_id\": \"+",
       "turns": 2
@@ -188,13 +202,6 @@
       "timestamp": 1774807210611,
       "message": "[cron:7a92d941-85dd-4f76-94e1-afa44cc2a75c pre-reset-summary-1774807201] Your session is about to re",
       "turns": 2
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774792802953,
-      "message": "[cron:42942ad3-d60c-4ffd-b64d-0417bb23cb70 Daily NBA + MLB Picks] Run the daily picks script and sen",
-      "turns": 2
     }
   ],
   "digest": [
@@ -236,12 +243,12 @@
     },
     {
       "day": "2026-04-05",
-      "total": 20,
+      "total": 22,
       "byAgent": {
-        "signal-chat": 19,
+        "signal-chat": 21,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775397561710
+  "updatedAt": 1775397861201
 }
