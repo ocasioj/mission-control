@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1775376334825,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1775373001937,
@@ -62,13 +69,6 @@
       "timestamp": 1775346193871,
       "message": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required ",
       "turns": 24
-    },
-    {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1775290854212,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
     },
     {
       "agentId": "analyst",
@@ -161,19 +161,19 @@
     },
     {
       "day": "2026-04-04",
-      "total": 2,
+      "total": 1,
       "byAgent": {
-        "signal-chat": 1,
-        "main": 1
+        "signal-chat": 1
       }
     },
     {
       "day": "2026-04-05",
-      "total": 8,
+      "total": 9,
       "byAgent": {
-        "signal-chat": 8
+        "signal-chat": 8,
+        "main": 1
       }
     }
   ],
-  "updatedAt": 1775376261212
+  "updatedAt": 1775376561209
 }
