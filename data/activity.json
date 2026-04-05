@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775395969126,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775395966449\",\n  \"sender_id\": \"+",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775394302144,
       "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
       "turns": 1
@@ -134,13 +141,6 @@
       "turns": 1
     },
     {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775346193871,
-      "message": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required ",
-      "turns": 24
-    },
-    {
       "agentId": "analyst",
       "agentName": "Nova",
       "timestamp": 1775247950996,
@@ -231,19 +231,17 @@
     },
     {
       "day": "2026-04-04",
-      "total": 1,
-      "byAgent": {
-        "signal-chat": 1
-      }
+      "total": 0,
+      "byAgent": {}
     },
     {
       "day": "2026-04-05",
-      "total": 19,
+      "total": 20,
       "byAgent": {
-        "signal-chat": 18,
+        "signal-chat": 19,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775395761268
+  "updatedAt": 1775396061179
 }
