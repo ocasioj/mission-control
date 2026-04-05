@@ -3278,6 +3278,9 @@
         <div class="sidebar-item" data-view="radar" onclick="switchView('radar')"><span class="sidebar-icon">📡</span><span class="sidebar-label">Radar</span></div>
         <div class="sidebar-item" data-view="factory" onclick="switchView('factory')"><span class="sidebar-icon">🏭</span><span class="sidebar-label">Factory</span></div>
         <div class="sidebar-item" data-view="billing" onclick="switchView('billing')"><span class="sidebar-icon">💰</span><span class="sidebar-label">Billing</span></div>
+        <div class="sidebar-item" data-view="gambling" onclick="switchView('gambling')"><span class="sidebar-icon">🎰</span><span class="sidebar-label">Gambling</span></div>
+        <div class="sidebar-item" data-view="calls" onclick="switchView('calls')"><span class="sidebar-icon">📞</span><span class="sidebar-label">Calls</span></div>
+        <div class="sidebar-item" data-view="logs" onclick="switchView('logs')"><span class="sidebar-icon">📜</span><span class="sidebar-label">Logs</span></div>
         <div class="sidebar-item" data-view="pipeline" onclick="switchView('pipeline')"><span class="sidebar-icon">🔀</span><span class="sidebar-label">Pipeline</span></div>
         <div class="sidebar-item" data-view="feedback" onclick="switchView('feedback')"><span class="sidebar-icon">💬</span><span class="sidebar-label">Feedback</span></div>
     </nav>
@@ -3840,6 +3843,36 @@
             <div id="billing-content"><div class="empty-state-large">Loading billing data...</div></div>
         </div>
     </div><!-- END view-billing -->
+
+    <div id="view-gambling" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>🎰 Gambling Agent</h2><p class="section-subtitle">Paper trading performance — $25/pick flat stake.</p></div>
+                <button class="btn-secondary" onclick="loadGamblingView()" style="margin-left:auto;">↻ Refresh</button>
+            </div>
+            <div id="gambling-content"><div class="empty-state-large">Loading gambling data...</div></div>
+        </div>
+    </div><!-- END view-gambling -->
+
+    <div id="view-calls" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>📞 Voice Calls</h2><p class="section-subtitle">Twilio call usage for the current month.</p></div>
+                <button class="btn-secondary" onclick="loadCallsView()" style="margin-left:auto;">↻ Refresh</button>
+            </div>
+            <div id="calls-content"><div class="empty-state-large">Loading call data...</div></div>
+        </div>
+    </div><!-- END view-calls -->
+
+    <div id="view-logs" class="view" style="display:none;">
+        <div class="view-content">
+            <div class="section-header-row">
+                <div><h2>📜 Logs</h2><p class="section-subtitle">Last 50 lines from the OpenClaw container.</p></div>
+                <button class="btn-secondary" onclick="loadLogsView()" style="margin-left:auto;">↻ Refresh</button>
+            </div>
+            <div id="logs-content"><div class="empty-state-large">Loading logs...</div></div>
+        </div>
+    </div><!-- END view-logs -->
 
     <!-- Quick Actions floating panel -->
     <div id="qa-btn" onclick="toggleQuickActions()" title="Quick Actions">⚡</div>
@@ -6964,7 +6997,7 @@
             }).join('');
         }
 
-        const MC_BASE = 'https://control.reservadoai.tech';
+        const MC_BASE = '';
         const MC_TOKEN = 'UyMUSmqc2l0lmvgX9ofsamPHZgKoapM4';
         const MC_HEADERS = { 'Content-Type': 'application/json', 'X-Gateway-Token': MC_TOKEN };
 
@@ -8846,6 +8879,151 @@
                 + `<p style="font-size:0.72rem;color:var(--text-secondary)">Cost tracking since 2026-02-21 · Based on JSONL session logs · Subscription totals from docker-compose env vars</p>`;
         }
 
+        // ── Gambling View ──────────────────────────────────────────────────────────
+
+        async function loadGamblingView() {
+            const el = document.getElementById('gambling-content');
+            if (!el) return;
+            el.innerHTML = '<div class="empty-state-large">Loading...</div>';
+            let d;
+            try {
+                const r = await fetch(`${MC_BASE}/api/gambling`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                d = await r.json();
+            } catch(e) { el.innerHTML = `<div class="empty-state-large">Error: ${e.message}</div>`; return; }
+            if (d.error) { el.innerHTML = `<div class="empty-state-large">${d.error}</div>`; return; }
+
+            // Aggregate by bet_type
+            const types = {};
+            for (const row of (d.byType || [])) {
+                if (!types[row.bet_type]) types[row.bet_type] = { wins:0, losses:0, pushes:0, pl:0, wagered:0 };
+                if (row.outcome === 'win')  { types[row.bet_type].wins += row.cnt; types[row.bet_type].pl += row.pl || 0; types[row.bet_type].wagered += row.wagered || 0; }
+                if (row.outcome === 'loss') { types[row.bet_type].losses += row.cnt; types[row.bet_type].pl += row.pl || 0; types[row.bet_type].wagered += row.wagered || 0; }
+                if (row.outcome === 'push') types[row.bet_type].pushes += row.cnt;
+            }
+            const pending = (d.pending || []).reduce((s, r) => s + r.cnt, 0);
+            const totalPL = Object.values(types).reduce((s, t) => s + t.pl, 0);
+            const totalWagered = Object.values(types).reduce((s, t) => s + t.wagered, 0);
+            const roi = totalWagered > 0 ? (totalPL / totalWagered * 100) : null;
+            const plColor = totalPL >= 0 ? '#10b981' : '#ef4444';
+
+            const summaryCards = `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:24px">
+                <div class="stat-card"><div class="stat-label">Total P/L</div><div class="stat-value" style="color:${plColor}">${totalPL >= 0 ? '+' : ''}$${totalPL.toFixed(2)}</div>${roi !== null ? `<div class="stat-sub">ROI: ${roi >= 0 ? '+' : ''}${roi.toFixed(1)}%</div>` : ''}</div>
+                <div class="stat-card"><div class="stat-label">Wagered</div><div class="stat-value" style="color:#94a3b8">$${totalWagered.toFixed(2)}</div><div class="stat-sub">paper trades</div></div>
+                <div class="stat-card"><div class="stat-label">Pending</div><div class="stat-value" style="color:#f59e0b">${pending}</div><div class="stat-sub">open bets</div></div>
+            </div>`;
+
+            const typeLabels = { moneyline:'Game Bets', prop:'Player Props', game_prop:'NRFI' };
+            const typeRows = Object.entries(types).map(([type, t]) => {
+                const label = typeLabels[type] || type;
+                const wr = (t.wins + t.losses) > 0 ? (t.wins / (t.wins + t.losses) * 100).toFixed(0) : '—';
+                const color = t.pl >= 0 ? '#10b981' : '#ef4444';
+                return `<tr style="border-bottom:1px solid #0f172a">
+                    <td style="padding:8px 0;color:#cbd5e1">${label}</td>
+                    <td style="text-align:right;color:#64748b">${t.wins}W-${t.losses}L${t.pushes ? `-${t.pushes}P` : ''}</td>
+                    <td style="text-align:right;color:#64748b">${wr}%</td>
+                    <td style="text-align:right;font-weight:600;color:${color}">${t.pl >= 0 ? '+' : ''}$${t.pl.toFixed(2)}</td>
+                </tr>`;
+            }).join('');
+
+            const typeTable = `<h3 style="font-size:0.85rem;font-weight:700;color:#94a3b8;margin-bottom:10px">By Bet Type</h3>
+                <table style="width:100%;border-collapse:collapse;margin-bottom:24px;font-size:0.8rem">
+                    <thead><tr style="color:#475569;border-bottom:1px solid #1e3a5f">
+                        <th style="text-align:left;padding:6px 0">Type</th>
+                        <th style="text-align:right;padding:6px 0">Record</th>
+                        <th style="text-align:right;padding:6px 0">Win%</th>
+                        <th style="text-align:right;padding:6px 0">P/L</th>
+                    </tr></thead>
+                    <tbody>${typeRows}</tbody>
+                </table>`;
+
+            const markets = (d.byMarket || []);
+            const marketRows = markets.map(m => {
+                const mkt = (m.market || '').replace(/player_|batter_|pitcher_/g,'').replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+                const wr = (m.wins + m.losses) > 0 ? (m.wins / (m.wins + m.losses) * 100).toFixed(0) : '—';
+                const color = (m.pl || 0) >= 0 ? '#10b981' : '#ef4444';
+                return `<tr style="border-bottom:1px solid #0f172a">
+                    <td style="padding:6px 0;color:#cbd5e1">${mkt} ${m.recommendation || ''}</td>
+                    <td style="text-align:right;color:#64748b">${m.wins}W-${m.losses}L (${wr}%)</td>
+                    <td style="text-align:right;font-weight:600;color:${color}">${(m.pl||0) >= 0 ? '+' : ''}$${(m.pl||0).toFixed(2)}</td>
+                </tr>`;
+            }).join('');
+
+            const marketTable = markets.length ? `<h3 style="font-size:0.85rem;font-weight:700;color:#94a3b8;margin-bottom:10px">Props by Market</h3>
+                <table style="width:100%;border-collapse:collapse;margin-bottom:24px;font-size:0.8rem">
+                    <thead><tr style="color:#475569;border-bottom:1px solid #1e3a5f">
+                        <th style="text-align:left;padding:6px 0">Market</th>
+                        <th style="text-align:right;padding:6px 0">Record</th>
+                        <th style="text-align:right;padding:6px 0">P/L</th>
+                    </tr></thead>
+                    <tbody>${marketRows}</tbody>
+                </table>` : '';
+
+            el.innerHTML = summaryCards + typeTable + marketTable
+                + `<p style="font-size:0.72rem;color:var(--text-secondary)">Paper trading at $25/pick · bet_placed=0 · Data from gambling.db</p>`;
+        }
+
+        // ── Calls View ─────────────────────────────────────────────────────────────
+
+        async function loadCallsView() {
+            const el = document.getElementById('calls-content');
+            if (!el) return;
+            el.innerHTML = '<div class="empty-state-large">Loading...</div>';
+            let d;
+            try {
+                const r = await fetch(`${MC_BASE}/api/data`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                d = await r.json();
+            } catch(e) { el.innerHTML = `<div class="empty-state-large">Error: ${e.message}</div>`; return; }
+
+            const tw = d.tw;
+            if (!tw || !tw.usage_records?.length) {
+                el.innerHTML = '<div class="empty-state-large">No Twilio call data available.</div>'; return;
+            }
+
+            const rows = tw.usage_records.map(r => `
+                <tr style="border-bottom:1px solid #0f172a">
+                    <td style="padding:8px 0;color:#cbd5e1">${r.description || r.category || '—'}</td>
+                    <td style="text-align:right;color:#64748b">${r.count || '—'}</td>
+                    <td style="text-align:right;color:#64748b">${r.usage || '—'} ${r.usage_unit || ''}</td>
+                    <td style="text-align:right;font-weight:600;color:#f97316">$${parseFloat(r.price || 0).toFixed(4)}</td>
+                </tr>`).join('');
+
+            el.innerHTML = `<table style="width:100%;border-collapse:collapse;font-size:0.8rem">
+                <thead><tr style="color:#475569;border-bottom:1px solid #1e3a5f">
+                    <th style="text-align:left;padding:6px 0">Category</th>
+                    <th style="text-align:right;padding:6px 0">Count</th>
+                    <th style="text-align:right;padding:6px 0">Usage</th>
+                    <th style="text-align:right;padding:6px 0">Cost</th>
+                </tr></thead>
+                <tbody>${rows}</tbody>
+            </table>
+            <p style="font-size:0.72rem;color:var(--text-secondary);margin-top:12px">Twilio month-to-date usage</p>`;
+        }
+
+        // ── Logs View ──────────────────────────────────────────────────────────────
+
+        async function loadLogsView() {
+            const el = document.getElementById('logs-content');
+            if (!el) return;
+            el.innerHTML = '<div class="empty-state-large">Loading...</div>';
+            let d;
+            try {
+                const r = await fetch(`${MC_BASE}/api/system`, { headers: { 'X-Gateway-Token': MC_TOKEN } });
+                d = await r.json();
+            } catch(e) { el.innerHTML = `<div class="empty-state-large">Error: ${e.message}</div>`; return; }
+
+            const lines = (d.logTail || '').split('\n').filter(l => l.trim());
+            const html = lines.map(line => {
+                let color = '#64748b';
+                if (/error|ERROR|FATAL|fatal/i.test(line)) color = '#ef4444';
+                else if (/warn|WARN/i.test(line)) color = '#f59e0b';
+                else if (/✅|success|SUCCESS|started/i.test(line)) color = '#10b981';
+                return `<div style="font-family:monospace;font-size:0.72rem;color:${color};padding:2px 0;border-bottom:1px solid #0a1628;white-space:pre-wrap;word-break:break-all">${escapeHtml(line)}</div>`;
+            }).join('');
+
+            el.innerHTML = `<div style="background:#060d18;border:1px solid #1e3a5f;border-radius:8px;padding:12px;max-height:70vh;overflow-y:auto">${html || '<span style="color:#334155">No log output.</span>'}</div>
+                <p style="font-size:0.72rem;color:var(--text-secondary);margin-top:8px">Last 50 lines from OpenClaw container logs</p>`;
+        }
+
         // ── Quick Actions ──────────────────────────────────────────────────────────
 
         let QA_OPEN = false;
@@ -9039,6 +9217,9 @@
             if (viewName === 'inbox') renderInboxView();
             if (viewName === 'content') renderContentView();
             if (viewName === 'billing') loadBillingView();
+            if (viewName === 'gambling') loadGamblingView();
+            if (viewName === 'calls') loadCallsView();
+            if (viewName === 'logs') loadLogsView();
             if (viewName !== 'office' && OFFICE_REFRESH_TIMER) { clearTimeout(OFFICE_REFRESH_TIMER); OFFICE_REFRESH_TIMER = null; }
             if (viewName !== 'office' && OFFICE_POLL_TIMER)   { clearInterval(OFFICE_POLL_TIMER);   OFFICE_POLL_TIMER = null; }
             if (viewName !== 'office' && OFFICE_CLOCK_TIMER)  { clearInterval(OFFICE_CLOCK_TIMER);  OFFICE_CLOCK_TIMER = null; }
