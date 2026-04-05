@@ -546,7 +546,24 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "close-props-lines-daily",
+      "name": "Props Closing Line Snapshot",
+      "schedule": "30 18 * * *",
+      "scheduleHuman": "30 18 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "prompt": "Run the close_props_lines.py script to capture closing odds for today's pending props before games start: cd /data/.openclaw/workspace-coder && source .env && python3 close_props_lines.py"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-05T22:30:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775403608145
+  "updatedAt": 1775403909105
 }
