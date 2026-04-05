@@ -5,10 +5,10 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 118,
-      "lastActivity": 1775348867013,
-      "lastActivityAgo": "1m ago",
+      "lastActivity": 1775349092080,
+      "lastActivityAgo": "2m ago",
       "isActive": true,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775348863402\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775349087424\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775347537050,
-      "lastActivityAgo": "23m ago",
+      "lastActivityAgo": "28m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775348959428
+  "updatedAt": 1775349259434
 }
