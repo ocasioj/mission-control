@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 91,
+      "lastActivity": 1775390417290,
+      "lastActivityAgo": "4m ago",
+      "isActive": true,
+      "lastMessage": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec python3 /data/.opencla",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775388937085,
-      "lastActivityAgo": "23m ago",
+      "lastActivityAgo": "28m ago",
       "isActive": false,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 87,
-      "lastActivity": 1775388600008,
-      "lastActivityAgo": "29m ago",
-      "isActive": false,
-      "lastMessage": "[cron:263990b7-a67c-4eaa-831d-58b28a811971 Daily Gambling Data Refresh] Run the daily stats and odds data refresh: exec ",
-      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "analyst",
@@ -144,5 +144,5 @@
       "lastModel": "gpt-5.1-codex"
     }
   ],
-  "updatedAt": 1775390359598
+  "updatedAt": 1775390659608
 }
