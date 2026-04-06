@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775463016827,
-      "lastActivityAgo": "17m ago",
+      "lastActivityAgo": "22m ago",
       "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,8 +17,8 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 122,
       "lastActivity": 1775462400013,
-      "lastActivityAgo": "28m ago",
-      "isActive": true,
+      "lastActivityAgo": "33m ago",
+      "isActive": false,
       "lastMessage": "[cron:0da84fc9-a8d8-4bfc-93e8-c25a031ba095 Gambling Agent Model Retraining] Launch the gambling model retraining in the ",
       "lastModel": "gemini-2.5-flash"
     },
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775464086360
+  "updatedAt": 1775464386359
 }
