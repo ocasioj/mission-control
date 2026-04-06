@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "main",
+      "name": "Joe (Web)",
+      "desc": "Web chat & group @mention handler",
+      "sessionCount": 7,
+      "lastActivity": 1775446816720,
+      "lastActivityAgo": "2m ago",
+      "isActive": true,
+      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
+      "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 121,
       "lastActivity": 1775446200307,
-      "lastActivityAgo": "8m ago",
+      "lastActivityAgo": "13m ago",
       "isActive": true,
       "lastMessage": "[cron:auto-result-nightly-001 Nightly Bet Settlement] Run the nightly bet settlement to capture tonight's game results: ",
       "lastModel": "gemini-2.5-flash"
-    },
-    {
-      "id": "main",
-      "name": "Joe (Web)",
-      "desc": "Web chat & group @mention handler",
-      "sessionCount": 7,
-      "lastActivity": 1775445019328,
-      "lastActivityAgo": "27m ago",
-      "isActive": true,
-      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
-      "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "analyst",
@@ -39,7 +39,7 @@
       "desc": "Trip planning and scheduling",
       "sessionCount": 5,
       "lastActivity": 1774669120794,
-      "lastActivityAgo": "8d ago",
+      "lastActivityAgo": "9d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 23:38 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775446686321
+  "updatedAt": 1775446986321
 }
