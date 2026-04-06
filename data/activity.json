@@ -297,13 +297,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775391302376,
-      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775372411438,
       "message": "[cron:prune-picks-data-weekly Prune Old Picks Data] Prune old picks data files: run: find /data/.ope",
       "turns": 1
@@ -369,9 +362,9 @@
     },
     {
       "day": "2026-04-05",
-      "total": 20,
+      "total": 19,
       "byAgent": {
-        "signal-chat": 20
+        "signal-chat": 19
       }
     },
     {
@@ -383,5 +376,5 @@
       }
     }
   ],
-  "updatedAt": 1775477886425
+  "updatedAt": 1775478186404
 }
