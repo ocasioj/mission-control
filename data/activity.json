@@ -288,13 +288,6 @@
       "turns": 1
     },
     {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775372403628,
-      "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
-      "turns": 1
-    },
-    {
       "agentId": "analyst",
       "agentName": "Nova",
       "timestamp": 1775247950996,
@@ -362,9 +355,9 @@
     },
     {
       "day": "2026-04-05",
-      "total": 28,
+      "total": 27,
       "byAgent": {
-        "signal-chat": 27,
+        "signal-chat": 26,
         "main": 1
       }
     },
@@ -376,5 +369,5 @@
       }
     }
   ],
-  "updatedAt": 1775458986355
+  "updatedAt": 1775459286351
 }
