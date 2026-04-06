@@ -139,10 +139,10 @@
       "name": "API_USAGE.md",
       "path": "/openclaw-data/workspace-signal-chat/API_USAGE.md",
       "category": "Notes",
-      "sizeBytes": 1373,
-      "wordCount": 173,
-      "modifiedAt": 1775433623766.6333,
-      "content": "# API Usage — April 2026\n\nLast updated: 2026-04-05 20:00 EDT\n\n```\nWeekly API Usage Summary — Apr 2026 (wk 1 of 4)\n\nAI Token Spend (month-to-date):\n  Anthropic    $2.97 / $20 (est.)\n  OpenAI       $0.00 / $20 (est.)\n  Google       $1.17 / $10 (est.)\n\nLive APIs (month-to-date):\n  OpenRouter  : $1.64 used (no cap)\n  ElevenLabs  : 1,312 / 36,998 chars | next $5.42 (resets Apr 24)\n  Odds API    : $14.88 est. | 11,900 / 20,000 requests\n  HeyGen      : $25.35 remaining (507 credits @ $0.05)\n  Brave Search: metered @ $0.005/query (usage not countable via API)\n  Twitter/X   : $10.51 est. | 2,102 / 2,000,000 posts (resets day 12)\n  Inference.sh: check manually at inference.sh (image-to-video)\n  SportsData.io: check manually at sportsdata.io (props/stats fallback)\n  Twilio      : $0.00 this month  [budget $20]\n\nBudget Progress:\n  Anthropic    [█░░░░░░░░░]   15%  $2.97 / $20.00\n  OpenAI       [░░░░░░░░░░]    0%  $0.00 / $20.00\n  Google       [█░░░░░░░░░]   12%  $1.17 / $10.00\n  OpenRouter   [█░░░░░░░░░]   16%  $1.64 / $10.00\n  ElevenLabs   [█████░░░░░]   54%  $5.42 / $10.00\n  Odds API     [█████░░░░░]   60%  11,900 / 20000 req\n\nEst. month-end total: ~$67.20  (5/30 days elapsed)\n\nUpdated /data/.openclaw/workspace-signal-chat/API_USAGE.md\n```\n"
+      "sizeBytes": 925,
+      "wordCount": 132,
+      "modifiedAt": 1775448011554.3816,
+      "content": "# API Usage — April 2026\n\nLast updated: 2026-04-06 00:00 EDT\n\n```\nAPI Usage Meter — 2026-04-06\n\nAI Tokens (today | month-to-date):\n  Anthropic    $0.00 today | $2.97 mtd  [budget $20] (est.)\n  OpenAI       $0.00 today | $0.00 mtd  [budget $20] (est.)\n  Google       $0.01 today | $1.42 mtd  [budget $10] (est.)\n\nLive APIs:\n  OpenRouter  : $1.64 used (no cap)\n  ElevenLabs  : 1,312 / 36,998 chars | next $5.42 (resets Apr 24)\n  Odds API    : $15.88 est. | 12,706 / 20,000 requests\n  HeyGen      : $25.35 remaining (507 credits @ $0.05)\n  Brave Search: metered @ $0.005/query (usage not countable via API)\n  Twitter/X   : $10.51 est. | 2,102 / 2,000,000 posts (resets day 12)\n  Inference.sh: check manually at inference.sh (image-to-video)\n  SportsData.io: check manually at sportsdata.io (props/stats fallback)\n  Twilio      : $0.00 this month  [budget $20]\n\nUpdated /data/.openclaw/workspace-signal-chat/API_USAGE.md\n```\n"
     },
     {
       "name": "BILLING.md",
@@ -370,5 +370,5 @@
       "content": "# Todo List: Rene\n"
     }
   ],
-  "updatedAt": 1775447886318
+  "updatedAt": 1775448186328
 }
