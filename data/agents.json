@@ -4,10 +4,10 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 122,
-      "lastActivity": 1775512809705,
-      "lastActivityAgo": "57m ago",
-      "isActive": false,
+      "sessionCount": 123,
+      "lastActivity": 1775516400066,
+      "lastActivityAgo": "3m ago",
+      "isActive": true,
       "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /data/.openclaw/workspa",
       "lastModel": "gemini-2.5-flash"
     },
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775516286519
+  "updatedAt": 1775516586526
 }
