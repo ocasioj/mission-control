@@ -290,13 +290,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775430003489,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775427822941,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775427819363\",\n  \"sender_id\": \"+",
       "turns": 8
@@ -362,9 +355,9 @@
     },
     {
       "day": "2026-04-05",
-      "total": 3,
+      "total": 2,
       "byAgent": {
-        "signal-chat": 3
+        "signal-chat": 2
       }
     },
     {
@@ -376,5 +369,5 @@
       }
     }
   ],
-  "updatedAt": 1775516586537
+  "updatedAt": 1775516886538
 }
