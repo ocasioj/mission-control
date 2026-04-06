@@ -5,8 +5,8 @@
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
-      "lastActivity": 1775466616289,
-      "lastActivityAgo": "27m ago",
+      "lastActivity": 1775468415844,
+      "lastActivityAgo": "2m ago",
       "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775468286376
+  "updatedAt": 1775468586373
 }
