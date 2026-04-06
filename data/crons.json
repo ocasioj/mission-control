@@ -407,10 +407,10 @@
         "timeoutSeconds": 600,
         "message": "Run the daily stats and odds data refresh: exec bash -c 'set -a; source /data/.openclaw/workspace-coder/.env; set +a; cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1'. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
-      "lastRunAt": "2026-04-05T11:30:00.006Z",
-      "nextRunAt": "2026-04-06T11:30:00.000Z",
+      "lastRunAt": "2026-04-06T11:30:00.003Z",
+      "nextRunAt": "2026-04-07T11:30:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 13397,
+      "lastDurationMs": 135146,
       "consecutiveErrors": 0
     },
     {
@@ -568,5 +568,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775474886386
+  "updatedAt": 1775475186389
 }
