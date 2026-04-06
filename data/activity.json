@@ -297,13 +297,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775392202727,
-      "message": "[cron:disk-space-alert-daily Disk Space Alert] Check disk usage on /docker: run df -h /docker | tail",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775372411438,
       "message": "[cron:prune-picks-data-weekly Prune Old Picks Data] Prune old picks data files: run: find /data/.ope",
       "turns": 1
@@ -369,9 +362,9 @@
     },
     {
       "day": "2026-04-05",
-      "total": 18,
+      "total": 17,
       "byAgent": {
-        "signal-chat": 18
+        "signal-chat": 17
       }
     },
     {
@@ -383,5 +376,5 @@
       }
     }
   ],
-  "updatedAt": 1775478786403
+  "updatedAt": 1775479086401
 }
