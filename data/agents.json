@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775455815995,
-      "lastActivityAgo": "17m ago",
+      "lastActivityAgo": "22m ago",
       "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 122,
       "lastActivity": 1775453400008,
-      "lastActivityAgo": "58m ago",
+      "lastActivityAgo": "1h ago",
       "isActive": false,
       "lastMessage": "[cron:auto-result-nightly-001 Nightly Bet Settlement] Run the nightly bet settlement to capture tonight's game results: ",
       "lastModel": "gemini-2.5-flash"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775456886342
+  "updatedAt": 1775457186344
 }
