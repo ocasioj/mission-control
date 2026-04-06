@@ -297,13 +297,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775394302144,
-      "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775372411438,
       "message": "[cron:prune-picks-data-weekly Prune Old Picks Data] Prune old picks data files: run: find /data/.ope",
       "turns": 1
@@ -362,9 +355,9 @@
     },
     {
       "day": "2026-04-05",
-      "total": 16,
+      "total": 15,
       "byAgent": {
-        "signal-chat": 16
+        "signal-chat": 15
       }
     },
     {
@@ -376,5 +369,5 @@
       }
     }
   ],
-  "updatedAt": 1775480886407
+  "updatedAt": 1775481186428
 }
