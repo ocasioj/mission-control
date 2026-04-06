@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775458202265,
+      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775453402904,
       "message": "[cron:auto-result-nightly-001 Nightly Bet Settlement] Run the nightly bet settlement to capture toni",
       "turns": 1
@@ -281,13 +288,6 @@
       "turns": 1
     },
     {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775371802458,
-      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
-      "turns": 1
-    },
-    {
       "agentId": "analyst",
       "agentName": "Nova",
       "timestamp": 1775247950996,
@@ -355,19 +355,19 @@
     },
     {
       "day": "2026-04-05",
-      "total": 29,
+      "total": 28,
       "byAgent": {
-        "signal-chat": 28,
+        "signal-chat": 27,
         "main": 1
       }
     },
     {
       "day": "2026-04-06",
-      "total": 12,
+      "total": 13,
       "byAgent": {
-        "signal-chat": 12
+        "signal-chat": 13
       }
     }
   ],
-  "updatedAt": 1775458086350
+  "updatedAt": 1775458386357
 }
