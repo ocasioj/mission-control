@@ -1,34 +1,34 @@
 {
   "containers": [
     {
-      "name": "quirky_liskov",
+      "name": "festive_wescoff",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 2 minutes (health: starting)"
-    },
-    {
-      "name": "cranky_boyd",
-      "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "running",
-      "status": "Up 3 minutes (health: starting)"
-    },
-    {
-      "name": "trusting_cerf",
-      "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "running",
-      "status": "Up 4 minutes (health: starting)"
-    },
-    {
-      "name": "unruffled_gould",
-      "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "running",
-      "status": "Up 5 minutes (health: starting)"
+      "status": "Up 1 second (health: starting)"
     },
     {
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 2 minutes (health: starting)"
+      "status": "Up 1 second (health: starting)"
+    },
+    {
+      "name": "condescending_leavitt",
+      "image": "ghcr.io/openclaw/openclaw:latest",
+      "state": "running",
+      "status": "Up 4 minutes (health: starting)"
+    },
+    {
+      "name": "quirky_liskov",
+      "image": "ghcr.io/openclaw/openclaw:latest",
+      "state": "running",
+      "status": "Up 7 minutes (unhealthy)"
+    },
+    {
+      "name": "cranky_boyd",
+      "image": "ghcr.io/openclaw/openclaw:latest",
+      "state": "running",
+      "status": "Up 8 minutes (unhealthy)"
     },
     {
       "name": "keen_golick",
@@ -44,13 +44,13 @@
     }
   ],
   "disk": {
-    "usedBytes": 49695248384,
-    "availBytes": 53176070144,
+    "usedBytes": 49339277312,
+    "availBytes": 53532041216,
     "totalBytes": 102888095744,
     "percent": 48
   },
   "cronErrors": [],
   "cronTotal": 30,
   "gatewayUp": false,
-  "updatedAt": 1775519618374
+  "updatedAt": 1775519916623
 }
