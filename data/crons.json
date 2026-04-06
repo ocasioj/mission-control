@@ -426,10 +426,10 @@
         "message": "Check disk usage on /docker: run df -h /docker | tail -1 and capture the percentage used. If usage is 80% or higher, send Jose a Signal message: '⚠️ Disk Alert: /docker at X% full (Y used / Z available). Cleanup needed.' If below 80%, stay completely silent — do NOT send any message.",
         "timeoutSeconds": 30
       },
-      "lastRunAt": "2026-04-05T12:30:00.005Z",
-      "nextRunAt": "2026-04-06T12:30:00.000Z",
+      "lastRunAt": "2026-04-06T12:30:00.002Z",
+      "nextRunAt": "2026-04-07T12:30:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 13007,
+      "lastDurationMs": 11129,
       "consecutiveErrors": 0
     },
     {
@@ -566,7 +566,26 @@
       "lastStatus": "ok",
       "lastDurationMs": 15370,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "fe8c9c9f-38fe-4d10-887d-c184d9e182d2",
+      "name": "Disk Space Alert",
+      "schedule": "0 8 * * *",
+      "scheduleHuman": "0 8 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "session:agent:signal-chat:cron:disk-space-alert-daily",
+      "payload": {
+        "message": "Run `df -h /docker | tail -1`. Extract 'Used', 'Avail', and 'Use%' values. If 'Use%' is 80% or higher, send a Signal message to Jose (+16462458614) with the format: '⚠️ Disk Alert: /docker at X% full (Y used / Z available). Cleanup needed.', replacing X, Y, and Z with the extracted values. If 'Use%' is below 80%, do NOT send any message.",
+        "model": "google/gemini-2.5-flash",
+        "kind": "agentTurn"
+      },
+      "lastRunAt": null,
+      "nextRunAt": "2026-04-07T12:00:00.000Z",
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775478486403
+  "updatedAt": 1775478786397
 }
