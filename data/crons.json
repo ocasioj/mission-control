@@ -34,10 +34,10 @@
         "model": "google/gemini-2.5-flash",
         "message": "Launch the gambling model retraining in the background: exec bash -c 'nohup /data/linuxbrew/.linuxbrew/bin/python3 /data/.openclaw/workspace-coder/retrain_with_validation.py > /data/.openclaw/workspace-coder/logs/retrain_bg.log 2>&1 & echo \"Retraining started PID $!\"'. Confirm the PID printed and stay silent — retraining runs in background."
       },
-      "lastRunAt": "2026-03-30T08:00:00.004Z",
-      "nextRunAt": "2026-04-06T08:00:00.000Z",
+      "lastRunAt": "2026-04-06T08:00:00.008Z",
+      "nextRunAt": "2026-04-13T08:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 300013,
+      "lastDurationMs": 9980,
       "consecutiveErrors": 0
     },
     {
@@ -568,5 +568,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775462286359
+  "updatedAt": 1775462586356
 }
