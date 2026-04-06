@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775462403434,
+      "message": "[cron:0da84fc9-a8d8-4bfc-93e8-c25a031ba095 Gambling Agent Model Retraining] Launch the gambling mode",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775459402091,
       "message": "[cron:804004cf-3ce2-4427-a060-d336b08398b0 Daily Backup Configs] Run a safe backup: copy /data/.open",
       "turns": 1
@@ -314,13 +321,6 @@
       "timestamp": 1774875661353,
       "message": "[cron:ce11b760-f125-4828-aee0-aadbd29e4c37 Daily Gambling Picks] Run the daily gambling picks and se",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774857602969,
-      "message": "[cron:0da84fc9-a8d8-4bfc-93e8-c25a031ba095 Gambling Agent Model Retraining] Run the weekly model ret",
-      "turns": 1
     }
   ],
   "digest": [
@@ -363,11 +363,11 @@
     },
     {
       "day": "2026-04-06",
-      "total": 15,
+      "total": 16,
       "byAgent": {
-        "signal-chat": 15
+        "signal-chat": 16
       }
     }
   ],
-  "updatedAt": 1775462286365
+  "updatedAt": 1775462586364
 }
