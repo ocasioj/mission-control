@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775484031284,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775484004600,
+      "message": "[cron:dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e Line Alert Digest — 10am ET] Run the line movement digest",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775480702064,
       "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
       "turns": 1
@@ -362,12 +376,12 @@
     },
     {
       "day": "2026-04-06",
-      "total": 28,
+      "total": 30,
       "byAgent": {
-        "signal-chat": 27,
+        "signal-chat": 29,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775483886418
+  "updatedAt": 1775484186418
 }
