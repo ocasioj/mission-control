@@ -274,20 +274,6 @@
       "turns": 1
     },
     {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775358020144,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775358003371,
-      "message": "[cron:b2f38f7b-82dd-42c9-9eeb-6935fd4b8a8d Nightly CLV Summary] Run the nightly CLV summary to check",
-      "turns": 1
-    },
-    {
       "agentId": "analyst",
       "agentName": "Nova",
       "timestamp": 1775247950996,
@@ -362,9 +348,9 @@
     },
     {
       "day": "2026-04-05",
-      "total": 33,
+      "total": 31,
       "byAgent": {
-        "signal-chat": 32,
+        "signal-chat": 30,
         "main": 1
       }
     },
@@ -376,5 +362,5 @@
       }
     }
   ],
-  "updatedAt": 1775444586322
+  "updatedAt": 1775444886311
 }
