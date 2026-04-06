@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775453402904,
+      "message": "[cron:auto-result-nightly-001 Nightly Bet Settlement] Run the nightly bet settlement to capture toni",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775448017563,
       "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
       "turns": 1
@@ -363,11 +370,11 @@
     },
     {
       "day": "2026-04-06",
-      "total": 11,
+      "total": 12,
       "byAgent": {
-        "signal-chat": 11
+        "signal-chat": 12
       }
     }
   ],
-  "updatedAt": 1775453286339
+  "updatedAt": 1775453586344
 }
