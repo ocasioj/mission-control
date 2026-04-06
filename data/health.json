@@ -3,14 +3,14 @@
     {
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/hostinger/hvps-openclaw@sha256:b3c2f0d055093f64cdca374a3b718c97338def4093671afe3ab8fa153637bc69",
-      "state": "running",
-      "status": "Up Less than a second (health: starting)"
+      "state": "exited",
+      "status": "Exited (143) Less than a second ago"
     },
     {
       "name": "keen_golick",
       "image": "ghcr.io/hostinger/hvps-openclaw@sha256:b3c2f0d055093f64cdca374a3b718c97338def4093671afe3ab8fa153637bc69",
       "state": "running",
-      "status": "Up 25 minutes"
+      "status": "Up 30 minutes"
     },
     {
       "name": "openclaw-mission-control-mission-control-1",
@@ -20,13 +20,13 @@
     }
   ],
   "disk": {
-    "usedBytes": 44760621056,
-    "availBytes": 58110697472,
+    "usedBytes": 44975767552,
+    "availBytes": 57895550976,
     "totalBytes": 102888095744,
     "percent": 44
   },
   "cronErrors": [],
   "cronTotal": 30,
   "gatewayUp": false,
-  "updatedAt": 1775516886741
+  "updatedAt": 1775517186674
 }
