@@ -92,10 +92,10 @@
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-06T00:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-04-06T00:00:00.012Z",
+      "nextRunAt": "2026-04-13T00:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 15740,
       "consecutiveErrors": 0
     },
     {
@@ -331,10 +331,10 @@
         "kind": "agentTurn",
         "message": "Run this exact command and return stdout exactly as plain text: exec python3 /data/.openclaw/workspace-signal-chat/api_usage_meter.py weekly"
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-06T00:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-04-06T00:00:15.752Z",
+      "nextRunAt": "2026-04-13T00:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 11949,
       "consecutiveErrors": 0
     },
     {
@@ -388,10 +388,10 @@
         "timeoutSeconds": 60,
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-05T23:00:00.007Z",
-      "nextRunAt": "2026-04-06T00:00:00.000Z",
+      "lastRunAt": "2026-04-06T00:00:27.701Z",
+      "nextRunAt": "2026-04-06T01:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 8370,
+      "lastDurationMs": 6625,
       "consecutiveErrors": 0
     },
     {
@@ -568,5 +568,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775433486284
+  "updatedAt": 1775433786281
 }
