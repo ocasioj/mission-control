@@ -4,9 +4,9 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 121,
+      "sessionCount": 119,
       "lastActivity": 1775444427380,
-      "lastActivityAgo": "2m ago",
+      "lastActivityAgo": "7m ago",
       "isActive": true,
       "lastMessage": "[cron:5cba1856-2475-42d4-bb3e-6dd5c2a48524 Daily Memory Journal] Write today's daily memory summary. Get today's date wi",
       "lastModel": "gemini-2.5-flash"
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 7,
       "lastActivity": 1775443216475,
-      "lastActivityAgo": "22m ago",
+      "lastActivityAgo": "27m ago",
       "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775444586313
+  "updatedAt": 1775444886305
 }
