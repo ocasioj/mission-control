@@ -221,10 +221,10 @@
         "message": "Run /data/.openclaw/hooks/heygen_dlq_report.py to scan retry and DLQ queues. Send a daily summary of stuck/failed HeyGen jobs to +16462458614 via Signal.",
         "kind": "agentTurn"
       },
-      "lastRunAt": "2026-04-05T07:00:00.013Z",
-      "nextRunAt": "2026-04-06T07:00:00.000Z",
+      "lastRunAt": "2026-04-06T07:00:00.005Z",
+      "nextRunAt": "2026-04-07T07:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 9254,
+      "lastDurationMs": 9491,
       "consecutiveErrors": 0
     },
     {
@@ -538,8 +538,8 @@
       "enabled": true,
       "sessionTarget": "isolated",
       "payload": {
-        "prompt": "Run the close_props_lines.py script to capture closing odds for today's pending props before games start: cd /data/.openclaw/workspace-coder && source .env && python3 close_props_lines.py",
-        "kind": "agentTurn"
+        "kind": "agentTurn",
+        "message": "Run the close_props_lines.py script to capture closing odds for today's pending props before games start: cd /data/.openclaw/workspace-coder && source .env && python3 close_props_lines.py"
       },
       "lastRunAt": "2026-04-05T22:30:00.002Z",
       "nextRunAt": "2026-04-06T22:30:00.000Z",
@@ -568,5 +568,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775458686351
+  "updatedAt": 1775458986347
 }
