@@ -297,13 +297,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775419202719,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775372411438,
       "message": "[cron:prune-picks-data-weekly Prune Old Picks Data] Prune old picks data files: run: find /data/.ope",
       "turns": 1
@@ -362,9 +355,9 @@
     },
     {
       "day": "2026-04-05",
-      "total": 7,
+      "total": 6,
       "byAgent": {
-        "signal-chat": 7
+        "signal-chat": 6
       }
     },
     {
@@ -376,5 +369,5 @@
       }
     }
   ],
-  "updatedAt": 1775505786479
+  "updatedAt": 1775506086473
 }
