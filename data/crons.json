@@ -111,10 +111,10 @@
         "message": "Run the nightly CLV summary to check closing line value for recent bets: cd /data/.openclaw/workspace-coder && python3 clv_summary.py --days 2. Only send Signal report if there is actual CLV data to share. If no data found, run silently.",
         "timeoutSeconds": 120
       },
-      "lastRunAt": "2026-04-05T03:00:00.008Z",
-      "nextRunAt": "2026-04-06T03:00:00.000Z",
+      "lastRunAt": "2026-04-06T03:00:00.007Z",
+      "nextRunAt": "2026-04-07T03:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 18388,
+      "lastDurationMs": 19663,
       "consecutiveErrors": 0
     },
     {
@@ -388,10 +388,10 @@
         "timeoutSeconds": 60,
         "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-06T02:00:00.004Z",
-      "nextRunAt": "2026-04-06T03:00:00.000Z",
+      "lastRunAt": "2026-04-06T03:00:19.670Z",
+      "nextRunAt": "2026-04-06T14:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 8259,
+      "lastDurationMs": 7415,
       "consecutiveErrors": 0
     },
     {
@@ -561,12 +561,12 @@
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-06T03:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-04-06T03:00:27.085Z",
+      "nextRunAt": "2026-04-07T03:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 15370,
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775444286305
+  "updatedAt": 1775444586313
 }
