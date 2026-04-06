@@ -281,20 +281,6 @@
       "turns": 1
     },
     {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775361617443,
-      "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775361603534,
-      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily API Usage Meter] Run this exact command and return ",
-      "turns": 1
-    },
-    {
       "agentId": "analyst",
       "agentName": "Nova",
       "timestamp": 1775247950996,
@@ -369,9 +355,9 @@
     },
     {
       "day": "2026-04-05",
-      "total": 31,
+      "total": 29,
       "byAgent": {
-        "signal-chat": 30,
+        "signal-chat": 28,
         "main": 1
       }
     },
@@ -383,5 +369,5 @@
       }
     }
   ],
-  "updatedAt": 1775448186332
+  "updatedAt": 1775448486330
 }
