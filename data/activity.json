@@ -321,13 +321,6 @@
       "timestamp": 1774857602969,
       "message": "[cron:0da84fc9-a8d8-4bfc-93e8-c25a031ba095 Gambling Agent Model Retraining] Run the weekly model ret",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1774850411006,
-      "message": "[cron:da774dc3-dbdc-4f09-a994-d507be6d32f9 pre-reset-summary-1774850402] Your session is about to re",
-      "turns": 1
     }
   ],
   "digest": [
@@ -376,5 +369,5 @@
       }
     }
   ],
-  "updatedAt": 1775455086361
+  "updatedAt": 1775455386339
 }
