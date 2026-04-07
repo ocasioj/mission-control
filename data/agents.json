@@ -5,8 +5,8 @@
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
-      "lastActivity": 1775561535672,
-      "lastActivityAgo": "25m ago",
+      "lastActivity": 1775563331082,
+      "lastActivityAgo": "30s ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -15,11 +15,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 27,
-      "lastActivity": 1775561400216,
-      "lastActivityAgo": "27m ago",
+      "sessionCount": 33,
+      "lastActivity": 1775563245477,
+      "lastActivityAgo": "1m ago",
       "isActive": true,
-      "lastMessage": "[cron:263990b7-a67c-4eaa-831d-58b28a811971 Daily Gambling Data Refresh] Run the daily stats and odds data refresh: exec ",
+      "lastMessage": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec python3 /data/.opencla",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775563061623
+  "updatedAt": 1775563361622
 }
