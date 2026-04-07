@@ -23,8 +23,8 @@
     {
       "id": "0da84fc9-a8d8-4bfc-93e8-c25a031ba095",
       "name": "Daily Gambling Model Retraining",
-      "schedule": "0 4 * * *",
-      "scheduleHuman": "0 4 * * *",
+      "schedule": "0 5 * * *",
+      "scheduleHuman": "0 5 * * *",
       "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
@@ -34,10 +34,10 @@
         "model": "google/gemini-2.5-flash",
         "message": "Launch the gambling model retraining in the background: exec bash -c 'nohup /data/linuxbrew/.linuxbrew/bin/python3 /data/.openclaw/workspace-coder/retrain_with_validation.py > /data/.openclaw/workspace-coder/logs/retrain_bg.log 2>&1 & echo \"Retraining started PID $!\"'. Confirm the PID printed and stay silent — retraining runs in background."
       },
-      "lastRunAt": "2026-04-06T08:00:00.008Z",
-      "nextRunAt": "2026-04-13T08:00:00.000Z",
+      "lastRunAt": "2026-04-07T15:03:27.537Z",
+      "nextRunAt": "2026-04-08T08:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 9980,
+      "lastDurationMs": 14518,
       "consecutiveErrors": 0
     },
     {
@@ -240,10 +240,10 @@
         "message": "Run a self health check: exec `joe-repair --check`. If any issues are found, run `joe-repair --fix` to repair them, then send Jose a brief Signal DM summarizing what you found and fixed. If everything is healthy, do nothing — no message needed.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-06T15:00:00.003Z",
-      "nextRunAt": "2026-04-07T15:00:00.000Z",
+      "lastRunAt": "2026-04-07T15:02:25.508Z",
+      "nextRunAt": "2026-04-08T15:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 12232,
+      "lastDurationMs": 45437,
       "consecutiveErrors": 0
     },
     {
@@ -388,17 +388,17 @@
         "timeoutSeconds": 60,
         "message": "Run the pre-game pick alert: python3 /data/.openclaw/workspace-coder/pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-07T14:00:18.086Z",
-      "nextRunAt": "2026-04-07T15:00:00.000Z",
+      "lastRunAt": "2026-04-07T15:03:10.945Z",
+      "nextRunAt": "2026-04-07T16:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 16875,
+      "lastDurationMs": 16592,
       "consecutiveErrors": 0
     },
     {
       "id": "263990b7-a67c-4eaa-831d-58b28a811971",
       "name": "Daily Gambling Data Refresh",
-      "schedule": "30 7 * * *",
-      "scheduleHuman": "30 7 * * *",
+      "schedule": "30 3 * * *",
+      "scheduleHuman": "30 3 * * *",
       "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
@@ -570,5 +570,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775574161673
+  "updatedAt": 1775574461659
 }
