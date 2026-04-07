@@ -14,8 +14,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 55699771392,
-    "availBytes": 47171547136,
+    "usedBytes": 55701315584,
+    "availBytes": 47170002944,
     "totalBytes": 102888095744,
     "percent": 54
   },
@@ -25,15 +25,11 @@
       "errors": 1
     },
     {
-      "name": "Daily Memory Journal",
-      "errors": 1
-    },
-    {
       "name": "Disk Space Alert",
       "errors": 1
     }
   ],
   "cronTotal": 30,
   "gatewayUp": true,
-  "updatedAt": 1775569061716
+  "updatedAt": 1775569361743
 }
