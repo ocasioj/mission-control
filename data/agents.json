@@ -6,7 +6,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 15,
       "lastActivity": 1775542055432,
-      "lastActivityAgo": "6s ago",
+      "lastActivityAgo": "5m ago",
       "isActive": true,
       "lastMessage": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required files before respond",
       "lastModel": "gemini-2.5-flash"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775542061546
+  "updatedAt": 1775542361543
 }
