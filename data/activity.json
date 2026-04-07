@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775601006594,
+      "message": "[cron:close-props-lines-daily Props Closing Line Snapshot] Run the close_props_lines.py script to ca",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775599218324,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python",
       "turns": 1
@@ -89,7 +96,7 @@
       "agentName": "Joe",
       "timestamp": 1775576206822,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775576201099\",\n  \"sender_id\": \"+",
-      "turns": 7
+      "turns": 8
     },
     {
       "agentId": "signal-chat",
@@ -412,13 +419,6 @@
       "timestamp": 1775487603154,
       "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775484031284,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 47,
+      "total": 48,
       "byAgent": {
-        "signal-chat": 44,
+        "signal-chat": 45,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775600861755
+  "updatedAt": 1775601161759
 }
