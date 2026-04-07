@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775567106659,
+      "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775566804353,
       "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1775448017563,
       "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775448005187,
-      "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily API Usage Meter] Run this exact command and return ",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 28,
+      "total": 29,
       "byAgent": {
-        "signal-chat": 25,
+        "signal-chat": 26,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775566961648
+  "updatedAt": 1775567261654
 }
