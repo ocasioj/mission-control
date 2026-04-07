@@ -4,18 +4,18 @@
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up About an hour (healthy)"
+      "status": "Up 2 hours (healthy)"
     },
     {
       "name": "openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
       "state": "running",
-      "status": "Up 38 hours (healthy)"
+      "status": "Up 39 hours (healthy)"
     }
   ],
   "disk": {
-    "usedBytes": 55678160896,
-    "availBytes": 47193157632,
+    "usedBytes": 55678611456,
+    "availBytes": 47192707072,
     "totalBytes": 102888095744,
     "percent": 54
   },
@@ -27,9 +27,13 @@
     {
       "name": "Daily Memory Journal",
       "errors": 1
+    },
+    {
+      "name": "Disk Space Alert",
+      "errors": 1
     }
   ],
   "cronTotal": 30,
   "gatewayUp": true,
-  "updatedAt": 1775564861690
+  "updatedAt": 1775565161697
 }
