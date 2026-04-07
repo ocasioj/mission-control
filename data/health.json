@@ -1,16 +1,22 @@
 {
   "containers": [
     {
-      "name": "dreamy_heisenberg",
+      "name": "openclaw-pa62-services-1",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 16 seconds (health: starting)"
+      "status": "Up 3 minutes (health: starting)"
     },
     {
       "name": "openclaw-pa62-openclaw-1",
-      "image": "ghcr.io/hostinger/hvps-openclaw@sha256:c677c4994dfc34827e99f422f672e7164e0a82716182874fdef5967de02747ea",
+      "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 10 minutes (unhealthy)"
+      "status": "Up Less than a second (health: starting)"
+    },
+    {
+      "name": "openclaw-pa62-init-services-1",
+      "image": "ghcr.io/openclaw/openclaw:latest",
+      "state": "exited",
+      "status": "Exited (0) 3 minutes ago"
     },
     {
       "name": "keen_golick",
@@ -26,10 +32,10 @@
     }
   ],
   "disk": {
-    "usedBytes": 52691320832,
-    "availBytes": 50179997696,
+    "usedBytes": 54525247488,
+    "availBytes": 48346071040,
     "totalBytes": 102888095744,
-    "percent": 51
+    "percent": 53
   },
   "cronErrors": [
     {
@@ -38,6 +44,6 @@
     }
   ],
   "cronTotal": 30,
-  "gatewayUp": true,
-  "updatedAt": 1775528016153
+  "gatewayUp": false,
+  "updatedAt": 1775528316275
 }
