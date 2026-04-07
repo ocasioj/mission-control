@@ -4,7 +4,7 @@
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 6 seconds (health: starting)"
+      "status": "Up Less than a second (health: starting)"
     },
     {
       "name": "keen_golick",
@@ -20,10 +20,10 @@
     }
   ],
   "disk": {
-    "usedBytes": 54439284736,
-    "availBytes": 48432033792,
+    "usedBytes": 57156493312,
+    "availBytes": 45714825216,
     "totalBytes": 102888095744,
-    "percent": 53
+    "percent": 56
   },
   "cronErrors": [
     {
@@ -33,5 +33,5 @@
   ],
   "cronTotal": 30,
   "gatewayUp": false,
-  "updatedAt": 1775524716143
+  "updatedAt": 1775525016207
 }
