@@ -1,16 +1,16 @@
 {
   "containers": [
     {
-      "name": "wizardly_ptolemy",
+      "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 36 seconds (health: starting)"
+      "status": "Up Less than a second (health: starting)"
     },
     {
       "name": "keen_golick",
       "image": "ghcr.io/hostinger/hvps-openclaw@sha256:b3c2f0d055093f64cdca374a3b718c97338def4093671afe3ab8fa153637bc69",
       "state": "running",
-      "status": "Up About an hour"
+      "status": "Up 2 hours"
     },
     {
       "name": "openclaw-mission-control-mission-control-1",
@@ -20,8 +20,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 52729126912,
-    "availBytes": 50142191616,
+    "usedBytes": 52414615552,
+    "availBytes": 50456702976,
     "totalBytes": 102888095744,
     "percent": 51
   },
@@ -33,5 +33,5 @@
   ],
   "cronTotal": 30,
   "gatewayUp": false,
-  "updatedAt": 1775520516105
+  "updatedAt": 1775520816313
 }
