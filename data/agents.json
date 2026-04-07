@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775592107869,
-      "lastActivityAgo": "20m ago",
+      "lastActivityAgo": "25m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 58,
       "lastActivity": 1775592000009,
-      "lastActivityAgo": "22m ago",
+      "lastActivityAgo": "27m ago",
       "isActive": true,
       "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python3 /data/.openclaw/wo",
       "lastModel": "gemini-2.5-flash"
@@ -28,7 +28,7 @@
       "desc": "Data analysis and reporting",
       "sessionCount": 7,
       "lastActivity": 1775247967306,
-      "lastActivityAgo": "3d ago",
+      "lastActivityAgo": "4d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-04-03 16:25 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775593361719
+  "updatedAt": 1775593661717
 }
