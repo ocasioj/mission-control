@@ -5,8 +5,8 @@
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
-      "lastActivity": 1775572333831,
-      "lastActivityAgo": "25m ago",
+      "lastActivity": 1775574157881,
+      "lastActivityAgo": "3s ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -15,11 +15,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 46,
-      "lastActivity": 1775570418265,
-      "lastActivityAgo": "57m ago",
-      "isActive": false,
-      "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python3 /data/.openclaw/wo",
+      "sessionCount": 49,
+      "lastActivity": 1775574044822,
+      "lastActivityAgo": "1m ago",
+      "isActive": true,
+      "lastMessage": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exec `joe-repair --chec",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775573861657
+  "updatedAt": 1775574161672
 }
