@@ -3,9 +3,9 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775537837888,
-      "message": "[Queued messages while agent was busy]\n\n---\nQueued #1\nA new session was started via /new or /reset. ",
-      "turns": 3
+      "timestamp": 1775538134732,
+      "message": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required ",
+      "turns": 2
     },
     {
       "agentId": "signal-chat",
@@ -40,7 +40,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1775531566533,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 4
+      "turns": 5
     },
     {
       "agentId": "signal-chat",
@@ -462,5 +462,5 @@
       }
     }
   ],
-  "updatedAt": 1775537916113
+  "updatedAt": 1775538216132
 }
