@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775537158042,
+      "message": "[Queued messages while agent was busy]\n\n---\nQueued #1\nA new session was started via /new or /reset. ",
+      "turns": 3
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775537120694,
+      "message": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775535484591,
       "message": "[cron:e64d74c3-9e0b-4a68-abd6-15b197839525 Daily Log Rotation] Run log rotation script: python3 /dat",
       "turns": 1
@@ -13,13 +27,6 @@
       "timestamp": 1775534406805,
       "message": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily API Usage Meter] Run this exact command and return ",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775532885155,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775532877925\",\n  \"sender_id\": \"+",
-      "turns": 6
     },
     {
       "agentId": "main",
@@ -441,12 +448,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 12,
+      "total": 13,
       "byAgent": {
-        "signal-chat": 9,
+        "signal-chat": 10,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775537016081
+  "updatedAt": 1775537316082
 }
