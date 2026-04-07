@@ -5,11 +5,11 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 67,
-      "lastActivity": 1775600375656,
-      "lastActivityAgo": "3m ago",
+      "lastActivity": 1775600845119,
+      "lastActivityAgo": "16s ago",
       "isActive": true,
-      "lastMessage": "[Queued messages while agent was busy]\n\n---\nQueued #1\nConversation info (untrusted metadata):\n```json\n{\n  \"message_id\": ",
-      "lastModel": "gemini-2.5-flash"
+      "lastMessage": "System: [2026-04-07 18:26:26 EDT] Exec completed (dawn-emb, code 0) :: ead: Warriors -14.5 (cover prob: 66%) | O/U: Unde",
+      "lastModel": "claude-opus-4-6"
     },
     {
       "id": "main",
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775599264357,
-      "lastActivityAgo": "21m ago",
+      "lastActivityAgo": "26m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775600561749
+  "updatedAt": 1775600861744
 }
