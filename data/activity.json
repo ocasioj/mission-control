@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775597553868,
+      "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775597485300,
+      "message": "[cron:b2f38f7b-82dd-42c9-9eeb-6935fd4b8a8d Nightly CLV Summary] Run the nightly CLV summary to check",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775595609053,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python",
       "turns": 1
@@ -47,7 +61,7 @@
       "agentName": "Joe",
       "timestamp": 1775576206822,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775576201099\",\n  \"sender_id\": \"+",
-      "turns": 1
+      "turns": 3
     },
     {
       "agentId": "signal-chat",
@@ -229,7 +243,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1775531566533,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 13
+      "turns": 14
     },
     {
       "agentId": "signal-chat",
@@ -405,20 +419,6 @@
       "timestamp": 1775478602544,
       "message": "[cron:disk-space-alert-daily Disk Space Alert] Check disk usage on /docker: run df -h /docker | tail",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775478302427,
-      "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775477702491,
-      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 41,
+      "total": 43,
       "byAgent": {
-        "signal-chat": 38,
+        "signal-chat": 40,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775597261747
+  "updatedAt": 1775597561771
 }
