@@ -571,25 +571,22 @@
     },
     {
       "id": "3ce24cb7-83b5-4cb8-bed2-bd04c69709f4",
-      "name": "(unnamed)",
-      "schedule": "",
-      "scheduleHuman": "",
-      "timezone": "UTC",
-      "enabled": false,
-      "sessionTarget": "main",
+      "name": "Weekly Gambling Performance Digest",
+      "schedule": "0 10 * * 0",
+      "scheduleHuman": "0 10 * * 0",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
       "payload": {
-        "message": "Run the weekly performance report and send it to Jose via Signal. Execute: python3 weekly_report.py",
-        "sessionTarget": "isolated",
-        "sessionKey": "weekly-report",
-        "timeout": 120,
-        "model": "claude-sonnet-4-20250514"
+        "kind": "agentTurn",
+        "message": "Run the weekly gambling performance report and send it to Jose via Signal. Execute: python3 /data/.openclaw/workspace-coder/weekly_report.py"
       },
       "lastRunAt": null,
-      "nextRunAt": null,
+      "nextRunAt": "2026-04-12T14:00:00.000Z",
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775576861671
+  "updatedAt": 1775577161665
 }
