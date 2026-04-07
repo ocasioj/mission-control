@@ -1,16 +1,10 @@
 {
   "containers": [
     {
-      "name": "sweet_varahamihira",
+      "name": "wizardly_ptolemy",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 3 minutes (health: starting)"
-    },
-    {
-      "name": "romantic_jennings",
-      "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "running",
-      "status": "Up 4 minutes (health: starting)"
+      "status": "Up 36 seconds (health: starting)"
     },
     {
       "name": "keen_golick",
@@ -26,13 +20,18 @@
     }
   ],
   "disk": {
-    "usedBytes": 51524403200,
-    "availBytes": 51346915328,
+    "usedBytes": 52729126912,
+    "availBytes": 50142191616,
     "totalBytes": 102888095744,
-    "percent": 50
+    "percent": 51
   },
-  "cronErrors": [],
+  "cronErrors": [
+    {
+      "name": "Daily Log Rotation",
+      "errors": 1
+    }
+  ],
   "cronTotal": 30,
   "gatewayUp": false,
-  "updatedAt": 1775520216269
+  "updatedAt": 1775520516105
 }
