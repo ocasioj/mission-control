@@ -4,7 +4,7 @@
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 38 minutes (healthy)"
+      "status": "Up 43 minutes (healthy)"
     },
     {
       "name": "openclaw-mission-control-mission-control-1",
@@ -14,16 +14,12 @@
     }
   ],
   "disk": {
-    "usedBytes": 55316017152,
-    "availBytes": 47555301376,
+    "usedBytes": 55320293376,
+    "availBytes": 47551025152,
     "totalBytes": 102888095744,
     "percent": 54
   },
   "cronErrors": [
-    {
-      "name": "Daily Log Rotation",
-      "errors": 1
-    },
     {
       "name": "Nightly CLV Summary",
       "errors": 1
@@ -35,5 +31,5 @@
   ],
   "cronTotal": 30,
   "gatewayUp": true,
-  "updatedAt": 1775535216135
+  "updatedAt": 1775535516171
 }
