@@ -1,16 +1,10 @@
 {
   "containers": [
     {
-      "name": "openclaw-pa62-openclaw-1",
-      "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "created",
-      "status": "Created"
-    },
-    {
       "name": "openclaw-pa62-init-services-1",
       "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "running",
-      "status": "Up Less than a second (health: starting)"
+      "state": "dead",
+      "status": "Dead"
     },
     {
       "name": "keen_golick",
@@ -26,8 +20,8 @@
     }
   ],
   "disk": {
-    "usedBytes": 53054832640,
-    "availBytes": 49816485888,
+    "usedBytes": 53067522048,
+    "availBytes": 49803796480,
     "totalBytes": 102888095744,
     "percent": 52
   },
@@ -39,5 +33,5 @@
   ],
   "cronTotal": 30,
   "gatewayUp": false,
-  "updatedAt": 1775529216105
+  "updatedAt": 1775529516107
 }
