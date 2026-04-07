@@ -6,7 +6,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 15,
       "lastActivity": 1775542707664,
-      "lastActivityAgo": "14m ago",
+      "lastActivityAgo": "19m ago",
       "isActive": true,
       "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775542700844\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gemini-2.5-flash"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775543561550
+  "updatedAt": 1775543861556
 }
