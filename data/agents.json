@@ -4,11 +4,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 9,
-      "lastActivity": 1775533220275,
-      "lastActivityAgo": "18m ago",
+      "sessionCount": 11,
+      "lastActivity": 1775534400181,
+      "lastActivityAgo": "3m ago",
       "isActive": true,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775533214587\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastMessage": "[cron:70cbb04a-5477-4fe7-8573-fb7ff27651f9 Daily API Usage Meter] Run this exact command and return stdout exactly as pl",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775532912433,
-      "lastActivityAgo": "23m ago",
+      "lastActivityAgo": "28m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775534316060
+  "updatedAt": 1775534616055
 }
