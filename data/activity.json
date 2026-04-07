@@ -5,7 +5,7 @@
       "agentName": "Joe",
       "timestamp": 1775537158042,
       "message": "[Queued messages while agent was busy]\n\n---\nQueued #1\nA new session was started via /new or /reset. ",
-      "turns": 3
+      "turns": 4
     },
     {
       "agentId": "signal-chat",
@@ -455,5 +455,5 @@
       }
     }
   ],
-  "updatedAt": 1775537316082
+  "updatedAt": 1775537616081
 }
