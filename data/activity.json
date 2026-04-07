@@ -1,6 +1,27 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775530897216,
+      "message": "[cron:5cba1856-2475-42d4-bb3e-6dd5c2a48524 Daily Memory Journal] Write today's daily memory summary.",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775530888721,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775530804382,
+      "message": "[cron:b2f38f7b-82dd-42c9-9eeb-6935fd4b8a8d Nightly CLV Summary] Run the nightly CLV summary to check",
+      "turns": 1
+    },
+    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1775529765700,
@@ -392,12 +413,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 5,
+      "total": 8,
       "byAgent": {
-        "signal-chat": 3,
+        "signal-chat": 6,
         "main": 2
       }
     }
   ],
-  "updatedAt": 1775530716085
+  "updatedAt": 1775531016076
 }
