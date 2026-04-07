@@ -1,11 +1,18 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775532885155,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775532877925\",\n  \"sender_id\": \"+",
+      "turns": 1
+    },
+    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1775531566533,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
+      "turns": 2
     },
     {
       "agentId": "signal-chat",
@@ -420,12 +427,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 9,
+      "total": 10,
       "byAgent": {
-        "signal-chat": 6,
+        "signal-chat": 7,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775532816067
+  "updatedAt": 1775533116076
 }
