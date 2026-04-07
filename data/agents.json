@@ -5,8 +5,8 @@
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
-      "lastActivity": 1775568733327,
-      "lastActivityAgo": "25m ago",
+      "lastActivity": 1775570534526,
+      "lastActivityAgo": "27s ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -15,11 +15,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 43,
-      "lastActivity": 1775567100460,
-      "lastActivityAgo": "52m ago",
-      "isActive": false,
-      "lastMessage": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email digest to Jose. Run: ",
+      "sessionCount": 46,
+      "lastActivity": 1775570418265,
+      "lastActivityAgo": "2m ago",
+      "isActive": true,
+      "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python3 /data/.openclaw/wo",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775570261649
+  "updatedAt": 1775570561675
 }
