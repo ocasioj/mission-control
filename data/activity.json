@@ -3,9 +3,16 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775537158042,
+      "timestamp": 1775537837888,
       "message": "[Queued messages while agent was busy]\n\n---\nQueued #1\nA new session was started via /new or /reset. ",
-      "turns": 4
+      "turns": 3
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775537800071,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775537729374\",\n  \"sender_id\": \"+",
+      "turns": 1
     },
     {
       "agentId": "signal-chat",
@@ -33,7 +40,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1775531566533,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 3
+      "turns": 4
     },
     {
       "agentId": "signal-chat",
@@ -448,12 +455,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 13,
+      "total": 14,
       "byAgent": {
-        "signal-chat": 10,
+        "signal-chat": 11,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775537616081
+  "updatedAt": 1775537916113
 }
