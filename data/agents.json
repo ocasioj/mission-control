@@ -4,11 +4,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 61,
-      "lastActivity": 1775597553916,
-      "lastActivityAgo": "7s ago",
+      "sessionCount": 64,
+      "lastActivity": 1775597578936,
+      "lastActivityAgo": "4m ago",
       "isActive": true,
-      "lastMessage": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/workspace-signal-chat/d",
+      "lastMessage": "[cron:402cdbe8-4933-4c2d-94c0-292ae8b24100 Weekly P&L Report] Run the weekly gambling P&L report and send it to Jose: py",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775595708580,
-      "lastActivityAgo": "30m ago",
+      "lastActivityAgo": "35m ago",
       "isActive": false,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775597561747
+  "updatedAt": 1775597861740
 }
