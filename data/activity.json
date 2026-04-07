@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775574008828,
+      "message": "[cron:0c26b4b2-456f-4dfe-b7e7-b2c9df150025 Joe Daily Self-Repair Check] Run a self health check: exe",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775570425754,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1775458803271,
       "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775458202265,
-      "message": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets ",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 31,
+      "total": 32,
       "byAgent": {
-        "signal-chat": 28,
+        "signal-chat": 29,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775573861669
+  "updatedAt": 1775574161705
 }
