@@ -3,9 +3,16 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775538134732,
+      "timestamp": 1775539914831,
       "message": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required ",
-      "turns": 2
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775539806685,
+      "message": "[cron:auto-result-nightly-001 Nightly Bet Settlement] Run the nightly bet settlement to capture toni",
+      "turns": 1
     },
     {
       "agentId": "signal-chat",
@@ -40,7 +47,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1775531566533,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 6
+      "turns": 7
     },
     {
       "agentId": "signal-chat",
@@ -455,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 14,
+      "total": 15,
       "byAgent": {
-        "signal-chat": 11,
+        "signal-chat": 12,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775539662096
+  "updatedAt": 1775539961544
 }
