@@ -32,7 +32,7 @@
         "kind": "agentTurn",
         "timeoutSeconds": 1800,
         "model": "google/gemini-2.5-flash",
-        "message": "Launch the gambling model retraining in the background: exec bash -c 'nohup /data/linuxbrew/.linuxbrew/bin/python3 /data/.openclaw/workspace-coder/retrain_with_validation.py > /data/.openclaw/workspace-coder/logs/retrain_bg.log 2>&1 & echo \"Retraining started PID $!\"'. Confirm the PID printed and stay silent — retraining runs in background."
+        "message": "Run the gambling model retraining: exec python3 /data/.openclaw/workspace-coder/retrain_with_validation.py. Stay silent on success. If it fails, send Jose a brief Signal alert with the error."
       },
       "lastRunAt": "2026-04-07T15:03:27.537Z",
       "nextRunAt": "2026-04-08T08:00:00.000Z",
@@ -81,8 +81,8 @@
     {
       "id": "402cdbe8-4933-4c2d-94c0-292ae8b24100",
       "name": "Weekly P&L Report",
-      "schedule": "0 20 * * 0",
-      "scheduleHuman": "0 20 * * 0",
+      "schedule": "15 20 * * 0",
+      "scheduleHuman": "15 20 * * 0",
       "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
@@ -101,8 +101,8 @@
     {
       "id": "b2f38f7b-82dd-42c9-9eeb-6935fd4b8a8d",
       "name": "Nightly CLV Summary",
-      "schedule": "0 23 * * *",
-      "scheduleHuman": "0 23 * * *",
+      "schedule": "15 23 * * *",
+      "scheduleHuman": "15 23 * * *",
       "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
@@ -127,7 +127,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Send the daily gambling picks email digest to Jose. Run: python3 /data/.openclaw/workspace-coder/email_digest.py 2>&1. Parse the output to get HTML_PATH, SUBJECT, and TO fields. Then use the send_email tool with: to=[TO value], subject=[SUBJECT value], htmlBody=[contents of HTML_PATH file], body='Daily picks digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent.",
+        "message": "Send the daily gambling picks email digest to Jose. Run: exec python3 /data/.openclaw/workspace-coder/email_digest.py. Parse the output to get HTML_PATH, SUBJECT, and TO fields. Then use the send_email tool with: to=[TO value], subject=[SUBJECT value], htmlBody=[contents of HTML_PATH file], body='Daily picks digest', mimeType='multipart/alternative'. Confirm when sent.",
         "timeoutSeconds": 60
       },
       "lastRunAt": "2026-04-07T13:05:00.004Z",
@@ -194,9 +194,9 @@
     {
       "id": "e64d74c3-9e0b-4a68-abd6-15b197839525",
       "name": "Daily Log Rotation",
-      "schedule": "0 0 * * *",
-      "scheduleHuman": "0 0 * * *",
-      "timezone": "UTC",
+      "schedule": "10 0 * * *",
+      "scheduleHuman": "10 0 * * *",
+      "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
       "payload": {
@@ -249,8 +249,8 @@
     {
       "id": "e107c6e6-1de3-47e3-a99a-8d31567982b0",
       "name": "OpenClaw Daily Health Report",
-      "schedule": "0 8 * * *",
-      "scheduleHuman": "0 8 * * *",
+      "schedule": "35 7 * * *",
+      "scheduleHuman": "35 7 * * *",
       "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
@@ -267,8 +267,8 @@
     {
       "id": "57081334-48ac-4626-88df-d7c29a43b26f",
       "name": "Daily X Morning Briefing",
-      "schedule": "0 7 * * *",
-      "scheduleHuman": "0 7 * * *",
+      "schedule": "15 7 * * *",
+      "scheduleHuman": "15 7 * * *",
       "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
@@ -347,7 +347,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the line movement digest and send email directly: exec python3 /data/.openclaw/workspace-coder/line_alert_digest.py 2>&1. If output contains SEND ERROR, report it. Otherwise stay silent.",
+        "message": "Run the line movement digest and send email directly: exec python3 /data/.openclaw/workspace-coder/line_alert_digest.py. If output contains SEND ERROR, report it. Otherwise stay silent.",
         "timeoutSeconds": 180
       },
       "lastRunAt": "2026-04-06T22:00:00.006Z",
@@ -366,7 +366,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the line movement digest and send email directly: exec python3 /data/.openclaw/workspace-coder/line_alert_digest.py 2>&1. If output contains SEND ERROR, report it. Otherwise stay silent.",
+        "message": "Run the line movement digest and send email directly: exec python3 /data/.openclaw/workspace-coder/line_alert_digest.py. If output contains SEND ERROR, report it. Otherwise stay silent.",
         "timeoutSeconds": 60
       },
       "lastRunAt": "2026-04-07T14:00:00.003Z",
@@ -386,12 +386,12 @@
       "payload": {
         "kind": "agentTurn",
         "timeoutSeconds": 60,
-        "message": "Run the pre-game pick alert: python3 /data/.openclaw/workspace-coder/pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
+        "message": "Run the pre-game pick alert: python3 /data/.openclaw/workspace-coder/pre_game_alert.py. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-07T15:03:10.945Z",
-      "nextRunAt": "2026-04-07T16:00:00.000Z",
+      "lastRunAt": "2026-04-07T16:00:00.004Z",
+      "nextRunAt": "2026-04-07T17:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 16592,
+      "lastDurationMs": 19358,
       "consecutiveErrors": 0
     },
     {
@@ -462,7 +462,7 @@
       "payload": {
         "timeoutSeconds": 60,
         "kind": "agentTurn",
-        "message": "Run the sharp money alert script: python3 /data/.openclaw/workspace-coder/sharp_money_alert.py 2>&1. Read the output carefully. Only send a Signal message if the output explicitly contains the text 'YOUR BET AFFECTED' AND 'Signal alert sent'. If the output says 'skipping Signal' or 'No active bets affected', do NOT send anything to Signal — stay completely silent. Never send the full list of all line movements to Signal under any circumstances."
+        "message": "Run the sharp money alert script: python3 /data/.openclaw/workspace-coder/sharp_money_alert.py. Read the output carefully. Only send a Signal message if the output explicitly contains the text 'YOUR BET AFFECTED' AND 'Signal alert sent'. If the output says 'skipping Signal' or 'No active bets affected', do NOT send anything to Signal — stay completely silent. Never send the full list of all line movements to Signal under any circumstances."
       },
       "lastRunAt": null,
       "nextRunAt": null,
@@ -473,8 +473,8 @@
     {
       "id": "perf-trigger-daily-001",
       "name": "Gambling Performance Check",
-      "schedule": "0 8 * * *",
-      "scheduleHuman": "0 8 * * *",
+      "schedule": "5 8 * * *",
+      "scheduleHuman": "5 8 * * *",
       "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
@@ -586,7 +586,27 @@
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "gmail-token-refresh-daily",
+      "name": "Gmail Token Auto-Refresh",
+      "schedule": "0 8 * * *",
+      "scheduleHuman": "0 8 * * *",
+      "timezone": "America/New_York",
+      "enabled": true,
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the Gmail token refresh: exec python3 /data/.openclaw/hooks/gmail_token_refresh.py. Stay silent on success.",
+        "timeoutSeconds": 30,
+        "model": "google/gemini-2.5-flash"
+      },
+      "lastRunAt": null,
+      "nextRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775577461674
+  "updatedAt": 1775577761668
 }
