@@ -1,26 +1,26 @@
 {
   "agents": [
     {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 37,
-      "lastActivity": 1775564700182,
-      "lastActivityAgo": "2m ago",
-      "isActive": true,
-      "lastMessage": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer canary: exec pm-visua",
-      "lastModel": "gemini-2.5-flash"
-    },
-    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
-      "lastActivity": 1775563331082,
-      "lastActivityAgo": "25m ago",
+      "lastActivity": 1775565132955,
+      "lastActivityAgo": "28s ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
+    },
+    {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 39,
+      "lastActivity": 1775565015343,
+      "lastActivityAgo": "2m ago",
+      "isActive": true,
+      "lastMessage": "[cron:disk-space-alert-daily Disk Space Alert] Check disk usage on /docker: run df -h /docker | tail -1 and capture the ",
+      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "analyst",
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775564861631
+  "updatedAt": 1775565161633
 }
