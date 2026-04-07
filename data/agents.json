@@ -5,10 +5,10 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 15,
-      "lastActivity": 1775541639180,
-      "lastActivityAgo": "2m ago",
+      "lastActivity": 1775542055432,
+      "lastActivityAgo": "6s ago",
       "isActive": true,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775541621056\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastMessage": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required files before respond",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775541761544
+  "updatedAt": 1775542061546
 }
