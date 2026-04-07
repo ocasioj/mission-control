@@ -5,10 +5,10 @@
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 15,
-      "lastActivity": 1775539919349,
-      "lastActivityAgo": "42s ago",
+      "lastActivity": 1775540022018,
+      "lastActivityAgo": "3m ago",
       "isActive": true,
-      "lastMessage": "[cron:auto-result-nightly-001 Nightly Bet Settlement] Run the nightly bet settlement to capture tonight's game results: ",
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775540007865\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775537286806,
-      "lastActivityAgo": "44m ago",
+      "lastActivityAgo": "49m ago",
       "isActive": false,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775539961535
+  "updatedAt": 1775540261541
 }
