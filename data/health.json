@@ -4,18 +4,18 @@
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 2 hours (healthy)"
+      "status": "Up 3 hours (healthy)"
     },
     {
       "name": "openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
       "state": "running",
-      "status": "Up 39 hours (healthy)"
+      "status": "Up 40 hours (healthy)"
     }
   ],
   "disk": {
-    "usedBytes": 55692881920,
-    "availBytes": 47178436608,
+    "usedBytes": 55702728704,
+    "availBytes": 47168589824,
     "totalBytes": 102888095744,
     "percent": 54
   },
@@ -35,5 +35,5 @@
   ],
   "cronTotal": 30,
   "gatewayUp": true,
-  "updatedAt": 1775568461792
+  "updatedAt": 1775568761768
 }
