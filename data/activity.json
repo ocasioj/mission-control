@@ -1,11 +1,18 @@
 {
   "events": [
     {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775526320299,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1775520766996,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
+      "turns": 2
     },
     {
       "agentId": "signal-chat",
@@ -379,12 +386,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 2,
+      "total": 3,
       "byAgent": {
-        "signal-chat": 1,
+        "signal-chat": 2,
         "main": 1
       }
     }
   ],
-  "updatedAt": 1775526216053
+  "updatedAt": 1775526516052
 }
