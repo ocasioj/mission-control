@@ -405,7 +405,7 @@
       "payload": {
         "kind": "agentTurn",
         "timeoutSeconds": 600,
-        "message": "Run the daily stats and odds data refresh: exec bash -c 'set -a; source /data/.openclaw/workspace-coder/.env; set +a; cd /data/.openclaw/workspace-coder && python3 update_data.py 2>&1'. Stay silent on success. If it fails, send a brief Signal alert with the error."
+        "message": "Run the daily stats and odds data refresh: exec /data/.openclaw/workspace-coder/run_with_env.sh /data/.openclaw/workspace-coder/update_data.py. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
       "lastRunAt": "2026-04-07T11:30:00.004Z",
       "nextRunAt": "2026-04-08T11:30:00.000Z",
@@ -539,7 +539,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the close_props_lines.py script to capture closing odds for today's pending props before games start: cd /data/.openclaw/workspace-coder && source .env && python3 close_props_lines.py",
+        "message": "Run the close_props_lines.py script to capture closing odds for today's pending props before games start: exec /data/.openclaw/workspace-coder/run_with_env.sh /data/.openclaw/workspace-coder/close_props_lines.py",
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
@@ -565,10 +565,10 @@
       },
       "lastRunAt": "2026-04-07T03:01:33.919Z",
       "nextRunAt": "2026-04-08T03:00:00.000Z",
-      "lastStatus": "error",
+      "lastStatus": "ok",
       "lastDurationMs": 11306,
-      "consecutiveErrors": 1
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775569061642
+  "updatedAt": 1775569361653
 }
