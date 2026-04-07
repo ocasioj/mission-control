@@ -568,7 +568,28 @@
       "lastStatus": "ok",
       "lastDurationMs": 11306,
       "consecutiveErrors": 0
+    },
+    {
+      "id": "3ce24cb7-83b5-4cb8-bed2-bd04c69709f4",
+      "name": "(unnamed)",
+      "schedule": "",
+      "scheduleHuman": "",
+      "timezone": "UTC",
+      "enabled": false,
+      "sessionTarget": "main",
+      "payload": {
+        "message": "Run the weekly performance report and send it to Jose via Signal. Execute: python3 weekly_report.py",
+        "sessionTarget": "isolated",
+        "sessionKey": "weekly-report",
+        "timeout": 120,
+        "model": "claude-sonnet-4-20250514"
+      },
+      "lastRunAt": null,
+      "nextRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": 0,
+      "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775575661670
+  "updatedAt": 1775575961663
 }
