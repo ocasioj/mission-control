@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775545806237,
+      "message": "[cron:804004cf-3ce2-4427-a060-d336b08398b0 Daily Backup Configs] Run a safe backup: copy /data/.open",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775545209625,
       "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1775372411438,
       "message": "[cron:prune-picks-data-weekly Prune Old Picks Data] Prune old picks data files: run: find /data/.ope",
       "turns": 1
-    },
-    {
-      "agentId": "analyst",
-      "agentName": "Nova",
-      "timestamp": 1775247950996,
-      "message": "[Fri 2026-04-03 16:25 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results aut",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 17,
+      "total": 18,
       "byAgent": {
-        "signal-chat": 14,
+        "signal-chat": 15,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775545661594
+  "updatedAt": 1775545961575
 }
