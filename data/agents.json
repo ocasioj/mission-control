@@ -5,22 +5,22 @@
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
-      "lastActivity": 1775531568533,
-      "lastActivityAgo": "20m ago",
+      "lastActivity": 1775532912433,
+      "lastActivityAgo": "3m ago",
       "isActive": true,
-      "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
+      "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
     },
     {
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 8,
-      "lastActivity": 1775530893998,
-      "lastActivityAgo": "32m ago",
-      "isActive": false,
-      "lastMessage": "[cron:5cba1856-2475-42d4-bb3e-6dd5c2a48524 Daily Memory Journal] Write today's daily memory summary. Get today's date wi",
-      "lastModel": "gemini-2.5-flash"
+      "sessionCount": 9,
+      "lastActivity": 1775532899369,
+      "lastActivityAgo": "3m ago",
+      "isActive": true,
+      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775532877925\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
+      "lastModel": "delivery-mirror"
     },
     {
       "id": "analyst",
@@ -50,7 +50,7 @@
       "desc": "Deep research and information retrieval",
       "sessionCount": 7,
       "lastActivity": 1774668903564,
-      "lastActivityAgo": "9d ago",
+      "lastActivityAgo": "10d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 23:34 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-3-pro-preview"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775532816055
+  "updatedAt": 1775533116063
 }
