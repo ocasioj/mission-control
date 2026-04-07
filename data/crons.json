@@ -10,7 +10,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the daily gambling picks and send them to Jose via Signal. Execute: cd /data/.openclaw/workspace-coder && python3 send_picks_signal.py. Report any errors if the script fails.",
+        "message": "Run the daily gambling picks and send them to Jose via Signal. Execute: python3 /data/.openclaw/workspace-coder/send_picks_signal.py. Report any errors if the script fails.",
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
@@ -88,7 +88,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the weekly gambling P&L report and send it to Jose: cd /data/.openclaw/workspace-coder && python3 weekly_report.py. Report any errors if it fails.",
+        "message": "Run the weekly gambling P&L report and send it to Jose: python3 /data/.openclaw/workspace-coder/weekly_report.py. Report any errors if it fails.",
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
@@ -108,7 +108,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the nightly CLV summary to check closing line value for recent bets: cd /data/.openclaw/workspace-coder && python3 clv_summary.py --days 2. Send the Signal report with CLV data if available, otherwise run silently.",
+        "message": "Run the nightly CLV summary to check closing line value for recent bets: python3 /data/.openclaw/workspace-coder/clv_summary.py --days 2. Send the Signal report with CLV data if available, otherwise run silently.",
         "timeoutSeconds": 120
       },
       "lastRunAt": "2026-04-07T03:00:00.018Z",
@@ -127,7 +127,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Send the daily gambling picks email digest to Jose. Run: cd /data/.openclaw/workspace-coder && python3 email_digest.py 2>&1. Parse the output to get HTML_PATH, SUBJECT, and TO fields. Then use the send_email tool with: to=[TO value], subject=[SUBJECT value], htmlBody=[contents of HTML_PATH file], body='Daily picks digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent.",
+        "message": "Send the daily gambling picks email digest to Jose. Run: python3 /data/.openclaw/workspace-coder/email_digest.py 2>&1. Parse the output to get HTML_PATH, SUBJECT, and TO fields. Then use the send_email tool with: to=[TO value], subject=[SUBJECT value], htmlBody=[contents of HTML_PATH file], body='Daily picks digest — view in HTML for best experience', mimeType='multipart/alternative'. Confirm when sent.",
         "timeoutSeconds": 60
       },
       "lastRunAt": "2026-04-07T13:05:00.004Z",
@@ -386,7 +386,7 @@
       "payload": {
         "kind": "agentTurn",
         "timeoutSeconds": 60,
-        "message": "Run the pre-game pick alert: cd /data/.openclaw/workspace-coder && python3 pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
+        "message": "Run the pre-game pick alert: python3 /data/.openclaw/workspace-coder/pre_game_alert.py 2>&1. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
       "lastRunAt": "2026-04-07T03:01:25.823Z",
       "nextRunAt": "2026-04-07T14:00:00.000Z",
@@ -405,7 +405,7 @@
       "payload": {
         "kind": "agentTurn",
         "timeoutSeconds": 600,
-        "message": "Run the daily stats and odds data refresh: exec /data/.openclaw/workspace-coder/run_with_env.sh /data/.openclaw/workspace-coder/update_data.py. Stay silent on success. If it fails, send a brief Signal alert with the error."
+        "message": "Run the daily stats and odds data refresh: exec python3 /data/.openclaw/workspace-coder/update_data.py. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
       "lastRunAt": "2026-04-07T11:30:00.004Z",
       "nextRunAt": "2026-04-08T11:30:00.000Z",
@@ -462,7 +462,7 @@
       "payload": {
         "timeoutSeconds": 60,
         "kind": "agentTurn",
-        "message": "Run the sharp money alert script: cd /data/.openclaw/workspace-coder && python3 sharp_money_alert.py 2>&1. Read the output carefully. Only send a Signal message if the output explicitly contains the text 'YOUR BET AFFECTED' AND 'Signal alert sent'. If the output says 'skipping Signal' or 'No active bets affected', do NOT send anything to Signal — stay completely silent. Never send the full list of all line movements to Signal under any circumstances."
+        "message": "Run the sharp money alert script: python3 /data/.openclaw/workspace-coder/sharp_money_alert.py 2>&1. Read the output carefully. Only send a Signal message if the output explicitly contains the text 'YOUR BET AFFECTED' AND 'Signal alert sent'. If the output says 'skipping Signal' or 'No active bets affected', do NOT send anything to Signal — stay completely silent. Never send the full list of all line movements to Signal under any circumstances."
       },
       "lastRunAt": null,
       "nextRunAt": null,
@@ -539,7 +539,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the close_props_lines.py script to capture closing odds for today's pending props before games start: exec /data/.openclaw/workspace-coder/run_with_env.sh /data/.openclaw/workspace-coder/close_props_lines.py",
+        "message": "Run the close_props_lines.py script to capture closing odds for today's pending props before games start: exec python3 /data/.openclaw/workspace-coder/close_props_lines.py",
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
@@ -570,5 +570,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775569961684
+  "updatedAt": 1775570261649
 }
