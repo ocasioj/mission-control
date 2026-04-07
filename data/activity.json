@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775520017124,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775517459161,
       "message": "[cron:close-props-lines-daily Props Closing Line Snapshot] Run the close_props_lines.py script to ca",
       "turns": 1
@@ -332,11 +339,6 @@
   ],
   "digest": [
     {
-      "day": "2026-03-31",
-      "total": 0,
-      "byAgent": {}
-    },
-    {
       "day": "2026-04-01",
       "total": 1,
       "byAgent": {
@@ -374,7 +376,14 @@
         "signal-chat": 41,
         "main": 1
       }
+    },
+    {
+      "day": "2026-04-07",
+      "total": 1,
+      "byAgent": {
+        "signal-chat": 1
+      }
     }
   ],
-  "updatedAt": 1775519916214
+  "updatedAt": 1775520216178
 }
