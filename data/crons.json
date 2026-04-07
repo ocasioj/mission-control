@@ -434,7 +434,7 @@
     },
     {
       "id": "prune-picks-data-weekly",
-      "name": "Prune Old Picks Data",
+      "name": "Weekly Data Pruning",
       "schedule": "0 3 * * 0",
       "scheduleHuman": "0 3 * * 0",
       "timezone": "America/New_York",
@@ -442,7 +442,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Prune old picks data files: run: find /data/.openclaw/workspace-coder/picks_data -name \"*.json\" -mtime +30 -delete 2>/dev/null; echo \"Pruned files older than 30 days. Remaining: $(ls /data/.openclaw/workspace-coder/picks_data/*.json 2>/dev/null | wc -l) files.\" Stay silent — do not send any Signal message. Just run the cleanup.",
+        "message": "Run the weekly data pruning: exec python3 /data/.openclaw/workspace-coder/prune_data.py. Stay silent on success.",
         "timeoutSeconds": 30
       },
       "lastRunAt": "2026-04-05T07:00:09.267Z",
@@ -602,11 +602,11 @@
         "model": "google/gemini-2.5-flash"
       },
       "lastRunAt": null,
-      "nextRunAt": null,
+      "nextRunAt": "2026-04-08T12:00:00.000Z",
       "lastStatus": null,
       "lastDurationMs": 0,
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775577761668
+  "updatedAt": 1775578061677
 }
