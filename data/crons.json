@@ -69,7 +69,7 @@
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the auto-result logging script to settle pending bets and update CLV, then fetch fresh injury data for all sports. Execute: cd /data/.openclaw/workspace-coder && python3 auto_results.py --days 3 && python3 fetch_injuries.py --sport all. If any bets were settled, send Jose a brief Signal summary with the results and net P/L. If no bets to settle, run silently with no message.",
+        "message": "Run the auto-result logging script to settle pending bets and update CLV, then fetch fresh injury data for all sports. Execute these commands one at a time using exec:\n1. python3 /data/.openclaw/workspace-coder/auto_results.py --days 3\n2. python3 /data/.openclaw/workspace-coder/fetch_injuries.py --sport all\nIf any bets were settled, send Jose a brief Signal summary with the results and net P/L. If no bets to settle, run silently with no message.",
         "timeoutSeconds": 180
       },
       "lastRunAt": "2026-04-06T11:00:00.005Z",
@@ -502,7 +502,7 @@
         "kind": "agentTurn",
         "timeoutSeconds": 180,
         "model": "google/gemini-2.5-flash",
-        "message": "Run the nightly bet settlement to capture tonight's game results: cd /data/.openclaw/workspace-coder && python3 auto_results.py --days 1 && python3 confidence_optimizer.py. If any bets were settled, send Jose a brief Signal summary with results and net P/L. If nothing to settle, stay silent."
+        "message": "Run the nightly bet settlement to capture tonight's game results. Execute these commands one at a time using exec:\n1. python3 /data/.openclaw/workspace-coder/auto_results.py --days 1\n2. python3 /data/.openclaw/workspace-coder/confidence_optimizer.py\nIf any bets were settled, send Jose a brief Signal summary with results and net P/L. If nothing to settle, stay silent."
       },
       "lastRunAt": "2026-04-07T05:30:00.003Z",
       "nextRunAt": "2026-04-08T05:30:00.000Z",
@@ -570,5 +570,5 @@
       "consecutiveErrors": 1
     }
   ],
-  "updatedAt": 1775541761544
+  "updatedAt": 1775542061547
 }
