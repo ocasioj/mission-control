@@ -14,22 +14,13 @@
     }
   ],
   "disk": {
-    "usedBytes": 58533937152,
-    "availBytes": 44337381376,
+    "usedBytes": 58538721280,
+    "availBytes": 44332597248,
     "totalBytes": 102888095744,
     "percent": 57
   },
-  "cronErrors": [
-    {
-      "name": "Nightly CLV Summary",
-      "errors": 1
-    },
-    {
-      "name": "Disk Space Alert",
-      "errors": 1
-    }
-  ],
+  "cronErrors": [],
   "cronTotal": 32,
   "gatewayUp": true,
-  "updatedAt": 1775595461804
+  "updatedAt": 1775595761838
 }
