@@ -1,34 +1,16 @@
 {
   "containers": [
     {
-      "name": "festive_wescoff",
+      "name": "sweet_varahamihira",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up 1 second (health: starting)"
+      "status": "Up 3 minutes (health: starting)"
     },
     {
-      "name": "openclaw-pa62-openclaw-1",
-      "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "running",
-      "status": "Up 1 second (health: starting)"
-    },
-    {
-      "name": "condescending_leavitt",
+      "name": "romantic_jennings",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
       "status": "Up 4 minutes (health: starting)"
-    },
-    {
-      "name": "quirky_liskov",
-      "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "running",
-      "status": "Up 7 minutes (unhealthy)"
-    },
-    {
-      "name": "cranky_boyd",
-      "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "running",
-      "status": "Up 8 minutes (unhealthy)"
     },
     {
       "name": "keen_golick",
@@ -44,13 +26,13 @@
     }
   ],
   "disk": {
-    "usedBytes": 49339277312,
-    "availBytes": 53532041216,
+    "usedBytes": 51524403200,
+    "availBytes": 51346915328,
     "totalBytes": 102888095744,
-    "percent": 48
+    "percent": 50
   },
   "cronErrors": [],
   "cronTotal": 30,
   "gatewayUp": false,
-  "updatedAt": 1775519916623
+  "updatedAt": 1775520216269
 }
