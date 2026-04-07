@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775577606883,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775576206822,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775576201099\",\n  \"sender_id\": \"+",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1775473247698,
       "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775473203794,
-      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 35,
+      "total": 36,
       "byAgent": {
-        "signal-chat": 32,
+        "signal-chat": 33,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775577461686
+  "updatedAt": 1775577761675
 }
