@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775559632699,
+      "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775559612513,
+      "message": "[cron:f3a1c2d4-8e7b-4f9a-b6c5-1d2e3f4a5b6c Auto-Result Logging + CLV] Run the auto-result logging sc",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775545806237,
       "message": "[cron:804004cf-3ce2-4427-a060-d336b08398b0 Daily Backup Configs] Run a safe backup: copy /data/.open",
       "turns": 1
@@ -68,7 +82,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1775531566533,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 11
+      "turns": 12
     },
     {
       "agentId": "signal-chat",
@@ -405,20 +419,6 @@
       "timestamp": 1775433607903,
       "message": "[cron:402cdbe8-4933-4c2d-94c0-292ae8b24100 Weekly P&L Report] Run the weekly gambling P&L report and",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775427822941,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775427819363\",\n  \"sender_id\": \"+",
-      "turns": 8
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775372411438,
-      "message": "[cron:prune-picks-data-weekly Prune Old Picks Data] Prune old picks data files: run: find /data/.ope",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 18,
+      "total": 20,
       "byAgent": {
-        "signal-chat": 15,
+        "signal-chat": 17,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775559461616
+  "updatedAt": 1775559761631
 }
