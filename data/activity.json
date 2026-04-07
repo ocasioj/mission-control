@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "agentId": "main",
+      "agentName": "Joe (Web)",
+      "timestamp": 1775529765700,
+      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
+      "turns": 1
+    },
+    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1775527379314,
@@ -385,12 +392,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 4,
+      "total": 5,
       "byAgent": {
         "signal-chat": 3,
-        "main": 1
+        "main": 2
       }
     }
   ],
-  "updatedAt": 1775529516060
+  "updatedAt": 1775529816060
 }
