@@ -22,15 +22,15 @@
     },
     {
       "id": "0da84fc9-a8d8-4bfc-93e8-c25a031ba095",
-      "name": "Gambling Agent Model Retraining",
-      "schedule": "0 4 * * 1",
-      "scheduleHuman": "0 4 * * 1",
+      "name": "Daily Gambling Model Retraining",
+      "schedule": "0 4 * * *",
+      "scheduleHuman": "0 4 * * *",
       "timezone": "America/New_York",
       "enabled": true,
       "sessionTarget": "isolated",
       "payload": {
         "kind": "agentTurn",
-        "timeoutSeconds": 120,
+        "timeoutSeconds": 1800,
         "model": "google/gemini-2.5-flash",
         "message": "Launch the gambling model retraining in the background: exec bash -c 'nohup /data/linuxbrew/.linuxbrew/bin/python3 /data/.openclaw/workspace-coder/retrain_with_validation.py > /data/.openclaw/workspace-coder/logs/retrain_bg.log 2>&1 & echo \"Retraining started PID $!\"'. Confirm the PID printed and stay silent — retraining runs in background."
       },
@@ -570,5 +570,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775573861658
+  "updatedAt": 1775574161673
 }
