@@ -3,9 +3,9 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775542052983,
+      "timestamp": 1775542693878,
       "message": "A new session was started via /new or /reset. Run your Session Startup sequence - read the required ",
-      "turns": 1
+      "turns": 2
     },
     {
       "agentId": "signal-chat",
@@ -469,5 +469,5 @@
       }
     }
   ],
-  "updatedAt": 1775542661559
+  "updatedAt": 1775542961559
 }
