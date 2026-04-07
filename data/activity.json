@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775565007039,
+      "message": "[cron:disk-space-alert-daily Disk Space Alert] Check disk usage on /docker: run df -h /docker | tail",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775564706899,
       "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1775446203158,
       "message": "[cron:auto-result-nightly-001 Nightly Bet Settlement] Run the nightly bet settlement to capture toni",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775444429454,
-      "message": "[cron:5cba1856-2475-42d4-bb3e-6dd5c2a48524 Daily Memory Journal] Write today's daily memory summary.",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 26,
+      "total": 27,
       "byAgent": {
-        "signal-chat": 23,
+        "signal-chat": 24,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775564861639
+  "updatedAt": 1775565161643
 }
