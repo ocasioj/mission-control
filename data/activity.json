@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775597584807,
+      "message": "[cron:402cdbe8-4933-4c2d-94c0-292ae8b24100 Weekly P&L Report] Run the weekly gambling P&L report and",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775597573823,
+      "message": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec py",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775597553868,
       "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
       "turns": 1
@@ -405,20 +419,6 @@
       "timestamp": 1775480702064,
       "message": "[cron:56482540-4ab6-4960-a112-93008aa9a2e4 Daily Email Digest] Send the daily gambling picks email d",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775480403355,
-      "message": "[cron:b68ad8d3-2b94-425f-9a97-d5ab979e5a93 Daily Gambling Picks → Signal] Run the daily gambling pic",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775478602544,
-      "message": "[cron:disk-space-alert-daily Disk Space Alert] Check disk usage on /docker: run df -h /docker | tail",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 43,
+      "total": 45,
       "byAgent": {
-        "signal-chat": 40,
+        "signal-chat": 42,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775597561771
+  "updatedAt": 1775597861752
 }
