@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 17,
+      "lastActivity": 1775544600224,
+      "lastActivityAgo": "2m ago",
+      "isActive": true,
+      "lastMessage": "[cron:b24ff533-ec0e-4129-855e-87e9affdd0ae Nightly Memory Summary (Joe)] Before your session resets in 10 minutes, revie",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775544395758,
-      "lastActivityAgo": "1m ago",
+      "lastActivityAgo": "6m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 15,
-      "lastActivity": 1775542707664,
-      "lastActivityAgo": "29m ago",
-      "isActive": true,
-      "lastMessage": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775542700844\",\n  \"sender_id\": \"+16462458614\",\n  \"sen",
-      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "analyst",
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775544461558
+  "updatedAt": 1775544761554
 }
