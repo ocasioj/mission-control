@@ -204,13 +204,6 @@
       "turns": 1
     },
     {
-      "agentId": "main",
-      "agentName": "Joe (Web)",
-      "timestamp": 1775463014516,
-      "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 1
-    },
-    {
       "agentId": "signal-chat",
       "agentName": "Joe",
       "timestamp": 1775462403434,
@@ -385,10 +378,9 @@
     },
     {
       "day": "2026-04-06",
-      "total": 41,
+      "total": 40,
       "byAgent": {
-        "signal-chat": 40,
-        "main": 1
+        "signal-chat": 40
       }
     },
     {
@@ -400,5 +392,5 @@
       }
     }
   ],
-  "updatedAt": 1775527716052
+  "updatedAt": 1775528016062
 }
