@@ -4,7 +4,7 @@
       "name": "openclaw-pa62-openclaw-1",
       "image": "ghcr.io/openclaw/openclaw:latest",
       "state": "running",
-      "status": "Up Less than a second (health: starting)"
+      "status": "Up 21 seconds (health: starting)"
     },
     {
       "name": "keen_golick",
@@ -20,18 +20,26 @@
     }
   ],
   "disk": {
-    "usedBytes": 58049900544,
-    "availBytes": 44821417984,
+    "usedBytes": 53144195072,
+    "availBytes": 49727123456,
     "totalBytes": 102888095744,
-    "percent": 56
+    "percent": 52
   },
   "cronErrors": [
     {
       "name": "Daily Log Rotation",
       "errors": 1
+    },
+    {
+      "name": "Nightly CLV Summary",
+      "errors": 1
+    },
+    {
+      "name": "Daily Memory Journal",
+      "errors": 1
     }
   ],
   "cronTotal": 30,
   "gatewayUp": false,
-  "updatedAt": 1775530716333
+  "updatedAt": 1775531016161
 }
