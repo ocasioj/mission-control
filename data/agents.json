@@ -1,23 +1,12 @@
 {
   "agents": [
     {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 123,
-      "lastActivity": 1775520334433,
-      "lastActivityAgo": "3m ago",
-      "isActive": true,
-      "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /data/.openclaw/workspa",
-      "lastModel": "gemini-2.5-flash"
-    },
-    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
-      "sessionCount": 7,
-      "lastActivity": 1775518968428,
-      "lastActivityAgo": "25m ago",
+      "sessionCount": 1,
+      "lastActivity": 1775520770000,
+      "lastActivityAgo": "46s ago",
       "isActive": true,
       "lastMessage": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chat",
       "lastModel": "gemini-2.5-flash-lite"
@@ -144,6 +133,17 @@
       "lastModel": "gpt-5.1-codex"
     },
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 0,
+      "lastActivity": 0,
+      "lastActivityAgo": "never",
+      "isActive": false,
+      "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /data/.openclaw/workspa",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
       "id": "workspace-coder",
       "name": "workspace-coder",
       "desc": "",
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775520516051
+  "updatedAt": 1775520816051
 }
