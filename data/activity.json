@@ -89,7 +89,7 @@
       "agentName": "Joe",
       "timestamp": 1775576206822,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775576201099\",\n  \"sender_id\": \"+",
-      "turns": 3
+      "turns": 5
     },
     {
       "agentId": "signal-chat",
@@ -271,7 +271,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1775531566533,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 14
+      "turns": 15
     },
     {
       "agentId": "signal-chat",
@@ -469,5 +469,5 @@
       }
     }
   ],
-  "updatedAt": 1775600261748
+  "updatedAt": 1775600561761
 }
