@@ -388,10 +388,10 @@
         "timeoutSeconds": 60,
         "message": "Run the pre-game pick alert: python3 /data/.openclaw/workspace-coder/pre_game_alert.py. Return stdout as-is. If output is \"No imminent picks.\", stay silent — do not send a Signal message."
       },
-      "lastRunAt": "2026-04-07T18:00:00.005Z",
-      "nextRunAt": "2026-04-07T19:00:00.000Z",
+      "lastRunAt": "2026-04-07T19:00:00.004Z",
+      "nextRunAt": "2026-04-07T20:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 12358,
+      "lastDurationMs": 14742,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775588261714
+  "updatedAt": 1775588561703
 }
