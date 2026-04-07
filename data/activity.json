@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775561407002,
+      "message": "[cron:263990b7-a67c-4eaa-831d-58b28a811971 Daily Gambling Data Refresh] Run the daily stats and odds",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775559632699,
       "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1775433618145,
       "message": "[cron:2b832ad4-671a-43f2-9736-9b199c96618b Weekly API Usage Summary] Run this exact command and retu",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775433607903,
-      "message": "[cron:402cdbe8-4933-4c2d-94c0-292ae8b24100 Weekly P&L Report] Run the weekly gambling P&L report and",
-      "turns": 1
     }
   ],
   "digest": [
@@ -462,12 +462,12 @@
     },
     {
       "day": "2026-04-07",
-      "total": 20,
+      "total": 21,
       "byAgent": {
-        "signal-chat": 17,
+        "signal-chat": 18,
         "main": 3
       }
     }
   ],
-  "updatedAt": 1775561261629
+  "updatedAt": 1775561561627
 }
