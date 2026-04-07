@@ -4,12 +4,12 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 67,
-      "lastActivity": 1775600845119,
-      "lastActivityAgo": "16s ago",
+      "sessionCount": 69,
+      "lastActivity": 1775601000486,
+      "lastActivityAgo": "2m ago",
       "isActive": true,
-      "lastMessage": "System: [2026-04-07 18:26:26 EDT] Exec completed (dawn-emb, code 0) :: ead: Warriors -14.5 (cover prob: 66%) | O/U: Unde",
-      "lastModel": "claude-opus-4-6"
+      "lastMessage": "[cron:close-props-lines-daily Props Closing Line Snapshot] Run the close_props_lines.py script to capture closing odds f",
+      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "main",
@@ -17,8 +17,8 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775599264357,
-      "lastActivityAgo": "26m ago",
-      "isActive": true,
+      "lastActivityAgo": "31m ago",
+      "isActive": false,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
     },
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775600861744
+  "updatedAt": 1775601161748
 }
