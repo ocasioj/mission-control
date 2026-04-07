@@ -92,10 +92,10 @@
         "timeoutSeconds": 120,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-06T00:00:00.012Z",
-      "nextRunAt": "2026-04-13T00:00:00.000Z",
+      "lastRunAt": "2026-04-07T21:32:58.635Z",
+      "nextRunAt": "2026-04-13T00:15:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 15740,
+      "lastDurationMs": 17768,
       "consecutiveErrors": 0
     },
     {
@@ -111,10 +111,10 @@
         "message": "Run the nightly CLV summary to check closing line value for recent bets: python3 /data/.openclaw/workspace-coder/clv_summary.py --days 2. Send the Signal report with CLV data if available, otherwise run silently.",
         "timeoutSeconds": 120
       },
-      "lastRunAt": "2026-04-07T03:00:00.018Z",
-      "nextRunAt": "2026-04-08T03:00:00.000Z",
-      "lastStatus": "error",
-      "lastDurationMs": 85805,
+      "lastRunAt": "2026-04-07T21:30:54.917Z",
+      "nextRunAt": "2026-04-08T03:15:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 91724,
       "consecutiveErrors": 0
     },
     {
@@ -277,10 +277,10 @@
         "message": "Run python3 /data/.openclaw/workspace-signal-chat/daily_briefing.py. If successful, return stdout exactly as plain text. Keep it concise. If it fails, return a short error summary with the failing step.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-07T11:00:23.639Z",
-      "nextRunAt": "2026-04-08T11:00:00.000Z",
+      "lastRunAt": "2026-04-07T21:32:26.641Z",
+      "nextRunAt": "2026-04-08T11:15:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 34288,
+      "lastDurationMs": 20650,
       "consecutiveErrors": 0
     },
     {
@@ -484,10 +484,10 @@
         "model": "google/gemini-2.5-flash",
         "message": "Run the gambling performance check: exec python3 /data/.openclaw/workspace-coder/performance_trigger.py. Stay silent unless it sends its own alerts."
       },
-      "lastRunAt": "2026-04-07T12:00:45.314Z",
-      "nextRunAt": "2026-04-08T12:00:00.000Z",
+      "lastRunAt": "2026-04-07T21:32:47.291Z",
+      "nextRunAt": "2026-04-08T12:05:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 15508,
+      "lastDurationMs": 11344,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775597561748
+  "updatedAt": 1775597861740
 }
