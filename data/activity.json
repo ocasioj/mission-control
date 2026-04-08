@@ -3,6 +3,20 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775617224129,
+      "message": "[cron:5cba1856-2475-42d4-bb3e-6dd5c2a48524 Daily Memory Journal] Write today's daily memory summary.",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775617209178,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775613608059,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python",
       "turns": 1
@@ -323,13 +337,6 @@
       "turns": 1
     },
     {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775530804382,
-      "message": "[cron:b2f38f7b-82dd-42c9-9eeb-6935fd4b8a8d Nightly CLV Summary] Run the nightly CLV summary to check",
-      "turns": 1
-    },
-    {
       "agentId": "main",
       "agentName": "Joe (Web)",
       "timestamp": 1775529765700,
@@ -412,13 +419,6 @@
       "timestamp": 1775498403125,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775494802861,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
     }
   ],
   "digest": [
@@ -455,19 +455,19 @@
     },
     {
       "day": "2026-04-07",
-      "total": 48,
+      "total": 47,
       "byAgent": {
-        "signal-chat": 45,
+        "signal-chat": 44,
         "main": 3
       }
     },
     {
       "day": "2026-04-08",
-      "total": 3,
+      "total": 5,
       "byAgent": {
-        "signal-chat": 3
+        "signal-chat": 5
       }
     }
   ],
-  "updatedAt": 1775617061806
+  "updatedAt": 1775617361797
 }
