@@ -407,10 +407,10 @@
         "timeoutSeconds": 600,
         "message": "Run the daily stats and odds data refresh: exec python3 /data/.openclaw/workspace-coder/update_data.py. Stay silent on success. If it fails, send a brief Signal alert with the error."
       },
-      "lastRunAt": "2026-04-07T11:30:00.004Z",
-      "nextRunAt": "2026-04-08T11:30:00.000Z",
+      "lastRunAt": "2026-04-08T11:03:00.586Z",
+      "nextRunAt": "2026-04-09T07:30:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 33342,
+      "lastDurationMs": 48034,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775646161954
+  "updatedAt": 1775646461910
 }
