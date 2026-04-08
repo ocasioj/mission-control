@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775650062419,
+      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775650056615\",\n  \"sender_id\": \"+",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775649906137,
       "message": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec py",
       "turns": 1
@@ -412,13 +419,6 @@
       "timestamp": 1775509202959,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775505603008,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
     }
   ],
   "digest": [
@@ -463,11 +463,11 @@
     },
     {
       "day": "2026-04-08",
-      "total": 22,
+      "total": 23,
       "byAgent": {
-        "signal-chat": 22
+        "signal-chat": 23
       }
     }
   ],
-  "updatedAt": 1775650062122
+  "updatedAt": 1775650361942
 }
