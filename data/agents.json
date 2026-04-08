@@ -4,11 +4,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 76,
-      "lastActivity": 1775649701112,
-      "lastActivityAgo": "1m ago",
+      "sessionCount": 77,
+      "lastActivity": 1775650057446,
+      "lastActivityAgo": "4s ago",
       "isActive": true,
-      "lastMessage": "[cron:gmail-token-refresh-daily Gmail Token Auto-Refresh] Run the Gmail token refresh: exec python3 /data/.openclaw/hook",
+      "lastMessage": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec python3 /data/.opencla",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -16,8 +16,8 @@
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
-      "lastActivity": 1775647988673,
-      "lastActivityAgo": "29m ago",
+      "lastActivity": 1775649782794,
+      "lastActivityAgo": "4m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775649761914
+  "updatedAt": 1775650062092
 }
