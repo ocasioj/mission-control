@@ -3,6 +3,27 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775649706824,
+      "message": "[cron:gmail-token-refresh-daily Gmail Token Auto-Refresh] Run the Gmail token refresh: exec python3 ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775649692374,
+      "message": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775649607806,
+      "message": "[cron:ec94eafa-e7d2-4304-aca7-db1a1c09dfc5 Dashboard Data Refresh + GitHub Push] Refresh the gamblin",
+      "turns": 2
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775646906810,
       "message": "[cron:57081334-48ac-4626-88df-d7c29a43b26f Daily X Morning Briefing] Run python3 /data/.openclaw/wor",
       "turns": 1
@@ -311,27 +332,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775563251505,
-      "message": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec py",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775563224970,
-      "message": "[cron:e107c6e6-1de3-47e3-a99a-8d31567982b0 OpenClaw Daily Health Report] Run the daily health report",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775563208932,
-      "message": "[cron:ec94eafa-e7d2-4304-aca7-db1a1c09dfc5 Dashboard Data Refresh + GitHub Push] Refresh the gamblin",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775537800071,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775537729374\",\n  \"sender_id\": \"+",
       "turns": 1
@@ -455,19 +455,19 @@
     },
     {
       "day": "2026-04-07",
-      "total": 36,
+      "total": 33,
       "byAgent": {
-        "signal-chat": 33,
+        "signal-chat": 30,
         "main": 3
       }
     },
     {
       "day": "2026-04-08",
-      "total": 18,
+      "total": 21,
       "byAgent": {
-        "signal-chat": 18
+        "signal-chat": 21
       }
     }
   ],
-  "updatedAt": 1775649461926
+  "updatedAt": 1775649761928
 }
