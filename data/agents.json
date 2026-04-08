@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775628165007,
-      "lastActivityAgo": "9m ago",
+      "lastActivityAgo": "14m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 73,
       "lastActivity": 1775626200010,
-      "lastActivityAgo": "42m ago",
+      "lastActivityAgo": "47m ago",
       "isActive": false,
       "lastMessage": "[cron:auto-result-nightly-001 Nightly Bet Settlement] Run the nightly bet settlement to capture tonight's game results. ",
       "lastModel": "gemini-2.5-flash"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775628761838
+  "updatedAt": 1775629061833
 }
