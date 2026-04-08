@@ -504,10 +504,10 @@
         "model": "google/gemini-2.5-flash",
         "message": "Run the nightly bet settlement to capture tonight's game results. Execute these commands one at a time using exec:\n1. python3 /data/.openclaw/workspace-coder/auto_results.py --days 1\n2. python3 /data/.openclaw/workspace-coder/confidence_optimizer.py\nIf any bets were settled, send Jose a brief Signal summary with results and net P/L. If nothing to settle, stay silent."
       },
-      "lastRunAt": "2026-04-07T05:30:00.003Z",
-      "nextRunAt": "2026-04-08T05:30:00.000Z",
+      "lastRunAt": "2026-04-08T05:30:00.003Z",
+      "nextRunAt": "2026-04-09T05:30:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 134751,
+      "lastDurationMs": 91091,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775626061821
+  "updatedAt": 1775626361847
 }
