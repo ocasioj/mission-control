@@ -72,10 +72,10 @@
         "message": "Run the auto-result logging script to settle pending bets and update CLV, then fetch fresh injury data for all sports. Execute these commands one at a time using exec:\n1. python3 /data/.openclaw/workspace-coder/auto_results.py --days 3\n2. python3 /data/.openclaw/workspace-coder/fetch_injuries.py --sport all\nIf any bets were settled, send Jose a brief Signal summary with the results and net P/L. If no bets to settle, run silently with no message.",
         "timeoutSeconds": 180
       },
-      "lastRunAt": "2026-04-07T11:00:00.003Z",
-      "nextRunAt": "2026-04-08T11:00:00.000Z",
+      "lastRunAt": "2026-04-08T11:00:00.005Z",
+      "nextRunAt": "2026-04-09T11:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 23636,
+      "lastDurationMs": 109240,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775645861899
+  "updatedAt": 1775646161954
 }
