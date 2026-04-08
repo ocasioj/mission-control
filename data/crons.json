@@ -203,10 +203,10 @@
         "kind": "agentTurn",
         "message": "Run log rotation script: python3 /data/.openclaw/hooks/rotate_logs.py. Respond with HEARTBEAT_OK if successful."
       },
-      "lastRunAt": "2026-04-08T04:00:20.103Z",
-      "nextRunAt": "2026-04-08T04:10:00.000Z",
+      "lastRunAt": "2026-04-08T04:10:00.003Z",
+      "nextRunAt": "2026-04-09T04:10:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 11654,
+      "lastDurationMs": 12817,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775621261806
+  "updatedAt": 1775621561813
 }
