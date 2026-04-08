@@ -1,26 +1,26 @@
 {
   "agents": [
     {
+      "id": "signal-chat",
+      "name": "Joe",
+      "desc": "Primary Signal chat agent — handles all messages with Jose",
+      "sessionCount": 72,
+      "lastActivity": 1775610000011,
+      "lastActivityAgo": "2m ago",
+      "isActive": true,
+      "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python3 /data/.openclaw/wo",
+      "lastModel": "gemini-2.5-flash"
+    },
+    {
       "id": "main",
       "name": "Joe (Web)",
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775609436040,
-      "lastActivityAgo": "7m ago",
+      "lastActivityAgo": "12m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
-    },
-    {
-      "id": "signal-chat",
-      "name": "Joe",
-      "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 71,
-      "lastActivity": 1775606400010,
-      "lastActivityAgo": "57m ago",
-      "isActive": false,
-      "lastMessage": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python3 /data/.openclaw/wo",
-      "lastModel": "gemini-2.5-flash"
     },
     {
       "id": "analyst",
@@ -61,7 +61,7 @@
       "desc": "Prospecting, cold outreach, follow-ups, pipeline tracking",
       "sessionCount": 2,
       "lastActivity": 1774659710454,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -72,7 +72,7 @@
       "desc": "LinkedIn and X content distribution and engagement",
       "sessionCount": 3,
       "lastActivity": 1774659702593,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:01 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -83,7 +83,7 @@
       "desc": "Customer support, issue logging, response drafts",
       "sessionCount": 2,
       "lastActivity": 1774659646727,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -94,7 +94,7 @@
       "desc": "YouTube video pipeline — script, HeyGen, thumbnail, publish",
       "sessionCount": 2,
       "lastActivity": 1774659641525,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash"
@@ -105,7 +105,7 @@
       "desc": "SaaS metrics, revenue, expenses, and burn rate",
       "sessionCount": 2,
       "lastActivity": 1774659634858,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -116,7 +116,7 @@
       "desc": "Image generation tasks",
       "sessionCount": 4,
       "lastActivity": 1774659619798,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-3-flash-preview"
@@ -127,7 +127,7 @@
       "desc": "Content writing and copywriting",
       "sessionCount": 3,
       "lastActivity": 1774659613966,
-      "lastActivityAgo": "10d ago",
+      "lastActivityAgo": "11d ago",
       "isActive": false,
       "lastMessage": "[Fri 2026-03-27 21:00 EDT] [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your r",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775609861769
+  "updatedAt": 1775610161779
 }
