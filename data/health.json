@@ -1,26 +1,26 @@
 {
   "containers": [
     {
-      "name": "openclaw-pa62-openclaw-1",
-      "image": "ghcr.io/openclaw/openclaw:latest",
-      "state": "running",
-      "status": "Up 19 minutes (healthy)"
-    },
-    {
       "name": "openclaw-mission-control-mission-control-1",
       "image": "openclaw-mission-control-mission-control",
       "state": "running",
-      "status": "Up 2 days (healthy)"
+      "status": "Up Less than a second (health: starting)"
+    },
+    {
+      "name": "openclaw-pa62-openclaw-1",
+      "image": "ghcr.io/openclaw/openclaw:latest",
+      "state": "running",
+      "status": "Up 23 minutes (healthy)"
     }
   ],
   "disk": {
-    "usedBytes": 57854394368,
-    "availBytes": 45016924160,
+    "usedBytes": 57856659456,
+    "availBytes": 45014659072,
     "totalBytes": 102888095744,
     "percent": 56
   },
   "cronErrors": [],
   "cronTotal": 32,
   "gatewayUp": true,
-  "updatedAt": 1775663416384
+  "updatedAt": 1775663645365
 }
