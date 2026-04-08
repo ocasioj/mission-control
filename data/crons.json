@@ -130,10 +130,10 @@
         "message": "Send the daily gambling picks email digest to Jose. Run: exec python3 /data/.openclaw/workspace-coder/email_digest.py. Parse the output to get HTML_PATH, SUBJECT, and TO fields. Then use the send_email tool with: to=[TO value], subject=[SUBJECT value], htmlBody=[contents of HTML_PATH file], body='Daily picks digest', mimeType='multipart/alternative'. Confirm when sent.",
         "timeoutSeconds": 60
       },
-      "lastRunAt": "2026-04-07T13:05:00.004Z",
-      "nextRunAt": "2026-04-08T13:05:00.000Z",
+      "lastRunAt": "2026-04-08T13:05:00.007Z",
+      "nextRunAt": "2026-04-09T13:05:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 28229,
+      "lastDurationMs": 24518,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775653361930
+  "updatedAt": 1775653661933
 }
