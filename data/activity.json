@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775651407955,
+      "message": "[cron:disk-space-alert-daily Disk Space Alert] Check disk usage on /: run df -h / | tail -1 and capt",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775651106479,
       "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
       "turns": 1
@@ -339,13 +346,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775564706899,
-      "message": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer c",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775537800071,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775537729374\",\n  \"sender_id\": \"+",
       "turns": 1
@@ -455,19 +455,19 @@
     },
     {
       "day": "2026-04-07",
-      "total": 31,
+      "total": 30,
       "byAgent": {
-        "signal-chat": 28,
+        "signal-chat": 27,
         "main": 3
       }
     },
     {
       "day": "2026-04-08",
-      "total": 25,
+      "total": 26,
       "byAgent": {
-        "signal-chat": 25
+        "signal-chat": 26
       }
     }
   ],
-  "updatedAt": 1775651261938
+  "updatedAt": 1775651561939
 }
