@@ -221,10 +221,10 @@
         "message": "Run /data/.openclaw/hooks/heygen_dlq_report.py to scan retry and DLQ queues. Send a daily summary of stuck/failed HeyGen jobs to +16462458614 via Signal.",
         "kind": "agentTurn"
       },
-      "lastRunAt": "2026-04-07T07:00:00.018Z",
-      "nextRunAt": "2026-04-08T07:00:00.000Z",
+      "lastRunAt": "2026-04-08T07:00:00.003Z",
+      "nextRunAt": "2026-04-09T07:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 19270,
+      "lastDurationMs": 71814,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775631461840
+  "updatedAt": 1775631761846
 }
