@@ -167,10 +167,10 @@
         "message": "Before your session resets in 10 minutes, review today's conversation and update MEMORY.md with anything important: unfinished tasks, decisions Jose made, things to follow up on, and any new facts about Jose or his contacts. Be concise — bullet points only. Do not reply to this message.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-07T06:50:00.009Z",
-      "nextRunAt": "2026-04-08T06:50:00.000Z",
+      "lastRunAt": "2026-04-08T06:50:00.005Z",
+      "nextRunAt": "2026-04-09T06:50:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 27744,
+      "lastDurationMs": 34402,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775630861843
+  "updatedAt": 1775631161836
 }
