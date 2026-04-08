@@ -4,11 +4,11 @@
       "id": "signal-chat",
       "name": "Joe",
       "desc": "Primary Signal chat agent — handles all messages with Jose",
-      "sessionCount": 77,
-      "lastActivity": 1775650500012,
-      "lastActivityAgo": "7m ago",
+      "sessionCount": 78,
+      "lastActivity": 1775651100011,
+      "lastActivityAgo": "2m ago",
       "isActive": true,
-      "lastMessage": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmail-health-report. Do ",
+      "lastMessage": "[cron:b54fb08e-a1a4-4226-8cad-a0a0edf4c6e0 PM Visualizer Daily Canary] Run the daily PM Visualizer canary: exec pm-visua",
       "lastModel": "gemini-2.5-flash"
     },
     {
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775649782794,
-      "lastActivityAgo": "19m ago",
+      "lastActivityAgo": "24m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775650961916
+  "updatedAt": 1775651261924
 }
