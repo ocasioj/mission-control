@@ -318,13 +318,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775545209625,
-      "message": "[cron:b4b4b1cc-7b9a-46da-860b-c4b57da1021a HeyGen DLQ/Retry Daily Report] Run /data/.openclaw/hooks/",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775537800071,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775537729374\",\n  \"sender_id\": \"+",
       "turns": 1
@@ -419,6 +412,13 @@
       "timestamp": 1775502003075,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775498403125,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
     }
   ],
   "digest": [
@@ -455,9 +455,9 @@
     },
     {
       "day": "2026-04-07",
-      "total": 41,
+      "total": 40,
       "byAgent": {
-        "signal-chat": 38,
+        "signal-chat": 37,
         "main": 3
       }
     },
@@ -469,5 +469,5 @@
       }
     }
   ],
-  "updatedAt": 1775631761861
+  "updatedAt": 1775632061863
 }
