@@ -277,10 +277,10 @@
         "message": "Run python3 /data/.openclaw/workspace-signal-chat/daily_briefing.py. If successful, return stdout exactly as plain text. Keep it concise. If it fails, return a short error summary with the failing step.",
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": "2026-04-07T21:32:26.641Z",
-      "nextRunAt": "2026-04-08T11:15:00.000Z",
+      "lastRunAt": "2026-04-08T11:15:00.004Z",
+      "nextRunAt": "2026-04-09T11:15:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 20650,
+      "lastDurationMs": 28584,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775646761898
+  "updatedAt": 1775647061905
 }
