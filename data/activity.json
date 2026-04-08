@@ -341,7 +341,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1775531566533,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 18
+      "turns": 17
     },
     {
       "agentId": "main",
@@ -469,5 +469,5 @@
       }
     }
   ],
-  "updatedAt": 1775635361871
+  "updatedAt": 1775635661872
 }
