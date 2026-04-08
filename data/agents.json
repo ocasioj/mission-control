@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775651586087,
-      "lastActivityAgo": "9m ago",
+      "lastActivityAgo": "14m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -17,7 +17,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 77,
       "lastActivity": 1775651400018,
-      "lastActivityAgo": "12m ago",
+      "lastActivityAgo": "17m ago",
       "isActive": true,
       "lastMessage": "[cron:disk-space-alert-daily Disk Space Alert] Check disk usage on /: run df -h / | tail -1 and capture the percentage u",
       "lastModel": "gemini-2.5-flash"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775652161924
+  "updatedAt": 1775652461927
 }
