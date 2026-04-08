@@ -6,7 +6,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775644359158,
-      "lastActivityAgo": "15m ago",
+      "lastActivityAgo": "20m ago",
       "isActive": true,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775645261892
+  "updatedAt": 1775645561895
 }
