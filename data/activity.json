@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775606409223,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775602806665,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python",
       "turns": 1
@@ -412,23 +419,9 @@
       "timestamp": 1775491203041,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775487613988,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
     }
   ],
   "digest": [
-    {
-      "day": "2026-04-01",
-      "total": 1,
-      "byAgent": {
-        "signal-chat": 1
-      }
-    },
     {
       "day": "2026-04-02",
       "total": 0,
@@ -467,7 +460,14 @@
         "signal-chat": 46,
         "main": 3
       }
+    },
+    {
+      "day": "2026-04-08",
+      "total": 1,
+      "byAgent": {
+        "signal-chat": 1
+      }
     }
   ],
-  "updatedAt": 1775606261775
+  "updatedAt": 1775606561778
 }
