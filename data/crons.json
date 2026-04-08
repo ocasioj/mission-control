@@ -484,10 +484,10 @@
         "model": "google/gemini-2.5-flash",
         "message": "Run the gambling performance check: exec python3 /data/.openclaw/workspace-coder/performance_trigger.py. Stay silent unless it sends its own alerts."
       },
-      "lastRunAt": "2026-04-07T21:32:47.291Z",
-      "nextRunAt": "2026-04-08T12:05:00.000Z",
+      "lastRunAt": "2026-04-08T12:05:00.008Z",
+      "nextRunAt": "2026-04-09T12:05:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 11344,
+      "lastDurationMs": 27031,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775649761914
+  "updatedAt": 1775650062093
 }
