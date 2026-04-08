@@ -6,7 +6,7 @@
       "desc": "Primary Signal chat agent — handles all messages with Jose",
       "sessionCount": 75,
       "lastActivity": 1775646182540,
-      "lastActivityAgo": "4m ago",
+      "lastActivityAgo": "9m ago",
       "isActive": true,
       "lastMessage": "[cron:263990b7-a67c-4eaa-831d-58b28a811971 Daily Gambling Data Refresh] Run the daily stats and odds data refresh: exec ",
       "lastModel": "gemini-2.5-flash"
@@ -17,7 +17,7 @@
       "desc": "Web chat & group @mention handler",
       "sessionCount": 1,
       "lastActivity": 1775644359158,
-      "lastActivityAgo": "35m ago",
+      "lastActivityAgo": "40m ago",
       "isActive": false,
       "lastMessage": "You are running a boot check. Follow BOOT.md instructions exactly.\n\nBOOT.md:\n---\nsummary: \"Workspace template for BOOT.m",
       "lastModel": "gemini-2.5-flash-lite"
@@ -155,5 +155,5 @@
       "lastModel": ""
     }
   ],
-  "updatedAt": 1775646461910
+  "updatedAt": 1775646761897
 }
