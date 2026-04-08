@@ -53,10 +53,10 @@
         "message": "Refresh the gambling dashboard and push to GitHub. Run: /data/.openclaw/workspace-coder/dashboard/push_dashboard.sh. Report any errors if it fails.",
         "timeoutSeconds": 120
       },
-      "lastRunAt": "2026-04-07T12:00:00.004Z",
-      "nextRunAt": "2026-04-08T12:00:00.000Z",
+      "lastRunAt": "2026-04-08T12:00:00.003Z",
+      "nextRunAt": "2026-04-09T12:00:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 18389,
+      "lastDurationMs": 86421,
       "consecutiveErrors": 0
     },
     {
@@ -258,10 +258,10 @@
         "kind": "agentTurn",
         "message": "Run the daily health report: exec heygen-health-report. Do not send any additional Signal message — the script sends the report directly. If the script fails, send Jose a brief note with the error."
       },
-      "lastRunAt": "2026-04-07T12:00:18.393Z",
-      "nextRunAt": "2026-04-08T12:00:00.000Z",
+      "lastRunAt": "2026-04-08T12:01:26.424Z",
+      "nextRunAt": "2026-04-09T11:35:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 26921,
+      "lastDurationMs": 14373,
       "consecutiveErrors": 0
     },
     {
@@ -601,12 +601,12 @@
         "timeoutSeconds": 30,
         "model": "google/gemini-2.5-flash"
       },
-      "lastRunAt": null,
-      "nextRunAt": "2026-04-08T12:00:00.000Z",
-      "lastStatus": null,
-      "lastDurationMs": 0,
+      "lastRunAt": "2026-04-08T12:01:40.797Z",
+      "nextRunAt": "2026-04-09T12:00:00.000Z",
+      "lastStatus": "ok",
+      "lastDurationMs": 15130,
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775649461914
+  "updatedAt": 1775649761914
 }
