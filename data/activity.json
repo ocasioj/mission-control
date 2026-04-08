@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775650506456,
+      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775650062419,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775650056615\",\n  \"sender_id\": \"+",
       "turns": 1
@@ -332,13 +339,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775564106481,
-      "message": "[cron:d53c81c6-d8c9-413b-8814-5b0ceb7e366a Gmail Daily Canary] Run the daily Gmail canary: exec gmai",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775537800071,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775537729374\",\n  \"sender_id\": \"+",
       "turns": 1
@@ -455,19 +455,19 @@
     },
     {
       "day": "2026-04-07",
-      "total": 32,
+      "total": 31,
       "byAgent": {
-        "signal-chat": 29,
+        "signal-chat": 28,
         "main": 3
       }
     },
     {
       "day": "2026-04-08",
-      "total": 23,
+      "total": 24,
       "byAgent": {
-        "signal-chat": 23
+        "signal-chat": 24
       }
     }
   ],
-  "updatedAt": 1775650361942
+  "updatedAt": 1775650661926
 }
