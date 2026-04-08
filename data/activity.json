@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775649906137,
+      "message": "[cron:perf-trigger-daily-001 Gambling Performance Check] Run the gambling performance check: exec py",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775649706824,
       "message": "[cron:gmail-token-refresh-daily Gmail Token Auto-Refresh] Run the Gmail token refresh: exec python3 ",
       "turns": 1
@@ -248,13 +255,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775576206822,
-      "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775576201099\",\n  \"sender_id\": \"+",
-      "turns": 8
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775574214015,
       "message": "[cron:0da84fc9-a8d8-4bfc-93e8-c25a031ba095 Daily Gambling Model Retraining] Launch the gambling mode",
       "turns": 1
@@ -455,19 +455,19 @@
     },
     {
       "day": "2026-04-07",
-      "total": 33,
+      "total": 32,
       "byAgent": {
-        "signal-chat": 30,
+        "signal-chat": 29,
         "main": 3
       }
     },
     {
       "day": "2026-04-08",
-      "total": 21,
+      "total": 22,
       "byAgent": {
-        "signal-chat": 21
+        "signal-chat": 22
       }
     }
   ],
-  "updatedAt": 1775649761928
+  "updatedAt": 1775650062122
 }
