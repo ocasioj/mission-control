@@ -426,10 +426,10 @@
         "message": "Check disk usage on /: run df -h / | tail -1 and capture the percentage used. If usage is 80% or higher, send Jose a Signal message: '⚠️ Disk Alert: / at X% full (Y used / Z available). Cleanup needed.' If below 80%, stay completely silent — do NOT send any message.",
         "timeoutSeconds": 60
       },
-      "lastRunAt": "2026-04-07T12:30:00.005Z",
-      "nextRunAt": "2026-04-08T12:30:00.000Z",
+      "lastRunAt": "2026-04-08T12:30:00.013Z",
+      "nextRunAt": "2026-04-09T12:30:00.000Z",
       "lastStatus": "ok",
-      "lastDurationMs": 30024,
+      "lastDurationMs": 23394,
       "consecutiveErrors": 0
     },
     {
@@ -608,5 +608,5 @@
       "consecutiveErrors": 0
     }
   ],
-  "updatedAt": 1775651261924
+  "updatedAt": 1775651561926
 }
