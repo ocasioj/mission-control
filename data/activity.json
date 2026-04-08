@@ -339,20 +339,6 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
-      "timestamp": 1775570425754,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: python",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775570408451,
-      "message": "[cron:dd71e236-8efa-4e63-a04f-b5eb5fcb6e8e Line Alert Digest — 10am ET] Run the line movement digest",
-      "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
       "timestamp": 1775537800071,
       "message": "Conversation info (untrusted metadata):\n```json\n{\n  \"message_id\": \"1775537729374\",\n  \"sender_id\": \"+",
       "turns": 1
@@ -419,6 +405,20 @@
       "timestamp": 1775512811847,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775512803259,
+      "message": "[cron:7bc3a548-d805-4171-9b25-a85c835a0b7d Line Alert Digest — 6pm ET] Run the line movement digest ",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
+      "timestamp": 1775509202959,
+      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
+      "turns": 1
     }
   ],
   "digest": [
@@ -455,9 +455,9 @@
     },
     {
       "day": "2026-04-07",
-      "total": 27,
+      "total": 25,
       "byAgent": {
-        "signal-chat": 24,
+        "signal-chat": 22,
         "main": 3
       }
     },
@@ -469,5 +469,5 @@
       }
     }
   ],
-  "updatedAt": 1775656961964
+  "updatedAt": 1775657261950
 }
