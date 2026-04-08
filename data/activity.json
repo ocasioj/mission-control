@@ -3,6 +3,13 @@
     {
       "agentId": "signal-chat",
       "agentName": "Joe",
+      "timestamp": 1775618106355,
+      "message": "[cron:b2f38f7b-82dd-42c9-9eeb-6935fd4b8a8d Nightly CLV Summary] Run the nightly CLV summary to check",
+      "turns": 1
+    },
+    {
+      "agentId": "signal-chat",
+      "agentName": "Joe",
       "timestamp": 1775617224129,
       "message": "[cron:5cba1856-2475-42d4-bb3e-6dd5c2a48524 Daily Memory Journal] Write today's daily memory summary.",
       "turns": 1
@@ -320,7 +327,7 @@
       "agentName": "Joe (Web)",
       "timestamp": 1775531566533,
       "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old t",
-      "turns": 15
+      "turns": 16
     },
     {
       "agentId": "main",
@@ -412,13 +419,6 @@
       "timestamp": 1775494802861,
       "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
       "turns": 1
-    },
-    {
-      "agentId": "signal-chat",
-      "agentName": "Joe",
-      "timestamp": 1775491203041,
-      "message": "[cron:8886957f-5f4d-4b82-9337-1f64f1c4faf7 Pre-Game Pick Alerts] Run the pre-game pick alert: cd /da",
-      "turns": 1
     }
   ],
   "digest": [
@@ -463,11 +463,11 @@
     },
     {
       "day": "2026-04-08",
-      "total": 5,
+      "total": 6,
       "byAgent": {
-        "signal-chat": 5
+        "signal-chat": 6
       }
     }
   ],
-  "updatedAt": 1775617961800
+  "updatedAt": 1775618261807
 }
